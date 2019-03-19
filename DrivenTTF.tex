@@ -1,0 +1,295 @@
+\documentclass[letterpaper,11pt]{article}
+\pdfoutput=1 % if you are submitting a pdflatex (i.e. if you have  
+% images in pdf, png or jpg format)
+\usepackage{jheppub}
+\usepackage[utf8]{inputenc} 
+%\usepackage[T1]{fontenc} % if needed
+%\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{slashed}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=red, urlcolor=cyan, linktoc=page}
+%\usepackage{cite}
+\usepackage{xfrac}
+\usepackage{empheq}
+\usepackage{caption, subcaption}
+
+\newcommand{\p}{\partial}
+\newcommand{\oi}{\omega_i}
+\newcommand{\oj}{\omega_j}
+\newcommand{\ok}{\omega_k}
+\newcommand{\ol}{\omega_\ell}
+\newcommand{\thi}{\theta_i}
+\newcommand{\thj}{\theta_j}
+\newcommand{\thk}{\theta_k}
+\newcommand{\thl}{\theta_\ell}
+\newcommand{\mc}{\mathcal}
+\newcommand{\jm}{\ensuremath{j_{max}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Arbitrary Dimensions, Massive, Non-normalizable Time-Dependent BCs}
+
+\abstract{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+\flushbottom
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Perturbative Expansion}
+
+The backreaction between the metric and the scalar field appears at second order in the perturbation,
+\begin{align}
+A_2' = - \mu \nu \left[ (\dot \phi_1 )^2 + (\phi_1')^2 + m^2 \phi_1^2 \sec^2 x \right] + \nu' A_2 / \nu
+\end{align}
+which can be directly integrated to give
+
+\begin{align}
+A_2 = -\nu \int^x_0 dy \, \mu \left( (\dot \phi_1 )^2 + (\phi_1')^2 + m^2 \phi_1^2 \sec^2 x \right) \, .
+\end{align}
+Furthermore, the first non-trivial contribution to the lapse in the boundary time gauge is
+
+\begin{align}
+\delta_2 = \int^{\pi/2}_x dy \, \mu \nu \left(  (\dot \phi_1 )^2 + (\phi_1')^2 \right) \, .
+\end{align}
+For convenience, we have also defined the functions
+\begin{align}
+\mu (x) = \left( \tan x \right)^{d-1} \quad \text{and} \quad \nu(x) = (d-1) / \mu ' \, .
+\end{align}
+
+To aide in evaluating integrals, we first derive the following identities: from the equation for the first-order time-dependent coefficients $c_i$,
+\begin{align} 
+\ddot c_i + \oi^2 c_i = 0 \quad \Rightarrow \quad \p_t \left(\dot c_i^2 + \oi^2 c_i^2 \right) = \p_t \mathbb C_i = 0 \, ;
+\end{align}
+from the equation definition of $\hat L$,
+\begin{align}
+\hat L e_j = -\frac{1}{\mu} \left( \mu e'_j \right)' + m^2 \sec^2 x e_j \quad \Rightarrow \quad \left( \mu e'_j \right)' = \mu \left( m^2 \sec^2 x - \omega_j^2 \right) e_j \, ;
+\end{align}
+from considering the expression $\left( \mu e'_i e_j \right)'$:
+\begin{align}
+\left( \mu e'_i e_j \right) ' = \left(m^2 \sec^2 x - \oi^2 \right) \mu e_i e_j + \mu e'_i e'_j \, ;
+\end{align}
+from permuting $i, j$ above and subtracting to give
+\begin{align}
+\frac{\left[ \mu (e'_i e_j \oj^2 - e_i e'_j \oi^2 ) \right]'}{(\oj^2 - \oi^2)} = \mu m^2 \sec^2 x e_i e_j + \mu e'_i e'_j \, .
+\end{align}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{$\mc O(\epsilon^3)$ Source Terms}
+At third order in $\epsilon$, the equation for $\phi_3$ contains a source $S$ given by
+\begin{align}
+\ddot \phi_3 + \hat L \phi_3 = S = 2 (A_2 - \delta_2) \ddot \phi_1 + (\dot A_2 - \dot \delta_2) \dot\phi_1 + (A_2' -\delta_2' )\phi_1' + m^2 A_2 \phi_1 \sec^2 x
+\end{align}
+Projecting each of the terms individually onto the eigenbasis $\{ e_\ell \}$:
+\begin{align}
+\langle \delta_2 \ddot \phi_1, e_\ell \rangle &= - \sum_{i = 0}^\infty \sum_{\substack{j=0 \\ k \neq \ell}}^\infty \sum_{k=0}^\infty \frac{\ok^2 c_k}{\ol^2 - \ok^2} \left[\dot c_i \dot c_j \left(X_{k\ell ij} - X_{\ell k i j} \right) + c_i c_j \left( Y_{ij\ell k} - Y_{ijk\ell} \right) \right] \nonumber \\
+& \qquad  - \sum_{i=0}^\infty \sum_{j=0}^\infty \ol^2 c_\ell \left[ \dot c_i \dot c_j P_{ij\ell} + c_i c_j B_{i j \ell} \right] \, , \\
+%
+\langle A_2 \ddot \phi_1, e_\ell \rangle &= 2 \sum_{i = 0}^\infty \sum_{\substack{j=0 \\ i \neq j}}^\infty \sum_{k=0}^\infty \frac{\ok^2 c_k}{\oj^2 - \oi^2} X_{ijk \ell} \left( \dot c_i \dot c_j + \oj^2 c_i c_j \right) \nonumber \\
+& \qquad + \sum_{i = 0}^\infty \sum_{j = 0}^\infty \oj^2 c_j \left( \mathbb C_i P_{j \ell i} + c_i^2 X_{ii j \ell} \right) \, , \\
+%
+\langle \dot \delta_2 \dot \phi_1 , e_\ell \rangle &= \sum_{i = 0}^\infty \sum_{\substack{j=0 \\ k \neq \ell}}^\infty \sum_{k=0}^\infty \frac{\dot c_k}{\ol^2 - \ok^2} \left[ \p_t \left( \dot c_i \dot c_j \right) \left( X_{k\ell ij} - X_{\ell k i j} \right) + \p_t (c_i c_j) \left(Y_{ij\ell k} - Y_{ijk\ell}\right) \right] \nonumber \\
+& \qquad+ \sum_{i=0}^\infty \sum_{j=0}^\infty \dot c_\ell \left[ \p_t \left( \dot c_i \dot c_j \right) P_{ij\ell} + \p_t (c_i c_j) B_{ij\ell} \right] \, , \\
+%
+\langle \dot A_2 \dot \phi_1, e_\ell \rangle &= -2 \sum_{i=0}^\infty \sum_{j=0}^\infty \sum_{k=0}^\infty  \dot c_k \dot c_j c_i X_{ijk\ell} \, , \\
+%
+\langle \left( A_2' - \delta_2' \right) \phi_1', e_\ell \rangle &= - 2 \sum_{i = 0}^\infty \sum_{\substack{j=0 \\ i \neq j}}^\infty \sum_{k=0}^\infty \frac{c_k (\dot c_i \dot c_j + \oj^2 c_i c_j)}{\oj^2 -\oi^2} H_{ijk\ell} -m^2 \sum_{i=0}^\infty \sum _{j=0}^\infty \sum_{k=0}^\infty c_i c_j c_k V_{ijk\ell} \nonumber \\
+%
+& \qquad - \sum_{i=0}^\infty \sum_{j=0}^\infty c_j \left[ c_i^2 H_{iij\ell} + \mathbb C_i M_{j \ell i} \right] \, , \\
+%
+\langle A_2 \phi_1 \sec^2 x, e_\ell \rangle &= - 2\sum_{i = 0}^\infty \sum_{\substack{j=0 \\ i \neq j}}^\infty \sum_{k=0}^\infty \frac{c_k (\dot c_i \dot c_j + \oj^2 c_i c_j )}{\oj^2 - \oi^2} V_{jki\ell} \nonumber \\
+& \qquad - \sum_{i=0}^\infty \sum_{j=0}^\infty c_j \left( c_i^2 V_{jii\ell} + \mathbb C_i Q_{j\ell i} \right) .
+\end{align}
+
+Where the forms of X, Y, V, H, B, M, P, and Q are given by
+\begin{align}
+X_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu e'_i e_j e_k e_\ell \\
+Y_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu e'_i e'_j e_k e'_\ell \\
+V_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu e_i e_j e'_k e_\ell \sec^2 x \\
+H_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu \nu' e'_i e_j e'_k e_\ell \\
+B_{ij\ell} &= \int^{\pi/2}_0 dx \, \mu \nu e'_i e'_j \int^x_0 dy \, \mu e^2_\ell \\
+M_{ij\ell} &= \int^{\pi/2}_0 dx \, \mu \nu' e'_i e_j \int^x_o dy \, \mu e_\ell^2 \\
+P_{ij\ell} &= \int^{\pi/2}_0 dx \, \mu \nu e_i e_j \int^x_0 dy \, \mu e^2_\ell \\
+Q_{ij\ell} &= \int^{\pi/2}_0 dx \, \mu \nu e_i e_j \sec^2 x \int^x_0 dy \, \mu e^2_\ell
+\end{align}
+
+Collecting terms together gives the expression for $S_\ell = \langle S, e_\ell \rangle$:
+\begin{align}
+S_\ell &= \sum_{\substack{i, j, k \\ k \neq \ell}}^\infty \frac{1}{\ol^2 - \ok^2} \Big[ F_k(\dot c_i \dot c_j) \left(X_{k\ell i j} - X_{\ell k i j} \right) + F_k(c_i c_j) \left(Y_{ij\ell k} - Y_{ijk\ell} \right) \Big] \nonumber \\
+%
+& \quad +2 \sum_{\substack{i,j,k \\ i \neq j}}^\infty \frac{c_k D_{ij}}{\oj^2 - \oi^2} \Big[  2\ok^2 X_{ijk\ell} - H_{ijk\ell} -m^2 V_{jki\ell} \Big] - \sum_{i,j,k}^\infty c_i \Big[ 2 \dot c_j \dot c_k X_{ijk\ell} + m^2 c_j c_k V_{ijk\ell} \Big] \nonumber \\ 
+%
+& \quad + \sum_{i,j}^\infty \Big[ F_\ell (\dot c_i \dot c_j) P_{ij\ell} + F_\ell (c_i c_j) B_{ij\ell} + 2\oj^2 c_j \left( c_i^2 X_{iij\ell} + \mathbb C_i P_{j\ell i} \right) \nonumber \\
+%
+& \qquad - c_j \left( c^2_i (H_{iij\ell} + m^2 V_{jii\ell} ) + \mathbb C_i (M_{j\ell i} + m^2 Q_{j\ell i}) \right) \Big] \, ,
+\end{align}
+where $F_k(z) = \dot c_k \dot z - 2\ok^2 c_k z$, $D_{ij} = \dot c_i \dot c_j + \omega^2_j c_i c_j$, and $\mathbb C_i = \dot c_i^2 + \oi^2 c_i^2$.
+
+Using the solution $c_i(t) = a_i \cos (\oi t + b_i) = a_i \cos \theta_i$, the source term becomes
+
+\begin{align}
+S_\ell &=\frac{1}{4} \sum_{\substack{i,j,k \\ k \neq \ell}}^\infty \frac{a_i a_j a_k \ok}{\ol^2 - \ok^2} \Big[ Z^-_{jk} (\oi + \oj + 2\ok) \cos (\thi + \thj + \thk) - Z^-_{jk} (\oi + \oj - 2\ok) \cos (\thi + \thj - \thk) \nonumber \\
+%
+&\qquad + Z^+_{jk} (\oi - \oj - 2\ok) \cos (\thi - \thj - \thk) - Z^+_{jk} (\oi - \oj + 2\ok)  \cos(\thi - \thj + \thk) \Big] \nonumber \\
+%
+& + \frac{1}{2}\sum_{\substack{i,j,k \\ i \neq j}}^\infty a_i a_j a_k \oj \left( H_{ijk\ell} + m^2 V_{jki\ell} - 2\ok^2 X_{ijk\ell} \right) \Big[ \frac{1}{\oi - \oj} \left( \cos (\thi - \thj - \thk)  + \cos(\thi - \thj + \thk) \right) \nonumber \\
+%
+& \qquad - \frac{1}{\oi + \oj} \left( \cos (\thi + \thj - \thk)  + \cos ( \thi + \thj + \thk) \right) \Big] \nonumber \\
+%
+& - \frac{1}{4} \sum_{i,j,k}^\infty a_i a_j a_k \Big[ \left( 2\oj \ok X_{ijk\ell} - m^2 V_{ijk\ell} \right)\cos(\thi + \thj - \thk) -  \left( 2\oj\ok X_{ijk\ell} - m^2 V_{ijk\ell} \right) \cos(\thi - \thj - \thk) \nonumber \\
+%
+& \qquad + \left(2\oj \ok X_{ijk\ell} + m^2 V_{ijk\ell} \right) \cos (\thi - \thj + \thk) - \left( 2\oj\ok X_{ijk\ell} - m^2 V_{ijk\ell} \right) \cos(\thi + \thj + \thk) \Big] \nonumber \\
+%
+& + \frac{1}{4} \sum_{i,j}^\infty a_i a_j a_\ell \ol \Big[ \tilde Z^-_{ij} (\oi + \oj + 2\ol) \cos(\thi + \thj +  \thl) - \tilde Z^-_{ij} (\oi + \oj - 2\ol) \cos (\thi + \thj - \thl) \nonumber \\
+%
+& \qquad + \tilde Z^+_{ij} (\oi - \oj - 2\ol) \cos( \thi - \thj - \thl) - \tilde Z^+_{ij} (\oi - \oj + 2\ol) \cos(\thi - \thj + \thl) \Big] \nonumber \\
+%
+& - \frac{1}{4} \sum_{i,j}^\infty a_i^2 a_j \left( H_{iij\ell} + m^2 V_{jii\ell} - 2\oj^2 X_{iij\ell} \right) \big[ \cos (2\thi - \thj) + \cos (2\thi + \thj) \big] \nonumber \\
+%
+& - \frac{1}{2} \sum_{i,j}^\infty a_i^2 a_j \left( H_{iij\ell} + m^2 V_{jii\ell} - 2\oj^2 X_{iij\ell} + 4\oi^2 \oj^2 P_{j\ell i} + 2\oi^2 (M_{j\ell i} + m^2 Q_{j\ell i}) \right) \cos \thj . \hspace{-0.2in}
+\end{align} 
+To simplify the above expression, we have defined
+\begin{align}
+Z^{\pm}_{jk} = \oj \ok \left( X_{k\ell ij} - X_{\ell kij} \right) \pm \left( Y_{ij\ell k} - Y_{ijk\ell} \right) \quad \text{and} \quad \tilde Z^{\pm}_{ij} = \oi \oj P_{ij\ell} \pm B_{ij\ell} \, .
+\end{align}
+
+Using integration by parts to remove the derivative from $\nu$ in the definition of $H_{ijk\ell}$, we can show that
+\begin{align}
+Z_{ijk\ell} = \oi^2 X_{kij\ell} - Y_{\ell kji} + \ok^2 X_{ijk\ell} - Y_{ij\ell k}  - m^2 \left( B_{kij\ell} + B_{ijk\ell} \right) \, .
+\end{align}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Resonances}
+After time-averaging, resonant contributions come from the set of conditions
+\begin{align}
+\oi \pm \oj \pm \ok = \pm \ol \,
+\end{align}
+which separates into three distinct cases
+\begin{align}
+\oi + \oj + \ok &= \ol \qquad (+++) \\
+\oi - \oj - \ok &= \ol \qquad (+--) \\
+\oi + \oj - \ok &= \ol \qquad (++-)
+\end{align}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{$(+++)$}
+
+These resonant contributions come from the condition $\oi + \oi + \ok = \ol$, and are of the form
+\begin{align}
+S_\ell = \underbrace{\sum_{i=0}^\infty \sum_{j=0}^\infty \sum_{k=0}^\infty}_{\oi + \oj + \ok = \, \ol} \Omega_{ijk\ell} a_i a_j a_k \cos \left( \thi + \thj + \thk \right) + \ldots \, ,
+\end{align}
+where
+\begin{align}
+\Omega_{ijk\ell} &= \frac{1}{12} \bigg\{ \oj \ok X_{ijk\ell} \left( \frac{\oi}{\oj + \ok} - \frac{3\ok}{\oi + \oj} - \frac{3\oj}{\oi + \ok} -1 \right) \nonumber \\
+%
+& \qquad + \oi \ok X_{jki\ell} \left( \frac{\oj}{\oi + \ok} - \frac{3\ok}{\oi + \oj} - \frac{3\oi}{\oj + \ok} - 1 \right) \nonumber \\
+%
+&\qquad + \oi \oj X_{kij\ell} \left( \frac{\ok}{\oi + \oj} - \frac{3\oi}{\oj + \ok} - \frac{3\oj}{\oi + \ok} -1 \right) \nonumber \\
+%
+&\qquad - \oi \oj \ok X_{\ell ijk} \left( \frac{1}{\oi + \oj} + \frac{1}{\oj + \ok} + \frac{1}{\oi + \ok} \right) \nonumber \\
+%
+&\qquad  - Y_{ji\ell k} \left( \frac{\ok}{\oi + \oj} + \frac{\oj}{\oi + \ok} + \frac{\oi}{\oj + \ok} - 3 \right) \nonumber \\
+%
+&\qquad + \ok Y_{ijk\ell} \left( \frac{1}{\oi + \oj} + \frac{1}{\oj + \ok} + \frac{1}{\oi + \ok} \right) \nonumber \\
+% 
+& \qquad + \oi Y_{jki\ell} \left( \frac{1}{\oi + \oj} + \frac{1}{\oj + \ok} + \frac{1}{\oi + \ok} \right) \nonumber \\
+%
+& \qquad + \oj Y_{kij\ell} \left( \frac{1}{\oi + \oj} + \frac{1}{\oj + \ok} + \frac{1}{\oi + \ok} \right) \nonumber \\
+%
+&\qquad + m^2 \Big[ 2B_{ijk\ell} \left( \frac{\oj}{\oi + \oj} + \frac{\ok}{\oi + \ok} \right) \nonumber \\
+%
+& \qquad + 2 B_{jki\ell} \left( \frac{\oi}{\oi + \oj} + \frac{\ok}{\oj + \ok} \right) +2 B_{kij\ell} \left( \frac{\oj}{\oj + \ok} + \frac{\oi}{\oi + \ok} \right) \nonumber \\
+%
+&\qquad  + (B_{ijk\ell} - W_{ijk\ell}) + (B_{jki\ell} - W_{jki\ell}) + (B_{kij\ell} - W_{kij\ell}) \Big] \bigg\} \, .
+\end{align}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{$(+--)$}
+
+These contributions arise from the condition $\oi - \ok - \ok = \ol$, which are symmetric under exchange of $\oj, \ok$, and are of the form
+\begin{align}
+S_\ell = \sum_{j=0}^\infty \sum_{k=0}^\infty \Gamma_{(j+k+\ell) jk\ell} a_j a_k a_{(j+k+\ell)} \cos \left( \theta_{j+k+\ell} - \thj - \thk \right) + \ldots \, ,
+\end{align}
+where
+\begin{align}
+\Gamma_{ijk\ell} &= \frac{1}{4} \bigg\{ m^2 \left(B_{kij\ell} - W_{ijk\ell}\right) + Y_{ij\ell k} - (1+m^2) B_{ijk\ell} \left(\frac{\oj}{\oi - \oj} \right) \nonumber \\
+%
+& \qquad -3\ok^2 X_{jik\ell} \left( \frac{\oi}{\oi - \oj}\right) + 3 \ok^2 X_{ijk\ell} \left( \frac{\oj}{\oi - \oj} \right) \nonumber \\
+%
+& \qquad + Y_{\ell kij} \left( \frac{\oi}{\oi - \oj} \right) - Y_{\ell kji} \left( \frac{\oj}{\oi - \oj} \right) \bigg\} \, .
+\end{align}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{$(++-)$}
+
+These contributions arise from the resonant condition $\oi + \oj = \ok + \ol$, which is symmetric under $\oi \leftrightarrow \oj$. These terms can be written as
+\begin{align}
+S_\ell &= T_\ell a^3_\ell \cos (\thl + \thl - \thl) + \sum_{i \neq \ell}^\infty R_{i \ell} a^2_i a_\ell \cos(\thi + \thl - \thi) \nonumber \\
+& \qquad + \sum_{i \neq \ell}^\infty \sum_{j \neq \ell}^\infty S_{i j (i + j - \ell) \ell} a_i a_j a_{(i + j - \ell)} \cos(\thi + \thj - \theta_{i + j -\ell} ) + \ldots
+\end{align}
+where each of the coefficients is given by
+\begin{align}
+S_{ijk\ell} &= \frac{1}{4} \bigg\{ \oi \oj X_{kij\ell} \left( 1 - \frac{\ok}{\oi + \oj} \right) + X_{\ell ijk} \left( \frac{\oi \oj \ok}{\oi + \oj}\right) \nonumber \\
+%
+& \qquad + \oj \ok X_{ijk\ell} \left( 1 - \frac{3\ok}{\oi + \oj} \right) + \oi \ok X_{jki\ell} \left( 1 - \frac{3\ok}{\oi + \oj} \right) \nonumber \\
+%
+& \qquad + Y_{ij\ell k} \left( \frac{\oi + \oj + \ok}{\oi + \oj} \right) + \frac{\oi Y_{\ell k i j} + \oj Y_{\ell k j i} - \ok Y_{ijk\ell}}{\oi + \oj} \nonumber \\
+%
+& \qquad + m^2 \Big[ B_{kij\ell} - W_{ijk\ell} + 2B_{ijk\ell} + 2B_{jki\ell} \Big] \bigg\} \, ,
+\end{align}
+\begin{align}
+R_{i\ell} &= \frac{1}{4} \bigg\{ \oi \ol X_{i\ell i \ell} \left( 1 - \frac{5 \oi\ol}{\ol^2 - \oi^2} \right) + \oi^2 X_{\ell \ell i i} \left( 2 + \frac{\oi \ol}{\ol^2 - \oi^2} \right) \nonumber \\
+%
+& \qquad + \ol Y_{i \ell \ell i} \left( \frac{4\ol - \oi}{\ol^2 - \oi^2} \right) + Y_{\ell i i \ell} \left( \frac{\oi \ol}{\ol^2 - \oi^2} \right) \nonumber \\
+%
+& \qquad + m^2 \Big[ 6 B_{i\ell i \ell} \frac{\ol^2}{\ol^2 - \oi^2}  - W_{i\ell i \ell} - 2\ol^2 (\oi^2 P_{ii\ell} + Q_{ii\ell} ) \Big] \bigg\} \, ,
+\end{align}
+\begin{align}
+T_{\ell} &= 
+\end{align}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\acknowledgments
+
+This research was enabled in part by support provided by WestGrid (\href{www.westgrid.ca}{www.westgrid.ca}) and Compute Canada (\href{www.computecanada.ca}{www.computecanada.ca}).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{JHEP}
+%\bibliography{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
