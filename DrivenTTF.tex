@@ -124,7 +124,7 @@ Where the forms of X, Y, V, H, B, M, P, and Q are given by
 X_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu e'_i e_j e_k e_\ell \\
 Y_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu e'_i e'_j e_k e'_\ell \\
 V_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu e_i e_j e'_k e_\ell \sec^2 x \\
-H_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu \nu' e'_i e_j e'_k e_\ell \\
+H_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu' e'_i e_j e'_k e_\ell \\
 B_{ij\ell} &= \int^{\pi/2}_0 dx \, \mu \nu e'_i e'_j \int^x_0 dy \, \mu e^2_\ell \\
 M_{ij\ell} &= \int^{\pi/2}_0 dx \, \mu \nu' e'_i e_j \int^x_o dy \, \mu e_\ell^2 \\
 P_{ij\ell} &= \int^{\pi/2}_0 dx \, \mu \nu e_i e_j \int^x_0 dy \, \mu e^2_\ell \\
@@ -171,9 +171,10 @@ To simplify the above expression, we have defined
 Z^{\pm}_{jk} = \oj \ok \left( X_{k\ell ij} - X_{\ell kij} \right) \pm \left( Y_{ij\ell k} - Y_{ijk\ell} \right) \quad \text{and} \quad \tilde Z^{\pm}_{ij} = \oi \oj P_{ij\ell} \pm B_{ij\ell} \, .
 \end{align}
 
-Using integration by parts to remove the derivative from $\nu$ in the definition of $H_{ijk\ell}$, we can show that
+Using integration by parts to remove the derivative from $\nu$ in the definitions of $H_{ijk\ell}$ and $M_{ij\ell}$, we can show that
 \begin{align}
-Z_{ijk\ell} = \oi^2 X_{kij\ell} - Y_{\ell kji} + \ok^2 X_{ijk\ell} - Y_{ij\ell k}  - m^2 \left( B_{kij\ell} + B_{ijk\ell} \right) \, .
+Z_{ijk\ell} &= \oi^2 X_{kij\ell} + \ok^2 X_{ijk\ell} - Y_{ij\ell k}  - Y_{\ell kji}   - m^2 V_{kji\ell} -m^2 V_{ijk\ell} \\
+M_{ij\ell} &= \oi^2 P_{ij\ell} - B_{ij\ell} -m^2 Q_{ij\ell}
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
