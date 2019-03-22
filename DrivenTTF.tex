@@ -146,21 +146,21 @@ where $F_k(z) = \dot c_k \dot z - 2\ok^2 c_k z$, $D_{ij} = \dot c_i \dot c_j + \
 Using the solution $c_i(t) = a_i \cos (\oi t + b_i) = a_i \cos \theta_i$, the source term becomes
 
 \begin{align}
-S_\ell &=\frac{1}{4} \sum_{\substack{i,j,k \\ k \neq \ell}}^\infty \frac{a_i a_j a_k \ok}{\ol^2 - \ok^2} \Big[ Z^-_{jk} (\oi + \oj + 2\ok) \cos (\thi + \thj + \thk) - Z^-_{jk} (\oi + \oj - 2\ok) \cos (\thi + \thj - \thk) \nonumber \\
+S_\ell &=\frac{1}{4} \sum_{\substack{i,j,k \\ k \neq \ell}}^\infty \frac{a_i a_j a_k \ok}{\ol^2 - \ok^2} \Big[ Z^-_{ijk\ell} (\oi + \oj - 2\ok) \cos (\thi + \thj - \thk) - Z^-_{ijk\ell} (\oi + \oj + 2\ok) \cos (\thi + \thj + \thk) - \nonumber \\
 %
-&\qquad + Z^+_{jk} (\oi - \oj - 2\ok) \cos (\thi - \thj - \thk) - Z^+_{jk} (\oi - \oj + 2\ok)  \cos(\thi - \thj + \thk) \Big] \nonumber \\
+&\qquad + Z^+_{ijk\ell} (\oi - \oj + 2\ok)  \cos(\thi - \thj + \thk) - Z^+_{ijk\ell} (\oi - \oj - 2\ok) \cos (\thi - \thj - \thk) \Big] \nonumber \\
 %
 & + \frac{1}{2}\sum_{\substack{i,j,k \\ i \neq j}}^\infty a_i a_j a_k \oj \left( H_{ijk\ell} + m^2 V_{jki\ell} - 2\ok^2 X_{ijk\ell} \right) \Big[ \frac{1}{\oi - \oj} \left( \cos (\thi - \thj - \thk)  + \cos(\thi - \thj + \thk) \right) \nonumber \\
 %
 & \qquad - \frac{1}{\oi + \oj} \left( \cos (\thi + \thj - \thk)  + \cos ( \thi + \thj + \thk) \right) \Big] \nonumber \\
 %
-& - \frac{1}{4} \sum_{i,j,k}^\infty a_i a_j a_k \Big[ \left( 2\oj \ok X_{ijk\ell} - m^2 V_{ijk\ell} \right)\cos(\thi + \thj - \thk) -  \left( 2\oj\ok X_{ijk\ell} - m^2 V_{ijk\ell} \right) \cos(\thi - \thj - \thk) \nonumber \\
+& - \frac{1}{4} \sum_{i,j,k}^\infty a_i a_j a_k \Big[ \left( 2\oj \ok X_{ijk\ell} + m^2 V_{ijk\ell} \right)\cos(\thi + \thj - \thk) -  \left( 2\oj\ok X_{ijk\ell} - m^2 V_{ijk\ell} \right) \cos(\thi - \thj - \thk) \nonumber \\
 %
 & \qquad + \left(2\oj \ok X_{ijk\ell} + m^2 V_{ijk\ell} \right) \cos (\thi - \thj + \thk) - \left( 2\oj\ok X_{ijk\ell} - m^2 V_{ijk\ell} \right) \cos(\thi + \thj + \thk) \Big] \nonumber \\
 %
-& + \frac{1}{4} \sum_{i,j}^\infty a_i a_j a_\ell \ol \Big[ \tilde Z^-_{ij} (\oi + \oj + 2\ol) \cos(\thi + \thj +  \thl) - \tilde Z^-_{ij} (\oi + \oj - 2\ol) \cos (\thi + \thj - \thl) \nonumber \\
+& + \frac{1}{4} \sum_{i,j}^\infty a_i a_j a_\ell \ol \Big[ \tilde Z^-_{ij\ell} (\oi + \oj - 2\ol) \cos (\thi + \thj - \thl) - \tilde Z^-_{ij\ell} (\oi + \oj + 2\ol) \cos(\thi + \thj +  \thl) \nonumber \\
 %
-& \qquad + \tilde Z^+_{ij} (\oi - \oj - 2\ol) \cos( \thi - \thj - \thl) - \tilde Z^+_{ij} (\oi - \oj + 2\ol) \cos(\thi - \thj + \thl) \Big] \nonumber \\
+& \qquad + \tilde Z^+_{ij\ell} (\oi - \oj + 2\ol) \cos(\thi - \thj + \thl)  - \tilde Z^+_{ij\ell} (\oi - \oj - 2\ol) \cos( \thi - \thj - \thl)  \Big] \nonumber \\
 %
 & - \frac{1}{4} \sum_{i,j}^\infty a_i^2 a_j \left( H_{iij\ell} + m^2 V_{jii\ell} - 2\oj^2 X_{iij\ell} \right) \big[ \cos (2\thi - \thj) + \cos (2\thi + \thj) \big] \nonumber \\
 %
@@ -168,7 +168,7 @@ S_\ell &=\frac{1}{4} \sum_{\substack{i,j,k \\ k \neq \ell}}^\infty \frac{a_i a_j
 \end{align} 
 To simplify the above expression, we have defined
 \begin{align}
-Z^{\pm}_{jk} = \oj \ok \left( X_{k\ell ij} - X_{\ell kij} \right) \pm \left( Y_{ij\ell k} - Y_{ijk\ell} \right) \quad \text{and} \quad \tilde Z^{\pm}_{ij} = \oi \oj P_{ij\ell} \pm B_{ij\ell} \, .
+Z^{\pm}_{ijk\ell} = \oi \oj \left( X_{k\ell ij} - X_{\ell kij} \right) \pm \left( Y_{ij\ell k} - Y_{ijk\ell} \right) \quad \text{and} \quad \tilde Z^{\pm}_{ij\ell} = \oi \oj P_{ij\ell} \pm B_{ij\ell} \, .
 \end{align}
 
 Using integration by parts to remove the derivative from $\nu$ in the definitions of $H_{ijk\ell}$ and $M_{ij\ell}$, we can show that
@@ -202,27 +202,15 @@ S_\ell = \underbrace{\sum_{i=0}^\infty \sum_{j=0}^\infty \sum_{k=0}^\infty}_{\oi
 \end{align}
 where
 \begin{align}
-\Omega_{ijk\ell} &= \frac{1}{12} \bigg\{ \oj \ok X_{ijk\ell} \left( \frac{\oi}{\oj + \ok} - \frac{3\ok}{\oi + \oj} - \frac{3\oj}{\oi + \ok} -1 \right) \nonumber \\
+\Omega_{ijk\ell} &= -\frac{1}{12}H_{ijk\ell} \frac{\oj (\oi + \ok +2\oj)}{(\oi + \oj)(\oj + \ok)} - \frac{1}{12} H_{ikj\ell} \frac{\ok (\oi + \oj + 2\ok)}{(\oi + \ok)(\oj + \ok)}- \frac{1}{12} H_{jik\ell} \frac{\oi (\oj + \ok +2\oi)}{(\oi + \oj)(\oi + \ok)} \nonumber \\
 %
-& \qquad + \oi \ok X_{jki\ell} \left( \frac{\oj}{\oi + \ok} - \frac{3\ok}{\oi + \oj} - \frac{3\oi}{\oj + \ok} - 1 \right) \nonumber \\
+& \quad - \frac{m^2}{12} V_{ijk\ell} \left( 1 + \frac{\oj}{\oj + \ok} + \frac{\oi}{\oi + \ok} \right) - \frac{m^2}{12} V_{jki\ell} \left( 1 + \frac{\oj}{\oi + \oj} + \frac{\ok}{\oi + \ok} \right) \nonumber \\
 %
-&\qquad + \oi \oj X_{kij\ell} \left( \frac{\ok}{\oi + \oj} - \frac{3\oi}{\oj + \ok} - \frac{3\oj}{\oi + \ok} -1 \right) \nonumber \\
+& \quad - \frac{m^2}{12} V_{kij\ell} \left( 1 + \frac{\oi}{\oi + \oj} + \frac{\ok}{\oj + \ok} \right)  + \frac{1}{6} \oj \ok X_{ijk\ell} \left( 1 + \frac{\oj}{\oi + \ok} + \frac{\ok}{\oi + \oj} \right) \nonumber \\
 %
-&\qquad - \oi \oj \ok X_{\ell ijk} \left( \frac{1}{\oi + \oj} + \frac{1}{\oj + \ok} + \frac{1}{\oi + \ok} \right) \nonumber \\
+& \quad + \frac{1}{6} \oi \ok X_{jki\ell} \left( 1 + \frac{\oi}{\oj + \ok} + \frac{\ok}{\oi + \oj} \right) + \frac{1}{6} \oi \oj X_{kij\ell} \left( 1 + \frac{\oi}{\oj + \ok} + \frac{\oj}{\oi + \ok} \right) \nonumber \\
 %
-&\qquad  - Y_{ji\ell k} \left( \frac{\ok}{\oi + \oj} + \frac{\oj}{\oi + \ok} + \frac{\oi}{\oj + \ok} - 3 \right) \nonumber \\
-%
-&\qquad + \ok Y_{ijk\ell} \left( \frac{1}{\oi + \oj} + \frac{1}{\oj + \ok} + \frac{1}{\oi + \ok} \right) \nonumber \\
-% 
-& \qquad + \oi Y_{jki\ell} \left( \frac{1}{\oi + \oj} + \frac{1}{\oj + \ok} + \frac{1}{\oi + \ok} \right) \nonumber \\
-%
-& \qquad + \oj Y_{kij\ell} \left( \frac{1}{\oi + \oj} + \frac{1}{\oj + \ok} + \frac{1}{\oi + \ok} \right) \nonumber \\
-%
-&\qquad + m^2 \Big[ 2B_{ijk\ell} \left( \frac{\oj}{\oi + \oj} + \frac{\ok}{\oi + \ok} \right) \nonumber \\
-%
-& \qquad + 2 B_{jki\ell} \left( \frac{\oi}{\oi + \oj} + \frac{\ok}{\oj + \ok} \right) +2 B_{kij\ell} \left( \frac{\oj}{\oj + \ok} + \frac{\oi}{\oi + \ok} \right) \nonumber \\
-%
-&\qquad  + (B_{ijk\ell} - W_{ijk\ell}) + (B_{jki\ell} - W_{jki\ell}) + (B_{kij\ell} - W_{kij\ell}) \Big] \bigg\} \, .
+& \quad - \frac{1}{12} Z^-_{ijk\ell} \frac{\ok}{\oi + \oj} - \frac{1}{12} Z^-_{ikj\ell} \frac{\oj}{\oi + \ok} - \frac{1}{12} Z^-_{jki\ell} \frac{\oi}{\oj + \ok} \, .
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -235,11 +223,17 @@ S_\ell = \sum_{j=0}^\infty \sum_{k=0}^\infty \Gamma_{(j+k+\ell) jk\ell} a_j a_k 
 \end{align}
 where
 \begin{align}
-\Gamma_{ijk\ell} &= \frac{1}{4} \bigg\{ m^2 \left(B_{kij\ell} - W_{ijk\ell}\right) + Y_{ij\ell k} - (1+m^2) B_{ijk\ell} \left(\frac{\oj}{\oi - \oj} \right) \nonumber \\
+\Gamma_{ijk\ell} &=\frac{1}{8} X_{\ell ijk} \left( \oi^2 + \oj^2 + \ok^2 \right) - \frac{1}{8} \oi^2 X_{ijk\ell} - \frac{1}{8} \oj^2 X_{jki\ell} - \frac{1}{8} \ok^2 X_{kij\ell} \nonumber \\
 %
-& \qquad -3\ok^2 X_{jik\ell} \left( \frac{\oi}{\oi - \oj}\right) + 3 \ok^2 X_{ijk\ell} \left( \frac{\oj}{\oi - \oj} \right) \nonumber \\
+& \quad + \frac{1}{2} \oj \ok X_{ijk\ell} \left( 1 - \frac{\ok}{\oi - \oj} - \frac{\oj}{\oi - \ok} \right) + \frac{1}{2} \oi \ok X_{jki\ell} \left( 1 - \frac{\oi}{\oj - \ok} - \frac{\ok}{\oj-\oi} \right) \nonumber \\
 %
-& \qquad + Y_{\ell kij} \left( \frac{\oi}{\oi - \oj} \right) - Y_{\ell kji} \left( \frac{\oj}{\oi - \oj} \right) \bigg\} \, .
+& \quad + \frac{1}{2} \oi \oj X_{kij\ell} \left( 1 - \frac{\oj}{\ok - \oi} - \frac{\oi}{\ok - \oj} \right) - \frac{m^2}{4} V_{jki\ell} \left(1 - \frac{\oj}{\oi - \oj} - \frac{\ok}{\oi - \ok} \right) \nonumber \\
+%
+& \quad - \frac{m^2}{4} V_{kij\ell} \left( 1 - \frac{\ok}{\oj - \ok} - \frac{\oi}{\oj - \oi} \right) - \frac{m^2}{4} V_{ijk\ell} \left( 1 - \frac{\oi}{\ok - \oi} - \frac{\oj}{\ok - \oj} \right) \nonumber \\
+%
+& \quad + \frac{1}{4} H_{ijk\ell} \frac{\oj (\oi + \ok - 2\oj)}{(\oi - \oj)(\ok - \oj)} + \frac{1}{4} H_{ikj\ell} \frac{\ok (\oi + \oj - 2\ok)}{(\oi - \ok)(\oj - \ok)} \nonumber \\
+%
+& \quad + \frac{1}{4} H_{jik\ell} \frac{\oi (\oj + \ok - 2\oi)}{(\oj - \oi)(\ok - \oi)} \, .
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
