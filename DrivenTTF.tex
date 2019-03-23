@@ -210,7 +210,7 @@ where
 %
 & \quad + \frac{1}{6} \oi \ok X_{jki\ell} \left( 1 + \frac{\oi}{\oj + \ok} + \frac{\ok}{\oi + \oj} \right) + \frac{1}{6} \oi \oj X_{kij\ell} \left( 1 + \frac{\oi}{\oj + \ok} + \frac{\oj}{\oi + \ok} \right) \nonumber \\
 %
-& \quad - \frac{1}{12} Z^-_{ijk\ell} \frac{\ok}{\oi + \oj} - \frac{1}{12} Z^-_{ikj\ell} \frac{\oj}{\oi + \ok} - \frac{1}{12} Z^-_{jki\ell} \frac{\oi}{\oj + \ok} \, .
+& \quad - \frac{1}{12} Z^-_{ijk\ell} \left( \frac{\ok}{\oi + \oj} \right) - \frac{1}{12} Z^-_{ikj\ell} \left( \frac{\oj}{\oi + \ok} \right) - \frac{1}{12} Z^-_{jki\ell}  \left( \frac{\oi}{\oj + \ok} \right) \, .
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -223,17 +223,15 @@ S_\ell = \sum_{j=0}^\infty \sum_{k=0}^\infty \Gamma_{(j+k+\ell) jk\ell} a_j a_k 
 \end{align}
 where
 \begin{align}
-\Gamma_{ijk\ell} &=\frac{1}{8} X_{\ell ijk} \left( \oi^2 + \oj^2 + \ok^2 \right) - \frac{1}{8} \oi^2 X_{ijk\ell} - \frac{1}{8} \oj^2 X_{jki\ell} - \frac{1}{8} \ok^2 X_{kij\ell} \nonumber \\
+\Gamma_{ijk\ell} &= \frac{1}{4} H_{ijk\ell} \frac{\oj (\oi + \ok - 2\oj)}{(\oi - \oj)(\ok - \oj)} + \frac{1}{4} H_{ikj\ell} \frac{\ok (\oi + \oj - 2\ok)}{(\oi - \ok)(\oj - \ok)} + \frac{1}{4} H_{jik\ell} \frac{\oi (\oj + \ok - 2\oi)}{(\oj - \oi)(\ok - \oi)} \nonumber \\
+% 
+& \quad -\frac{1}{2} \oj \ok X_{ijk\ell} \left( \frac{\ok}{\oi - \oj} + \frac{\oj}{\oi - \ok} - 1\right) + \frac{1}{2} \oi \ok X_{jki\ell} \left( \frac{\ok}{\oi - \oj} + \frac{\oi}{\oj + \ok} - 1 \right) \nonumber \\
 %
-& \quad + \frac{1}{2} \oj \ok X_{ijk\ell} \left( 1 - \frac{\ok}{\oi - \oj} - \frac{\oj}{\oi - \ok} \right) + \frac{1}{2} \oi \ok X_{jki\ell} \left( 1 - \frac{\oi}{\oj - \ok} - \frac{\ok}{\oj-\oi} \right) \nonumber \\
+& \quad + \frac{1}{2} \oi \oj X_{kij\ell} \left( \frac{\oj}{\oi - \ok} + \frac{\oi}{\oj + \ok} -1 \right) + \frac{m^2}{4} V_{jki\ell} \left( \frac{\oj}{\oi - \oj} + \frac{\ok}{\oi - \ok} -1\right) \nonumber \\
 %
-& \quad + \frac{1}{2} \oi \oj X_{kij\ell} \left( 1 - \frac{\oj}{\ok - \oi} - \frac{\oi}{\ok - \oj} \right) - \frac{m^2}{4} V_{jki\ell} \left(1 - \frac{\oj}{\oi - \oj} - \frac{\ok}{\oi - \ok} \right) \nonumber \\
+& \quad - \frac{m^2}{4} V_{kij\ell} \left( \frac{\oi}{\oi - \oj} + \frac{\ok}{\oj + \ok} + 1\right) - \frac{m^2}{4} V_{ijk\ell} \left( \frac{\oi}{\oi - \ok} + \frac{\oj}{\oj + \ok} + 1 \right) \nonumber \\
 %
-& \quad - \frac{m^2}{4} V_{kij\ell} \left( 1 - \frac{\ok}{\oj - \ok} - \frac{\oi}{\oj - \oi} \right) - \frac{m^2}{4} V_{ijk\ell} \left( 1 - \frac{\oi}{\ok - \oi} - \frac{\oj}{\ok - \oj} \right) \nonumber \\
-%
-& \quad + \frac{1}{4} H_{ijk\ell} \frac{\oj (\oi + \ok - 2\oj)}{(\oi - \oj)(\ok - \oj)} + \frac{1}{4} H_{ikj\ell} \frac{\ok (\oi + \oj - 2\ok)}{(\oi - \ok)(\oj - \ok)} \nonumber \\
-%
-& \quad + \frac{1}{4} H_{jik\ell} \frac{\oi (\oj + \ok - 2\oi)}{(\oj - \oi)(\ok - \oi)} \, .
+& \quad + \frac{1}{4} Z^-_{kji\ell} \left( \frac{\oi}{\oj + \ok}\right) - \frac{1}{4} Z^+_{ijk\ell} \left( \frac{\ok}{\oi - \oj} \right) - \frac{1}{4} Z^+_{jki\ell} \left( \frac{\oj}{\oi - \ok}\right) \, .
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -247,20 +245,18 @@ S_\ell &= T_\ell a^3_\ell \cos (\thl + \thl - \thl) + \sum_{i \neq \ell}^\infty 
 \end{align}
 where each of the coefficients is given by
 \begin{align}
-S_{ijk\ell} &= \frac{1}{4} \bigg\{ \oi \oj X_{kij\ell} \left( 1 - \frac{\ok}{\oi + \oj} \right) + X_{\ell ijk} \left( \frac{\oi \oj \ok}{\oi + \oj}\right) \nonumber \\
+S_{ijk\ell} &= - \frac{1}{4} H_{kij\ell} \frac{\oi (\oj - \ok + 2\oi)}{(\oi - \ok)(\oi + \oj)} -\frac{1}{4} H_{ijk\ell} \frac{\oj (\oi - \ok + 2\oj)}{(\oj - \ok)(\oi + \oj)} - \frac{1}{4} H_{jki\ell} \frac{\ok ( \oi + \oj - 2\ok)}{(\oi - \ok)(\oj - \ok)} \nonumber \\
 %
-& \qquad + \oj \ok X_{ijk\ell} \left( 1 - \frac{3\ok}{\oi + \oj} \right) + \oi \ok X_{jki\ell} \left( 1 - \frac{3\ok}{\oi + \oj} \right) \nonumber \\
+& \quad - \frac{1}{2} \oj \ok X_{ijk\ell} \left( \frac{\oj}{\oi - \ok} - \frac{\ok}{\oi + \oj} + 1 \right) - \frac{1}{2} \oi \ok X_{jki\ell} \left( \frac{\oi}{\oj - \ok} - \frac{\ok}{\oi + \oj} + 1 \right) \nonumber \\
 %
-& \qquad + Y_{ij\ell k} \left( \frac{\oi + \oj + \ok}{\oi + \oj} \right) + \frac{\oi Y_{\ell k i j} + \oj Y_{\ell k j i} - \ok Y_{ijk\ell}}{\oi + \oj} \nonumber \\
+& \quad + \frac{1}{2} \oi \oj X_{kij\ell} \left( \frac{\oi}{\oj - \ok} + \frac{\oj}{\oi - \ok} + 1 \right) - \frac{m^2}{4} V_{ijk\ell} \left( \frac{\oi}{\oi - \ok} + \frac{\oj}{\oj - \ok} + 1\right) \nonumber \\
 %
-& \qquad + m^2 \Big[ B_{kij\ell} - W_{ijk\ell} + 2B_{ijk\ell} + 2B_{jki\ell} \Big] \bigg\} \, ,
+& \quad + \frac{m^2}{4} V_{jki\ell} \left( \frac{\ok}{\oi - \ok} - \frac{\oj}{\oi + \oj} - 1 \right) + \frac{m^2}{4} V_{kij\ell} \left( \frac{\ok}{\oj - \ok} - \frac{\oi}{\oi + \oj} - 1 \right) \nonumber \\
+%
+& \quad + \frac{1}{4}  Z^-_{ijk\ell} \left( \frac{\ok}{\oi + \oj}\right)  + \frac{1}{4}  Z^+_{ikj\ell} \left( \frac{\oj}{\oi - \ok}\right) + \frac{1}{4} Z^+_{jki\ell} \left( \frac{\oi}{\oj - \ok} \right) \, .
 \end{align}
 \begin{align}
-R_{i\ell} &= \frac{1}{4} \bigg\{ \oi \ol X_{i\ell i \ell} \left( 1 - \frac{5 \oi\ol}{\ol^2 - \oi^2} \right) + \oi^2 X_{\ell \ell i i} \left( 2 + \frac{\oi \ol}{\ol^2 - \oi^2} \right) \nonumber \\
-%
-& \qquad + \ol Y_{i \ell \ell i} \left( \frac{4\ol - \oi}{\ol^2 - \oi^2} \right) + Y_{\ell i i \ell} \left( \frac{\oi \ol}{\ol^2 - \oi^2} \right) \nonumber \\
-%
-& \qquad + m^2 \Big[ 6 B_{i\ell i \ell} \frac{\ol^2}{\ol^2 - \oi^2}  - W_{i\ell i \ell} - 2\ol^2 (\oi^2 P_{ii\ell} + Q_{ii\ell} ) \Big] \bigg\} \, ,
+R_{i\ell} &= 
 \end{align}
 \begin{align}
 T_{\ell} &= 
