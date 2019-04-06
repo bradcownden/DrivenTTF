@@ -28,6 +28,7 @@
 \newcommand{\thl}{\theta_\ell}
 \newcommand{\mc}{\mathcal}
 \newcommand{\jm}{\ensuremath{j_{max}}}
+\newcommand{\ob}{\overline{\omega}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -162,6 +163,7 @@ where $F_k(z) = \dot c_k \dot z - 2\ok^2 c_k z$, $D_{ij} = \dot c_i \dot c_j + \
 Using the solution $c_i(t) = a_i \cos (\oi t + b_i) = a_i \cos \theta_i$, the source term becomes
 
 \begin{align}
+\label{general source}
 S_\ell &=\frac{1}{4} \sum_{\substack{i,j,k \\ k \neq \ell}}^\infty \frac{a_i a_j a_k \ok}{\ol^2 - \ok^2} \Big[ Z^-_{ijk\ell} (\oi + \oj - 2\ok) \cos (\thi + \thj - \thk) - Z^-_{ijk\ell} (\oi + \oj + 2\ok) \cos (\thi + \thj + \thk) - \nonumber \\
 %
 &\qquad + Z^+_{ijk\ell} (\oi - \oj + 2\ok)  \cos(\thi - \thj + \thk) - Z^+_{ijk\ell} (\oi - \oj - 2\ok) \cos (\thi - \thj - \thk) \Big] \nonumber \\
@@ -295,11 +297,43 @@ T_{\ell} &= \frac{1}{2} \ol^2 \left( X_{\ell \ell \ell \ell} + 4 B_{\ell \ell \e
 
 \section{Resonances From Non-normalizable Modes}
 
+We now consider the case when at least one of the $e_i(x), e_j(x), e_k(x)$ is a non-normalizable mode. Since the boundary condition has been set to be a single non-normalizable mode, any non-normalizable modes in the source term must exactly cancel; therefore, at least two of the modes must be non-normalizable. This assumption breaks some of the symmetries that contributed to the previous expressions for resonance channels, and so each resonance must be re-examined starting from the source expression \eqref{general source}.
+
 \subsection{Two General, Equal-frequency Modes}
 
-\subsubsection{$m^2 = 0$}
+As a first case, let us assume that the two non-normalizable modes have equal, constant frequencies $\ob$ that is equal to the driving frequency of the boundary value. We are projecting onto a basis of normalizable modes, and so $\ol = 2\ell + \Delta^+$. We can now choose two of the remaining modes to be non-normalizable and the final mode to be normalizable.
 
-\subsubsection{$m^2 = 1$}
+\subsubsection{$(+++)$}
+
+Consider the resonance condition $\oi + \oi + \ok = \ol$. Below we choose $\omega_i$ to be the frequency of the normalizable mode, with the other choices following immediately under $\oi \to \oj$ or $\oi \to \ok$. These resonant contributions are of the form
+\begin{align}
+S_\ell = \sum_{\substack{i = 0 \\ \oi \neq \ob \\ \ol \geq 2\ob}}^\infty \overline{\Omega}_{i{\ob}{\ob}\ell} \, a_i a_{\ob} a_{\ob} \cos \left(\thi + \theta_{\ob} + \theta_{\ob} \right) + \ldots
+\end{align}
+where
+\begin{align}
+\overline{\Omega}_{ijk\ell} &= -\frac{1}{8} Z^{-}_{ijk\ell} \left( \frac{\ok}{\oi + \oj} \right) - \frac{1}{8} Z^{-}_{ikj\ell} \left( \frac{\oj}{\oi + \ok} \right) + \frac{1}{2} \oj \ok X_{ijk\ell} - \frac{m^2}{8} \left( V_{ijk\ell} + V_{ikj\ell} \right) \nonumber \\
+%
+& \quad -\frac{1}{4} H_{ijk\ell} \left( \frac{\oj}{\oi + \oj} \right) - \frac{1}{4} H_{ikj\ell} \left( \frac{\ok}{\oi + \ok} \right) - \frac{1}{2} \oj \ok X_{ijk\ell} \left( \frac{\ok}{\oi + \oj} + \frac{\oj}{\oi + \ok} \right) \nonumber \\
+%
+& \quad - \frac{m^2}{4} V_{jki\ell} \left( \frac{\oj}{\oi + \oj} + \frac{\ok}{\oi + \ok} \right) \, .
+\end{align}
+
+\subsubsection{$(+ - - )$}
+
+Next, consider the resonance condition $\oi - \oj - \ok = \ol$. When we choose either $\oj$ or $\ok$ to be normalizable, we find, for example, that $\oi - \oj - \ok = \ob - \ob - \ok =  \ol$. However, we have chosen all frequencies to be strictly positive, and therefore there are no possible solutions. Next, we choose $\oi$ to be the frequency of a normalizable mode, with $\oj = \ok = \ob$ being non-normalizable. The resonant contribution takes the form
+\begin{align}
+S_\ell = \sum_{\substack{i = 0 \\ \oi, \ol \, \neq \, \ob}}^\infty \overline{\Gamma}^{(i)}_{i {\ob}{\ob} \ell} \, a_i a_{\ob} a_{\ob} \cos \left(\thi - \theta_{\ob} - \theta_{\ob} \right) + \ldots
+\end{align}
+where
+\begin{align}
+\overline{\Gamma}^{(i)}_{ijk\ell} &= -\frac{1}{8} Z^+_{ijk\ell} \left( \frac{\ok}{\oi - \oj} \right) - \frac{1}{8} Z^+_{ikj\ell} \left( \frac{\oj}{\oi - \ok} \right) + \frac{1}{4} H_{ijk\ell} \left( \frac{\oj}{\oi - \oj} \right) + \frac{1}{4} H_{ikj\ell} \left( \frac{\ok}{\oi - \ok} \right) \nonumber \\
+%
+& \quad + \frac{m^2}{4}V_{jki\ell} \left( \frac{\oj}{\oi - \oj} + \frac{\ok}{\oi - \ok} \right) - \frac{m^2}{2} \left( V_{ijk\ell} + V_{ikj\ell} \right) \nonumber \\
+%
+& \quad - \frac{1}{2} \oj \ok X_{ijk\ell} \left( \frac{\ok}{\oi - \oj} + \frac{\oj}{\oi - \ok} - 1 \right) \, .
+\end{align}
+
+\subsubsection{$(++-)$}
 
 \subsection{Special Values of Non-normalizable Frequencies}
 
