@@ -90,6 +90,22 @@ from permuting $i, j$ above and subtracting to give
 \frac{\left[ \mu (e'_i e_j \oj^2 - e_i e'_j \oi^2 ) \right]'}{(\oj^2 - \oi^2)} = \mu m^2 \sec^2 x e_i e_j + \mu e'_i e'_j \, .
 \end{align}
 
+The basis functions $e_j (x)$ are the solutions to the eigenvalue equation
+\begin{align}
+\hat L e_j(x) = \omega^2_j e_j(x) ,
+\end{align}
+which, for massive scalars, are (up to some normalization)
+\begin{align}
+\label{general basis}
+e_j(x) = \left( \cos(x) \right)^{\Delta_+} {_2F_1} \left(\frac{\Delta_+ + \omega}{2}, \frac{\Delta_+ - \omega}{2}, d/2 ; \sin^2 (x) \right) \, ,
+\end{align}
+when $\omega$ is arbitrary. However, when the frequency is equal to the resonant frequency $\omega_j = \Delta_+ + 2j$, \eqref{general basis} separates into normalizable and non-normalizable solutions
+\begin{align}
+e_j(x) &= C_1 \left( \cos(x) \right)^{\Delta_+} {_2F_1}\left(\frac{\Delta_+ + \omega)}{2}, \frac{\Delta_+ - \omega}{2}, \Delta_+ -d/2 + 1 ; \cos^2 (x) \right) \nonumber \\
+& + C_2 \left( \cos(x) \right)^{\Delta_-} {_2F_1} \left(\frac{\Delta_- + \omega)}{2}, \frac{\Delta_- - \omega}{2}, \Delta_- -d/2 + 1 ; \cos^2 (x) \right) \, .
+\end{align}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -180,8 +196,8 @@ M_{ij\ell} &= \oi^2 P_{ij\ell} - B_{ij\ell} -m^2 Q_{ij\ell}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Resonances}
-After time-averaging, resonant contributions come from the set of conditions
+\section{Resonances From Normalizable Solutions}
+Consider the case where each of the basis functions are given by normalizable solutions. After time-averaging, resonant contributions come from the set of conditions
 \begin{align}
 \oi \pm \oj \pm \ok = \pm \ol \,
 \end{align}
@@ -225,7 +241,7 @@ S_\ell = \sum_{j=0}^\infty \sum_{k=0}^\infty \Gamma_{(j+k+\ell) jk\ell} a_j a_k 
 where
 \begin{align}
 \label{gamma}
-\Gamma_{ijk\ell} &= \frac{1}{4} H_{ijk\ell} \frac{\oj (\oi + \ok - 2\oj)}{(\oi - \oj)(\ok - \oj)} + \frac{1}{4} H_{ikj\ell} \frac{\ok (\oi + \oj - 2\ok)}{(\oi - \ok)(\oj - \ok)} + \frac{1}{4} H_{jik\ell} \frac{\oi (\oj + \ok - 2\oi)}{(\oj - \oi)(\ok - \oi)} \nonumber \\
+\Gamma_{ijk\ell} &= \frac{1}{4} H_{ijk\ell} \frac{\oj (\ok - \oi + 2\oj)}{(\oi - \oj)(\oj + \ok)} + \frac{1}{4} H_{jki\ell} \frac{\ok (\oj - \oi + 2\ok)}{(\oi - \ok)(\oj + \ok)} + \frac{1}{4} H_{kij\ell} \frac{\oi (\oj + \ok - 2\oi)}{(\oi - \oj)(\oi - \ok)} \nonumber \\
 % 
 & \quad -\frac{1}{2} \oj \ok X_{ijk\ell} \left( \frac{\ok}{\oi - \oj} + \frac{\oj}{\oi - \ok} - 1\right) + \frac{1}{2} \oi \ok X_{jki\ell} \left( \frac{\ok}{\oi - \oj} + \frac{\oi}{\oj + \ok} - 1 \right) \nonumber \\
 %
@@ -277,7 +293,7 @@ T_{\ell} &= \frac{1}{2} \ol^2 \left( X_{\ell \ell \ell \ell} + 4 B_{\ell \ell \e
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Contributions From Non-normalizable Modes}
+\section{Resonances From Non-normalizable Modes}
 
 \subsection{Two General, Equal-frequency Modes}
 
