@@ -7,8 +7,8 @@
 #include <gsl/gsl_deriv.h>
 
 #define pi M_PI
-#define d 3.0
-#define m 2.0
+#define d 4.0
+#define m 0.0
 #define Delta ((d + sqrt(pow(d, 2.0) + 4. * pow(m, 2.))) / 2.)
 
 
@@ -28,15 +28,31 @@ double nn(double x, void *p) {
   // Compute a, b, c out of delta and w
   double a = (delta + w) / 2.;
   double b = (delta - w) / 2.;
-  double c = d / 2.;
 
   // Return the NN basis function
-  double f = pow(cos(x), delta) * gsl_sf_hyperg_2F1(a, b, c, pow(sin(x), 2.));
+  double f = pow(cos(x), delta) * gsl_sf_hyperg_2F1(a, b, d / 2., pow(sin(x), 2.));
   return f;
-} 
+}
+
+// Integral weight function
+double nnint(double x, void *p) {
+  // Read parameters
+  nn_params &params = *reinterpret_cast<nn_params *>(p);
+  double w = params.w;
+  double delta = params.delta;
+  // Compute the arguments
+  double a = (delta + w) / 2.;
+  double b = (delta - w) / 2.;
+
+  // Return the integrand
+  double f = pow(cos(x), delta) * pow(tan(x), d - 1.) * gsl_sf_hyperg_2F1(a, b, d / 2., pow(sin(x), 2.));
+  return f;
+}
+									 
   
 int main (void) {
 
+  /*
   // Test finding the derivative of a function at a point
   printf("Derivatives of NN basis functions at various points:\n");
 
@@ -59,9 +75,18 @@ int main (void) {
       printf("%.12f\n", result);
     }
   }
+  */
 
-
-
+  gsl_function F;
+  double result, error;
+  // Load parameters for NN modes
+  nn_params params;
+  params.w = M_PI / 2.;
+  params.delta = Delta;
+  // Set function with params
+  F.function = &nnint;
+  F.params = reinterpret_cast<void *>(&params);
+  
   int npts = 3;
   double pts[npts];
   pts[0] = 0.;
