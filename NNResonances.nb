@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     41278,       1153]
-NotebookOptionsPosition[     40381,       1121]
-NotebookOutlinePosition[     40737,       1137]
-CellTagsIndexPosition[     40694,       1134]
+NotebookDataLength[     41433,       1175]
+NotebookOptionsPosition[     40578,       1144]
+NotebookOutlinePosition[     40935,       1160]
+CellTagsIndexPosition[     40892,       1157]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1069,58 +1069,81 @@ Cell[BoxData[
    3.7641755259919233`*^9}, {3.764175741242498*^9, 3.764175803420519*^9}, {
    3.764175883221478*^9, 3.7641759045410223`*^9}}],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
  RowBox[{"Tbar", "[", 
   RowBox[{"Pi", ",", "0"}], "]"}]], "Input",
  CellChangeTimes->{{3.764175922461329*^9, 3.76417592930857*^9}}],
 
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NIntegrate", "::", "slwcon"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Numerical integration converging too slowly; suspect one \
-of the following: singularity, value of the integration is 0, highly \
-oscillatory integrand, or WorkingPrecision too small. \\!\\(\\*ButtonBox[\\\"\
-\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/NIntegrate/slwcon\\\", ButtonNote -> \
-\\\"NIntegrate::slwcon\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.764175930948826*^9, 3.76417601099572*^9, 
-  3.764176089197813*^9}],
+Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"NIntegrate", "::", "ncvb"}], "MessageName"], 
+ RowBox[{"Plot3D", "[", 
   RowBox[{
-  ":", " "}], "\<\"NIntegrate failed to converge to prescribed accuracy after \
-\[NoBreak]\\!\\(\\*RowBox[{\\\"18\\\"}]\\)\[NoBreak] recursive bisections in \
-\[NoBreak]\\!\\(\\*RowBox[{\\\"x\\\"}]\\)\[NoBreak] near \
-\[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"x\\\", \\\",\\\", \
-\\\"y\\\"}], \\\"}\\\"}]\\)\[NoBreak] = \[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\", \
-RowBox[{\\\"0.\
-99999998837997745045544508276708821695177853428049274953082203865`65.\
-954589770191\\\", \\\",\\\", \\\"0.46103090020146065`\\\"}], \\\"}\\\"}]\\)\
-\[NoBreak]. NIntegrate obtained \
-\[NoBreak]\\!\\(\\*RowBox[{\\\"0.15033129781090235`\\\"}]\\)\[NoBreak] and \
-\[NoBreak]\\!\\(\\*RowBox[{\\\"0.00004732247544724467`\\\"}]\\)\[NoBreak] for \
-the integral and error estimates. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/NIntegrate/ncvb\\\", \
-ButtonNote -> \\\"NIntegrate::ncvb\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.764175930948826*^9, 3.76417601099572*^9, 
-  3.7641760893507643`*^9}],
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"Tan", "[", "x", "]"}], ")"}], "^", 
+     RowBox[{"(", 
+      RowBox[{"d", "-", "1"}], ")"}]}], 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"Cos", "[", "x", "]"}], ")"}], "^", "Dpl"}], " ", 
+       RowBox[{"Hypergeometric2F1", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"Dpl", " ", "+", " ", "w"}], ")"}], "/", "2"}], ",", " ", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"Dpl", "-", "w"}], ")"}], "/", "2"}], ",", " ", 
+         RowBox[{"d", "/", "2"}], ",", " ", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"Sin", "[", "x", "]"}], ")"}], "^", "2"}]}], "]"}]}], 
+      ")"}], "^", "2"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"w", ",", "0", ",", 
+     RowBox[{"2", "Pi"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"0.9", "*", 
+      RowBox[{"Pi", "/", "2"}]}], ",", 
+     RowBox[{"Pi", "/", "2"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.764180310750011*^9, 3.7641804365675163`*^9}, {
+  3.764180471601898*^9, 3.764180477880101*^9}, {3.764199113948204*^9, 
+  3.764199115978136*^9}}],
 
-Cell[BoxData["3.0886009722208527`"], "Output",
- CellChangeTimes->{3.7641759426471643`*^9, 3.7641760226539373`*^9, 
-  3.764176100862308*^9}]
+Cell[BoxData[
+ Graphics3DBox[{},
+  Axes->True,
+  AxesLabel->{None, None, None},
+  BoxRatios->{1, 1, 0.4},
+  DisplayFunction->Identity,
+  FaceGridsStyle->Automatic,
+  ImageSize->{294.7035133470214, 279.4183962802844},
+  Method->{"DefaultBoundaryStyle" -> Directive[
+      GrayLevel[0.3]], "RotationControl" -> "Globe"},
+  PlotRange->
+   NCache[{{0, 2 Pi}, {1.413716694115407, Rational[1, 2] Pi}, {0., 0.}}, {{
+     0, 6.283185307179586}, {1.413716694115407, 1.5707963267948966`}, {0., 
+     0.}}],
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02], 
+    Scaled[0.02]},
+  Ticks->{Automatic, Automatic, Automatic},
+  ViewPoint->{0.06249527417229583, -3.3119096949423907`, 0.6909041273958779},
+  ViewVertical->{0., 0., 1.}]], "Output",
+ CellChangeTimes->{3.7641803682849617`*^9, 3.764180402666333*^9, 
+  3.764180437302341*^9, 3.76418048101178*^9, 3.7641991166962137`*^9}]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{645, 737},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowMargins->{{93, Automatic}, {1, Automatic}},
 FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
 2015)",
 StyleDefinitions->"Default.nb"
@@ -1148,11 +1171,10 @@ Cell[13214, 367, 1758, 51, 131, "Input"],
 Cell[14975, 420, 14450, 403, 896, "Input"],
 Cell[29428, 825, 2547, 68, 165, "Input"],
 Cell[31978, 895, 6258, 174, 250, "Input"],
+Cell[38239, 1071, 146, 3, 28, "Input"],
 Cell[CellGroupData[{
-Cell[38261, 1073, 146, 3, 28, "Input"],
-Cell[38410, 1078, 624, 12, 60, "Message"],
-Cell[39037, 1092, 1174, 21, 94, "Message"],
-Cell[40214, 1115, 139, 2, 28, "Output"]
+Cell[38410, 1078, 1262, 38, 80, "Input"],
+Cell[39675, 1118, 875, 22, 294, "Output"]
 }, Open  ]]
 }, Open  ]]
 }
