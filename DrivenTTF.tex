@@ -93,19 +93,18 @@ from permuting $i, j$ above and subtracting to give
 
 The basis functions $e_j (x)$ are the solutions to the eigenvalue equation
 \begin{align}
-\hat L e_j(x) = \omega^2_j e_j(x) ,
+\hat L e_j(x) = \omega^2_j e_j(x) .
 \end{align}
-which, for massive scalars, are (up to some normalization)
+When considering normalizable solutions only, the basis functions become
+\begin{align}
+e_j(x) &= k_j \left( \cos(x) \right)^{\Delta^+} P_{j}^{(d/2 - 1, \Delta^+ - d/2)} \left( \cos (2x) \right) \\
+k_j &= 2 \sqrt{\frac{(j + \Delta^+ /2) \Gamma(j+1) \Gamma(j+\Delta^+)}{\Gamma(j+d/2) \Gamma(j + \Delta^+ - d/2 + 1)}} \, ,
+\end{align} 
+with eigenvalues $\omega_j = 2j + \Delta^+$, $j \in \mathbb{Z}^*$, and $\Delta^+$ as the positive root of $\Delta ( \Delta - d ) = m^2$. On the other hand, for non-normalizable solutions with arbitrary frequency, the basis functions are
 \begin{align}
 \label{general basis}
-e_j(x) = \left( \cos(x) \right)^{\Delta_+} {_2F_1} \left(\frac{\Delta_+ + \omega}{2}, \frac{\Delta_+ - \omega}{2}, d/2 ; \sin^2 (x) \right) \, ,
+E_\omega (x) =  \left( \cos(x) \right)^{\Delta_+} {_2F_1} \left(\frac{\Delta_+ + \omega}{2}, \frac{\Delta_+ - \omega}{2}, d/2 ; \sin^2 (x) \right) \, .
 \end{align}
-when $\omega$ is arbitrary. However, when the frequency is equal to the resonant frequency $\omega_j = \Delta_+ + 2j$, \eqref{general basis} separates into normalizable and non-normalizable solutions
-\begin{align}
-e_j(x) &= C_1 \left( \cos(x) \right)^{\Delta_+} {_2F_1}\left(\frac{\Delta_+ + \omega)}{2}, \frac{\Delta_+ - \omega}{2}, \Delta_+ -d/2 + 1 ; \cos^2 (x) \right) \nonumber \\
-& + C_2 \left( \cos(x) \right)^{\Delta_-} {_2F_1} \left(\frac{\Delta_- + \omega)}{2}, \frac{\Delta_- - \omega}{2}, \Delta_- -d/2 + 1 ; \cos^2 (x) \right) \, .
-\end{align}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -326,9 +325,28 @@ after expanding out $Z^{\pm}_{ijk\ell}$, $H_{ijk\ell}$, $\tilde{Z}^{\pm}_{\ij\el
 
 \subsection{Special Values of Non-normalizable Frequencies}
 
-\subsubsection{Differ by an integer}
+\subsubsection{Add to an integer}
 
-\subsubsection{Resonant Values}
+\section{Examining a Special Case For $m^2$}
+
+Returning to the solutions of the eigenvalue equation $\hat L e_j(x) = \omega^2_j e_j(x)$, it has so far been implicit that the the value of $\sqrt{d^2 + 4m^2}$ is taken to be both non-integer and greater than two. However, the Breitenholmer-Freeman bound allows for the existence of negative mass-squared, i.e. tachyonic, scalar fields in AdS$_{d+1}$, provided that $d^2 + 4m^2 \geq 0$. Let us now consider a class of solutions that include a tachyonic scalar: when $\sqrt{d^2 + 4m^2} \in \mathbb{Z}^*$. 
+
+The general solution in this case can be written as the sum \cite{hep-th/9805171}
+\begin{align}
+\Psi(x) = C^{(+)} \Phi^{(+)} + C^{(-)} \Phi^{(-)}
+\end{align}
+where
+\begin{align}
+\Phi^{(+)} &= \left( \cos (x) \right)^{\Delta^+} {_2 F_1}\left( \frac{\Delta^+ + \omega}{2}, \frac{\Delta^+ - \omega}{2}, 1 + \frac{1}{2} \sqrt{d^2 + 4m^2} \, ; \cos^2 x \right) \, ,
+\end{align}
+and the form of $\Phi^{(-)}$ depends on the value of $\sqrt{d^2 + 4m^2}$. When $4m^2 = -d^2$, we have
+\begin{align}
+\Phi^{(-)} &= \text{equation (43) of hep-th/9805171}
+\end{align}
+while for $\sqrt{d^2 + 4m^2} \in \mathbb{Z}^+$,
+\begin{align}
+\Phi^{(-)} &= \text{equation (44) of the same.}
+\end{align}
 
 \subsection{Boundary Condition is a Superposition/Fourier Integral of Non-normalizable Modes}
 
