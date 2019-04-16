@@ -22,6 +22,8 @@
 \newcommand{\oj}{\omega_j}
 \newcommand{\ok}{\omega_k}
 \newcommand{\ol}{\omega_\ell}
+\newcommand{\oone}{\omega_1}
+\newcommand{\otwo}{\omega_2}
 \newcommand{\thi}{\theta_i}
 \newcommand{\thj}{\theta_j}
 \newcommand{\thk}{\theta_k}
@@ -321,34 +323,45 @@ Collecting the appropriate terms in \eqref{general source}, and evaluating the e
 \end{align}
 after expanding out $Z^{\pm}_{ijk\ell}$, $H_{ijk\ell}$, $\tilde{Z}^{\pm}_{\ij\ell}$, and $M_{ij\ell}$.
 
-
-
 \subsection{Special Values of Non-normalizable Frequencies}
+
+Focus on non-arbitrary values of the non-normalizable frequencies.
 
 \subsubsection{Add to an integer}
 
-\section{Examining a Special Case For $m^2$}
+Choose two of the modes to be non-normalizable with frequencies $\omega_1$ and $\omega_2$ that add to give an integer: $\omega_1 + \omega_2 = 2n$ where $n = 1, 2, 3, \ldots$ (note that the $n = 0$ case means that both $\omega_1$ and $\omega_2$ would need to be zero by the positive-frequency requirement and so would not contribute). Keeping the values as general as possible, the difference of the frequencies will not necessarily be an integer. Once again, consider each channel and determine the conditions for resonance.
+\begin{align}
+\label{all pluses}
+\oi + \oj + \ok - \ol &= 0 \quad \Rightarrow \quad \text{any of $\{\oi, \oj, \ok\}$ is normalizable with $\ell \geq n$} \\
+\oi - \oj + \ok + \ol &= 0 \quad \Rightarrow \quad \text{$\oj$ is normalizable and $\forall \, n \in \mathbb{Z}^+$} \\
+\oi + \oj - \ok + \ol &= 0 \quad \Rightarrow \quad \text{$\ok$ is normalizable and $\forall \,  n \in \mathbb{Z}^+$} \\
+\oi - \oj - \ok - \ol &= 0 \quad \Rightarrow \quad \text{$\oi$ is normalizable and $\forall \, n \in \mathbb{Z}^+$.}
+\end{align}
+These resonances will contribute to the source term in the form
+\begin{align}
+S_\ell = \overline{R}^{(1)}_{(\ell - n) \ell} \Theta \left( \ell - n \right) \cos (\thl) + \overline{R}^{(2)}_{(\ell + n) \ell } \cos (\thl)  + \overline{T}_\ell \cos(\thl) \, ,
+\end{align}
+where the Heaviside step function $\Theta(x)$ enforces the restriction on $n$ that comes from \eqref{all pluses}, and
+\begin{align}
+\overline{R}^{(1)}_{i \ell} &= \frac{1}{4} Z^{-}_{12i\ell} \left( \frac{2n - \ol}{2n} \right) - \frac{1}{4} Z^{-}_{i21\ell} \frac{\oone(\ol + \oone)}{\ol^2 - \oone^2} - \frac{1}{4} Z^{-}_{i12\ell} \frac{\otwo (\ol + \otwo)}{\ol^2 - \otwo^2} - \frac{1}{4}  \oone H_{i12\ell} \left( \frac{1}{\ol - \otwo} + \frac{1}{2n} \right) \nonumber \\
+%
+& \quad - \frac{1}{4} \otwo H_{i21\ell} \left( \frac{1}{\ol - \oone} + \frac{1}{2n} \right) - \frac{1}{4} (\ol - 2n) H_{1i2\ell} \left( \frac{1}{\ol - \oone} + \frac{1}{\ol - \otwo} \right) \nonumber \\
+%
+& \quad + \frac{1}{2} \oone \otwo X_{i12\ell} \left( \frac{\otwo}{\ol - \otwo} + \frac{\oone}{\ol - \oone} + 1 \right) + \frac{1}{2} (\ol - 2n) \otwo X_{12i\ell} \left( \frac{\otwo}{\ol - \otwo} + \frac{\ol}{2n} \right) \nonumber \\
+%
+& \quad + \frac{1}{2} (\ol - 2n) \oone X_{21i\ell} \left( \frac{\oone}{\ol - \oone} + \frac{\ol}{2n} \right) - \frac{m^2}{4} V_{12i\ell} \left( \frac{\oone}{\ol - \otwo} + \frac{\otwo}{\ol - \oone} + 1 \right) \nonumber \\
+%
+& \quad - \frac{m^2}{4} V_{i21\ell} \left( \frac{\ol - 2n}{\ol - \otwo} + \frac{\ol - 2n}{\ol - \oone} + 2 \right) - \frac{m^2}{4} V_{i12\ell} \, ,
+\end{align}
+\begin{align}
+\overline{R}^{(2)}_{i \ell} &=
+\end{align}
 
-Returning to the solutions of the eigenvalue equation $\hat L e_j(x) = \omega^2_j e_j(x)$, it has so far been implicit that the the value of $\sqrt{d^2 + 4m^2}$ is taken to be both non-integer and greater than two. However, the Breitenholmer-Freeman bound allows for the existence of negative mass-squared, i.e. tachyonic, scalar fields in AdS$_{d+1}$, provided that $d^2 + 4m^2 \geq 0$. Let us now consider a class of solutions that include a tachyonic scalar: when $\sqrt{d^2 + 4m^2} \in \mathbb{Z}^*$. 
+\subsubsection{Integer Plus/Minus $\Delta^+$}
 
-The general solution in this case can be written as the sum \cite{hep-th/9805171}
-\begin{align}
-\Psi(x) = C^{(+)} \Phi^{(+)} + C^{(-)} \Phi^{(-)}
-\end{align}
-where
-\begin{align}
-\Phi^{(+)} &= \left( \cos (x) \right)^{\Delta^+} {_2 F_1}\left( \frac{\Delta^+ + \omega}{2}, \frac{\Delta^+ - \omega}{2}, 1 + \frac{1}{2} \sqrt{d^2 + 4m^2} \, ; \cos^2 x \right) \, ,
-\end{align}
-and the form of $\Phi^{(-)}$ depends on the value of $\sqrt{d^2 + 4m^2}$. When $4m^2 = -d^2$, we have
-\begin{align}
-\Phi^{(-)} &= \text{equation (43) of hep-th/9805171}
-\end{align}
-while for $\sqrt{d^2 + 4m^2} \in \mathbb{Z}^+$,
-\begin{align}
-\Phi^{(-)} &= \text{equation (44) of the same.}
-\end{align}
+\section{QP Equations}
 
-\subsection{Boundary Condition is a Superposition/Fourier Integral of Non-normalizable Modes}
+\section{Numerics}
 
 \acknowledgments
 
