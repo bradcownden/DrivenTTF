@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     41433,       1175]
-NotebookOptionsPosition[     40578,       1144]
-NotebookOutlinePosition[     40935,       1160]
-CellTagsIndexPosition[     40892,       1157]
+NotebookDataLength[     43657,       1256]
+NotebookOptionsPosition[     42459,       1213]
+NotebookOutlinePosition[     42816,       1229]
+CellTagsIndexPosition[     42773,       1226]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1077,6 +1077,75 @@ Cell[BoxData[
 Cell[CellGroupData[{
 
 Cell[BoxData[
+ RowBox[{"TrigExpand", "[", 
+  RowBox[{"Cos", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "2"}], " ", "*", " ", "n"}], " ", "+", " ", 
+    RowBox[{"w_i", " ", "*", " ", "t"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.764264386160407*^9, 3.7642644267946377`*^9}, 
+   3.7642704417399406`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"Cos", "[", "n", "]"}], "2"], " ", 
+   RowBox[{"Cos", "[", 
+    RowBox[{"t", " ", "w_i"}], "]"}]}], "-", 
+  RowBox[{
+   RowBox[{"Cos", "[", 
+    RowBox[{"t", " ", "w_i"}], "]"}], " ", 
+   SuperscriptBox[
+    RowBox[{"Sin", "[", "n", "]"}], "2"]}], "+", 
+  RowBox[{"2", " ", 
+   RowBox[{"Cos", "[", "n", "]"}], " ", 
+   RowBox[{"Sin", "[", "n", "]"}], " ", 
+   RowBox[{"Sin", "[", 
+    RowBox[{"t", " ", "w_i"}], "]"}]}]}]], "Output",
+ CellChangeTimes->{3.764264427345439*^9, 3.764270443082777*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Sin", "[", 
+     RowBox[{"2", "x"}], "]"}], 
+    RowBox[{"Cos", "[", "x", "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", 
+     RowBox[{"2", "Pi"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.764264466848024*^9, 3.764264496721394*^9}}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{{3.7642644833163223`*^9, 3.7642644979433613`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TrigReduce", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"Cos", "[", "z", "]"}], ")"}], "^", "2"}], " ", "-", " ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"Sin", "[", "z", "]"}], ")"}], "^", "2"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.764270202251645*^9, 3.764270222338032*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Cos", "[", 
+  RowBox[{"2", " ", "z"}], "]"}]], "Output",
+ CellChangeTimes->{3.764270222803937*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
  RowBox[{"Plot3D", "[", 
   RowBox[{
    RowBox[{
@@ -1173,8 +1242,20 @@ Cell[29428, 825, 2547, 68, 165, "Input"],
 Cell[31978, 895, 6258, 174, 250, "Input"],
 Cell[38239, 1071, 146, 3, 28, "Input"],
 Cell[CellGroupData[{
-Cell[38410, 1078, 1262, 38, 80, "Input"],
-Cell[39675, 1118, 875, 22, 294, "Output"]
+Cell[38410, 1078, 316, 8, 28, "Input"],
+Cell[38729, 1088, 563, 17, 66, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39329, 1110, 336, 10, 28, "Input"],
+Cell[39668, 1122, 98, 1, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39803, 1128, 326, 9, 28, "Input"],
+Cell[40132, 1139, 122, 3, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40291, 1147, 1262, 38, 80, "Input"],
+Cell[41556, 1187, 875, 22, 294, "Output"]
 }, Open  ]]
 }, Open  ]]
 }

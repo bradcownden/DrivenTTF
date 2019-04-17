@@ -307,9 +307,11 @@ We now consider the case when at least one of the $e_i(x), e_j(x), e_k(x)$ is a 
 
 As a first case, let us assume that the two non-normalizable modes have constant, generic (i.e., non integer) frequency values, $\ob$. Applying the time-averaging procedure to the source $S_\ell$ once again eliminates all contributions except those that satisfy \eqref{gen res}. Since the basis onto which we are projecting is normalizable, we know that $\omega_\ell$ is given by $\omega_\ell = 2\ell + \Delta^{+}$. We are now free to choose any one of $\{\omega_i, \omega_j, \ok\}$ to be normalizable and consider when the resonance condition is satisfied. In particular, we find that the following combinations are resonant:
 \begin{align}
+\label{gen nn res 1}
 \oi - \oj + \ok - \ol &= 0 \qquad \Rightarrow \qquad \text{either $\oi$ or $\ok$ is normalizable} \\
 \oi + \oj - \ok - \ol &= 0 \qquad \Rightarrow \qquad \text{either $\oi$ or $\oj$ is normalizable} \\
 \oi - \oj - \ok + \ol &= 0 \qquad \Rightarrow \qquad \text{either $\oj$ or $\ok$ is normalizable.}
+\label{gen nn res 2}
 \end{align}
 When any of these resonance conditions is met, the remaining normalizable mode will have a frequency equal to $\ol$, collapsing all sums over frequencies so that
 \begin{align}
@@ -317,12 +319,14 @@ S_\ell = \overline{T}_\ell \, a_\ell^3 \cos (\thl) \, .
 \end{align}
 Collecting the appropriate terms in \eqref{general source}, and evaluating the each possible resonance (being careful not to violate restrictions placed on the sums), we find that
 \begin{align}
-\overline{T}_\ell &= \frac{3 \ol^2 \ob^2}{\ol^2 - \ob^2} X_{\ob \ob \ell \ell} - \frac{\ob^2 (\ol^2 + \ob^2)}{\ol^2 -\ob^2} X_{\ell \ell \ob \ob} + \ol^2 X_{\ob \ob \ell \ell} - \ob^2 X_{\ell \ell \ob \ob} + \frac{2 \ol^2}{\ol^2 - \ob^2} Y_{\ob \ob \ell \ell} \nonumber \\
-\quad & - \frac{2 \ob^2}{\ol^2 - \ob^2} Y_{\ell \ell \ob \ob} - \frac{1}{2} H_{\ell \ob \ob \ell} + 2m^2 \left( \frac{4 \ol^2 - 3 \ob^2}{\ol^2 - \ob^2}  \right) V_{\ell \ell \ob \ob}  - \frac{m^2}{2} V_{\ob \ob \ell \ell} \nonumber \\
-\quad & + \ol^2 \ob^2 P_{\ob \ob \ell} - 3 \ob^2 \ol^2 P_{\ell \ell \ob} + \ol^2 B_{\ob \ob \ell} + \ob^2 B_{\ell \ell \ob} \, ,
+\overline{T}_\ell &= \frac{1}{2} Z^{-}_{\ell \ob \ob \ell} \left( \frac{\ob}{\ol + \ob} \right) + \frac{1}{2} Z^{+}_{\ell \ob \ob \ell} \left( \frac{\ob}{\ol - \ob} \right) - H_{\ob \ell \ob \ell} \frac{\ol^2}{\ol^2 - \ob^2} + \frac{1}{2} H_{\ell \ob \ob \ell} \left( \frac{2 \ob^2}{\ol^2 - \ob^2} - 1 \right) \nonumber \\
+%
+& \quad + \ob \ol X_{\ob \ob \ell \ell} \left( \frac{\ob}{\ol -\ob} + \frac{\ob}{\ol + \ob} + \frac{\ol}{\ob} \right) - \ob^2 X_{\ell \ell \ob \ob} \left( \frac{\ob}{\ol - \ob} - \frac{\ob}{\ol + \ob} + 1 \right) \nonumber \\
+% 
+& \quad + \frac{m^2}{2} V_{\ell \ell \ob \ob} \left( \frac{\ol}{\ol - \ob} + \frac{\ol}{\ol + \ob} + \frac{5}{2} \right) + \frac{m^2}{2} V_{\ob \ob \ell \ell} \left( \frac{\ob}{\ol - \ob} - \frac{\ob}{\ol + \ob} - 1 \right) \nonumber \\
+%
+& \quad + \ol^2 \tilde{Z}^+_{\ob \ob \ell} - 2 \ob^2 \ol^2 P_{\ell \ell \ob} - \ob^2 M_{\ell \ell \ob} - m^2 \ob^2 Q_{\ell \ell \ob} \, .
 \end{align}
-after expanding out $Z^{\pm}_{ijk\ell}$, $H_{ijk\ell}$, $\tilde{Z}^{\pm}_{\ij\ell}$, and $M_{ij\ell}$.
-
 \subsection{Special Values of Non-normalizable Frequencies}
 
 Focus on non-arbitrary values of the non-normalizable frequencies.
@@ -339,7 +343,7 @@ Choose two of the modes to be non-normalizable with frequencies $\omega_1$ and $
 \end{align}
 These resonances will contribute to the source term in the form
 \begin{align}
-S_\ell = \overline{R}^{(1)}_{(\ell - n) \ell} \Theta \left( \ell - n \right) \cos (\thl) + \overline{R}^{(2)}_{(\ell + n) \ell } \cos (\thl)  + \overline{T}_\ell \cos(\thl) \, ,
+S_\ell = \left[ \overline{R}^{(1)}_{(\ell - n) \ell} \Theta \left( \ell - n \right) + \overline{R}^{(2)}_{(\ell + n) \ell }  + \overline{T}_\ell \right]\cos(\thl) \, ,
 \end{align}
 where the Heaviside step function $\Theta(x)$ enforces the restriction on $n$ that comes from \eqref{all pluses}, and
 \begin{align}
@@ -354,18 +358,65 @@ where the Heaviside step function $\Theta(x)$ enforces the restriction on $n$ th
 & \quad - \frac{m^2}{4} V_{i21\ell} \left( \frac{\ol - 2n}{\ol - \otwo} + \frac{\ol - 2n}{\ol - \oone} + 2 \right) - \frac{m^2}{4} V_{i12\ell} \, ,
 \end{align}
 \begin{align}
-\overline{R}^{(2)}_{i \ell} &=
+\overline{R}^{(2)}_{i \ell} &= \frac{1}{4} Z^{-}_{12i\ell} \left(\frac{\ol + 2n}{2n} \right) - \frac{1}{4} Z^{+}_{i 21\ell} \frac{\oone (\ol - \oone)}{\ol^2 - \oone^2} - \frac{1}{4} Z^{+}_{i12\ell} \frac{\otwo (\ol - \otwo)}{\ol^2 - \otwo^2} + \frac{1}{4} \oone H_{i12\ell} \left( \frac{1}{\ol + \otwo} - \frac{1}{2n} \right) \nonumber \\
+%
+& \quad + \frac{1}{4} \otwo H_{i21\ell} \left( \frac{1}{\ol + \oone} - \frac{1}{2n} \right) - \frac{1}{4} (\ol + 2n) H_{1i2\ell} \left( \frac{1}{\ol + \oone} + \frac{1}{\ol + \otwo} \right) \nonumber \\
+%
+& \quad - \frac{1}{2} \oone \otwo X_{i12\ell} \left( \frac{\otwo}{\ol + \otwo} + \frac{\oone}{\ol + \oone} - 1 \right) + \frac{1}{2} (\ol + 2n) \otwo X_{12i \ell} \left( \frac{\otwo}{\ol + \otwo} + \frac{\ol}{2n} \right) \nonumber \\
+%
+& \quad + \frac{1}{2} (\ol + 2n) \oone X_{21i\ell} \left( \frac{\oone}{\ol + \oone} + \frac{\ol}{2n} \right) + \frac{m^2}{4} V_{12i\ell} \left( \frac{\oone}{\ol + \otwo} + \frac{\otwo}{\ol + \oone} -1 \right) \nonumber \\
+%
+& \quad - \frac{m^2}{4} V_{i21\ell} \left( \frac{\ol + 2n}{\ol + \otwo} + \frac{\otwo}{2n} + 1\right) - \frac{m^2}{4} V_{i12\ell} \left( \frac{\ol + 2n}{\ol + \oone} + \frac{\oone}{2n} + 1 \right) \, ,
 \end{align}
+and
+\begin{align}
+\overline{T}_\ell &= - \frac{3}{4} H_{\ell \ell \ell \ell} + \frac{3}{4} \ol^2 X_{\ell \ell \ell \ell} - \frac{3}{4} m^2 V_{\ell \ell \ell \ell} - 2\ol^4 P_{\ell \ell \ell} - \ol^2 M_{\ell \ell \ell} - m^2 \ol^2 Q_{\ell \ell \ell} \, .
+\end{align}
+The notation $X_{i12\ell}$ corresponds to evaluating $X_{ijk\ell}$ with $\omega_j = \oone$ and $\omega_k = \otwo$.
 
-\subsubsection{Integer Plus/Minus $\Delta^+$}
+\subsubsection{Integer Plus/Minus $\Delta^-$}
+
+This is a case where the non-normalizable frequencies are non-integer, but differ from integer values by a specific amount. In analogue to the case where all modes are normalizable, we consider setting any two of the non-normalizable frequencies to
+\begin{align}
+\oi = 2i + \Delta^- \, .
+\end{align}
+An examination of the resonance channels shows that the same terms as those found in \S\!~\ref{sec: norm res} appear. The derivation of the resonant terms is therefore trivial, and the solution would only differ by the form of the basis functions {\bf See if source terms still vanish for massless scalars in this case.}
+
+However, when the form of the frequencies of the non-normalizable modes is
+\begin{align}
+\oi = 2i - \Delta^{-} \, 
+\end{align}
+there are different contributions to consider. In addition to the resonance conditions described in \eqref{gen nn res 1}-\eqref{gen nn res 2}, there are
+\begin{align}
+\label{shifted res}
+\oi + \oj - \ok - \ol &= 0 \quad \Rightarrow \quad \text{$\ok$ is normalizable} \\
+\oi - \oj + \ok - \ol &= 0 \quad \Rightarrow \quad \text{$\oj$ is normalizable} \\
+\oi - \oj - \ok + \ol &= 0 \quad \Rightarrow \quad \text{$\oi$ is normalizable} \, .
+\end{align}
+These resonance conditions are satisfied not when, using \eqref{shifted res} as an example, $i + j - k = \ell$, but rather when $i + j - k = \ell + d$. Thus, these resonances will be satisfied under the shifted condition $\ell \to \ell + d$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{QP Equations}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Numerics}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \acknowledgments
 
 This research was enabled in part by support provided by WestGrid (\href{www.westgrid.ca}{www.westgrid.ca}) and Compute Canada (\href{www.computecanada.ca}{www.computecanada.ca}).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\appendix
+%\section{First Appendix}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
