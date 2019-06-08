@@ -37,6 +37,9 @@
 \newcommand{\ib}{\overline{i}}
 \newcommand{\jb}{\overline{j}}
 \newcommand{\kb}{\overline{k}}
+\newcommand{\oal}{\omega_\alpha}
+\newcommand{\obet}{\omega_{\beta}}
+\newcommand{\ogam}{\omega_\gamma}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -265,7 +268,7 @@ Focusing on the position-dependence only, we find that
 \begin{align}
 \lim_{\tilde x \to 0} A_2 (\tilde x = \pi /2 - x) = \tilde{x}^{-\xi} \left( \frac{2 \tilde{x}^{2+d}}{2 - \xi} - \frac{\tilde{x}^d (1 + \left(\Delta^{-}\right)^2)}{\xi} \right)
 \end{align}
-where we have defined $\xi = \sqrt{d^2 + 4m^2}$. In the massless case, $\xi = d$ and all powers of $\tilde{x}$ are non-negative and thus the limit is finite; for tachyonic masses, $0 \leq \xi < d$ and the limit is again finite. However, for massive scalars, at least one of the terms above diverges as $\xi \to 0$. This case would require the addition of counter-terms in the bulk action to cancel such divergences -- we will not consider this case presently. Thus, we will restrict our discussion to non-positive masses to avoid these issues.
+where we have defined $\xi = \sqrt{d^2 + 4m^2}$. In the massless case, $\xi = d$ and all powers of $\tilde{x}$ are non-negative and thus the limit is finite; for tachyonic masses, $0 \leq \xi < d$ and the limit is again finite. However, for massive scalars, at least one of the terms above diverges as $\xi \to 0$. This case would require the addition of counter-terms in the bulk action to cancel such divergences -- we will not consider this case presently. Thus, we will restrict our discussion to non-positive masses to avoid these issues. A similar check on the near-boundary behaviour of $\delta_2$ shows that, in the massless case, the gauge condition $\delta_2 (t, x=\pi/2)$ remains unchanged by the addition of non-normalizable modes.
 
 \subsection{Two General, Non-normalizable Modes}
 
@@ -310,7 +313,7 @@ Choose two of the modes to be non-normalizable with frequencies $\omega_1$ and $
 \end{align}
 These resonances will contribute to the source term in the form
 \begin{align}
-S_\ell = \left[ \overline{R}^{(1)}_{(\ell - n) \ell} \Theta \left( \ell - n \right) + \overline{R}^{(2)}_{(\ell + n) \ell } \right]\cos(\thl) \, ,
+S_\ell = \sum_{\omega_1 + \omega_2 = 2n} \left[ \overline{R}^{(1)}_{(\ell - n) \ell} \Theta \left( \ell - n \right) + \overline{R}^{(2)}_{(\ell + n) \ell } \right]\cos(\thl) \, ,
 \end{align}
 where the Heaviside step function $\Theta(x)$ enforces the restriction on $n$ that comes from \eqref{all pluses}, and
 \begin{align}
@@ -337,69 +340,45 @@ where the Heaviside step function $\Theta(x)$ enforces the restriction on $n$ th
 \end{align}
 The notation $X_{i12\ell}$ corresponds to evaluating $X_{ijk\ell}$ with $\omega_j = \oone$ and $\omega_k = \otwo$.
 
-\subsection{Integer Plus $\Delta^-$}
+\subsection{Integer Plus $\chi$}
 
 This is a case where the non-normalizable frequencies are non-integer, but differ from integer values by a specific amount. In analogue to the case where all modes are normalizable, we consider setting any two of the non-normalizable frequencies to
 \begin{align}
-\oi = 2i + \Delta^- \, ,
+\oi = 2i + \chi \, ,
 \end{align}
-where $m^2$ is \emph{not} chosen to be a special value\footnote{By tuning the value of the mass so that $\Delta^{-}$ is an integer, additional resonant terms are possible; however, this scenario becomes a special instance of the case covered in \S\!~\ref{ssec: add to integer}. Furthermore, we do not consider the case when the Breitenlohmer-Freeman bound is saturated. This would place further restrictions on the allowed values of the indices in certain terms since the difference between the frequencies of normalizable and non-normalizable modes could then be zero.}, i.e. $\Delta^{-} \notin \mathbb{Z}^*$. For this choice of non-normalizable frequencies, there are no resonant contributions from the all-plus channel; only the $(++-)$ and $(+--)$ channels can contribute resonant terms.
+where $m^2$ is \emph{not} chosen to be a special value\footnote{By tuning the value of the mass so that $\chi$ is an integer, additional resonant terms are possible; however, this scenario is addressed in \S\!~\ref{ssec: add to integer}. Furthermore, we do not consider the case when the Breitenlohmer-Freeman bound is saturated. This would place further restrictions on the allowed values of the indices in certain terms since the difference between the frequencies of normalizable and non-normalizable modes could then be zero.}, i.e. $\chi \notin \mathbb{Z}^*$. For this choice of non-normalizable frequencies, there are no resonant contributions from the all-plus channel; only the $(++-)$ and $(+--)$ channels can contribute resonant terms.
 
 \subsubsection{$(++-)$}
 
-This resonance channel\footnote{As is the case when all modes are normalizable, the results from this channel are equal to those from the $(+-+)$ channel under the exchange of $\ojb \leftrightarrow \okb$.} contributes secular terms to the $\mathcal{O}(\epsilon^3)$ source via:
+As in the case of all normalizable modes, the contribution from the $(++-)$ is equal to that of the $(+-+)$ and thus only one will be considered. This channel contributes secular terms of the form
 \begin{align}
-S_\ell &= \sum_{\jb, \kb}^{\jb \neq \kb} \overline{S}_{(\ell - \overline{j} + \overline{k}) \overline{j} \overline{k} \ell} \, \cos ( \theta_{(\ell - \overline{j} + \overline{k})} + \overline{\theta}_j - \overline{\theta}_k )  + \sum_{\jb}^{\jb \neq \ell} \overline{R}_{\overline{j} \ell} \, \cos \left( \theta_\ell + \overline{\theta}_j - \overline{\theta}_j \right) 
+S_\ell &= \overline{S}_{i \beta \gamma \ell}\Big|_{\oi + \obet - \ogam = \ol} + \overline{R}_{i \beta} \Big|_{i = \ell} + \overline{T}_\ell
 \end{align}
-where
-%\begin{align}
-%\overline{T}_\ell &= \frac{1}{2} \ol^2 X_{\ell \ell \ell \ell} - \frac{3}{4} H_{\ell \ell \ell \ell} - \frac{9}{4} m^2 V_{\ell \ell \ell \ell} + 2 \ol^2 \widetilde{Z}^{+}_{\ell \ell \ell} - 2 \ol^4 P_{\ell \ell \ell} - \ol^2 M_{\ell \ell \ell} - m^2 \ol^2 Q_{\ell \ell \ell} \, ,
-%\end{align}
+where (sums over the indices that are not $\ell$ are implied, and only restrictions on the indices are explicitly included)
 \begin{align}
-\label{integer plus: ++- source}
-\overline{S}_{i \jb \kb \ell} &= \frac{1}{2} Z^{+}_{\jb \kb i\ell} \left( \frac{\oi}{\ojb - \okb} \right) + \frac{1}{2} Z^{-}_{i \jb \kb \ell} \left( \frac{\okb}{\oi + \ojb} \right) + \frac{1}{2} Z^{+}_{i \kb \jb \ell} \left( \frac{\ojb}{\oi - \okb} \right) \nonumber \\
-%
-& \quad + \frac{1}{2} \ojb H_{i \jb \kb \ell} \left( \frac{1}{\oi - \ojb} - \frac{1}{\oi + \okb} \right) - \frac{1}{2} \oi H_{\jb i \kb \ell} \left( \frac{1}{\oi - \ojb} + \frac{1}{\oi + \okb} \right) \nonumber \\
-%
-& \quad - \frac{1}{2} \okb H_{\jb \kb i \ell} \left( \frac{1}{\ojb + \okb} - \frac{1}{\oi + \okb} \right) - \ojb \okb X_{i \jb \kb \ell} \left( \frac{\okb}{\oi - \ojb} - \frac{\ojb}{\oi + \okb} + 1 \right) \nonumber \\
-%
-& \quad + \oi \okb X_{\jb \kb i \ell} \left( \frac{\okb}{\oi - \ojb} + \frac{\oi}{\ojb + \okb} - 1 \right) + \oi \ojb X_{\kb i \jb \ell} \left( \frac{\ojb}{\oi + \okb} + \frac{\oi}{\ojb + \okb} + 1 \right) \nonumber \\
-%
-& \quad - m^2 V_{\kb i \jb \ell} \left( \frac{\oi}{\oi - \ojb} + \frac{\okb}{\ojb + \okb} + 1 \right) - m^2 V_{i \jb \kb \ell} \left( \frac{\oi}{\oi + \okb} + \frac{\ojb}{\ojb + \okb} + 1 \right) \nonumber \\
-%
-& \quad + m^2 V_{\jb \kb i \ell} \left( \frac{\ojb}{\oi - \ojb} - \frac{\okb}{\oi + \okb} - 1 \right) \, ,
+\overline{S}_{i \beta \gamma \ell} &= \frac{1}{4} \sum_{\gamma \neq \ell} \frac{\ogam}{\oi + \obet} Z^{-}_{i \beta \gamma \ell} + \frac{1}{4} \sum_{\beta \neq \ell} \frac{\obet}{\oi - \ogam} Z^+_{i \gamma \beta \ell} + \sum_{i \neq \ell} \frac{\oi}{\obet - \ogam} Z^+_{\beta \gamma i \ell} + \ldots
 \end{align}
 \begin{align}
-\overline{R}_{\jb i} &= \frac{1}{2} Z^{-}_{i \jb \jb \ell} \left( \frac{\ojb}{\oi + \ojb} \right) + \frac{1}{2} Z^{+}_{i \jb \jb \ell} \left( \frac{\ojb}{\oi - \ojb} \right) + \frac{1}{2} \left( \frac{\ojb}{\oi - \ojb} \right) H_{\jb \jb i \ell} - H_{\jb i \jb \ell} \left( \frac{\oi^2}{\oi^2 - \ojb^2} \right) \nonumber \\
-%
-& \quad - \frac{5}{4} H_{\jb \jb i \ell}  - \ojb^2 X_{i \jb \jb \ell} \left( \frac{\oi^2 + \ojb^2}{\oi^2 - \ojb^2} \right) + 3 \oi^2 X_{\jb \jb i \ell} + \oi \ojb X_{\jb \jb i \ell} \left( \frac{\ojb}{\oi^2 - \ojb^2} + \frac{\ojb}{\oi + \ojb} \right) \nonumber \\
-%
-& \quad -4m^2 V_{i \jb \jb \ell} - 2m^2 V_{i \jb \jb \ell} \left( \frac{\oi^2}{\oi^2 - \oj^2} \right) + 2m^2 V_{\jb \jb i \ell} \left( \frac{\ojb^2}{\oi^2 - \ojb^2} \right) - m^2 V_{\jb \jb i \ell} \nonumber \\
-%
-& \quad + 2\ojb^2 (\ol^2 P_{\jb \jb \ell} - 3 \oi^2 P_{i \ell \jb} ) + 2\ol^2 B_{\jb \jb \ell} + 2 \ojb^2 B_{i \ell \jb} \, .
+\overline{R}_{i \beta} &= \frac{1}{2} \sum_{\beta \neq \ell} \left[ \frac{\obet}{\ol^2 - \obet^2} \left( (\oi - \obet) Z^{-}_{i \beta \beta \ell} + 2 (\oi + \obet) Z^+_{i\beta \beta \ell} \right) \right] + \ldots
 \end{align}
-
-\begin{center}
-	{\bf Possible contributions from double sums when both indices are NN?}.
-\end{center}
+\begin{align}
+\overline{T}_\ell &= - \frac{1}{2} \sum \left( 4 \obet^2 \ol^2 P_{\ell \ell \beta} + H_{\beta \beta \ell \ell} + 2\obet^2 M_{\ell \ell \beta} - 2\ol^2 X_{\beta \beta \ell \ell} \right) \cos \theta_\ell \, .
+\end{align}
 
 \subsubsection{$(+--)$}
-
-
-
-\subsection{Integer Minus $\Delta^-$}
-However, when the form of the frequencies of the non-normalizable modes is
+Resonant terms proportional to $\cos \left(\theta_\alpha - \theta_\beta - \theta_k \right)$ must be evaluated subject to $\omega_\alpha - \omega_\beta - \omega_k + \ol = 0$ and are of the form
 \begin{align}
-\oi = 2i - \Delta^{-} \, 
+\overline{S}_{\alpha \beta k \ell} &= \frac{1}{4} \sum_{\alpha \neq \ell} \frac{\omega_\alpha}{\omega_\beta + \omega_k} Z^{-}_{\beta k \alpha \ell} + \frac{1}{4} \sum_{\beta \neq \ell} \frac{\omega_\beta}{\ok - \omega_{\alpha}} Z^{+}_{\alpha k \beta \ell} + \frac{1}{4} \sum_{k \neq \ell} \frac{\ok}{\obet - \omega_\alpha} Z^{+}_{\alpha \beta k \ell} \nonumber \\
+%
+& \quad + \frac{1}{4} \sum_{k \neq \alpha} \left[ \frac{\oal}{\ok - \oal} (H_{k \alpha \beta \ell} - 2 \obet^2 X_{k \alpha \beta \ell}) - \frac{\ok}{\ok + \oal} (H_{\alpha k \beta \ell} - 2\obet^2 X_{\alpha k \beta \ell}) \right] \nonumber \\
+%
+& \quad + \frac{1}{4} \sum_{\alpha \neq \beta} \left[ \frac{\oal}{\obet - \oal} (H_{\beta \alpha k \ell} - 2\ok^2 X_{\beta \alpha k \ell}) - \frac{\obet}{\oal + \obet}(H_{\alpha \beta k \ell} - 2 \ok^2 X_{\alpha \beta k \ell}) \right] \nonumber \\
+%
+& \quad - \frac{1}{4} \sum_{k \neq \beta} \left[ \frac{\obet}{\ok + \obet} (H_{k \beta \alpha \ell} - 2\oal^2 X_{k \beta \alpha \ell}) + \frac{\ok}{\ok + \obet}(H_{\beta k \alpha \ell} - 2\oal^2 X_{\beta k \alpha \ell}) \right] \nonumber \\
+%
+& \quad - \frac{1}{2} \sum \left( \oal \obet X_{k \alpha \beta \ell} + \oal \ok X_{\beta k \alpha \ell} - \obet \ok X_{\alpha \beta k \ell} \right) \, .
 \end{align}
-there are different contributions to consider. In addition to the resonance conditions described in \eqref{gen nn res 1}-\eqref{gen nn res 2}, there are
-\begin{align}
-\label{shifted res}
-\oi + \oj - \ok - \ol &= 0 \quad \Rightarrow \quad \text{$\ok$ is normalizable} \\
-\oi - \oj + \ok - \ol &= 0 \quad \Rightarrow \quad \text{$\oj$ is normalizable} \\
-\oi - \oj - \ok + \ol &= 0 \quad \Rightarrow \quad \text{$\oi$ is normalizable} \, .
-\end{align}
-These resonance conditions are satisfied not when, using \eqref{shifted res} as an example, $i + j - k = \ell$, but rather when $i + j - k = \ell + d$. Thus, these resonances will be satisfied under the shifted condition $\ell \to \ell + d$.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -498,4 +477,37 @@ M_{ij\ell} &= \oi^2 P_{ij\ell} - B_{ij\ell} -m^2 Q_{ij\ell}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\subsubsection{$(++-)$}
+
+This resonance channel\footnote{As is the case when all modes are normalizable, the results from this channel are equal to those from the $(+-+)$ channel under the exchange of $\ojb \leftrightarrow \okb$.} contributes secular terms to the $\mathcal{O}(\epsilon^3)$ source via:
+\begin{align}
+S_\ell &= \sum_{\jb, \kb}^{\jb \neq \kb} \overline{S}_{(\ell - \overline{j} + \overline{k}) \overline{j} \overline{k} \ell} \, \cos ( \theta_{(\ell - \overline{j} + \overline{k})} + \overline{\theta}_j - \overline{\theta}_k )  + \sum_{\jb}^{\jb \neq \ell} \overline{R}_{\overline{j} \ell} \, \cos \left( \theta_\ell + \overline{\theta}_j - \overline{\theta}_j \right) 
+\end{align}
+where
+%\begin{align}
+%\overline{T}_\ell &= \frac{1}{2} \ol^2 X_{\ell \ell \ell \ell} - \frac{3}{4} H_{\ell \ell \ell \ell} - \frac{9}{4} m^2 V_{\ell \ell \ell \ell} + 2 \ol^2 \widetilde{Z}^{+}_{\ell \ell \ell} - 2 \ol^4 P_{\ell \ell \ell} - \ol^2 M_{\ell \ell \ell} - m^2 \ol^2 Q_{\ell \ell \ell} \, ,
+%\end{align}
+\begin{align}
+\label{integer plus: ++- source}
+\overline{S}_{i \jb \kb \ell} &= \frac{1}{2} Z^{+}_{\jb \kb i\ell} \left( \frac{\oi}{\ojb - \okb} \right) + \frac{1}{2} Z^{-}_{i \jb \kb \ell} \left( \frac{\okb}{\oi + \ojb} \right) + \frac{1}{2} Z^{+}_{i \kb \jb \ell} \left( \frac{\ojb}{\oi - \okb} \right) \nonumber \\
+%
+& \quad + \frac{1}{2} \ojb H_{i \jb \kb \ell} \left( \frac{1}{\oi - \ojb} - \frac{1}{\oi + \okb} \right) - \frac{1}{2} \oi H_{\jb i \kb \ell} \left( \frac{1}{\oi - \ojb} + \frac{1}{\oi + \okb} \right) \nonumber \\
+%
+& \quad - \frac{1}{2} \okb H_{\jb \kb i \ell} \left( \frac{1}{\ojb + \okb} - \frac{1}{\oi + \okb} \right) - \ojb \okb X_{i \jb \kb \ell} \left( \frac{\okb}{\oi - \ojb} - \frac{\ojb}{\oi + \okb} + 1 \right) \nonumber \\
+%
+& \quad + \oi \okb X_{\jb \kb i \ell} \left( \frac{\okb}{\oi - \ojb} + \frac{\oi}{\ojb + \okb} - 1 \right) + \oi \ojb X_{\kb i \jb \ell} \left( \frac{\ojb}{\oi + \okb} + \frac{\oi}{\ojb + \okb} + 1 \right) \nonumber \\
+%
+& \quad - m^2 V_{\kb i \jb \ell} \left( \frac{\oi}{\oi - \ojb} + \frac{\okb}{\ojb + \okb} + 1 \right) - m^2 V_{i \jb \kb \ell} \left( \frac{\oi}{\oi + \okb} + \frac{\ojb}{\ojb + \okb} + 1 \right) \nonumber \\
+%
+& \quad + m^2 V_{\jb \kb i \ell} \left( \frac{\ojb}{\oi - \ojb} - \frac{\okb}{\oi + \okb} - 1 \right) \, ,
+\end{align}
+\begin{align}
+\overline{R}_{\jb i} &= \frac{1}{2} Z^{-}_{i \jb \jb \ell} \left( \frac{\ojb}{\oi + \ojb} \right) + \frac{1}{2} Z^{+}_{i \jb \jb \ell} \left( \frac{\ojb}{\oi - \ojb} \right) + \frac{1}{2} \left( \frac{\ojb}{\oi - \ojb} \right) H_{\jb \jb i \ell} - H_{\jb i \jb \ell} \left( \frac{\oi^2}{\oi^2 - \ojb^2} \right) \nonumber \\
+%
+& \quad - \frac{5}{4} H_{\jb \jb i \ell}  - \ojb^2 X_{i \jb \jb \ell} \left( \frac{\oi^2 + \ojb^2}{\oi^2 - \ojb^2} \right) + 3 \oi^2 X_{\jb \jb i \ell} + \oi \ojb X_{\jb \jb i \ell} \left( \frac{\ojb}{\oi^2 - \ojb^2} + \frac{\ojb}{\oi + \ojb} \right) \nonumber \\
+%
+& \quad -4m^2 V_{i \jb \jb \ell} - 2m^2 V_{i \jb \jb \ell} \left( \frac{\oi^2}{\oi^2 - \oj^2} \right) + 2m^2 V_{\jb \jb i \ell} \left( \frac{\ojb^2}{\oi^2 - \ojb^2} \right) - m^2 V_{\jb \jb i \ell} \nonumber \\
+%
+& \quad + 2\ojb^2 (\ol^2 P_{\jb \jb \ell} - 3 \oi^2 P_{i \ell \jb} ) + 2\ol^2 B_{\jb \jb \ell} + 2 \ojb^2 B_{i \ell \jb} \, .
+\end{align}
 
