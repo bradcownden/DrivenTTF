@@ -352,17 +352,29 @@ where $m^2$ is \emph{not} chosen to be a special value\footnote{By tuning the va
 
 As in the case of all normalizable modes, the contribution from the $(++-)$ is equal to that of the $(+-+)$ and thus only one will be considered. This channel contributes secular terms of the form
 \begin{align}
-S_\ell &= \overline{S}_{i \beta \gamma \ell}\Big|_{\oi + \obet - \ogam = \ol} + \overline{R}_{i \beta} \Big|_{i = \ell} + \overline{T}_\ell
+S_\ell &= \overline{S}_{i \beta \gamma \ell} \cos \left( \theta_i + \theta_\beta - \theta_\gamma \right) \Big|_{\oi + \obet - \ogam = \ol} + \overline{R}_{i \beta} \cos \left(\theta_i + \theta_\beta - \theta_\beta \right) \Big|_{i = \ell} + \overline{T}_\ell \cos \left( \theta_\ell \right)
 \end{align}
 where (sums over the indices that are not $\ell$ are implied, and only restrictions on the indices are explicitly included)
 \begin{align}
-\overline{S}_{i \beta \gamma \ell} &= \frac{1}{4} \sum_{\gamma \neq \ell} \frac{\ogam}{\oi + \obet} Z^{-}_{i \beta \gamma \ell} + \frac{1}{4} \sum_{\beta \neq \ell} \frac{\obet}{\oi - \ogam} Z^+_{i \gamma \beta \ell} + \sum_{i \neq \ell} \frac{\oi}{\obet - \ogam} Z^+_{\beta \gamma i \ell} + \ldots
+\overline{S}_{i \beta \gamma \ell} &= \frac{1}{4} \sum_{\gamma \neq \ell} \frac{\ogam}{\oi + \obet} Z^{-}_{i \beta \gamma \ell} + \frac{1}{4} \sum_{\beta \neq \ell} \frac{\obet}{\oi - \ogam} Z^+_{i \gamma \beta \ell} + \sum_{i \neq \ell} \frac{\oi}{\obet - \ogam} Z^+_{\beta \gamma i \ell} \nonumber \\
+%
+& \quad + \frac{1}{4} \sum_{i \neq \gamma} \left[ \frac{\omega_\gamma}{\oi - \ogam} (H_{i \gamma \beta \ell} - 2\obet^2 X_{i \gamma \beta \ell}) - \frac{\oi}{\oi + \ogam} (H_{\gamma i \beta \ell} - 2\obet^2 X_{\gamma i \beta \ell} ) \right] \nonumber \\
+%
+& \quad + \frac{1}{4} \sum_{\beta \neq \gamma} \left[ \frac{\ogam}{\obet - \ogam} (H_{\beta \gamma i \ell} - 2 \oi^2 X_{\beta\gamma i \ell} ) - \frac{\obet}{\obet + \ogam} (H_{\gamma \beta i \ell} - 2\oi^2 X_{\gamma \beta i \ell} ) \right] \nonumber \\
+%
+& \quad -  \frac{1}{4} \sum_{i \neq \beta} \left[ \frac{\obet}{\oi + \obet} (H_{i \beta \gamma \ell} - 2\ogam^2 X_{i \beta \gamma \ell} ) + \frac{\oi}{\oi + \obet} (H_{\beta i \gamma \ell} - 2\ogam^2 X_{\beta i \gamma \ell}) \right] \nonumber \\
+%
+& \quad - \frac{1}{2} \sum \left( \obet \ogam X_{i \beta \gamma \ell} + \oi \ogam X_{\beta \gamma i \ell} - \oi \obet X_{\gamma i \beta \ell} \right) \, ,
 \end{align}
 \begin{align}
-\overline{R}_{i \beta} &= \frac{1}{2} \sum_{\beta \neq \ell} \left[ \frac{\obet}{\ol^2 - \obet^2} \left( (\oi - \obet) Z^{-}_{i \beta \beta \ell} + 2 (\oi + \obet) Z^+_{i\beta \beta \ell} \right) \right] + \ldots
+\overline{R}_{i \beta} &= \frac{1}{2} \sum_{\beta \neq \ell} \Big[ \frac{\obet}{\ol^2 - \obet^2} \left( (\oi - \obet) Z^{-}_{i \beta \beta \ell} + 2 (\oi + \obet) Z^+_{i\beta \beta \ell} \right) \Big] + \sum_{i \neq \ell} \frac{\oi^2}{\ol^2 - \oi^2} Z^+_{\beta \beta i \ell} \nonumber \\
+%
+& \quad + \sum_{i \neq \beta} \Big[  H_{i \beta \beta \ell} \left( \frac{\obet^2}{\oi^2 - \obet^2} \right) - H_{\beta i \beta \ell} \left( \frac{\oi}{\oi + \obet} \right) - 2\obet^2 X_{i \beta \beta \ell} \left( \frac{\obet^2}{\oi^2 - \obet^2} \right) \nonumber \\
+%
+& \quad + \obet^2 X_{\beta \beta i \ell} \left( \frac{\oi}{\oi + \obet} \right) \Big] - \sum \obet^2 X_{i\beta\beta \ell} \, ,
 \end{align}
 \begin{align}
-\overline{T}_\ell &= - \frac{1}{2} \sum \left( 4 \obet^2 \ol^2 P_{\ell \ell \beta} + H_{\beta \beta \ell \ell} + 2\obet^2 M_{\ell \ell \beta} - 2\ol^2 X_{\beta \beta \ell \ell} \right) \cos \theta_\ell \, .
+\overline{T}_\ell &= - \frac{1}{2} \sum \left( 4 \obet^2 \ol^2 P_{\ell \ell \beta} + H_{\beta \beta \ell \ell} + 2\obet^2 M_{\ell \ell \beta} - 2\ol^2 X_{\beta \beta \ell \ell} \right) \, .
 \end{align}
 
 \subsubsection{$(+--)$}
@@ -381,7 +393,7 @@ Resonant terms proportional to $\cos \left(\theta_\alpha - \theta_\beta - \theta
 
 Other resonances are proportional to $\cos \left( \theta_\alpha - \theta_\alpha - \thk \right)$, and can be written as $\overline{R}_{\ell \alpha}$ where
 \begin{align}
-\overline{R}_{i \alpha} &= \frac{1}{2} \sum_{\alpha \neq \ell} \left[ \frac{\oal}{\ol^2 - \oal^2} \left( \ok (Z^{-}_{k \alpha \alpha \ell} + Z^{+}_{k \alpha \alpha \ell} ) + \oal (Z^{+}_{k \alpha \alpha \ell} - Z^{-}_{k \alpha \alpha \ell} ) \right) \right]  + \sum_{k \neq \ell} \frac{\ok^2}{\ol^2 - \ok^2} Z^{+}_{\alpha \alpha k \ell} \nonumber \\
+\overline{R}_{k \alpha} &= \frac{1}{2} \sum_{\alpha \neq \ell} \left[ \frac{\oal}{\ol^2 - \oal^2} \left( \ok (Z^{-}_{k \alpha \alpha \ell} + Z^{+}_{k \alpha \alpha \ell} ) + \oal (Z^{+}_{k \alpha \alpha \ell} - Z^{-}_{k \alpha \alpha \ell} ) \right) \right]  + \sum_{k \neq \ell} \frac{\ok^2}{\ol^2 - \ok^2} Z^{+}_{\alpha \alpha k \ell} \nonumber \\
 %
 & \quad + \sum_{k \neq \alpha} \bigg[ H_{k \alpha \alpha \ell} \left( \frac{\oal^2}{\ol^2 - \oal^2} \right) - 2 \oal^2 X_{k \alpha \alpha \ell} \left( \frac{\oal \ok}{\ok^2 - \oal^2} \right) - H_{\alpha k \alpha \ell} \left( \frac{\ok}{\ok + \oal} \right) \nonumber \\
 %
