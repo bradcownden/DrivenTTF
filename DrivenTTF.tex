@@ -286,6 +286,7 @@ S_\ell = \overline{T}_\ell \, a_\ell A_{\ob}^2 \cos (\thl) \, ,
 \end{align}
 where the non-normalizable modes have constant amplitudes $A_{\ob}$. Collecting the appropriate terms in \eqref{general source}, and evaluating the each possible resonance (being careful not to violate restrictions placed on the sums), we find that
 \begin{align}
+\label{S:2NN}
 \overline{T}_\ell &= \frac{1}{2} Z^{-}_{\ell \ob \ob \ell} \left( \frac{\ob}{\ol + \ob} \right) + \frac{1}{2} Z^{+}_{\ell \ob \ob \ell} \left( \frac{\ob}{\ol - \ob} \right) - H_{\ob \ell \ob \ell} \left( \frac{\ol^2}{\ol^2 - \ob^2} \right) + H_{\ob \ob \ell \ell} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right) \nonumber \\
 %
 & \quad + 2 \ob^2 X_{\ob \ob \ell \ell} + 2 X_{\ob \ob \ell \ell} \left( \frac{{\ob}^2 \ol^2}{\ol^2 - \ob^2} \right) - \ob^2 X_{\ell \ell \ob \ob} - 2 X_{\ell \ell \ob \ob}  \left( \frac{\ob^4}{\ol^2 - \ob^2} \right) \nonumber \\
@@ -293,6 +294,12 @@ where the non-normalizable modes have constant amplitudes $A_{\ob}$. Collecting 
 & \quad + m^2 V_{\ob \ob \ell \ell} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right) - m^2 V_{\ell \ell \ob \ob} \left( \frac{\ol^2}{\ol^2 - \ob^2} \right) - 2m^2 V_{\ell \ell \ob \ob} - \frac{m^2}{2} V_{\ob \ob \ell \ell}  \nonumber \\
 %
 & \quad + 2 \ol^2 \tilde{Z}^+_{\ob \ob \ell} - H_{\ob \ob \ell \ell} - 4 \ob^2 \ol^2 P_{\ell \ell \ob} -2 \ob^2 M_{\ell \ell \ob} - 2 m^2 \ob^2 Q_{\ell \ell \ob} \, .
+\end{align}
+
+It is easy to see that when $\ob = \ol$, there will be singular terms in \eqref{S:2NN}. Using the definitions of $Z^\pm_{ijk\ell}$ and $H_{ijk\ell}$, some simplification is possible; however, $\overline{T}_\ell$ still evaluates to $0/0 + (\text{non-singular})$. Using L'H\^{o}pital's rule to evaluate the undetermined expression, we find that the limit of \eqref{S:2NN} is
+\begin{align}
+\label{Tbar limit}
+\lim_{\ob \to \ol} \overline{T}_\ell = 3Y_{\ell \ell \ell \ell} + \ol^2 \left( B_{\ell \ell \ell} - \ol^2 P_{\ell \ell \ell} \right) \, .
 \end{align}
 
 
