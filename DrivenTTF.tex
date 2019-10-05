@@ -254,6 +254,8 @@ T_{\ell} &= \frac{1}{2} \ol^2 \left( X_{\ell \ell \ell \ell} + 4 B_{\ell \ell \e
 
 \section{Resonances From Non-normalizable Modes}
 
+{\bf Discuss falloff of A2 and delta2 with three NN modes, but don't calculate anything new. Mention overlap of NN and normalizable cases when omega(i) $\pm$ omega(j) = NN frequency. Then focus on two NN modes.}
+
 We now consider the case when at least one of the $e_i(x), e_j(x), e_k(x)$ is a non-normalizable mode. Since the boundary condition has been set to be a single non-normalizable mode, any non-normalizable modes in the source term must exactly cancel; therefore, at least two of the modes must be non-normalizable. This assumption breaks some of the symmetries that contributed to the previous expressions for resonance channels, and so the resonance conditions must be re-examined starting from the source expression \eqref{general source}.
 
 An important consideration is also the effect of non-normalizable modes on the perturbative expansion that leads to the source equations. Since non-normalizable solutions do not have well-defined norms, we do not know \emph{a priori} that the inner products described in Appendix~\ref{source term derivation} are still finite. To investigate this, consider the second-order metric function $A_2$
@@ -268,7 +270,7 @@ Focusing on the position-dependence only, we find that
 \begin{align}
 \lim_{\tilde x \to 0} A_2 (\tilde x = \pi /2 - x) = \tilde{x}^{-\xi} \left( \frac{2 \tilde{x}^{2+d}}{2 - \xi} - \frac{\tilde{x}^d (1 + \left(\Delta^{-}\right)^2)}{\xi} \right)
 \end{align}
-where we have defined $\xi = \sqrt{d^2 + 4m^2}$. In the massless case, $\xi = d$ and all powers of $\tilde{x}$ are non-negative and thus the limit is finite; for tachyonic masses, $0 \leq \xi < d$ and the limit is again finite. However, for massive scalars, at least one of the terms above diverges as $\xi \to 0$. This case would require the addition of counter-terms in the bulk action to cancel such divergences -- we will not consider this case presently. Thus, we will restrict our discussion to non-positive masses to avoid these issues. A similar check on the near-boundary behaviour of $\delta_2$ shows that, in the massless case, the gauge condition $\delta_2 (t, x=\pi/2)$ remains unchanged by the addition of non-normalizable modes.
+where we have defined $\xi = \sqrt{d^2 + 4m^2}$. In the massless case, $\xi = d$ and all powers of $\tilde{x}$ are non-negative and thus the limit is finite; for tachyonic masses, $0 \leq \xi < d$ and the limit is again finite. However, for massive scalars, at least one of the terms above diverges as $\xi \to 0$. This case would require the addition of counter-terms in the bulk action to cancel such divergences -- we will not consider this case presently. Thus, we will restrict our discussion to $m^2 \leq 0$ to avoid these issues. A similar check on the near-boundary behaviour of $\delta_2$ shows that, in the massless case, the gauge condition $\delta_2 (t, x=\pi/2)$ remains unchanged by the addition of non-normalizable modes.
 
 \subsection{Two General, Non-normalizable Modes}
 
@@ -299,8 +301,24 @@ where the non-normalizable modes have constant amplitudes $A_{\ob}$. Collecting 
 It is easy to see that when $\ob = \ol$, there will be singular terms in \eqref{S:2NN}. Using the definitions of $Z^\pm_{ijk\ell}$ and $H_{ijk\ell}$, some simplification is possible; however, $\overline{T}_\ell$ still evaluates to $0/0 + (\text{non-singular})$. Using L'H\^{o}pital's rule to evaluate the undetermined expression, we find that the limit of \eqref{S:2NN} is
 \begin{align}
 \label{Tbar limit}
-\lim_{\ob \to \ol} \overline{T}_\ell = 3Y_{\ell \ell \ell \ell} + \ol^2 \left( B_{\ell \ell \ell} - \ol^2 P_{\ell \ell \ell} \right) \, .
+\lim_{\ob \to \ol} \overline{T}_\ell = 3Y_{\ell \ell \ell \ell} + \ol^2 \left( B_{\ell \ell \ell} - 2m^2 Q_{\ell \ell \ell} - \ol^2 P_{\ell \ell \ell} \right) - \frac{5m^2}{2} V_{\ell \ell \ell \ell} \, .
 \end{align}
+
+Using these two expressions, we evaluate $\overline{T}_\ell$ for $\ell < 10$ and a variety of $\ob$ values for both a massless scalar (figure~\ref{fig:equal_frequency_m0}) and a tachyon (figure~\ref{fig:equal_frequency_m-05}).
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{./figures/NN_equalfreq_sourceterms_m0}
+\caption{{\it Left:} Evaluating \eqref{S:2NN} (rescaled by the amplitudes) when $m^2 = 0$ for various choices of $\ob$. {\it Right, top}: Zoom near $S=0$ (dotted line) showing the transition to negative values for the same choices of $\ob$. {\it Right, bottom}: The absolute value of the sum of $S_\ell$ for $\ell < 10$ corresponding to the choices of $\ob$.}
+\label{fig:equal_frequency_m0}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{./figures/NN_equalfreq_sourceterms_m-05}
+\caption{{\it Left:} Evaluating \eqref{S:2NN} for the same choices of $\ob$ as in figure~\ref{fig:equal_frequency_m0} but for a tachyon with $m^2 = -0.25$.}
+\label{fig:equal_frequency_m-05}
+\end{figure}
 
 
 \subsection{Special Values of Non-normalizable Frequencies}
