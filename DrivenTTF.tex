@@ -328,41 +328,44 @@ Focus on non-arbitrary values of the non-normalizable frequencies.
 \subsubsection{Add to an integer}
 \label{ssec: add to integer}
 
-Choose two of the modes to be non-normalizable with frequencies $\omega_1$ and $\omega_2$ that add to give an integer: $\omega_1 + \omega_2 = 2n$ where $n = 1, 2, 3, \ldots$ (note that the $n = 0$ case means that both $\omega_1$ and $\omega_2$ would need to be zero by the positive-frequency requirement and so would not contribute). Keeping the values as general as possible, the difference of the frequencies will not necessarily be an integer. Once again, consider each channel and determine the conditions for resonance.
+Choose two of the modes to be non-normalizable with frequencies $\omega_1$ and $\omega_2$ that add to give an integer: $\omega_1 + \omega_2 = 2n$ where $n = 1, 2, 3, \ldots$ (note that the $n = 0$ case means that both $\omega_1$ and $\omega_2$ would need to be zero by the positive-frequency requirement and so would not contribute). Furthermore, either frequency need not be an integer and therefore the difference $|\omega_1 - \omega_2|$ will not be an integer. 
+
+When we consider possible resonance channels, we see that resonances can be grouped into
 \begin{align}
 \label{all pluses}
-\oi + \oj + \ok - \ol &= 0 \quad \Rightarrow \quad \text{any of $\{\oi, \oj, \ok\}$ is normalizable with $\ell \geq n$} \\
-\oi - \oj + \ok + \ol &= 0 \quad \Rightarrow \quad \text{$\oj$ is normalizable and $\forall \, n \in \mathbb{Z}^+$} \\
-\oi + \oj - \ok + \ol &= 0 \quad \Rightarrow \quad \text{$\ok$ is normalizable and $\forall \,  n \in \mathbb{Z}^+$} \\
-\oi - \oj - \ok - \ol &= 0 \quad \Rightarrow \quad \text{$\oi$ is normalizable and $\forall \, n \in \mathbb{Z}^+$.}
+(++): \; \omega_I + 2n &= \omega_\ell \quad I \in \{i,j,k\} \; \forall \; \ell \geq n \\
+(+-): \, \omega_I - 2n &=\omega_\ell \quad I \in \{i,j,k\} \; \forall \; n
 \end{align}
-These resonances will contribute to the source term in the form
+for any $m^2_{BF} \leq m^2 < 0$. However, for a massless scalar, we have an additional channel
 \begin{align}
-S_\ell = \sum_{\omega_1 + \omega_2 = 2n} \left[ \overline{R}^{(1)}_{(\ell - n) \ell} \Theta \left( \ell - n \right) + \overline{R}^{(2)}_{(\ell + n) \ell } \right]\cos(\thl) \, ,
+\label{minus plus}
+(-+): \, -\omega_I + 2n = \omega_\ell \quad I \in \{i,j,k\} \; \forall \; n \geq \ell + d
 \end{align}
-where the Heaviside step function $\Theta(x)$ enforces the restriction on $n$ that comes from \eqref{all pluses}, and
+Adding the channels together, the total source term is
 \begin{align}
-\overline{R}^{(1)}_{i \ell} &= \frac{1}{4} Z^{-}_{12i\ell} \left( \frac{2n - \ol}{2n} \right) - \frac{1}{4} Z^{-}_{i21\ell} \frac{\oone(\ol + \oone)}{\ol^2 - \oone^2} - \frac{1}{4} Z^{-}_{i12\ell} \frac{\otwo (\ol + \otwo)}{\ol^2 - \otwo^2} - \frac{1}{4}  \oone H_{i12\ell} \left( \frac{1}{\ol - \otwo} + \frac{1}{2n} \right) \nonumber \\
-%
-& \quad - \frac{1}{4} \otwo H_{i21\ell} \left( \frac{1}{\ol - \oone} + \frac{1}{2n} \right) - \frac{1}{4} (\ol - 2n) H_{1i2\ell} \left( \frac{1}{\ol - \oone} + \frac{1}{\ol - \otwo} \right) \nonumber \\
-%
-& \quad + \frac{1}{2} \oone \otwo X_{i12\ell} \left( \frac{\otwo}{\ol - \otwo} + \frac{\oone}{\ol - \oone} + 1 \right) + \frac{1}{2} (\ol - 2n) \otwo X_{12i\ell} \left( \frac{\otwo}{\ol - \otwo} + \frac{\ol}{2n} \right) \nonumber \\
-%
-& \quad + \frac{1}{2} (\ol - 2n) \oone X_{21i\ell} \left( \frac{\oone}{\ol - \oone} + \frac{\ol}{2n} \right) - \frac{m^2}{4} V_{12i\ell} \left( \frac{\oone}{\ol - \otwo} + \frac{\otwo}{\ol - \oone} + 1 \right) \nonumber \\
-%
-& \quad - \frac{m^2}{4} V_{i21\ell} \left( \frac{\ol - 2n}{\ol - \otwo} + \frac{\ol - 2n}{\ol - \oone} + 2 \right) - \frac{m^2}{4} V_{i12\ell} \, ,
+S_\ell &=\Theta \left( \ell - n \right)  \overline{R}^{(1)}_{(\ell - n) 1 2 \ell} \cos \left( \theta_{(\ell - n)} + 2nt \right) + \overline{R}^{(2)}_{(\ell + n) 1 2 \ell } \cos\left( \theta_{(\ell + n)} - 2nt \right) \nonumber \\
+& \quad + \delta(m^2) \Theta\left( n - \ell - d \right) \overline{R}^{(3)}_{(n - \ell - d) 1 2 \ell} \cos \left( \theta_{(n - \ell - d)} + 2nt \right) \, ,
 \end{align}
+where the Heaviside step function $\Theta(x)$ enforces the restrictions on the indices in \eqref{all pluses} and \eqref{minus plus}.
+
+Examining each channel individually, we find that
 \begin{align}
-\overline{R}^{(2)}_{i \ell} &= \frac{1}{4} Z^{-}_{12i\ell} \left(\frac{\ol + 2n}{2n} \right) - \frac{1}{4} Z^{+}_{i 21\ell} \frac{\oone (\ol - \oone)}{\ol^2 - \oone^2} - \frac{1}{4} Z^{+}_{i12\ell} \frac{\otwo (\ol - \otwo)}{\ol^2 - \otwo^2} + \frac{1}{4} \oone H_{i12\ell} \left( \frac{1}{\ol + \otwo} - \frac{1}{2n} \right) \nonumber \\
+\label{R1}
+\overline{R}^{(1)}_{i 1 2 \ell} &= - \frac{1}{6} \sum_{\oone + \otwo = 2n} \Big\{ \frac{\otwo}{\ol - \otwo} Z^{-}_{i12\ell} + \frac{\oone}{\ol - \oone} Z^{-}_{i21\ell} + \frac{\ol - 2n}{2n} Z^-_{12i\ell} + \oone \otwo X_{i12\ell}  \nonumber \\
 %
-& \quad + \frac{1}{4} \otwo H_{i21\ell} \left( \frac{1}{\ol + \oone} - \frac{1}{2n} \right) - \frac{1}{4} (\ol + 2n) H_{1i2\ell} \left( \frac{1}{\ol + \oone} + \frac{1}{\ol + \otwo} \right) \nonumber \\
+& \quad + (\ol - 2n)\left(\otwo X_{1i2\ell} + \oone X_{2i1\ell} \right) - \frac{m^2}{2} \left(V_{12i\ell} + V_{i12\ell} + V_{i21\ell} \right) \Big\} \nonumber \\
 %
-& \quad - \frac{1}{2} \oone \otwo X_{i12\ell} \left( \frac{\otwo}{\ol + \otwo} + \frac{\oone}{\ol + \oone} - 1 \right) + \frac{1}{2} (\ol + 2n) \otwo X_{12i \ell} \left( \frac{\otwo}{\ol + \otwo} + \frac{\ol}{2n} \right) \nonumber \\
+& \quad - \frac{1}{6} \sum_{\oone + \otwo = 2n}^{\oi \neq \oone} \Big\{ \frac{\otwo}{\ol - \oone} \left( H_{i21\ell} + m^2 V_{21i\ell} - 2\otwo^2 X_{i12\ell} \right) \nonumber \\
 %
-& \quad + \frac{1}{2} (\ol + 2n) \oone X_{21i\ell} \left( \frac{\oone}{\ol + \oone} + \frac{\ol}{2n} \right) + \frac{m^2}{4} V_{12i\ell} \left( \frac{\oone}{\ol + \otwo} + \frac{\otwo}{\ol + \oone} -1 \right) \nonumber \\
+& \quad + \frac{(\ol - 2n)}{\ol - \otwo} \left( H_{2i1\ell} + m^2 V_{i12\ell} - 2\otwo^2 X_{2i1\ell} \right) \Big\} - \frac{1}{6} \sum_{\oone + \otwo = 2n}^{\oi \neq \otwo} \Big\{  \frac{\oone}{\ol - \otwo} \left( H_{i21\ell} \right. \nonumber \\
 %
-& \quad - \frac{m^2}{4} V_{i21\ell} \left( \frac{\ol + 2n}{\ol + \otwo} + \frac{\otwo}{2n} + 1\right) - \frac{m^2}{4} V_{i12\ell} \left( \frac{\ol + 2n}{\ol + \oone} + \frac{\oone}{2n} + 1 \right) \, .
+& \quad \left. + \,m^2 V_{21i\ell} - 2\oone^2 X_{21i\ell} \right) + \frac{(\ol - 2n)}{\ol - \oone} \left( H_{2i1\ell} + m^2 V_{i 12 \ell} - 2 \oone^2 X_{2i1\ell} \right) \Big\} \nonumber \\
+%
+& \quad -\frac{1}{12n} \sum_{\oone + \otwo = 2n}^{\oone \neq \otwo} \Big\{ \oone H_{21i\ell} + \otwo H_{12i\ell} + m^2 \left( \oone V_{1i2\ell} + \otwo V_{2i1\ell} \right) \nonumber \\
+%
+&\quad - 2 \left(\ol - 2n\right)^2 \left(\oone X_{21i\ell} + \otwo X_{12i\ell} \right) \Big \} \, .
 \end{align}
+
 The notation $X_{i12\ell}$ corresponds to evaluating $X_{ijk\ell}$ with $\omega_j = \oone$ and $\omega_k = \otwo$.
 
 \subsection{Integer Plus $\chi$}
@@ -560,5 +563,31 @@ where
 & \quad -4m^2 V_{i \jb \jb \ell} - 2m^2 V_{i \jb \jb \ell} \left( \frac{\oi^2}{\oi^2 - \oj^2} \right) + 2m^2 V_{\jb \jb i \ell} \left( \frac{\ojb^2}{\oi^2 - \ojb^2} \right) - m^2 V_{\jb \jb i \ell} \nonumber \\
 %
 & \quad + 2\ojb^2 (\ol^2 P_{\jb \jb \ell} - 3 \oi^2 P_{i \ell \jb} ) + 2\ol^2 B_{\jb \jb \ell} + 2 \ojb^2 B_{i \ell \jb} \, .
+\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+Sum of two NN frequencies is an integer:
+\begin{align}
+\overline{R}^{(1)}_{i \ell} &= \frac{1}{4} Z^{-}_{12i\ell} \left( \frac{2n - \ol}{2n} \right) - \frac{1}{4} Z^{-}_{i21\ell} \frac{\oone(\ol + \oone)}{\ol^2 - \oone^2} - \frac{1}{4} Z^{-}_{i12\ell} \frac{\otwo (\ol + \otwo)}{\ol^2 - \otwo^2} - \frac{1}{4}  \oone H_{i12\ell} \left( \frac{1}{\ol - \otwo} + \frac{1}{2n} \right) \nonumber \\
+%
+& \quad - \frac{1}{4} \otwo H_{i21\ell} \left( \frac{1}{\ol - \oone} + \frac{1}{2n} \right) - \frac{1}{4} (\ol - 2n) H_{1i2\ell} \left( \frac{1}{\ol - \oone} + \frac{1}{\ol - \otwo} \right) \nonumber \\
+%
+& \quad + \frac{1}{2} \oone \otwo X_{i12\ell} \left( \frac{\otwo}{\ol - \otwo} + \frac{\oone}{\ol - \oone} + 1 \right) + \frac{1}{2} (\ol - 2n) \otwo X_{12i\ell} \left( \frac{\otwo}{\ol - \otwo} + \frac{\ol}{2n} \right) \nonumber \\
+%
+& \quad + \frac{1}{2} (\ol - 2n) \oone X_{21i\ell} \left( \frac{\oone}{\ol - \oone} + \frac{\ol}{2n} \right) - \frac{m^2}{4} V_{12i\ell} \left( \frac{\oone}{\ol - \otwo} + \frac{\otwo}{\ol - \oone} + 1 \right) \nonumber \\
+%
+& \quad - \frac{m^2}{4} V_{i21\ell} \left( \frac{\ol - 2n}{\ol - \otwo} + \frac{\ol - 2n}{\ol - \oone} + 2 \right) - \frac{m^2}{4} V_{i12\ell} \, ,
+\end{align}
+\begin{align}
+\overline{R}^{(2)}_{i \ell} &= \frac{1}{4} Z^{-}_{12i\ell} \left(\frac{\ol + 2n}{2n} \right) - \frac{1}{4} Z^{+}_{i 21\ell} \frac{\oone (\ol - \oone)}{\ol^2 - \oone^2} - \frac{1}{4} Z^{+}_{i12\ell} \frac{\otwo (\ol - \otwo)}{\ol^2 - \otwo^2} + \frac{1}{4} \oone H_{i12\ell} \left( \frac{1}{\ol + \otwo} - \frac{1}{2n} \right) \nonumber \\
+%
+& \quad + \frac{1}{4} \otwo H_{i21\ell} \left( \frac{1}{\ol + \oone} - \frac{1}{2n} \right) - \frac{1}{4} (\ol + 2n) H_{1i2\ell} \left( \frac{1}{\ol + \oone} + \frac{1}{\ol + \otwo} \right) \nonumber \\
+%
+& \quad - \frac{1}{2} \oone \otwo X_{i12\ell} \left( \frac{\otwo}{\ol + \otwo} + \frac{\oone}{\ol + \oone} - 1 \right) + \frac{1}{2} (\ol + 2n) \otwo X_{12i \ell} \left( \frac{\otwo}{\ol + \otwo} + \frac{\ol}{2n} \right) \nonumber \\
+%
+& \quad + \frac{1}{2} (\ol + 2n) \oone X_{21i\ell} \left( \frac{\oone}{\ol + \oone} + \frac{\ol}{2n} \right) + \frac{m^2}{4} V_{12i\ell} \left( \frac{\oone}{\ol + \otwo} + \frac{\otwo}{\ol + \oone} -1 \right) \nonumber \\
+%
+& \quad - \frac{m^2}{4} V_{i21\ell} \left( \frac{\ol + 2n}{\ol + \otwo} + \frac{\otwo}{2n} + 1\right) - \frac{m^2}{4} V_{i12\ell} \left( \frac{\ol + 2n}{\ol + \oone} + \frac{\oone}{2n} + 1 \right) \, .
 \end{align}
 
