@@ -304,7 +304,7 @@ It is easy to see that when $\ob = \ol$, there will be singular terms in \eqref{
 \lim_{\ob \to \ol} \overline{T}_\ell = 3Y_{\ell \ell \ell \ell} + \ol^2 \left( B_{\ell \ell \ell} - 2m^2 Q_{\ell \ell \ell} - \ol^2 P_{\ell \ell \ell} \right) - \frac{5m^2}{2} V_{\ell \ell \ell \ell} \, .
 \end{align}
 
-Using these two expressions, we evaluate $\overline{T}_\ell$ for $\ell < 10$ and a variety of $\ob$ values for both a massless scalar (figure~\ref{fig:equal_frequency_m0}) and a tachyon (figure~\ref{fig:equal_frequency_m-05}).
+Using these two expressions, we evaluate $\overline{T}_\ell$ for $\ell < 10$ and a variety of $\ob$ values for both a massless scalar (figure~\ref{fig:equal_frequency_m0}) and a tachyon (figure~\ref{fig:equal_frequency_m-2_25}).
 
 \begin{figure}
 \centering
@@ -315,9 +315,9 @@ Using these two expressions, we evaluate $\overline{T}_\ell$ for $\ell < 10$ and
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\textwidth]{./figures/NN_equalfreq_sourceterms_m-05}
-\caption{{\it Left:} Evaluating \eqref{S:2NN} for the same choices of $\ob$ as in figure~\ref{fig:equal_frequency_m0} but for a tachyon with $m^2 = -0.25$.}
-\label{fig:equal_frequency_m-05}
+\includegraphics[width=\textwidth]{./figures/NN_equalfreq_sourceterms_m-2_25}
+\caption{{\it Left:} Evaluating \eqref{S:2NN} for the same choices of $\ob$ as in figure~\ref{fig:equal_frequency_m0} but for a tachyon with $m^2 = -2.25$.}
+\label{fig:equal_frequency_m-2_25}
 \end{figure}
 
 
@@ -343,30 +343,63 @@ for any $m^2_{BF} \leq m^2 < 0$. However, for a massless scalar, we have an addi
 \end{align}
 Adding the channels together, the total source term is
 \begin{align}
-S_\ell &=\Theta \left( \ell - n \right)  \overline{R}^{(1)}_{(\ell - n) 1 2 \ell} \cos \left( \theta_{(\ell - n)} + 2nt \right) + \overline{R}^{(2)}_{(\ell + n) 1 2 \ell } \cos\left( \theta_{(\ell + n)} - 2nt \right) \nonumber \\
-& \quad + \delta(m^2) \Theta\left( n - \ell - d \right) \overline{R}^{(3)}_{(n - \ell - d) 1 2 \ell} \cos \left( \theta_{(n - \ell - d)} + 2nt \right) \, ,
+S_\ell &=\Theta \left( \ell - n \right)  \overline{R}^{(++)}_{(\ell - n) 1 2 \ell} \cos \left( \theta_{(\ell - n)} + 2nt \right) + \overline{R}^{(+-)}_{(\ell + n) 1 2 \ell } \cos\left( \theta_{(\ell + n)} - 2nt \right) \nonumber \\
+%
+& \quad + \delta(m^2) \Theta\left( n - \ell - d \right) \overline{R}^{(-+)}_{(n - \ell - d) 1 2 \ell} \cos \left( \theta_{(n - \ell - d)} + 2nt \right) + \overline{T}_{12\ell} \cos \left( \theta_\ell \right) \, ,
 \end{align}
 where the Heaviside step function $\Theta(x)$ enforces the restrictions on the indices in \eqref{all pluses} and \eqref{minus plus}.
 
 Examining each channel individually, we find that
 \begin{align}
 \label{R1}
-\overline{R}^{(1)}_{i 1 2 \ell} &= - \frac{1}{6} \sum_{\oone + \otwo = 2n} \Big\{ \frac{\otwo}{\ol - \otwo} Z^{-}_{i12\ell} + \frac{\oone}{\ol - \oone} Z^{-}_{i21\ell} + \frac{\ol - 2n}{2n} Z^-_{12i\ell} + \oone \otwo X_{i12\ell}  \nonumber \\
+\overline{R}^{(++)}_{i 1 2 \ell} &= - \frac{1}{6} \sum_{\oone + \otwo = 2n} \Big\{ \frac{\otwo}{\ol - \otwo} Z^{-}_{i12\ell} + \frac{\oone}{\ol - \oone} Z^{-}_{i21\ell} + \frac{\ol - 2n}{2n} Z^-_{12i\ell} + \oone \otwo X_{i12\ell}  \nonumber \\
 %
 & \quad + (\ol - 2n)\left(\otwo X_{1i2\ell} + \oone X_{2i1\ell} \right) - \frac{m^2}{2} \left(V_{12i\ell} + V_{i12\ell} + V_{i21\ell} \right) \Big\} \nonumber \\
 %
 & \quad - \frac{1}{6} \sum_{\oone + \otwo = 2n}^{\oi \neq \oone} \Big\{ \frac{\otwo}{\ol - \oone} \left( H_{i21\ell} + m^2 V_{21i\ell} - 2\otwo^2 X_{i12\ell} \right) \nonumber \\
 %
-& \quad + \frac{(\ol - 2n)}{\ol - \otwo} \left( H_{2i1\ell} + m^2 V_{i12\ell} - 2\otwo^2 X_{2i1\ell} \right) \Big\} - \frac{1}{6} \sum_{\oone + \otwo = 2n}^{\oi \neq \otwo} \Big\{  \frac{\oone}{\ol - \otwo} \left( H_{i21\ell} \right. \nonumber \\
+& \quad + \frac{(\ol - 2n)}{\ol - \otwo} \left( H_{1i2\ell} + m^2 V_{i21\ell} - 2\otwo^2 X_{1i2\ell} \right) \Big\} - \frac{1}{6} \sum_{\oone + \otwo = 2n}^{\oi \neq \otwo} \Big\{  \frac{\oone}{\ol - \otwo} \left( H_{i21\ell} \right. \nonumber \\
 %
-& \quad \left. + \,m^2 V_{21i\ell} - 2\oone^2 X_{21i\ell} \right) + \frac{(\ol - 2n)}{\ol - \oone} \left( H_{2i1\ell} + m^2 V_{i 12 \ell} - 2 \oone^2 X_{2i1\ell} \right) \Big\} \nonumber \\
+& \quad \left. + \,m^2 V_{21i\ell} - 2\oone^2 X_{i 21 \ell} \right) + \frac{(\ol - 2n)}{\ol - \oone} \left( H_{2i1\ell} + m^2 V_{i 12 \ell} - 2 \oone^2 X_{2i1\ell} \right) \Big\} \nonumber \\
 %
 & \quad -\frac{1}{12n} \sum_{\oone + \otwo = 2n}^{\oone \neq \otwo} \Big\{ \oone H_{21i\ell} + \otwo H_{12i\ell} + m^2 \left( \oone V_{1i2\ell} + \otwo V_{2i1\ell} \right) \nonumber \\
 %
-&\quad - 2 \left(\ol - 2n\right)^2 \left(\oone X_{21i\ell} + \otwo X_{12i\ell} \right) \Big \} \, .
+& \quad - 2 \left(\ol - 2n\right)^2 \left(\oone X_{21i\ell} + \otwo X_{12i\ell} \right) \Big \} \, .
+\end{align}
+The notation $X_{i12\ell}$ corresponds to evaluating $X_{ijk\ell}$ with $\omega_j = \oone$ and $\omega_k = \otwo$. 
+
+Next, we find that
+\begin{align}
+\label{R2}
+\overline{R}_{i12\ell}^{(+-)} &= - \frac{1}{4} \sum_{\oone + \otwo = 2n} \Big\{ \frac{(\ol + 2n)}{2n} Z^-_{12i\ell} + 2 (\ol + 2n) \left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) \nonumber \\
+%
+& \quad  -\frac{\oone}{(\ol + \otwo)} \left( H_{i12\ell} + m^2 V_{12i\ell} - 2 \otwo^2 X_{i12\ell} \right) + \frac{(\ol + 2n)}{(\ol + \otwo)} \left( H_{1i2\ell} + m^2 V_{i21\ell} - 2\otwo^2 X_{1i2\ell} \right)  \nonumber \\
+%
+& \quad - \frac{\otwo}{(\ol + \oone)} \left( H_{i21\ell} + m^2 V_{21i\ell} - 2\oone^2 X_{i21\ell} \right) + \frac{(\ol + 2n)}{(\ol + \oone)} \left(H_{2i1\ell} + m^2 V_{i12\ell} - 2\oone^2 X_{2i1\ell} \right)  \nonumber \\
+%
+& \quad  - 2 \oone\otwo X_{i12\ell} + m^2 \left( V_{12i\ell} + V_{i12\ell} + V_{i21\ell} \right) \Big\} + \frac{1}{4} \sum^{\otwo \neq \ol}_{\oone + \otwo = 2n} \frac{\oone\otwo(\ol + 2n)}{\ol + \otwo} \left( X_{21i\ell} - X_{\ell i 12} \right) \nonumber \\
+%
+& \quad + \frac{1}{4} \sum^{\oone \neq \ol}_{\oone + \otwo = 2n} \frac{\oone\otwo(\ol + 2n)}{\ol + \oone} \left( X_{12i\ell} - X_{\ell i 12} \right).
 \end{align}
 
-The notation $X_{i12\ell}$ corresponds to evaluating $X_{ijk\ell}$ with $\omega_j = \oone$ and $\omega_k = \otwo$.
+When $m^2 = 0$, we have contributions from
+\begin{align}
+\label{R3}
+\overline{R}_{i12\ell}^{(-+)} &= \frac{2n-\ol}{8n} \sum_{\oone + \otwo = 2n}^{\oi \neq \ol} Z^-_{12i\ell} \quad - \frac{1}{2} \sum_{\oone + \otwo = 2n} \Big\{ (2n - \ol)\left(\oone X_{21i\ell} + \otwo X_{12i\ell} \right) - \oone \otwo X_{i12\ell} \Big\} \nonumber \\
+%
+& + \frac{1}{4} \sum_{\oone + \otwo = 2n}^{\oone \neq \ol} \Big\{ \frac{\oone}{\ol - \oone} Z^+_{2i1\ell} - \frac{\otwo}{\ol - \oone} \left(H_{i21\ell} - 2\oone^2 X_{i21\ell} \right) + \frac{2n - \ol}{\ol - \oone} \left( H_{2i1\ell} - 2\oone^2 X_{2i1\ell} \right) \Big\} \nonumber \\
+%
+& + \frac{1}{4} \sum_{\oone + \otwo = 2n}^{\otwo \neq \ol} \Big\{ \frac{\otwo}{\ol-\otwo} Z^+_{1i2\ell} - \frac{\oone}{\ol-\otwo}\left(H_{i21\ell} - 2\otwo^2 X_{i12\ell} \right) + \frac{2n - \ol}{\ol - \otwo} \left( H_{1i2\ell} - 2\otwo^2 X_{1i2\ell} \right) \Big\} \nonumber \\
+%
+& - \frac{1}{8n} \sum_{\oone + \otwo = 2n}^{\oone \neq \otwo} \Big\{ (2n - \ol) \left(\oone X_{21i\ell} + \otwo X_{12i\ell} \right) - \oone \otwo X_{i12\ell} \Big\} ,
+\end{align}
+and finally, 
+\begin{align}
+\label{T12}
+\overline{T}_{12\ell} &=  \frac{1}{2} \ol^2 \left( \tilde{Z}^+_{11\ell} + \tilde{Z}^+_{22\ell} \right)- \frac{1}{2} \Big\{ H_{11\ell\ell} + H_{22\ell\ell} + m^2 \left( V_{\ell 1 1 \ell} + V_{\ell 2 2 \ell} \right) - 2 \ol^2 \left( X_{11\ell\ell} + X_{22\ell\ell} \right)  \nonumber \\
+%
+& \quad + 4 \ol^2 \left( \oone^2 P_{\ell \ell 1} + \otwo^2 P_{\ell \ell 2} \right) + 2\oone^2 M_{\ell \ell 1} + 2\otwo^2 M_{\ell \ell 2} + 2m^2 \left( \oone^2 Q_{\ell\ell 1} + \otwo^2 Q_{\ell \ell 2} \right) \Big\} \, .
+\end{align}
 
 \subsection{Integer Plus $\chi$}
 
