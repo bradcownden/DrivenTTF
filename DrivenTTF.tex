@@ -22,8 +22,8 @@
 \newcommand{\oj}{\omega_j}
 \newcommand{\ok}{\omega_k}
 \newcommand{\ol}{\omega_\ell}
-\newcommand{\oone}{\omega_1}
-\newcommand{\otwo}{\omega_2}
+\newcommand{\oone}{\overline{\omega}_1}
+\newcommand{\otwo}{\overline{\omega}_2}
 \newcommand{\thi}{\theta_i}
 \newcommand{\thj}{\theta_j}
 \newcommand{\thk}{\theta_k}
@@ -328,7 +328,7 @@ Focus on non-arbitrary values of the non-normalizable frequencies.
 \subsubsection{Add to an integer}
 \label{ssec: add to integer}
 
-Choose two of the modes to be non-normalizable with frequencies $\omega_1$ and $\omega_2$ that add to give an integer: $\omega_1 + \omega_2 = 2n$ where $n = 1, 2, 3, \ldots$ (note that the $n = 0$ case means that both $\omega_1$ and $\omega_2$ would need to be zero by the positive-frequency requirement and so would not contribute). Furthermore, either frequency need not be an integer and therefore the difference $|\omega_1 - \omega_2|$ will not be an integer. 
+Choose two of the modes to be non-normalizable with frequencies $\oone$ and $\otwo$ that add to give an integer: $\oone+ \otwo = 2n$ where $n = 1, 2, 3, \ldots$ (note that the $n = 0$ case means that both $\omega_1$ and $\omega_2$ would need to be zero by the positive-frequency requirement and so would not contribute). Furthermore, either frequency need not be an integer and therefore the difference $|\oone - \otwo|$ will not be an integer. 
 
 When we consider possible resonance channels, we see that resonances can be grouped into
 \begin{align}
@@ -343,6 +343,7 @@ for any $m^2_{BF} \leq m^2 < 0$. However, for a massless scalar, we have an addi
 \end{align}
 Adding the channels together, the total source term is
 \begin{align}
+\label{add to integer}
 S_\ell &=\Theta \left( \ell - n \right)  \overline{R}^{(++)}_{(\ell - n) 1 2 \ell} \cos \left( \theta_{(\ell - n)} + 2nt \right) + \overline{R}^{(+-)}_{(\ell + n) 1 2 \ell } \cos\left( \theta_{(\ell + n)} - 2nt \right) \nonumber \\
 %
 & \quad + \delta(m^2) \Theta\left( n - \ell - d \right) \overline{R}^{(-+)}_{(n - \ell - d) 1 2 \ell} \cos \left( \theta_{(n - \ell - d)} + 2nt \right) + \overline{T}_{12\ell} \cos \left( \theta_\ell \right) \, ,
@@ -409,15 +410,19 @@ In figure~\ref{fig:atoi_pm_m-4_0}, values of $\overline{R}^{(+-)}_{(\ell + n) 1 
 When $m^2 = 0$, we have contributions from
 \begin{align}
 \label{R3}
-\overline{R}_{i12\ell}^{(-+)} &= \frac{2n-\ol}{8n} \sum_{\oone + \otwo = 2n}^{\oi \neq \ol} Z^-_{12i\ell} \quad - \frac{1}{2} \sum_{\oone + \otwo = 2n} \Big\{ (2n - \ol)\left(\oone X_{21i\ell} + \otwo X_{12i\ell} \right) - \oone \otwo X_{i12\ell} \Big\} \nonumber \\
+\overline{R}_{i12\ell}^{(-+)} &=  \frac{1}{4} \sum_{\oone+\otwo = 2n}^{\otwo \neq \ol} \frac{\otwo}{\ol - \otwo} Z^+_{i12\ell} + \frac{1}{4} \sum_{\oone+\otwo = 2n}^{\oone \neq \ol} \frac{\oone}{\ol - \oone} Z^+_{i21\ell} + \frac{1}{4} \sum_{\oone+\otwo = 2n}^{i \neq \ell} \left( \frac{2n - \ol}{2n} \right) Z^-_{12i\ell} \nonumber \\
 %
-& + \frac{1}{4} \sum_{\oone + \otwo = 2n}^{\oone \neq \ol} \Big\{ \frac{\oone}{\ol - \oone} Z^+_{2i1\ell} - \frac{\otwo}{\ol - \oone} \left(H_{i21\ell} - 2\oone^2 X_{i21\ell} \right) + \frac{2n - \ol}{\ol - \oone} \left( H_{2i1\ell} - 2\oone^2 X_{2i1\ell} \right) \Big\} \nonumber \\
+& \quad + \frac{1}{4} \sum_{\oone+\otwo = 2n}^{\oone \neq \oi} \frac{1}{\oi - \oone} \Big\{ \oone \left( H_{i12\ell} - 2\otwo^2 X_{i12\ell} \right) - (2n - \ol) \left( H_{1i2\ell} - 2\otwo^2 X_{1i2\ell} \right) \Big\} \nonumber \\
 %
-& + \frac{1}{4} \sum_{\oone + \otwo = 2n}^{\otwo \neq \ol} \Big\{ \frac{\otwo}{\ol-\otwo} Z^+_{1i2\ell} - \frac{\oone}{\ol-\otwo}\left(H_{i21\ell} - 2\otwo^2 X_{i12\ell} \right) + \frac{2n - \ol}{\ol - \otwo} \left( H_{1i2\ell} - 2\otwo^2 X_{1i2\ell} \right) \Big\} \nonumber \\
+& \quad + \frac{1}{4} \sum_{\oone+\otwo = 2n}^{\otwo \neq \oi} \frac{1}{\oi - \otwo} \Big\{ \otwo \left( H_{i21\ell} - 2\oone^2 X_{i21\ell} \right) - (2n - \ol) \left( H_{2i1\ell} - 2\oone^2 X_{2i1\ell} \right) \Big\} \nonumber \\
 %
-& - \frac{1}{8n} \sum_{\oone + \otwo = 2n}^{\oone \neq \otwo} \Big\{ (2n - \ol) \left(\oone X_{21i\ell} + \otwo X_{12i\ell} \right) - \oone \otwo X_{i12\ell} \Big\} ,
+& \quad - \frac{1}{8n} \sum_{\oone+\otwo = 2n}^{\oone \neq \otwo} \Big\{ \oone H_{21i\ell} + \otwo H_{12i\ell} - 2 \left( 2n - \ol \right)^2 \left(\oone X_{21i\ell} + \otwo X_{12i\ell} \right) \Big\} \nonumber \\
+%
+& \quad - \frac{1}{2} \sum_{\oone+\otwo = 2n} \Big\{ (2n - \ol) \left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) - \oone \otwo X_{i12\ell} \Big\} ,
 \end{align}
-and finally, 
+{\it NB.}\, In \eqref{R3} \emph{only}, $\oi = 2i + d$ since this term requires that $m^2 = 0$ to contribute. We maintain the same notation despite the special case out of convenience.
+
+Finally, 
 \begin{align}
 \label{T12}
 \overline{T}_{12\ell} &=  \frac{1}{2} \ol^2 \left( \tilde{Z}^+_{11\ell} + \tilde{Z}^+_{22\ell} \right)- \frac{1}{2} \Big\{ H_{11\ell\ell} + H_{22\ell\ell} + m^2 \left( V_{\ell 1 1 \ell} + V_{\ell 2 2 \ell} \right) - 2 \ol^2 \left( X_{11\ell\ell} + X_{22\ell\ell} \right)  \nonumber \\
@@ -445,6 +450,13 @@ and finally,
 \label{fig:atoi_all_m-4_0}
 \end{figure}
 
+\begin{figure}
+\centering
+	\includegraphics[width=\textwidth]{./figures/NNAddToInteger_source_n2_m0_0}\\ 
+	\includegraphics[width=\textwidth]{./figures/NNAddToInteger_source_n4_m0_0}
+	\caption{{\it Above:} The value of \eqref{add to integer} as a function of $\ell$ for a massless scalar with values of $\oone$ and $\otwo$ chosen so that $\oone + \otwo = 4$. {\it Below:} The same plot but with values chosen to satisfy $\oone + \otwo = 8$.}
+	\label{fig:atoi_all_m0_0}
+\end{figure}
 
 \subsection{Integer Plus $\chi$}
 
