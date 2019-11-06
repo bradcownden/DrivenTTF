@@ -214,7 +214,7 @@ where
 
 \subsection{Naturally Vanishing Resonances}
 
-It has been shown that when $m=0$, and only normalizable modes are considered, \eqref{omega} and \eqref{gamma} vanish by the orthogonality of the basis functions. {\bf Maybe show that mass-dependent terms vanish for normalizable modes?}
+It has been shown that when working in the interior gauge, \eqref{omega} and \eqref{gamma} for a massless scalar vanish by the orthogonality of the basis functions. Moreover, we are able to demonstrate that these continue to vanish (as they must) for massive scalars in the boundary gauge. This means that the dynamics of the perturbative system are determined only from the remaining resonance channel. When non-normalizable modes are introduced, we will see that all none of the resonance channels naturally vanish.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -304,7 +304,7 @@ It is easy to see that when $\ob = \ol$, there will be singular terms in \eqref{
 \lim_{\ob \to \ol} \overline{T}_\ell = 3Y_{\ell \ell \ell \ell} + \ol^2 \left( B_{\ell \ell \ell} - 2m^2 Q_{\ell \ell \ell} - \ol^2 P_{\ell \ell \ell} \right) - \frac{5m^2}{2} V_{\ell \ell \ell \ell} \, .
 \end{align}
 
-Using these two expressions, we evaluate $\overline{T}_\ell$ for $\ell < 10$ and a variety of $\ob$ values for both a massless scalar (figure~\ref{fig:equal_frequency_m0}) and a tachyon (figure~\ref{fig:equal_frequency_m-4_0}).
+Using these two expressions, we evaluate $\overline{T}_\ell$ for $\ell < 10$ and a variety of $\ob$ values for both a massless scalar (figure~\ref{fig:equal_frequency_m0}) and a tachyonic scalar (figure~\ref{fig:equal_frequency_m-4_0}).
 
 \begin{figure}
 \centering
@@ -365,20 +365,6 @@ Examining each channel individually, we find that
 \end{align}
 The notation $X_{i12\ell}$ corresponds to evaluating $X_{ijk\ell}$ with $\omega_j = \oone$ and $\omega_k = \otwo$. 
 
-\begin{figure}
-\centering
-	\includegraphics[width=\textwidth]{./figures/NN_equalfreq_ppchannel_n2_m-4_0}
-	\caption{{\it Left, above}: Individual values of $\overline{R}^{(++)}_{(\ell - n)12\ell}$ for $m^2 = -4.0$ as a function of $\ell$ for $\oone + \otwo = 2n$ with $n = 4$ when $\oone \leq n$. {\it Left, below}: The same function, but for $\oone \geq n$; note the symmetry in values as $\oone \leftrightarrow \otwo$. {\it Right}: The absolute value of the sum of the $(++)$ source terms for choices of $\oone$.}
-	\label{fig:atoi_pp_m-4_0}
-\end{figure}
-
-\begin{figure}
-\centering
-	\includegraphics[width=\textwidth]{./figures/NN_equalfreq_ppchannel_n2_m0_0}
-	\caption{$\overline{R}^{(++)}_{(\ell - n)12\ell}$ for $m^2 = 0$.}
-\end{figure}
-
-
 Next, we find that
 \begin{align}
 \label{R2}
@@ -392,20 +378,6 @@ Next, we find that
 %
 & \quad + \frac{1}{4} \sum^{\oone \neq \ol}_{\oone + \otwo = 2n} \frac{\oone\otwo(\ol + 2n)}{\ol + \oone} \left( X_{12i\ell} - X_{\ell i 12} \right).
 \end{align}
-In figure~\ref{fig:atoi_pm_m-4_0}, values of $\overline{R}^{(+-)}_{(\ell + n) 1 2 \ell}$ are calculated up to $\ell= 10$ for $n = 2$ and steps of $\Delta \overline{\omega} = 0.25$.
-
-\begin{figure}
-\centering
-	\includegraphics[width=\textwidth]{./figures/NN_equalfreq_pmchannel_n2_m-4_0}
-	\caption{{\it Left, above}: Individual values of $\overline{R}^{(+-)}_{(\ell - n)12\ell}$ for $m^2 = -4.0$ as a function of $\ell$ for $\oone + \otwo = 2n$ with $n = 4$ when $\oone \leq n$. {\it Left, below}: The same function, but for $\oone \geq n$; note the symmetry in values as $\oone \leftrightarrow \otwo$. {\it Right}: The absolute value of the sum of the $(+-)$ source terms for choices of $\oone$.}
-	\label{fig:atoi_pm_m-4_0}
-\end{figure}
-
-\begin{figure}
-\centering
-	\includegraphics[width=\textwidth]{./figures/NN_equalfreq_pmchannel_n2_m0_0}
-	\caption{$\overline{R}^{(+-)}_{(\ell - n)12\ell}$ for $m^2 = 0$.}
-\end{figure}
 
 When $m^2 = 0$, we have contributions from
 \begin{align}
@@ -418,7 +390,7 @@ When $m^2 = 0$, we have contributions from
 %
 & \quad - \frac{1}{8n} \sum_{\oone+\otwo = 2n}^{\oone \neq \otwo} \Big\{ \oone H_{21i\ell} + \otwo H_{12i\ell} - 2 \left( 2n - \ol \right)^2 \left(\oone X_{21i\ell} + \otwo X_{12i\ell} \right) \Big\} \nonumber \\
 %
-& \quad - \frac{1}{2} \sum_{\oone+\otwo = 2n} \Big\{ (2n - \ol) \left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) - \oone \otwo X_{i12\ell} \Big\} ,
+& \quad - \frac{1}{2} \sum_{\oone+\otwo = 2n} \Big\{ (2n - \ol) \left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) - \oone \otwo X_{i12\ell} \Big\} .
 \end{align}
 {\it NB.}\, In \eqref{R3} \emph{only}, $\oi = 2i + d$ since this term requires that $m^2 = 0$ to contribute. We maintain the same notation despite the special case out of convenience.
 
@@ -430,32 +402,28 @@ Finally,
 & \quad + 4 \ol^2 \left( \oone^2 P_{\ell \ell 1} + \otwo^2 P_{\ell \ell 2} \right) + 2\oone^2 M_{\ell \ell 1} + 2\otwo^2 M_{\ell \ell 2} + 2m^2 \left( \oone^2 Q_{\ell\ell 1} + \otwo^2 Q_{\ell \ell 2} \right) \Big\} \, .
 \end{align}
 
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{./figures/NN_equalfreq_tchannel_n2_m-4_0}
-\caption{{\it Left, above}: . {\it Left, below}: .{\it Right}: $m^2 = -4.0$.}
-\label{fig:atoi_t_m-4_0}
-\end{figure}
+To examine the effect of the choice of $n$ on the value of $S_\ell$ and $| \Sigma S_\ell |$, figure~\ref{fig:atoi_all_m0_0compare} provides a comparison between the value of the source term for a massless scalar for two choices of $n$.
 
 \begin{figure}
 \centering
-	\includegraphics[width=\textwidth]{./figures/NN_equalfreq_tchannel_n2_m0_0}
-	\caption{$\overline{T}$ for $m^2 = 0$.}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{./figures/NN_equalfreq_source_n2_m-4_0}
-\caption{{\it Left, above}: . {\it Left, below}: .{\it Right}: sum of all source terms for $m^2 = -4.0$.}
+\includegraphics[width=\textwidth]{./figures/NNAddToInteger_source_n2_m-4_0}
+\caption{{\it Left}: Source term values for a tachyonic scalar with $m^2 = -4.0$ when the frequencies of non-normalizable modes sum to $4.0$. {\it Right}: The absolute value of the sum of the source terms for each choice of $\oone$, $\otwo$.}
 \label{fig:atoi_all_m-4_0}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
-	\includegraphics[width=\textwidth]{./figures/NNAddToInteger_source_n2_m0_0}\\ 
-	\includegraphics[width=\textwidth]{./figures/NNAddToInteger_source_n4_m0_0}
+	\begin{subfigure}[b]{0.75\textwidth}
+		\includegraphics[width=\textwidth]{./figures/NNAddToInteger_source_n2_m0_0}
+		\label{fig:atoi_all_n2_m0}
+	\end{subfigure}
+	\vspace{-0.25in}
+	\begin{subfigure}[b]{0.75\textwidth}
+		\includegraphics[width=\textwidth]{./figures/NNAddToInteger_source_n4_m0_0}
+		\label{fig:atoi_all_n4_m0}
+	\end{subfigure}
 	\caption{{\it Above:} The value of \eqref{add to integer} as a function of $\ell$ for a massless scalar with values of $\oone$ and $\otwo$ chosen so that $\oone + \otwo = 4$. {\it Below:} The same plot but with values chosen to satisfy $\oone + \otwo = 8$.}
-	\label{fig:atoi_all_m0_0}
+	\label{fig:atoi_all_m0_0compare}
 \end{figure}
 
 \subsection{Integer Plus $\chi$}
@@ -532,14 +500,12 @@ Finally, the last set of contributions comes from terms that go as $\overline{T}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Numerics}
+\section{Discussion}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\acknowledgments
-
-This research was enabled in part by support provided by WestGrid (\href{www.westgrid.ca}{www.westgrid.ca}) and Compute Canada (\href{www.computecanada.ca}{www.computecanada.ca}).
+%\acknowledgments
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -620,6 +586,48 @@ M_{ij\ell} &= \oi^2 P_{ij\ell} - B_{ij\ell} -m^2 Q_{ij\ell}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{./figures/NN_equalfreq_tchannel_n2_m-4_0}
+\caption{{\it Left, above}: . {\it Left, below}: .{\it Right}: $m^2 = -4.0$.}
+\label{fig:atoi_t_m-4_0}
+\end{figure}
+
+\begin{figure}
+\centering
+	\includegraphics[width=\textwidth]{./figures/NN_equalfreq_tchannel_n2_m0_0}
+	\caption{$\overline{T}$ for $m^2 = 0$.}
+\end{figure}
+
+\begin{figure}
+\centering
+	\includegraphics[width=\textwidth]{./figures/NN_equalfreq_pmchannel_n2_m-4_0}
+	\caption{{\it Left, above}: Individual values of $\overline{R}^{(+-)}_{(\ell - n)12\ell}$ for $m^2 = -4.0$ as a function of $\ell$ for $\oone + \otwo = 2n$ with $n = 4$ when $\oone \leq n$. {\it Left, below}: The same function, but for $\oone \geq n$; note the symmetry in values as $\oone \leftrightarrow \otwo$. {\it Right}: The absolute value of the sum of the $(+-)$ source terms for choices of $\oone$.}
+	\label{fig:atoi_pm_m-4_0}
+\end{figure}
+
+\begin{figure}
+\centering
+	\includegraphics[width=\textwidth]{./figures/NN_equalfreq_pmchannel_n2_m0_0}
+	\caption{$\overline{R}^{(+-)}_{(\ell - n)12\ell}$ for $m^2 = 0$.}
+\end{figure}
+
+
+\begin{figure}
+\centering
+	\includegraphics[width=\textwidth]{./figures/NN_equalfreq_ppchannel_n2_m-4_0}
+	\caption{{\it Left, above}: Individual values of $\overline{R}^{(++)}_{(\ell - n)12\ell}$ for $m^2 = -4.0$ as a function of $\ell$ for $\oone + \otwo = 2n$ with $n = 4$ when $\oone \leq n$. {\it Left, below}: The same function, but for $\oone \geq n$; note the symmetry in values as $\oone \leftrightarrow \otwo$. {\it Right}: The absolute value of the sum of the $(++)$ source terms for choices of $\oone$.}
+	\label{fig:atoi_pp_m-4_0}
+\end{figure}
+
+\begin{figure}
+\centering
+	\includegraphics[width=\textwidth]{./figures/NN_equalfreq_ppchannel_n2_m0_0}
+	\caption{$\overline{R}^{(++)}_{(\ell - n)12\ell}$ for $m^2 = 0$.}
+\end{figure}
+
 
 \subsubsection{$(++-)$}
 
