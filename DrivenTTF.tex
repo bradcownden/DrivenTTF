@@ -274,18 +274,7 @@ where we have defined $\xi = \sqrt{d^2 + 4m^2}$. In the massless case, $\xi = d$
 
 \subsection{Two Non-normalizable Modes with Equal Frequencies}
 
-Consider activating two non-normalizable modes at the same general frequency, $\ob$. In such a case, any two of the summed indices may represent a non-normalizable frequency. These non-normalizable modes may have frequencies that happen to satisfy $\ob = \ol$ numerically; this does not change the fact that their basis functions are given by \eqref{general basis}. With this is mind, the same time averaging procedure restricts the presence of resonant contributions to those that satisfy \eqref{gen res}. Since the basis onto which we are projecting is normalizable, we know that $\ol = 2\ell + \Delta^+$, which means there are three cases in which resonance may occur:
-\begin{align}
-\label{gen NN res}
-\omega_I &= \ol + 2\ob \quad I \in \{i,j,k\} \; \forall \; \ob \in \mathbb{Z}^* \\
-\omega_I &= | \ol - 2\ob| \quad I \in \{i,j,k\} \; \forall \; \ob \in \mathbb{Z}^* \\
-\omega_I &= \ol \; \text{for one of} \; I \in \{i,j,k\}, \; \omega_I = \ob \notin \mathbb{Z}^* \; \text{otherwise}
-\end{align}
-
-
-\subsection{Two General, Non-normalizable Modes}
-
-As a first case, let us assume that the two non-normalizable modes have constant, generic (i.e., non integer) frequency values, $\ob$. Applying the time-averaging procedure to the source $S_\ell$ once again eliminates all contributions except those that satisfy \eqref{gen res}. Since the basis onto which we are projecting is normalizable, we know that $\omega_\ell$ is given by $\omega_\ell = 2\ell + \Delta^{+}$. We are now free to choose any one of $\{\omega_i, \omega_j, \ok\}$ to be normalizable and consider when the resonance condition is satisfied. In particular, we find that the following combinations are resonant:
+As a first case, let us assume that the two non-normalizable modes have equal, constant, and arbitrary frequencies, $\ob$. Applying the time-averaging procedure to the source $S_\ell$ once again eliminates all contributions except those that satisfy \eqref{gen res}. Since the basis onto which we are projecting is normalizable, we know that $\omega_\ell$ is given by $\omega_\ell = 2\ell + \Delta^{+}$. We are now free to choose any one of $\{\omega_i, \omega_j, \ok\}$ to be normalizable and consider when the resonance condition is satisfied. In particular, we find that the following combinations are resonant:
 \begin{align}
 \label{gen nn res 1}
 \oi - \oj + \ok - \ol &= 0 \qquad \Rightarrow \qquad \text{either $\oi$ or $\ok$ is normalizable} \\
@@ -295,42 +284,39 @@ As a first case, let us assume that the two non-normalizable modes have constant
 \end{align}
 When any of these resonance conditions is met, the remaining normalizable mode will have a frequency equal to $\ol$, collapsing all sums over frequencies so that
 \begin{align}
-S_\ell = \overline{T}_\ell \, a_\ell A_{\ob}^2 \cos (\thl) \, ,
+S_\ell = \overline{T}_{\ob \ell} \, a_\ell A_{\ob}^2 \cos (\thl) \, ,
 \end{align}
 where the non-normalizable modes have constant amplitudes $A_{\ob}$. Collecting the appropriate terms in \eqref{general source}, and evaluating the each possible resonance (being careful not to violate restrictions placed on the sums), we find that
 \begin{align}
 \label{S:2NN}
-\overline{T}_\ell &= \frac{1}{2} Z^{-}_{\ell \ob \ob \ell} \left( \frac{\ob}{\ol + \ob} \right) + \frac{1}{2} Z^{+}_{\ell \ob \ob \ell} \left( \frac{\ob}{\ol - \ob} \right) - H_{\ob \ell \ob \ell} \left( \frac{\ol^2}{\ol^2 - \ob^2} \right) + H_{\ob \ob \ell \ell} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right) \nonumber \\
+\overline{T}_{\ob \ell} &= \left( 1 - \delta(\ol - \ob) \right) \Big\{ \frac{1}{2} Z^-_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol + \ob} \right) + \frac{1}{2} Z^+_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol - \ob} \right)  + H_{\ell \ob \ob \ell} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right) \nonumber \\
 %
-& \quad + 2 \ob^2 X_{\ob \ob \ell \ell} + 2 X_{\ob \ob \ell \ell} \left( \frac{{\ob}^2 \ol^2}{\ol^2 - \ob^2} \right) - \ob^2 X_{\ell \ell \ob \ob} - 2 X_{\ell \ell \ob \ob}  \left( \frac{\ob^4}{\ol^2 - \ob^2} \right) \nonumber \\
-% 
-& \quad + m^2 V_{\ob \ob \ell \ell} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right) - m^2 V_{\ell \ell \ob \ob} \left( \frac{\ol^2}{\ol^2 - \ob^2} \right) - 2m^2 V_{\ell \ell \ob \ob} - \frac{m^2}{2} V_{\ob \ob \ell \ell}  \nonumber \\
+& - H_{\ob\ell\ob\ell} \left(\frac{\ol^2}{\ol^2 - \ob^2} \right) - m^2 V_{\ell \ob\ob\ell}  \left(\frac{\ol^2}{\ol^2 - \ob^2} \right) + m^2 V_{\ob\ob\ell\ell} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right) + 2 X_{\ob\ob\ell\ell} \left( \frac{\ob^2 \ol^2}{\ol^2 - \ob^2} \right) \nonumber \\
 %
-& \quad + 2 \ol^2 \tilde{Z}^+_{\ob \ob \ell} - H_{\ob \ob \ell \ell} - 4 \ob^2 \ol^2 P_{\ell \ell \ob} -2 \ob^2 M_{\ell \ell \ob} - 2 m^2 \ob^2 Q_{\ell \ell \ob} \, .
+&  - 2 X_{\ell\ell\ob\ob} \left( \frac{\ob^4}{\ol^2 - \ob^2} \right) \Big\} + \ol^2 X_{\ob\ob\ell\ell}  - \ob^2 X_{\ell\ell\ob\ob} - \frac{3}{2} m^2 V_{\ell\ell\ob\ob} - \frac{1}{2} m^2 V_{\ob\ob\ell\ell}  - \frac{1}{2} H_{\ob\ob\ell\ell} \nonumber \\
+%
+& + \ol^2 \tilde{Z}^+_{\ob\ob\ell} - 2 \ob^2 \ol^2 P_{\ell\ell\ob} - \ob^2 \left( \ol^2 P_{\ell\ell \ob} - B_{\ell\ell\ob} \right) \, .
 \end{align}
 
-It is easy to see that when $\ob = \ol$, there will be singular terms in \eqref{S:2NN}. Using the definitions of $Z^\pm_{ijk\ell}$ and $H_{ijk\ell}$, some simplification is possible; however, $\overline{T}_\ell$ still evaluates to $0/0 + (\text{non-singular})$. Using L'H\^{o}pital's rule to evaluate the undetermined expression, we find that the limit of \eqref{S:2NN} is
-\begin{align}
-\label{Tbar limit}
-\lim_{\ob \to \ol} \overline{T}_\ell = 3Y_{\ell \ell \ell \ell} + \ol^2 \left( B_{\ell \ell \ell} - 2m^2 Q_{\ell \ell \ell} - \ol^2 P_{\ell \ell \ell} \right) - \frac{5m^2}{2} V_{\ell \ell \ell \ell} \, .
-\end{align}
+Notice that the terms in the curly braces only contribute when $\ob \neq \ol$, owing to the $(1- \delta(\ol - \ob))$ factor. Beginning from \eqref{general source}, only terms in the curly braces that are proportional to $Z^{\pm}$ are limited in this way; the remaining terms have no such restriction. However, it can be shown that integral functions with permuted indices are equal when the non-normalizable frequency equals the normalizable frequency. Upon simplification, factors of $\ol^2 - \ob^2$ are canceled and the overall contribution to $T_{\ob \ell}$ from the terms in the braces is zero. Thus, these terms are grouped with those that have natural restrictions on the indices. 
 
-Using these two expressions, we evaluate $\overline{T}_\ell$ for $\ell < 10$ and a variety of $\ob$ values for both a massless scalar (figure~\ref{fig:equal_frequency_m0}) and a tachyonic scalar (figure~\ref{fig:equal_frequency_m-4_0}).
+In figures~\ref{fig:equal_frequency_m0} and~\ref{fig:equal_frequency_m-4_0}, we evaluate \eqref{S:2NN} for $\ell < 10$ over a variety of $\ob$ values first for a massless scalar, then for a tachyonic scalar.
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{./figures/NN_equalfreq_sourceterms_m0_0+zoom}
-\caption{{\it Left:} Evaluating $S_\ell$ (rescaled by the amplitudes) when $m^2 = 0$ for various choices of $\ob$. {\it Right}: The behaviour of $S_\ell$ as $\ob \to \ol$. When $\ob = \ol$, $S_\ell$ is given by \eqref{S:2NN}}
+\caption{{\it Left:} Evaluating $S_\ell$ (rescaled by the amplitudes) when $m^2 = 0$ for various choices of $\ob$. {\it Right}: The behaviour of $S_\ell$ for $\ob$ values near $\omega_0$.}
 \label{fig:equal_frequency_m0}
 \end{figure}
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth]{./figures/NN_equalfreq_sourceterms_m-4_0+zoom}
-\caption{{\it Left:} Evaluating \eqref{S:2NN} for the same choices of $\ob$ as in figure~\ref{fig:equal_frequency_m0} but for a tachyon with $m^2 = -4.0$.}
+\caption{{\it Left:} Evaluating $\overline{T}_{\ob \ell}$ for a tachyon with $m^2 = -4.0$. {\it Right:} The behaviour of $S_\ell$ near $\omega_0 = \Delta^+ =  2$.}
 \label{fig:equal_frequency_m-4_0}
 \end{figure}
 
+Other resonant contributions become possible for more restrictive values of the non-normalizable frequency, such as if $\ob$ is allow to be an integer. These contributions are not included here, but rather are discussed briefly in Appendix~\ref{more 2NN}.
 
 \subsection{Special Values of Non-normalizable Frequencies}
 
@@ -403,7 +389,7 @@ When $m^2 = 0$, we have contributions from
 %
 & \quad - \frac{1}{2} \sum_{\oone+\otwo = 2n} \Big\{ (2n - \ol) \left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) - \oone \otwo X_{i12\ell} \Big\} .
 \end{align}
-{\it NB.}\, In \eqref{R3} \emph{only}, $\oi = 2i + d$ since this term requires that $m^2 = 0$ to contribute. We maintain the same notation despite the special case out of convenience.
+{\it NB.}\, In \eqref{R3} \emph{only}, $\oi = 2i + d$ since this term requires that $m^2 = 0$ to contribute. We maintain the same notation out of convenience, despite the special case.
 
 Finally, 
 \begin{align}
@@ -582,7 +568,41 @@ H_{ijk\ell} &= \oi^2 X_{kij\ell} + \ok^2 X_{ijk\ell} - Y_{ij\ell k}  - Y_{\ell k
 M_{ij\ell} &= \oi^2 P_{ij\ell} - B_{ij\ell} -m^2 Q_{ij\ell}
 \end{align}
 
+\section{Two Non-normalizable Modes with Equal Frequencies}
+\label{more 2NN}
 
+Discuss difference resonances for special cases of $\ob$ beyond the arbitrary value covered in the main portion.
+
+Consider activating two non-normalizable modes at the same general frequency, $\ob$. In such a case, any two of the summed indices may represent a non-normalizable frequency. These non-normalizable modes may have frequencies that happen to satisfy $\ob = \ol$ numerically; this does not change the fact that their basis functions are given by \eqref{general basis}. With this is mind, the same time averaging procedure restricts the presence of resonant contributions to those that satisfy \eqref{gen res}. Since the basis onto which we are projecting is normalizable, we know that $\ol = 2\ell + \Delta^+$, which means there are four cases in which resonance may occur:
+\begin{align}
+\label{gen NN res}
+\omega_I &= \ol + 2\ob \quad I \in \{i,j,k\} \; \forall \; \ob \in \mathbb{Z}^* \\
+\omega_I &= \ol - 2\ob \quad I \in \{i,j,k\} \; \forall \; \ob \in \mathbb{Z}^* \; \text{such that } \ell \geq \ob \\
+\omega_I &= 2\ob - \ol \quad I \in \{i,j,k\} \; \forall \; \ob \in \mathbb{Z}^* \; \text{such that } \ell \leq \ob \\
+\omega_I &= \ol \; \text{for one of} \; I \in \{i,j,k\}, \; \omega_I = \ob \notin \mathbb{Z}^* \; \text{otherwise}
+\end{align}
+
+When $\ob$ is an arbitrary value,
+\begin{align}
+\overline{T}_\ell &= 2 \left( 1 - \delta(\ol - \ob)\right) \Big\{ X_{\ob \ob \ell \ell} \left( \frac{\ob^2 \ol^2}{\ol^2 - \ob^2} \right) - X_{\ell \ell \ob \ob} \left( \frac{\ob^2 \ol^2}{\ol^2 - \ob^2} \right) -  \ob\ol  X_{\ob\ob\ell\ell} \nonumber \\
+%
+& \quad + Y_{\ob\ob\ell\ell} \left( \frac{\ol^2}{\ol^2 - \ob^2} \right) - Y_{\ell\ell\ob\ob} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right) + \frac{m^2}{4} V_{\ell \ell \ob \ob} \Big\} \nonumber \\
+%
+& \quad - \delta(\ol - \ob) \Big\{ \ob^2 X_{\ell\ell\ob\ob} + \ob \ol X_{\ob\ob\ell\ell} + \frac{m^2}{2} V_{\ell\ell\ob\ob} \Big\} + \ob^2 \ol^2 P_{\ob\ob\ell} + \ol^2 B_{\ob \ob \ell} \nonumber \\
+%
+& \quad -\frac{1}{2} H_{\ob\ob\ell\ell} - \frac{m^2}{2} V_{\ell\ell\ob\ob} - \ol^2 X_{\ob\ob\ell\ell} + 3\ob^2 \ol^2 P_{\ell\ell\ob} -\ob^2 B_{\ell\ell\ob}
+\end{align}
+
+When $\ob \in \mathbb{Z}^*  \leq \ell$, resonance is at $\oi = \ol - 2\ob$ with 
+\begin{align}
+\overline{R}_{i \ell} &= - \frac{1}{12} \left(1 - \delta(\ol - \ob) \right) Z^-_{i \ob \ob \ell} \left(\frac{\ob}{\ol - \ob} \right) \nonumber \\
+%
+& \quad - \frac{1}{12} (1 - \delta(\oi - \ob) \Big \{ \left( \frac{\ob}{\oi + \ob} \right) \left(H_{i\ob\ob\ell} + m^2 V_{\ob\ob i \ell} - 2\ob^2 X_{i\ob\ob\ell} \right) + \nonumber \\
+%
+& \quad + \left( \frac{\ol - 2\ob}{\oi + \ob} \right) \left( H_{\ob i \ob \ell} + m^2 V_{i \ob \ob \ell} - 2 \ob^2 X_{\ob i \ob \ell} \right) \Big\} \nonumber \\
+%
+& \quad - \frac{(\ol - 2\ob)}{48\ob} Z^-_{\ob\ob i \ell} + \frac{1}{12} \ob^2 X_{i \ob \ob \ell} + \frac{\ob (\ol - 2\ob)}{12} X_{\ob\ob i \ell} - \frac{m^2}{12} V_{i\ob\ob\ell} - \frac{m^2}{24} V_{\ob\ob i \ell}
+\end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
