@@ -284,12 +284,12 @@ As a first case, let us assume that the two non-normalizable modes have equal, c
 \end{align}
 When any of these resonance conditions is met, the remaining normalizable mode will have a frequency equal to $\ol$, collapsing all sums over frequencies so that
 \begin{align}
-S_\ell = \overline{T}_{\ob \ell} \, a_\ell A_{\ob}^2 \cos (\thl) \, ,
+S_\ell = \overline{T}_{\ell \ob} \, a_\ell A_{\ob}^2 \cos (\thl) \, ,
 \end{align}
 where the non-normalizable modes have constant amplitudes $A_{\ob}$. Collecting the appropriate terms in \eqref{general source}, and evaluating the each possible resonance (being careful not to violate restrictions placed on the sums), we find that
 \begin{align}
 \label{S:2NN}
-\overline{T}_{\ob \ell} &= \left( 1 - \delta(\ol - \ob) \right) \Big\{ \frac{1}{2} Z^-_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol + \ob} \right) + \frac{1}{2} Z^+_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol - \ob} \right)  + H_{\ell \ob \ob \ell} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right) \nonumber \\
+\overline{T}_{\ell \ob} &= \left( 1 - \delta(\ol - \ob) \right) \Big\{ \frac{1}{2} Z^-_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol + \ob} \right) + \frac{1}{2} Z^+_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol - \ob} \right)  + H_{\ell \ob \ob \ell} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right) \nonumber \\
 %
 & - H_{\ob\ell\ob\ell} \left(\frac{\ol^2}{\ol^2 - \ob^2} \right) - m^2 V_{\ell \ob\ob\ell}  \left(\frac{\ol^2}{\ol^2 - \ob^2} \right) + m^2 V_{\ob\ob\ell\ell} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right) + 2 X_{\ob\ob\ell\ell} \left( \frac{\ob^2 \ol^2}{\ol^2 - \ob^2} \right) \nonumber \\
 %
@@ -312,7 +312,7 @@ In figures~\ref{fig:equal_frequency_m0} and~\ref{fig:equal_frequency_m-4_0}, we 
 \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth]{./figures/NN_equalfreq_sourceterms_m-4_0+zoom}
-\caption{{\it Left:} Evaluating $\overline{T}_{\ob \ell}$ for a tachyon with $m^2 = -4.0$. {\it Right:} The behaviour of $S_\ell$ near $\omega_0 = \Delta^+ =  2$.}
+\caption{{\it Left:} Evaluating $\overline{T}_{\ell \ob}$ for a tachyon with $m^2 = -4.0$. {\it Right:} The behaviour of $S_\ell$ near $\omega_0 = \Delta^+ =  2$.}
 \label{fig:equal_frequency_m-4_0}
 \end{figure}
 
@@ -435,11 +435,11 @@ where $m^2$ is \emph{not} chosen to be a special value\footnote{By tuning the va
 
 As in the case of all normalizable modes, the contribution from the $(++-)$ is equal to that of the $(+-+)$ and thus only one will be considered. This channel contributes secular terms of the form
 \begin{align}
-S_\ell &= \overline{S}_{i \beta \gamma \ell} \cos \left( \theta_i + \theta_\beta - \theta_\gamma \right) \Big|_{\oi + \obet - \ogam = \ol} + \overline{R}_{i \beta} \cos \left(\theta_i + \theta_\beta - \theta_\beta \right) \Big|_{i = \ell} + \overline{T}_\ell \cos \left( \theta_\ell \right)
+S_\ell &= \overline{S}_{i \beta \gamma \ell} \cos \left( \theta_i + \theta_\beta - \theta_\gamma \right) \Big|_{\oi + \obet - \ogam = \ol} + \overline{R}_{i \beta} \cos \left(\theta_i + \theta_\beta - \theta_\beta \right) \Big|_{i = \ell}
 \end{align}
 where (sums over the indices that are not $\ell$ are implied, and only restrictions on the indices are explicitly included)
 \begin{align}
-\overline{S}_{i \beta \gamma \ell} &= \frac{1}{4} \sum_{\gamma \neq \ell} \frac{\ogam}{\oi + \obet} Z^{-}_{i \beta \gamma \ell} + \frac{1}{4} \sum_{\beta \neq \ell} \frac{\obet}{\oi - \ogam} Z^+_{i \gamma \beta \ell} + \sum_{i \neq \ell} \frac{\oi}{\obet - \ogam} Z^+_{\beta \gamma i \ell} \nonumber \\
+\overline{S}_{i \beta \gamma \ell} &= \frac{1}{4} \sum_{\gamma \neq \ell} \frac{\ogam}{\oi + \obet} Z^{-}_{i \beta \gamma \ell} + \frac{1}{4} \sum_{\beta \neq \ell} \frac{\obet}{\oi - \ogam} Z^+_{i \gamma \beta \ell} + \frac{1}{4} \sum_{i \neq \ell} \frac{\oi}{\obet - \ogam} Z^+_{\beta \gamma i \ell} \nonumber \\
 %
 & \quad + \frac{1}{4} \sum_{i \neq \gamma} \left[ \frac{\omega_\gamma}{\oi - \ogam} (H_{i \gamma \beta \ell} - 2\obet^2 X_{i \gamma \beta \ell}) - \frac{\oi}{\oi + \ogam} (H_{\gamma i \beta \ell} - 2\obet^2 X_{\gamma i \beta \ell} ) \right] \nonumber \\
 %
@@ -450,14 +450,13 @@ where (sums over the indices that are not $\ell$ are implied, and only restricti
 & \quad - \frac{1}{2} \sum \left( \obet \ogam X_{i \beta \gamma \ell} + \oi \ogam X_{\beta \gamma i \ell} - \oi \obet X_{\gamma i \beta \ell} \right) \, ,
 \end{align}
 \begin{align}
-\overline{R}_{i \beta} &= \frac{1}{2} \sum_{\beta \neq \ell} \Big[ \frac{\obet}{\ol^2 - \obet^2} \left( (\oi - \obet) Z^{-}_{i \beta \beta \ell} + 2 (\oi + \obet) Z^+_{i\beta \beta \ell} \right) \Big] + \sum_{i \neq \ell} \frac{\oi^2}{\ol^2 - \oi^2} Z^+_{\beta \beta i \ell} \nonumber \\
+\overline{R}_{i \beta} &= \frac{1}{2} \sum_{\beta \neq \ell} \Big[ \frac{\obet}{\ol^2 - \obet^2} \left( (\oi - \obet) Z^{-}_{i \beta \beta \ell} + 2 (\oi + \obet) Z^+_{i\beta \beta \ell} \right) \Big]  \nonumber \\
 %
 & \quad + \sum_{i \neq \beta} \Big[  H_{i \beta \beta \ell} \left( \frac{\obet^2}{\oi^2 - \obet^2} \right) - H_{\beta i \beta \ell} \left( \frac{\oi}{\oi + \obet} \right) - 2\obet^2 X_{i \beta \beta \ell} \left( \frac{\obet^2}{\oi^2 - \obet^2} \right) \nonumber \\
 %
-& \quad + \obet^2 X_{\beta \beta i \ell} \left( \frac{\oi}{\oi + \obet} \right) \Big] - \sum \obet^2 X_{i\beta\beta \ell} \, ,
-\end{align}
-\begin{align}
-\overline{T}_\ell &= - \frac{1}{2} \sum \left( 4 \obet^2 \ol^2 P_{\ell \ell \beta} + H_{\beta \beta \ell \ell} + 2\obet^2 M_{\ell \ell \beta} - 2\ol^2 X_{\beta \beta \ell \ell} \right) \, .
+& \quad + \obet^2 X_{\beta \beta i \ell} \left( \frac{\oi}{\oi + \obet} \right) \Big] - \frac{1}{2} \sum \Big[ 2 \obet^2 X_{i\beta\beta \ell} + 4 \obet^2 \ol^2 P_{\ell \ell \beta} + H_{\beta \beta \ell \ell}  \nonumber \\
+%
+& \quad + 2\obet^2 M_{\ell \ell \beta} - 2\ol^2 X_{\beta \beta \ell \ell} \Big] \, .
 \end{align}
 
 \subsubsection{$(+--)$}
@@ -571,38 +570,44 @@ M_{ij\ell} &= \oi^2 P_{ij\ell} - B_{ij\ell} -m^2 Q_{ij\ell}
 \section{Two Non-normalizable Modes with Equal Frequencies}
 \label{more 2NN}
 
-Discuss difference resonances for special cases of $\ob$ beyond the arbitrary value covered in the main portion.
+Consider activating two non-normalizable modes at the same general frequency, $\ob$. In such a case, any two of the summed indices may represent a non-normalizable frequency. These non-normalizable modes may have frequencies that happen to satisfy $\ob = \ol$ numerically; this does not change the fact that their basis functions are given by \eqref{general basis}. With this is mind, the same time averaging procedure restricts the presence of resonant contributions to those that satisfy \eqref{gen res}. Since the basis onto which we are projecting is normalizable, we know that $\ol = 2\ell + \Delta^+$, which means there are four cases in which resonance may occur.
 
-Consider activating two non-normalizable modes at the same general frequency, $\ob$. In such a case, any two of the summed indices may represent a non-normalizable frequency. These non-normalizable modes may have frequencies that happen to satisfy $\ob = \ol$ numerically; this does not change the fact that their basis functions are given by \eqref{general basis}. With this is mind, the same time averaging procedure restricts the presence of resonant contributions to those that satisfy \eqref{gen res}. Since the basis onto which we are projecting is normalizable, we know that $\ol = 2\ell + \Delta^+$, which means there are four cases in which resonance may occur:
+Discuss difference resonances for special cases of $\ob$ beyond the arbitrary value condition covered in the main portion. 
+
+In addition to the case of arbitrary values of $\ob$, the following resonances contribute to the source term $S_\ell$ via
+\begin{align}
+S_\ell &= a_\ell A^2_{\ob} \left[ \overline{R}^{(1)}_{i \ob} \cos \left( \theta_i - 2\ob t \right) + \overline{R}^{(2)}_{i \ob} \cos \left( \theta_i + 2\ob t \right) + \overline{R}^{(3)}_{i \ob} \cos \left( 2\ob t - \theta_i \right) \right] \Big|_{i = \ell}
+\end{align}
+under their respective conditions on the value of $\ob$:
 \begin{align}
 \label{gen NN res}
-\omega_I &= \ol + 2\ob \quad I \in \{i,j,k\} \; \forall \; \ob \in \mathbb{Z}^* \\
-\omega_I &= \ol - 2\ob \quad I \in \{i,j,k\} \; \forall \; \ob \in \mathbb{Z}^* \; \text{such that } \ell \geq \ob \\
-\omega_I &= 2\ob - \ol \quad I \in \{i,j,k\} \; \forall \; \ob \in \mathbb{Z}^* \; \text{such that } \ell \leq \ob \\
-\omega_I &= \ol \; \text{for one of} \; I \in \{i,j,k\}, \; \omega_I = \ob \notin \mathbb{Z}^* \; \text{otherwise}
-\end{align}
-
-When $\ob$ is an arbitrary value,
-\begin{align}
-\overline{T}_\ell &= 2 \left( 1 - \delta(\ol - \ob)\right) \Big\{ X_{\ob \ob \ell \ell} \left( \frac{\ob^2 \ol^2}{\ol^2 - \ob^2} \right) - X_{\ell \ell \ob \ob} \left( \frac{\ob^2 \ol^2}{\ol^2 - \ob^2} \right) -  \ob\ol  X_{\ob\ob\ell\ell} \nonumber \\
-%
-& \quad + Y_{\ob\ob\ell\ell} \left( \frac{\ol^2}{\ol^2 - \ob^2} \right) - Y_{\ell\ell\ob\ob} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right) + \frac{m^2}{4} V_{\ell \ell \ob \ob} \Big\} \nonumber \\
-%
-& \quad - \delta(\ol - \ob) \Big\{ \ob^2 X_{\ell\ell\ob\ob} + \ob \ol X_{\ob\ob\ell\ell} + \frac{m^2}{2} V_{\ell\ell\ob\ob} \Big\} + \ob^2 \ol^2 P_{\ob\ob\ell} + \ol^2 B_{\ob \ob \ell} \nonumber \\
-%
-& \quad -\frac{1}{2} H_{\ob\ob\ell\ell} - \frac{m^2}{2} V_{\ell\ell\ob\ob} - \ol^2 X_{\ob\ob\ell\ell} + 3\ob^2 \ol^2 P_{\ell\ell\ob} -\ob^2 B_{\ell\ell\ob}
+\overline{R}^{(1)}_{\ell \ob}: \quad \omega_I &= \ol + 2\ob \quad I \in \{i,j,k\} \; \forall \; \ob \in \mathbb{Z}^* \\
+\overline{R}^{(2)}_{\ell \ob}: \quad \omega_I &= \ol - 2\ob \quad I \in \{i,j,k\} \; \forall \; \ob \in \mathbb{Z}^* \; \text{such that } \ell \geq \ob \\
+\overline{R}^{(3)}_{\ell \ob}: \quad \omega_I &= 2\ob - \ol \quad I \in \{i,j,k\} \; \forall \; \ob \in \mathbb{Z}^* \; \text{such that } \ell \leq \ob
 \end{align}
 
 When $\ob \in \mathbb{Z}^*  \leq \ell$, resonance is at $\oi = \ol - 2\ob$ with 
 \begin{align}
-\overline{R}_{i \ell} &= - \frac{1}{12} \left(1 - \delta(\ol - \ob) \right) Z^-_{i \ob \ob \ell} \left(\frac{\ob}{\ol - \ob} \right) \nonumber \\
+\overline{R}^{(1)}_{i \ob} &= - \frac{1}{12} \left(1 - \delta(\ol - \ob) \right) Z^-_{i \ob \ob \ell} \left(\frac{\ob}{\ol - \ob} \right) \nonumber \\
 %
 & \quad - \frac{1}{12} (1 - \delta(\oi - \ob) \Big \{ \left( \frac{\ob}{\oi + \ob} \right) \left(H_{i\ob\ob\ell} + m^2 V_{\ob\ob i \ell} - 2\ob^2 X_{i\ob\ob\ell} \right) + \nonumber \\
 %
 & \quad + \left( \frac{\ol - 2\ob}{\oi + \ob} \right) \left( H_{\ob i \ob \ell} + m^2 V_{i \ob \ob \ell} - 2 \ob^2 X_{\ob i \ob \ell} \right) \Big\} \nonumber \\
 %
-& \quad - \frac{(\ol - 2\ob)}{48\ob} Z^-_{\ob\ob i \ell} + \frac{1}{12} \ob^2 X_{i \ob \ob \ell} + \frac{\ob (\ol - 2\ob)}{12} X_{\ob\ob i \ell} - \frac{m^2}{12} V_{i\ob\ob\ell} - \frac{m^2}{24} V_{\ob\ob i \ell}
+& \quad - \frac{(\ol - 2\ob)}{48\ob} Z^-_{\ob\ob i \ell} + \frac{1}{12} \ob^2 X_{i \ob \ob \ell} + \frac{\ob (\ol - 2\ob)}{12} X_{\ob\ob i \ell} - \frac{m^2}{12} V_{i\ob\ob\ell} - \frac{m^2}{24} V_{\ob\ob i \ell} \, .
 \end{align}
+
+When $\ob \in \mathbb{Z}^*$ and $\ob \geq \ob$:
+\begin{align}
+\overline{R}^{(2)}_{i \ob} &= \, .
+\end{align}
+
+When $\ob \in \mathbb{Z}^*$ and $\ob \leq \ob$:
+\begin{align}
+\overline{R}^{(3)}_{i\ob} &= \, .
+\end{align}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
