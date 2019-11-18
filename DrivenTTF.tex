@@ -289,16 +289,16 @@ S_\ell = \overline{T}_{\ell \ob} \, a_\ell A_{\ob}^2 \cos (\thl) \, ,
 where the non-normalizable modes have constant amplitudes $A_{\ob}$. Collecting the appropriate terms in \eqref{general source}, and evaluating the each possible resonance (being careful not to violate restrictions placed on the sums), we find that
 \begin{align}
 \label{S:2NN}
-\overline{T}_{\ell \ob} &= \left( 1 - \delta(\ol - \ob) \right) \Big\{ \frac{1}{2} Z^-_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol + \ob} \right) + \frac{1}{2} Z^+_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol - \ob} \right)  + H_{\ell \ob \ob \ell} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right) \nonumber \\
+\overline{T}_{\ell \ob} &=  \left( 1 - \delta_{\ol, \ob} \right)\Big[ \, \frac{1}{2} Z^-_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol + \ob} \right) + \frac{1}{2} Z^+_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol - \ob} \right)  + H_{\ell \ob \ob \ell} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right) \nonumber \\
 %
 & - H_{\ob\ell\ob\ell} \left(\frac{\ol^2}{\ol^2 - \ob^2} \right) - m^2 V_{\ell \ob\ob\ell}  \left(\frac{\ol^2}{\ol^2 - \ob^2} \right) + m^2 V_{\ob\ob\ell\ell} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right) + 2 X_{\ob\ob\ell\ell} \left( \frac{\ob^2 \ol^2}{\ol^2 - \ob^2} \right) \nonumber \\
 %
-&  - 2 X_{\ell\ell\ob\ob} \left( \frac{\ob^4}{\ol^2 - \ob^2} \right) \Big\} + \ol^2 X_{\ob\ob\ell\ell}  - \ob^2 X_{\ell\ell\ob\ob} - \frac{3}{2} m^2 V_{\ell\ell\ob\ob} - \frac{1}{2} m^2 V_{\ob\ob\ell\ell}  - \frac{1}{2} H_{\ob\ob\ell\ell} \nonumber \\
+&  - 2 X_{\ell\ell\ob\ob} \left( \frac{\ob^4}{\ol^2 - \ob^2} \right) \Big] + \ol^2 X_{\ob\ob\ell\ell}  - \ob^2 X_{\ell\ell\ob\ob} - \frac{3}{2} m^2 V_{\ell\ell\ob\ob} - \frac{1}{2} m^2 V_{\ob\ob\ell\ell}  - \frac{1}{2} H_{\ob\ob\ell\ell} \nonumber \\
 %
 & + \ol^2 \tilde{Z}^+_{\ob\ob\ell} - 2 \ob^2 \ol^2 P_{\ell\ell\ob} - \ob^2 \left( \ol^2 P_{\ell\ell \ob} - B_{\ell\ell\ob} \right) \, .
 \end{align}
 
-Notice that the terms in the curly braces only contribute when $\ob \neq \ol$, owing to the $(1- \delta(\ol - \ob))$ factor. Beginning from \eqref{general source}, only terms in the curly braces that are proportional to $Z^{\pm}$ are limited in this way; the remaining terms have no such restriction. However, it can be shown that integral functions with permuted indices are equal when the non-normalizable frequency equals the normalizable frequency. Upon simplification, factors of $\ol^2 - \ob^2$ are canceled and the overall contribution to $T_{\ob \ell}$ from the terms in the braces is zero. Thus, these terms are grouped with those that have natural restrictions on the indices. 
+Notice that the Kronecker delta multiplying the terms in the square braces means that these terms will only contribute when $\ob \neq \ol$. Beginning from \eqref{general source}, only terms in the square braces that are proportional to $Z^{\pm}$ are limited in this way; the remaining terms have no such restriction. However, it can be shown that integral functions with permuted indices are equal when the non-normalizable frequency equals the normalizable frequency. Upon simplification, factors of $\ol^2 - \ob^2$ are canceled and the overall contribution to $T_{\ob \ell}$ from the terms in the braces is zero. Thus, these terms are grouped with those that have natural restrictions on the indices. 
 
 In figures~\ref{fig:equal_frequency_m0} and~\ref{fig:equal_frequency_m-4_0}, we evaluate \eqref{S:2NN} for $\ell < 10$ over a variety of $\ob$ values first for a massless scalar, then for a tachyonic scalar.
 
@@ -343,60 +343,60 @@ Adding the channels together, the total source term is
 \label{add to integer}
 S_\ell &=\Theta \left( \ell - n \right)  \overline{R}^{(++)}_{(\ell - n) 1 2 \ell} \cos \left( \theta_{(\ell - n)} + 2nt \right) + \overline{R}^{(+-)}_{(\ell + n) 1 2 \ell } \cos\left( \theta_{(\ell + n)} - 2nt \right) \nonumber \\
 %
-& \quad + \delta(m^2) \Theta\left( n - \ell - d \right) \overline{R}^{(-+)}_{(n - \ell - d) 1 2 \ell} \cos \left( \theta_{(n - \ell - d)} + 2nt \right) + \overline{T}_{12\ell} \cos \left( \theta_\ell \right) \, ,
+& \quad + \Theta\left( n - \ell - d \right) \delta_{m^2} \overline{R}^{(-+)}_{(n - \ell - d) 1 2 \ell} \cos \left( \theta_{(n - \ell - d)} + 2nt \right) + \overline{T}_{12\ell} \cos \left( \theta_\ell \right) \, ,
 \end{align}
-where the Heaviside step function $\Theta(x)$ enforces the restrictions on the indices in \eqref{all pluses} and \eqref{minus plus}.
+where the Heaviside step function $\Theta(x)$ enforces the restrictions on the indices in \eqref{all pluses} and \eqref{minus plus} and the Kronecker delta is again employed to denote that terms in $\overline{R}^{(-+)}$ only contribute to the massless case.
 
-Examining each channel individually, we find that
+In the following expressions, the sum over all $\oone$, $\otwo$ such that $\oone + \otwo = 2n$ is implied, and only the restrictions on individual frequencies are included. Examining each channel in \eqref{add to integer} individually, we find that
 \begin{align}
 \label{R1}
-\overline{R}^{(++)}_{i 1 2 \ell} &= - \frac{1}{4} \sum^{\otwo \neq \ol}_{\oone + \otwo = 2n} \frac{\otwo}{\ol - \otwo} Z^{-}_{i12\ell} - \frac{1}{4} \sum_{\oone+\otwo=2n}^{\oone \neq \ol} \frac{\oone}{\ol - \oone} Z^{-}_{i21\ell} - \frac{1}{8n} \sum_{\oone+\otwo = 2n}\!\!\!\! \left( \ol - 2n \right) Z^-_{12i\ell} \nonumber \\
+\overline{R}^{(++)}_{i 1 2 \ell} &= - \frac{1}{4} \sum_{\otwo \neq \ol} \frac{\otwo}{\ol - \otwo} Z^{-}_{i12\ell} - \frac{1}{4} \sum_{\oone \neq \ol} \frac{\oone}{\ol - \oone} Z^{-}_{i21\ell} - \frac{1}{8n} \sum \left( \ol - 2n \right) Z^-_{12i\ell} \nonumber \\
 %
-& + \frac{1}{2} \sum_{\oone + \otwo = 2n} \Big\{ \oone\otwo X_{i12\ell} + \left( \ol - 2n \right)\left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) - \frac{m^2}{2} \left( V_{i12\ell} + V_{i21\ell} + V_{12i\ell} \right) \Big\} \nonumber \\
+& - \frac{1}{4} \sum_{\oi \neq \oone} \frac{1}{\ol - \otwo} \Big[ \oone \left( H_{i12\ell} + m^2 V_{12i\ell} - 2 \otwo^2 X_{i12\ell} \right) + (\ol - 2n) \left( H_{1i2\ell} + m^2 V_{i21\ell} - 2\otwo^2 X_{1i2\ell} \right)\Big] \nonumber \\
 %
-& - \frac{1}{4} \sum_{\oone + \otwo = 2n}^{\oi \neq \oone} \frac{1}{\ol - \otwo} \Big\{ \oone \left( H_{i12\ell} + m^2 V_{12i\ell} - 2 \otwo^2 X_{i12\ell} \right) + (\ol - 2n) \left( H_{1i2\ell} + m^2 V_{i21\ell} - 2\otwo^2 X_{1i2\ell} \right)\Big\} \nonumber \\
+& - \frac{1}{4} \sum_{\oi \neq \otwo} \frac{1}{\ol - \oone} \Big[ \otwo \left( H_{i21\ell} + m^2 V_{21i\ell} - 2\oone^2 X_{i21\ell} \right) + (\ol - 2n) \left( H_{2i1\ell} + m^2 V_{i12\ell} - 2\oone^2 X_{2i1\ell} \right) \Big] \nonumber \\
 %
-& - \frac{1}{4} \sum_{\oone + \otwo = 2n}^{\oi \neq \otwo} \frac{1}{\ol - \oone} \Big\{ \otwo \left( H_{i21\ell} + m^2 V_{21i\ell} - 2\oone^2 X_{i21\ell} \right) + (\ol - 2n) \left( H_{2i1\ell} + m^2 V_{i12\ell} - 2\oone^2 X_{2i1\ell} \right) \Big\} \nonumber \\
+& - \frac{1}{8n} \sum_{\oone \neq \otwo} \Big[ \oone H_{21i\ell} + \otwo H_{12i\ell} + m^2 \left( \oone V_{1i2\ell} + \otwo V_{2i1\ell} \right) - \left( \ol - 2n \right)^2 \left(\oone X_{21i\ell} + \otwo X_{12i\ell} \right) \Big] \nonumber \\
 %
-& - \frac{1}{8n} \sum_{\oone + \otwo = 2n}^{\oone \neq \otwo} \Big\{ \oone H_{21i\ell} + \otwo H_{12i\ell} + m^2 \left( \oone V_{1i2\ell} + \otwo V_{2i1\ell} \right) - \left( \ol - 2n \right)^2 \left(\oone X_{21i\ell} + \otwo X_{12i\ell} \right) \Big\}
+& + \frac{1}{2} \sum \Big[ \oone\otwo X_{i12\ell} + \left( \ol - 2n \right)\left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) - \frac{m^2}{2} \left( V_{i12\ell} + V_{i21\ell} + V_{12i\ell} \right) \Big]
 \end{align}
 The notation $X_{i12\ell}$ corresponds to evaluating $X_{ijk\ell}$ with $\omega_j = \oone$ and $\omega_k = \otwo$. 
 
 Next, we find that
 \begin{align}
 \label{R2}
-\overline{R}_{i12\ell}^{(+-)} &= - \frac{1}{4} \sum_{\oone + \otwo = 2n} \Big\{ \frac{(\ol + 2n)}{2n} Z^-_{12i\ell} + 2 (\ol + 2n) \left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) \nonumber \\
+\overline{R}_{i12\ell}^{(+-)} &= - \frac{1}{4} \sum \Big[ \frac{(\ol + 2n)}{2n} Z^-_{12i\ell} + 2 (\ol + 2n) \left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) \nonumber \\
 %
-& \quad  -\frac{\oone}{(\ol + \otwo)} \left( H_{i12\ell} + m^2 V_{12i\ell} - 2 \otwo^2 X_{i12\ell} \right) + \frac{(\ol + 2n)}{(\ol + \otwo)} \left( H_{1i2\ell} + m^2 V_{i21\ell} - 2\otwo^2 X_{1i2\ell} \right)  \nonumber \\
+& -\frac{\oone}{(\ol + \otwo)} \left( H_{i12\ell} + m^2 V_{12i\ell} - 2 \otwo^2 X_{i12\ell} \right) + \frac{(\ol + 2n)}{(\ol + \otwo)} \left( H_{1i2\ell} + m^2 V_{i21\ell} - 2\otwo^2 X_{1i2\ell} \right)  \nonumber \\
 %
-& \quad - \frac{\otwo}{(\ol + \oone)} \left( H_{i21\ell} + m^2 V_{21i\ell} - 2\oone^2 X_{i21\ell} \right) + \frac{(\ol + 2n)}{(\ol + \oone)} \left(H_{2i1\ell} + m^2 V_{i12\ell} - 2\oone^2 X_{2i1\ell} \right)  \nonumber \\
+&- \frac{\otwo}{(\ol + \oone)} \left( H_{i21\ell} + m^2 V_{21i\ell} - 2\oone^2 X_{i21\ell} \right) + \frac{(\ol + 2n)}{(\ol + \oone)} \left(H_{2i1\ell} + m^2 V_{i12\ell} - 2\oone^2 X_{2i1\ell} \right)  \nonumber \\
 %
-& \quad  - 2 \oone\otwo X_{i12\ell} + m^2 \left( V_{12i\ell} + V_{i12\ell} + V_{i21\ell} \right) \Big\} + \frac{1}{4} \sum^{\otwo \neq \ol}_{\oone + \otwo = 2n} \frac{\oone\otwo(\ol + 2n)}{\ol + \otwo} \left( X_{21i\ell} - X_{\ell i 12} \right) \nonumber \\
+&  - 2 \oone\otwo X_{i12\ell} + m^2 \left( V_{12i\ell} + V_{i12\ell} + V_{i21\ell} \right) \Big] + \frac{1}{4} \sum_{\otwo \neq \ol} \frac{\oone\otwo(\ol + 2n)}{\ol + \otwo} \left( X_{21i\ell} - X_{\ell i 12} \right) \nonumber \\
 %
-& \quad + \frac{1}{4} \sum^{\oone \neq \ol}_{\oone + \otwo = 2n} \frac{\oone\otwo(\ol + 2n)}{\ol + \oone} \left( X_{12i\ell} - X_{\ell i 12} \right).
+& + \frac{1}{4} \sum_{\oone \neq \ol} \frac{\oone\otwo(\ol + 2n)}{\ol + \oone} \left( X_{12i\ell} - X_{\ell i 12} \right).
 \end{align}
 
 When $m^2 = 0$, we have contributions from
 \begin{align}
 \label{R3}
-\overline{R}_{i12\ell}^{(-+)} &=  \frac{1}{4} \sum_{\oone+\otwo = 2n}^{\otwo \neq \ol} \frac{\otwo}{\ol - \otwo} Z^+_{i12\ell} + \frac{1}{4} \sum_{\oone+\otwo = 2n}^{\oone \neq \ol} \frac{\oone}{\ol - \oone} Z^+_{i21\ell} + \frac{1}{4} \sum_{\oone+\otwo = 2n}^{i \neq \ell} \left( \frac{2n - \ol}{2n} \right) Z^-_{12i\ell} \nonumber \\
+\overline{R}_{i12\ell}^{(-+)} &=  \frac{1}{4} \sum_{\otwo \neq \ol} \frac{\otwo}{\ol - \otwo} Z^+_{i12\ell} + \frac{1}{4} \sum_{\oone \neq \ol} \frac{\oone}{\ol - \oone} Z^+_{i21\ell} + \frac{1}{4} \sum_{i \neq \ell} \left( \frac{2n - \ol}{2n} \right) Z^-_{12i\ell} \nonumber \\
 %
-& \quad + \frac{1}{4} \sum_{\oone+\otwo = 2n}^{\oone \neq \oi} \frac{1}{\oi - \oone} \Big\{ \oone \left( H_{i12\ell} - 2\otwo^2 X_{i12\ell} \right) - (2n - \ol) \left( H_{1i2\ell} - 2\otwo^2 X_{1i2\ell} \right) \Big\} \nonumber \\
+& \quad + \frac{1}{4} \sum_{\oone \neq \oi} \frac{1}{\oi - \oone} \Big[ \oone \left( H_{i12\ell} - 2\otwo^2 X_{i12\ell} \right) - (2n - \ol) \left( H_{1i2\ell} - 2\otwo^2 X_{1i2\ell} \right) \Big] \nonumber \\
 %
-& \quad + \frac{1}{4} \sum_{\oone+\otwo = 2n}^{\otwo \neq \oi} \frac{1}{\oi - \otwo} \Big\{ \otwo \left( H_{i21\ell} - 2\oone^2 X_{i21\ell} \right) - (2n - \ol) \left( H_{2i1\ell} - 2\oone^2 X_{2i1\ell} \right) \Big\} \nonumber \\
+& \quad + \frac{1}{4} \sum_{\otwo \neq \oi} \frac{1}{\oi - \otwo} \Big[ \otwo \left( H_{i21\ell} - 2\oone^2 X_{i21\ell} \right) - (2n - \ol) \left( H_{2i1\ell} - 2\oone^2 X_{2i1\ell} \right) \Big] \nonumber \\
 %
-& \quad - \frac{1}{8n} \sum_{\oone+\otwo = 2n}^{\oone \neq \otwo} \Big\{ \oone H_{21i\ell} + \otwo H_{12i\ell} - 2 \left( 2n - \ol \right)^2 \left(\oone X_{21i\ell} + \otwo X_{12i\ell} \right) \Big\} \nonumber \\
+& \quad - \frac{1}{8n} \sum_{\oone \neq \otwo} \Big[ \oone H_{21i\ell} + \otwo H_{12i\ell} - 2 \left( 2n - \ol \right)^2 \left(\oone X_{21i\ell} + \otwo X_{12i\ell} \right) \Big] \nonumber \\
 %
-& \quad - \frac{1}{2} \sum_{\oone+\otwo = 2n} \Big\{ (2n - \ol) \left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) - \oone \otwo X_{i12\ell} \Big\} .
+& \quad - \frac{1}{2} \sum \Big[ (2n - \ol) \left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) - \oone \otwo X_{i12\ell} \Big] .
 \end{align}
 {\it NB.}\, In \eqref{R3} \emph{only}, $\oi = 2i + d$ since this term requires that $m^2 = 0$ to contribute. We maintain the same notation out of convenience, despite the special case.
 
 Finally, 
 \begin{align}
 \label{T12}
-\overline{T}_{12\ell} &=  \frac{1}{2} \ol^2 \left( \tilde{Z}^+_{11\ell} + \tilde{Z}^+_{22\ell} \right)- \frac{1}{2} \Big\{ H_{11\ell\ell} + H_{22\ell\ell} + m^2 \left( V_{\ell 1 1 \ell} + V_{\ell 2 2 \ell} \right) - 2 \ol^2 \left( X_{11\ell\ell} + X_{22\ell\ell} \right)  \nonumber \\
+\overline{T}_{12\ell} &=  \frac{1}{2} \ol^2 \left( \tilde{Z}^+_{11\ell} + \tilde{Z}^+_{22\ell} \right)- \frac{1}{2} \Big[ H_{11\ell\ell} + H_{22\ell\ell} + m^2 \left( V_{\ell 1 1 \ell} + V_{\ell 2 2 \ell} \right) - 2 \ol^2 \left( X_{11\ell\ell} + X_{22\ell\ell} \right)  \nonumber \\
 %
-& \quad + 4 \ol^2 \left( \oone^2 P_{\ell \ell 1} + \otwo^2 P_{\ell \ell 2} \right) + 2\oone^2 M_{\ell \ell 1} + 2\otwo^2 M_{\ell \ell 2} + 2m^2 \left( \oone^2 Q_{\ell\ell 1} + \otwo^2 Q_{\ell \ell 2} \right) \Big\} \, .
+& \quad + 4 \ol^2 \left( \oone^2 P_{\ell \ell 1} + \otwo^2 P_{\ell \ell 2} \right) + 2\oone^2 M_{\ell \ell 1} + 2\otwo^2 M_{\ell \ell 2} + 2m^2 \left( \oone^2 Q_{\ell\ell 1} + \otwo^2 Q_{\ell \ell 2} \right) \Big] \, .
 \end{align}
 
 To examine the effect of the choice of $n$ on the value of $S_\ell$ and $| \Sigma S_\ell |$, figure~\ref{fig:atoi_all_m0_0compare} provides a comparison between the value of the source term for a massless scalar for two choices of $n$.
@@ -427,9 +427,9 @@ To examine the effect of the choice of $n$ on the value of $S_\ell$ and $| \Sigm
 
 This is a case where the non-normalizable frequencies are non-integer, but differ from integer values by a specific amount. In analogue to the case where all modes are normalizable, we consider setting any two of the non-normalizable frequencies to
 \begin{align}
-\oi = 2i + \chi \, ,
+\ogam = 2\gamma + \chi \, ,
 \end{align}
-where $m^2$ is \emph{not} chosen to be a special value\footnote{By tuning the value of the mass so that $\chi$ is an integer, additional resonant terms are possible; however, this scenario is addressed in \S\!~\ref{ssec: add to integer}. Furthermore, we do not consider the case when the Breitenlohmer-Freeman bound is saturated. This would place further restrictions on the allowed values of the indices in certain terms since the difference between the frequencies of normalizable and non-normalizable modes could then be zero.}, i.e. $\chi \notin \mathbb{Z}^*$. For this choice of non-normalizable frequencies, there are no resonant contributions from the all-plus channel; only the $(++-)$ and $(+--)$ channels can contribute resonant terms.
+where $m^2$ is \emph{not} chosen to be a special value\footnote{By tuning the value of the mass so that $\chi$ is an integer, additional resonant terms are possible; however, this scenario is addressed in \S\!~\ref{ssec: add to integer}. Furthermore, we do not consider the case when the Breitenlohmer-Freeman bound is saturated. This would place further restrictions on the allowed values of the indices in certain terms since the difference between the frequencies of normalizable and non-normalizable modes could then be zero.}, i.e. $\chi \notin \mathbb{Z}^*$, and $\gamma$ is an integer (greek letters are chosen to differentiate between normalizable modes with integer frequencies that use roman letters). For this choice of non-normalizable frequencies, there are no resonant contributions from the all-plus channel; only the $(++-)$ and $(+--)$ channels can contribute resonant terms.
 
 \subsubsection{$(++-)$}
 
@@ -437,7 +437,7 @@ As in the case of all normalizable modes, the contribution from the $(++-)$ is e
 \begin{align}
 S_\ell &= \overline{S}_{i \beta \gamma \ell} \cos \left( \theta_i + \theta_\beta - \theta_\gamma \right) \Big|_{\oi + \obet - \ogam = \ol} + \overline{R}_{i \beta} \cos \left(\theta_i + \theta_\beta - \theta_\beta \right) \Big|_{i = \ell}
 \end{align}
-where (sums over the indices that are not $\ell$ are implied, and only restrictions on the indices are explicitly included)
+where (sums over the indices that are not $\ell$ are implied, and only restrictions on the indices are explicitly included). {\bf REMOVE $\gamma \neq \ell$ AND $\beta \neq \ell$, ETC. SINCE THIS CAN NEVER BE TRUE WITHOUT FINE-TUNED $m^2$ OR INTEGER $\chi$?}
 \begin{align}
 \overline{S}_{i \beta \gamma \ell} &= \frac{1}{4} \sum_{\gamma \neq \ell} \frac{\ogam}{\oi + \obet} Z^{-}_{i \beta \gamma \ell} + \frac{1}{4} \sum_{\beta \neq \ell} \frac{\obet}{\oi - \ogam} Z^+_{i \gamma \beta \ell} + \frac{1}{4} \sum_{i \neq \ell} \frac{\oi}{\obet - \ogam} Z^+_{\beta \gamma i \ell} \nonumber \\
 %
@@ -475,18 +475,12 @@ Resonant terms proportional to $\cos \left(\theta_\alpha - \theta_\beta - \theta
 
 Other resonances are proportional to $\cos \left( \theta_\alpha - \theta_\alpha - \thk \right)$, and can be written as $\overline{R}_{\ell \alpha}$ where
 \begin{align}
-\overline{R}_{k \alpha} &= \frac{1}{2} \sum_{\alpha \neq \ell} \left[ \frac{\oal}{\ol^2 - \oal^2} \left( \ok (Z^{-}_{k \alpha \alpha \ell} + Z^{+}_{k \alpha \alpha \ell} ) + \oal (Z^{+}_{k \alpha \alpha \ell} - Z^{-}_{k \alpha \alpha \ell} ) \right) \right]  + \sum_{k \neq \ell} \frac{\ok^2}{\ol^2 - \ok^2} Z^{+}_{\alpha \alpha k \ell} \nonumber \\
+\overline{R}_{k \alpha} &= \frac{1}{2} \sum_{\alpha \neq \ell} \left[ \frac{\oal}{\ol^2 - \oal^2} \left( \ok (Z^{-}_{k \alpha \alpha \ell} + Z^{+}_{k \alpha \alpha \ell} ) + \oal (Z^{+}_{k \alpha \alpha \ell} - Z^{-}_{k \alpha \alpha \ell} ) \right) \right]  \nonumber \\
 %
-& \quad + \sum_{k \neq \alpha} \bigg[ H_{k \alpha \alpha \ell} \left( \frac{\oal^2}{\ol^2 - \oal^2} \right) - 2 \oal^2 X_{k \alpha \alpha \ell} \left( \frac{\oal \ok}{\ok^2 - \oal^2} \right) - H_{\alpha k \alpha \ell} \left( \frac{\ok}{\ok + \oal} \right) \nonumber \\
+& \quad + \sum_{k \neq \alpha} \bigg[ H_{k \alpha \alpha \ell} \left( \frac{\oal^2}{\ol^2 - \oal^2} \right) - 2 \oal^2 X_{k \alpha \alpha \ell} \left( \frac{\oal \ok}{\ok^2 - \oal^2} \right) - H_{\alpha k \alpha \ell} \left( \frac{\ok}{\ok + \oal} \right)   - 2 \oal^2 X_{\alpha k \alpha \ell} \left( \frac{\ok}{\ok + \oal} \right) \bigg] \nonumber \\
 %
-& \quad  - 2 \oal^2 X_{\alpha k \alpha \ell} \left( \frac{\ok}{\ok + \oal} \right) \bigg] - \sum_{k, \alpha} \oal^2 X_{k \alpha \alpha \ell}
+& \quad  - \sum \Big[ \oal^2 X_{k \alpha \alpha \ell} + 2 \oal^2 \ol^2 P_{\ell \ell \alpha} + \frac{1}{2} H_{\alpha \alpha \ell \ell} + \oal^2 M_{\ell \ell \alpha} + \ol^2 X_{\alpha \alpha \ell \ell} \Big]
 \end{align}
-
-Finally, the last set of contributions comes from terms that go as $\overline{T}_\ell \cos \theta_\ell$ where
-\begin{align}
-\overline{T}_\ell &= - \frac{1}{2} \sum_\alpha \cos \theta_\ell \left( 4 \oal^2 \ol^2 P_{\ell \ell \alpha} + H_{\alpha \alpha \ell \ell} + 2 \oal^2 M_{\ell \ell \alpha} - 2 \ol^2 X_{\alpha \alpha \ell \ell} \right) \, .
-\end{align}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -592,7 +586,7 @@ When $\ob \in \mathbb{Z}^*  \leq \ell$, resonance is at $\oi = \ol - 2\ob$ with
 %
 & \quad - \frac{1}{12} (1 - \delta(\oi - \ob) \Big \{ \left( \frac{\ob}{\oi + \ob} \right) \left(H_{i\ob\ob\ell} + m^2 V_{\ob\ob i \ell} - 2\ob^2 X_{i\ob\ob\ell} \right) + \nonumber \\
 %
-& \quad + \left( \frac{\ol - 2\ob}{\oi + \ob} \right) \left( H_{\ob i \ob \ell} + m^2 V_{i \ob \ob \ell} - 2 \ob^2 X_{\ob i \ob \ell} \right) \Big\} \nonumber \\
+& \quad + \left( \frac{\ol - 2\ob}{\oi + \ob} \right) \left( H_{\ob i \ob \ell} + m^2 V_{i \ob \ob \ell} - 2 \ob^2 X_{\ob i \ob \ell} \right) \Big] \nonumber \\
 %
 & \quad - \frac{(\ol - 2\ob)}{48\ob} Z^-_{\ob\ob i \ell} + \frac{1}{12} \ob^2 X_{i \ob \ob \ell} + \frac{\ob (\ol - 2\ob)}{12} X_{\ob\ob i \ell} - \frac{m^2}{12} V_{i\ob\ob\ell} - \frac{m^2}{24} V_{\ob\ob i \ell} \, .
 \end{align}
