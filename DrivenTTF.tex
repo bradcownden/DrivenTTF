@@ -429,26 +429,27 @@ This is a case where the non-normalizable frequencies are non-integer, but diffe
 \begin{align}
 \ogam = 2\gamma + \chi \, ,
 \end{align}
-where $m^2$ is \emph{not} chosen to be a special value\footnote{By tuning the value of the mass so that $\chi$ is an integer, additional resonant terms are possible; however, this scenario is addressed in \S\!~\ref{ssec: add to integer}. Furthermore, we do not consider the case when the Breitenlohmer-Freeman bound is saturated. This would place further restrictions on the allowed values of the indices in certain terms since the difference between the frequencies of normalizable and non-normalizable modes could then be zero.}, i.e. $\chi \notin \mathbb{Z}^*$, and $\gamma$ is an integer (greek letters are chosen to differentiate between normalizable modes with integer frequencies that use roman letters). For this choice of non-normalizable frequencies, there are no resonant contributions from the all-plus channel; only when $\oi + \ogam = \obet - \ol$ or {\bf OTHER} are resonant terms present.
+where $m^2$ is \emph{not} chosen to be a special value\footnote{By tuning the value of the mass so that $\chi$ is an integer, additional resonant terms are possible; however, this scenario is addressed in \S\!~\ref{ssec: add to integer}. Furthermore, we do not consider the case when the Breitenlohmer-Freeman bound is saturated. This would place further restrictions on the allowed values of the indices in certain terms since the difference between the frequencies of normalizable and non-normalizable modes could then be zero.}, i.e. $\chi \notin \mathbb{Z}^*$, and $\gamma$ is an integer (greek letters are chosen to differentiate between normalizable modes with integer frequencies that use roman letters). For this choice of non-normalizable frequencies, there are no resonant contributions from the all-plus channel; only when either $\oi + \ogam = \obet - \ol$, or $\oi + \ogam = \obet + \ol$ with $i + \gamma \geq \ell$, are resonant terms present.
 
 \subsubsection{$\oi + \ogam = \obet - \ol$}
 
-As in the case of all normalizable modes, the contribution from the $(++-)$ is equal to that of the $(+-+)$ and thus only one will be considered {\bf IS THIS TRUE?}. This channel contributes secular terms of the form
+This channel contributes secular terms of the form
 \begin{align}
-S_\ell &= \sum_{i \neq \ell} \sum_{\gamma} \overline{S}_{i (i + \gamma + \ell) \gamma \ell} \cos \left( \theta_i - \theta_{(i + \gamma + \ell)} + \theta_\gamma \right) + \sum_\beta \overline{R}_{\ell \beta} \cos \left(\theta_\ell + \theta_\beta - \theta_\beta \right) 
+S_\ell &= \sum_{i \neq \ell} \sum_{\gamma \neq \beta} \overline{S}_{i (i + \gamma + \ell) \gamma \ell} \cos \left( \theta_i - \theta_{(i + \gamma + \ell)} + \theta_\gamma \right) + \sum_\beta \overline{R}_{\ell \beta} \cos \left(\theta_\ell + \theta_\beta - \theta_\beta \right) 
 \end{align}
 where 
 \begin{align}
-\overline{S}_{i \beta\gamma\ell} &= - \frac{1}{4} \bigg[ Z^+_{\beta\gamma i \ell} \left( \frac{\oi\ol}{\ol^2 - \oi^2}\right) + Z^{-}_{i\gamma\beta\ell} \left(  \frac{\obet}{\ol - \obet}  \right) + Z^+_{i\beta\gamma\ell} \left( \frac{\ogam}{\ol + \ogam} \right) \bigg] \nonumber \\
+\overline{S}_{i \beta\gamma\ell} &= - \frac{1}{4} Z^+_{\beta\gamma i \ell} \left( \frac{\oi}{\oi + \ol}\right) + \frac{1}{4} Z^{-}_{i\gamma\beta\ell} \left(  \frac{\obet}{\ol - \obet}  \right) + \frac{1}{4} Z^+_{i\beta\gamma\ell} \left( \frac{\ogam}{\ol + \ogam} \right) \nonumber \\
 %
 & + \frac{1}{4} \bigg[ \frac{1}{\obet - \ogam} \left( \ogam H_{\beta\gamma i \ell} - \obet H_{\gamma \beta i \ell} - 2\oi^2 \left( \ogam X_{\beta\gamma i \ell} - \obet X_{\gamma \beta i \ell} \right) \right)\nonumber \\
 %
-& - \frac{1}{\oi + \ogam} \left( \oi H_{\gamma i \beta \ell}  + \ogam H_{i \gamma\beta\ell} - 2\obet^2 \left( \oi X_{\gamma i \beta\ell} + \ogam X_{i \gamma\beta \ell} \right) \right) \nonumber \\
+& \quad - \frac{1}{\oi + \ogam} \left( \oi H_{\gamma i \beta \ell}  + \ogam H_{i \gamma\beta\ell} - 2\obet^2 \left( \oi X_{\gamma i \beta\ell} + \ogam X_{i \gamma\beta \ell} \right) \right) \nonumber \\
 %
-& + \frac{1}{\oi - \obet} \left( \obet H_{i\beta\gamma\ell} - \oi H_{\beta i \gamma \ell} - 2 \ogam^2 \left( \obet X_{i \beta \gamma \ell} - \oi X_{\beta i \gamma \ell} \right) \right) \nonumber \\
+& \quad + \frac{1}{\oi - \obet} \left( \obet H_{i\beta\gamma\ell} - \oi H_{\beta i \gamma \ell} - 2 \ogam^2 \left( \obet X_{i \beta \gamma \ell} - \oi X_{\beta i \gamma \ell} \right) \right) \nonumber \\
 %
-& -\obet \ogam X_{i\beta\gamma\ell} -\oi\obet X_{\gamma i \beta\ell} + 2 \oi\ogam X_{\beta i \gamma\ell} \bigg]
+& \quad -2 \obet \ogam X_{i\beta\gamma\ell} -2 \oi\obet X_{\gamma i \beta\ell} + 2 \oi\ogam X_{\beta i \gamma\ell} \bigg]
 \end{align}
+and
 \begin{align}
 \overline{R}_{\ell \beta} &= \frac{1}{4}  \bigg[ Z^{-}_{\ell \beta \beta \ell} \left( \frac{\obet}{\ol + \obet} \right) +  Z^+_{\ell \beta \beta \ell} \left(\frac{\obet}{\ol - \obet} \right) + 2 H_{\ell\beta\beta\ell} \left( \frac{\obet^2}{\ol^2 - \obet^2} \right)  \nonumber \\
 %
@@ -457,27 +458,30 @@ where
 &  - 2\obet^2 X_{\ell\beta\beta\ell} + 4 \ol^2 X_{\beta\ell\beta\ell} + 4 \ol^2 \tilde{Z}^+_{\beta\beta\ell} - 2H_{\beta\beta\ell\ell}  - 8 \obet^2 \ol^2 P_{\ell\ell\beta} - 4 \obet^2 M_{\ell\ell\beta} \bigg]
 \end{align}
 
-\subsubsection{$(+--)$}
-Resonant terms proportional to $\cos \left(\theta_\alpha - \theta_\beta - \theta_k \right)$ must be evaluated subject to $\omega_\alpha - \omega_\beta - \omega_k + \ol = 0$ and are of the form
+\subsubsection{$\oi + \ogam = \obet + \ol$}
+This channel contributes secular terms of the form
 \begin{align}
-\overline{S}_{\alpha \beta k \ell} &= \frac{1}{4} \sum_{\alpha \neq \ell} \frac{\omega_\alpha}{\omega_\beta + \omega_k} Z^{-}_{\beta k \alpha \ell} + \frac{1}{4} \sum_{\beta \neq \ell} \frac{\omega_\beta}{\ok - \omega_{\alpha}} Z^{+}_{\alpha k \beta \ell} + \frac{1}{4} \sum_{k \neq \ell} \frac{\ok}{\obet - \omega_\alpha} Z^{+}_{\alpha \beta k \ell} \nonumber \\
-%
-& \quad + \frac{1}{4} \sum_{k \neq \alpha} \left[ \frac{\oal}{\ok - \oal} (H_{k \alpha \beta \ell} - 2 \obet^2 X_{k \alpha \beta \ell}) - \frac{\ok}{\ok + \oal} (H_{\alpha k \beta \ell} - 2\obet^2 X_{\alpha k \beta \ell}) \right] \nonumber \\
-%
-& \quad + \frac{1}{4} \sum_{\alpha \neq \beta} \left[ \frac{\oal}{\obet - \oal} (H_{\beta \alpha k \ell} - 2\ok^2 X_{\beta \alpha k \ell}) - \frac{\obet}{\oal + \obet}(H_{\alpha \beta k \ell} - 2 \ok^2 X_{\alpha \beta k \ell}) \right] \nonumber \\
-%
-& \quad - \frac{1}{4} \sum_{k \neq \beta} \left[ \frac{\obet}{\ok + \obet} (H_{k \beta \alpha \ell} - 2\oal^2 X_{k \beta \alpha \ell}) + \frac{\ok}{\ok + \obet}(H_{\beta k \alpha \ell} - 2\oal^2 X_{\beta k \alpha \ell}) \right] \nonumber \\
-%
-& \quad - \frac{1}{2} \sum \left( \oal \obet X_{k \alpha \beta \ell} + \oal \ok X_{\beta k \alpha \ell} - \obet \ok X_{\alpha \beta k \ell} \right) \, .
+S_\ell = \underbrace{\sum_{i \neq \ell} \sum_{\gamma \neq \beta}}_{i + \gamma \geq \ell} \overline{S}_{i (i + \gamma - \ell) \gamma \ell} \cos \left( \theta_i - \theta_{(i + \gamma - \ell)} + \theta_\gamma \right) + \sum_\beta \overline{R}_{\ell \beta} \cos \left( \theta_\ell + \theta_\beta - \theta_\beta \right)
 \end{align}
-
-Other resonances are proportional to $\cos \left( \theta_\alpha - \theta_\alpha - \thk \right)$, and can be written as $\overline{R}_{\ell \alpha}$ where
+where
 \begin{align}
-\overline{R}_{k \alpha} &= \frac{1}{2} \sum_{\alpha \neq \ell} \left[ \frac{\oal}{\ol^2 - \oal^2} \left( \ok (Z^{-}_{k \alpha \alpha \ell} + Z^{+}_{k \alpha \alpha \ell} ) + \oal (Z^{+}_{k \alpha \alpha \ell} - Z^{-}_{k \alpha \alpha \ell} ) \right) \right]  \nonumber \\
+\overline{S}_{i\beta\gamma\ell} &= \frac{1}{4} Z^-_{i\gamma\beta\ell} \left( \frac{\obet}{\ol + \obet}\right)  + \frac{1}{4} Z^+_{i\beta\gamma\ell} \left( \frac{\ogam}{\ol - \ogam}\right)  - \frac{1}{4}Z^+_{\beta\gamma i \ell} \left( \frac{\oi}{\oi - \ol} \right) \nonumber \\
 %
-& \quad + \sum_{k \neq \alpha} \bigg[ H_{k \alpha \alpha \ell} \left( \frac{\oal^2}{\ol^2 - \oal^2} \right) - 2 \oal^2 X_{k \alpha \alpha \ell} \left( \frac{\oal \ok}{\ok^2 - \oal^2} \right) - H_{\alpha k \alpha \ell} \left( \frac{\ok}{\ok + \oal} \right)   - 2 \oal^2 X_{\alpha k \alpha \ell} \left( \frac{\ok}{\ok + \oal} \right) \bigg] \nonumber \\
+& + \frac{1}{4}\bigg[  \frac{1}{\obet - \ogam} \left( \ogam H_{\beta\gamma i \ell} - \obet H_{\gamma\beta i \ell} - 2\oi^2 \left( \ogam X_{\beta\gamma i \ell} - \obet X_{\gamma\beta i \ell} \right) \right) \nonumber \\
 %
-& \quad  - \sum \Big[ \oal^2 X_{k \alpha \alpha \ell} + 2 \oal^2 \ol^2 P_{\ell \ell \alpha} + \frac{1}{2} H_{\alpha \alpha \ell \ell} + \oal^2 M_{\ell \ell \alpha} + \ol^2 X_{\alpha \alpha \ell \ell} \Big]
+& \quad + \frac{1}{\oi - \obet} \left( \obet H_{i\beta\gamma\ell} - \oi H_{\beta i \gamma\ell}  -2 \ogam^2 \left( \obet X_{i\beta\gamma\ell} - \oi X_{\beta i \gamma\ell} \right) \right) \nonumber \\
+%
+& \quad + \frac{1}{\oi - \ogam} \left( \oi H_{\gamma i \beta\ell} - \ogam H_{i\gamma\beta\ell} - 2\obet^2 \left( \oi X_{\gamma i \beta\ell} - \ogam X_{i\gamma\beta\ell} \right) \right) \nonumber \\
+%
+& \quad - 2 \oi\obet X_{\gamma i \beta\ell} - 2 \obet\ogam X_{i\beta\gamma\ell} + 2\oi\ogam X_{\beta\gamma i\ell}\bigg]
+\end{align}
+and
+\begin{align}
+\overline{R}_{\ell \alpha} &= \frac{1}{4} \bigg[ Z^-_{\ell\beta\beta\ell} \left( \frac{\obet}{\ol + \obet} \right) + Z^+_{\ell\beta\beta\ell} \left( \frac{\obet}{\ol - \obet} \right) + 2 H_{\ell\beta\beta\ell} \left( \frac{\obet^2}{\ol^2 - \obet^2} \right) \nonumber \\
+%
+& - 2 H_{\beta\ell\beta\ell} \left( \frac{\ol^2}{\ol^2 - \obet^2} \right) - 4 X_{\ell\beta\beta\ell} \left( \frac{\obet^4}{\ol^2 - \obet^2} \right) + 4 X_{\beta\ell\beta\ell} \left( \frac{\ol^2 \obet^2}{\ol^2 - \obet^2} \right) \nonumber \\
+%
+& - 2 \obet^2 X_{\ell \beta\beta \ell} + 4\ol^2 \tilde{Z}^+_{\beta\beta\ell} + 4 \ol^2 X_{\beta\beta\ell\ell} - 2 H_{\beta\beta\ell\ell} - 8 \obet^2 \ol^2 P_{\ell\ell\beta} - 4 \obet^2 M_{\ell\ell\beta} \bigg] \, .
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -678,6 +682,18 @@ where
 & \quad -  \frac{1}{4} \sum_{i \neq \beta} \left[ \frac{\obet}{\oi + \obet} (H_{i \beta \gamma \ell} - 2\ogam^2 X_{i \beta \gamma \ell} ) + \frac{\oi}{\oi + \obet} (H_{\beta i \gamma \ell} - 2\ogam^2 X_{\beta i \gamma \ell}) \right] \nonumber \\
 %
 & \quad - \frac{1}{2} \sum \left( \obet \ogam X_{i \beta \gamma \ell} + \oi \ogam X_{\beta \gamma i \ell} - \oi \obet X_{\gamma i \beta \ell} \right) \, ,
+\end{align}
+
+\begin{align}
+\overline{S}_{\alpha \beta k \ell} &= \frac{1}{4} \sum_{\alpha \neq \ell} \frac{\omega_\alpha}{\omega_\beta + \omega_k} Z^{-}_{\beta k \alpha \ell} + \frac{1}{4} \sum_{\beta \neq \ell} \frac{\omega_\beta}{\ok - \omega_{\alpha}} Z^{+}_{\alpha k \beta \ell} + \frac{1}{4} \sum_{k \neq \ell} \frac{\ok}{\obet - \omega_\alpha} Z^{+}_{\alpha \beta k \ell} \nonumber \\
+%
+& \quad + \frac{1}{4} \sum_{k \neq \alpha} \left[ \frac{\oal}{\ok - \oal} (H_{k \alpha \beta \ell} - 2 \obet^2 X_{k \alpha \beta \ell}) - \frac{\ok}{\ok + \oal} (H_{\alpha k \beta \ell} - 2\obet^2 X_{\alpha k \beta \ell}) \right] \nonumber \\
+%
+& \quad + \frac{1}{4} \sum_{\alpha \neq \beta} \left[ \frac{\oal}{\obet - \oal} (H_{\beta \alpha k \ell} - 2\ok^2 X_{\beta \alpha k \ell}) - \frac{\obet}{\oal + \obet}(H_{\alpha \beta k \ell} - 2 \ok^2 X_{\alpha \beta k \ell}) \right] \nonumber \\
+%
+& \quad - \frac{1}{4} \sum_{k \neq \beta} \left[ \frac{\obet}{\ok + \obet} (H_{k \beta \alpha \ell} - 2\oal^2 X_{k \beta \alpha \ell}) + \frac{\ok}{\ok + \obet}(H_{\beta k \alpha \ell} - 2\oal^2 X_{\beta k \alpha \ell}) \right] \nonumber \\
+%
+& \quad - \frac{1}{2} \sum \left( \oal \obet X_{k \alpha \beta \ell} + \oal \ok X_{\beta k \alpha \ell} - \obet \ok X_{\alpha \beta k \ell} \right) \, .
 \end{align}
 
 \begin{align}
