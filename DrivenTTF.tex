@@ -64,68 +64,68 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Perturbative Expansion}
+\section{Source Terms and Boundary Conditions}
 
-The backreaction between the metric and the scalar field appears at second order in the perturbation,
+To examine the weak turbulence that leads to instability, we consider a massive scalar field coupled to a spherically symmetry, asymptotically AdS$_{d+1}$ spacetime in global coordinates whose metric is given by
 \begin{align}
-A_2' = - \mu \nu \left[ (\dot \phi_1 )^2 + (\phi_1')^2 + m^2 \phi_1^2 \sec^2 x \right] + \nu' A_2 / \nu
+\label{AdS metric}
+ds^2 &= \frac{L^2}{\cos(x)} \left( - A(t,x) e^{-2 \delta(t,x)} \, dt^2 + A^{-1}(t, x) \, dx^2 + \sin^2 (x) \, d\Omega^2_{d-1} \right) \, ,
 \end{align}
-which can be directly integrated to give
+where $L$ is the AdS curvature (hereafter set to $1$), and the radial coordinate $x \in [0, \pi/2)$. The dynamics of the system come from the Einstein and Klein-Gordon equations:
+\begin{align}
+G_{\mu \nu} + \Lambda g_{\mu \nu} = 8 \pi \left( \nabla_\mu \phi \nabla_\nu \phi - \frac{1}{2} g_{\mu \nu} \left( \nabla^\rho \phi \nabla_\rho \phi + m^2 \phi^2 \right) \right), \quad \text{and} \quad \nabla^2 \phi - m^2 \phi = 0 \, ,
+\end{align}
+with $\Lambda$ as cosmological constant for AdS, $\Lambda = -d(d-1)/2$. 
 
+Perturbing around static AdS, we expand the minimally-coupled scalar field in terms of odd powers of epsilon (the even powers do not contribute)
 \begin{align}
-A_2 = -\nu \int^x_0 dy \, \mu \left( (\dot \phi_1 )^2 + (\phi_1')^2 + m^2 \phi_1^2 \sec^2 x \right) \, .
+\phi(t,x) = \epsilon \phi_1 + \epsilon^3 \phi_3 + \ldots
 \end{align}
-Furthermore, the first non-trivial contribution to the lapse in the boundary time gauge is
+and the metric functions $A$ and $\delta$ in terms of even powers of the expansion parameter,
+\begin{align}
+A(t, x) = 1 + A_2 \epsilon^2 + \ldots \quad \text{and} \quad \delta(t, x) = \epsilon^2 \delta_2 + \ldots \, .
+\end{align}
+We choose to work in the boundary gauge, where $\delta(t, \pi/2) = 0$, for reasons that we discuss below.
 
+At linear order, $\phi_1$ satisfies
 \begin{align}
-\delta_2 = \int^{\pi/2}_x dy \, \mu \nu \left(  (\dot \phi_1 )^2 + (\phi_1')^2 \right) \, .
+\p^2_t \phi_1 + \hat L \phi_1 = 0 \quad \text{where} \quad \hat{L} \equiv \frac{1}{\mu} (\mu' \p_x + \mu \p^2_x)  - \frac{m^2}{\cos^2(x)} \, ,
 \end{align}
-For convenience, we have also defined the functions
+where $\mu \equiv \tan^{d-1}(x)$. Writing the scalar field as the product of time- and position-dependent parts,
 \begin{align}
-\mu (x) = \left( \tan x \right)^{d-1} \quad \text{and} \quad \nu(x) = (d-1) / \mu ' \, .
+\phi_1 (t, x) = \sum_j c_j (t) e_j (x) \, ,
 \end{align}
-
-To aide in evaluating integrals, we first derive the following identities: from the equation for the first-order time-dependent coefficients $c_i$,
-\begin{align} 
-\ddot c_i + \oi^2 c_i = 0 \quad \Rightarrow \quad \p_t \left(\dot c_i^2 + \oi^2 c_i^2 \right) = \p_t \mathbb C_i = 0 \, ;
-\end{align}
-from the equation definition of $\hat L$,
+we find that the basis functions $e_j (x)$ are the solutions to the eigenvalue equation
 \begin{align}
-\hat L e_j = -\frac{1}{\mu} \left( \mu e'_j \right)' + m^2 \sec^2 x e_j \quad \Rightarrow \quad \left( \mu e'_j \right)' = \mu \left( m^2 \sec^2 x - \omega_j^2 \right) e_j \, ;
-\end{align}
-from considering the expression $\left( \mu e'_i e_j \right)'$:
-\begin{align}
-\left( \mu e'_i e_j \right) ' = \left(m^2 \sec^2 x - \oi^2 \right) \mu e_i e_j + \mu e'_i e'_j \, ;
-\end{align}
-from permuting $i, j$ above and subtracting to give
-\begin{align}
-\frac{\left[ \mu (e'_i e_j \oj^2 - e_i e'_j \oi^2 ) \right]'}{(\oj^2 - \oi^2)} = \mu m^2 \sec^2 x e_i e_j + \mu e'_i e'_j \, .
-\end{align}
-
-The basis functions $e_j (x)$ are the solutions to the eigenvalue equation
-\begin{align}
+\label{eigen eqn}
 \hat L e_j(x) = \omega^2_j e_j(x) .
 \end{align}
-When considering normalizable solutions only, the basis functions become
+The general solution to this eigenvalue equation involves two types of functions: those that are normalizable and therefore vanish as $x \to \pi / 2$, and those that are non-normalizable and approach a finite value on the boundary. In many previous works, the dynamics of scalar fields have been studied using exclusively normalizable functions (as is the focus of \S\!~\ref{sec: norm res}); however, we now wish to consider so-called ``pumped'' systems, where a time-dependent source term exists on the boundary that sends energy into AdS. This energy is carried into the bulk spacetime via non-normalizable solutions to \eqref{eigen eqn}, and coupling between the scalar field and metric functions drives the system out of equilibrium. 
+
+In general, a combination of normalizable and non-normalizable eigenmodes make up the scalar field:
 \begin{align}
-e_j(x) &= k_j \left( \cos(x) \right)^{\Delta^+} P_{j}^{(d/2 - 1, \Delta^+ - d/2)} \left( \cos (2x) \right) \\
+\phi_1(t,x) = \sum_j c_j(t) e_j(x) + \sum_\alpha A_\alpha (t) E_\alpha(x) \, ,
+\end{align}
+with the $A_\alpha$ set by the choice of boundary conditions. The normalizable modes have eigenfunctions given by
+\begin{align}
+e_j(x) &= k_j \left( \cos(x) \right)^{\Delta^+} P_{j}^{(d/2 - 1, \, \Delta^+ - d/2)} \left( \cos (2x) \right) \\
 k_j &= 2 \sqrt{\frac{(j + \Delta^+ /2) \Gamma(j+1) \Gamma(j+\Delta^+)}{\Gamma(j+d/2) \Gamma(j + \Delta^+ - d/2 + 1)}} \, ,
 \end{align} 
-with eigenvalues $\omega_j = 2j + \Delta^+$, $j \in \mathbb{Z}^*$, and $\Delta^+$ as the positive root of $\Delta ( \Delta - d ) = m^2$. On the other hand, for non-normalizable solutions with arbitrary frequency, the basis functions are
+with fully resonance eigenvalues $\omega_j = 2j + \Delta^+$, $j \in \mathbb{Z}^*$, and $\Delta^+$ as the positive root of $\Delta ( \Delta - d ) = m^2$. On the other hand, non-normalizable eigenfunctions with arbitrary frequency $\omega_\alpha$, have basis functions
 \begin{align}
 \label{general basis}
-E_\omega (x) =  \left( \cos(x) \right)^{\Delta_+} {_2F_1} \left(\frac{\Delta_+ + \omega}{2}, \frac{\Delta_+ - \omega}{2}, d/2 ; \sin^2 (x) \right) \, .
+E_\alpha (x) =  \left( \cos(x) \right)^{\Delta_+} {_2F_1} \left(\frac{\Delta_+ + \omega_\alpha}{2}, \frac{\Delta_+ - \omega_\alpha}{2}, d/2 ; \sin^2 (x) \right) \, .
 \end{align}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+{\bf DISCUSS RESONANT CONTRIBUTIONS \& THE TIME AVERAGING PROCEDURE}
+\end{center}
 
-\section{$\mc O(\epsilon^3)$ Source Terms}
-At third order in $\epsilon$, the equation for $\phi_3$ contains a source $S$ given by
+Without specifying whether an eigenmode is non-/normalizable, we can determine the effect of the weakly turbulent transfer of energy at $\mc O(\epsilon^3)$, with
 \begin{align}
 \ddot \phi_3 + \hat L \phi_3 = S = 2 (A_2 - \delta_2) \ddot \phi_1 + (\dot A_2 - \dot \delta_2) \dot\phi_1 + (A_2' -\delta_2' )\phi_1' + m^2 A_2 \phi_1 \sec^2 x \, .
 \end{align}
-Following the steps outlined in Appendix~\ref{source term derivation}, and employing the solution $c_i(t) = a_i \cos (\oi t + b_i) = a_i \cos \theta_i$, the source term becomes
+Following the steps outlined in Appendix~\ref{app: source term derivation}, and employing the solution ${c_i(t) = a_i \cos (\oi t + b_i) = a_i \cos\theta_i}$, the source term can be written as
 \begin{align}
 \label{general source}
 S_\ell &=\frac{1}{4} \sum_{\substack{i,j,k \\ k \neq \ell}}^\infty \frac{a_i a_j a_k \ok}{\ol^2 - \ok^2} \Big[ Z^-_{ijk\ell} (\oi + \oj - 2\ok) \cos (\thi + \thj - \thk) - Z^-_{ijk\ell} (\oi + \oj + 2\ok) \cos (\thi + \thj + \thk) - \nonumber \\
@@ -149,32 +149,35 @@ S_\ell &=\frac{1}{4} \sum_{\substack{i,j,k \\ k \neq \ell}}^\infty \frac{a_i a_j
 & - \frac{1}{2} \sum_{i,j}^\infty a_i^2 a_j \left( H_{iij\ell} + m^2 V_{jii\ell} - 2\oj^2 X_{iij\ell} + 4\oi^2 \oj^2 P_{j\ell i} + 2\oi^2 (M_{j\ell i} + m^2 Q_{j\ell i}) \right) \cos \thj . \hspace{-0.2in}
 \end{align} 
 
+As an exercise, we first derive the resonant contributions when the boundary source is zero, and therefore only normalizable modes are present. These results agree numerically with previous work on normalizable modes for massless scalars in the interior time gauge $\delta(t, 0) = 0$. The definitions of the integral functions $Z$, $H$, $X$, etc. differ slightly from other works -- in part because of the gauge choice, and in part because of a desire to separate mass-dependent terms -- and so are given explicitly in Appendix~\ref{app: source term derivation}.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Resonances From Normalizable Solutions}
 \label{sec: norm res}
-Consider the case where each of the basis functions are given by normalizable solutions. After time-averaging, resonant contributions come from the set of conditions
+Consider the case where each of the basis functions are given by normalizable solutions. After time-averaging, the  resonant contributions occur for the following combination of normalizable frequencies: 
 \begin{align}
 \label{gen res}
 \oi \pm \oj \pm \ok = \pm \ol \,
 \end{align}
-which separates into three distinct cases
+which can be separated into the three distinct cases
 \begin{align}
 \oi + \oj + \ok &= \ol \qquad (+++) \\
 \oi - \oj - \ok &= \ol \qquad (+--) \\
-\oi + \oj - \ok &= \ol \qquad (++-)
+\oi + \oj - \ok &= \ol \qquad (++-) \, .
 \end{align}
+We will see that the first two resonances, $(+++)$ and $(+--)$, will non-trivially vanish whenever their respective resonance conditions are satisfied. This is in agreement with the results shown for the massless scalar in the interior time gauge (as they must be, since the choice of time gauge should not change the existence of resonant channels). Here we include the expressions for the naturally vanishing resonances, choosing to explicitly express the mass dependence.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{$(+++)$}
+\subsection{Naturally Vanishing Resonances: $(+++)$ and $(+--)$}
 
-These resonant contributions come from the condition $\oi + \oj + \ok = \ol$, and are of the form
+Resonant contributions that come from the condition $\oi + \oj + \ok = \ol$ are of the form
 \begin{align}
 S_\ell = \underbrace{\sum_{i=0}^\infty \sum_{j=0}^\infty \sum_{k=0}^\infty}_{\oi + \oj + \ok = \, \ol} \Omega_{ijk\ell} \, a_i a_j a_k \cos \left( \thi + \thj + \thk \right) + \ldots \, ,
 \end{align}
-where
+where dots denote other resonances, both vanishing and non-vanishing. $\Omega_{ijk\ell}$ is then given by
 \begin{align}
 \label{omega}
 \Omega_{ijk\ell} &= -\frac{1}{12}H_{ijk\ell} \frac{\oj (\oi + \ok +2\oj)}{(\oi + \oj)(\oj + \ok)} - \frac{1}{12} H_{ikj\ell} \frac{\ok (\oi + \oj + 2\ok)}{(\oi + \ok)(\oj + \ok)}- \frac{1}{12} H_{jik\ell} \frac{\oi (\oj + \ok +2\oi)}{(\oi + \oj)(\oi + \ok)} \nonumber \\
@@ -188,11 +191,7 @@ where
 & \quad - \frac{1}{12} Z^-_{ijk\ell} \left( \frac{\ok}{\oi + \oj} \right) - \frac{1}{12} Z^-_{ikj\ell} \left( \frac{\oj}{\oi + \ok} \right) - \frac{1}{12} Z^-_{jki\ell}  \left( \frac{\oi}{\oj + \ok} \right) \, .
 \end{align}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{$(+--)$}
-
-These contributions arise from the condition $\oi - \oj - \ok = \ol$, are of the form
+The second naturally vanishing resonance comes from the condition $\oi - \oj - \ok = \ol$, and is of the form
 \begin{align}
 S_\ell = \sum_{j=0}^\infty \sum_{k=0}^\infty \Gamma_{(j + k + \ell + \Delta^+) jk\ell} \, a_j a_k a_{(j+k+\ell + \Delta^+)} \cos \left( \theta_{(j+k+\ell + \Delta^+)} - \thj - \thk \right) + \ldots \, ,
 \end{align}
@@ -210,18 +209,18 @@ where
 & \quad + \frac{1}{4} Z^-_{kji\ell} \left( \frac{\oi}{\oj + \ok}\right) - \frac{1}{4} Z^+_{ijk\ell} \left( \frac{\ok}{\oi - \oj} \right) - \frac{1}{4} Z^+_{jki\ell} \left( \frac{\oj}{\oi - \ok}\right) \, .
 \end{align}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Building on the work done with massless scalars, we are able to demonstrate that \eqref{omega} and \eqref{gamma} continue to vanish for massive scalars in the boundary gauge; thus, the weak turbulence is determined only from the remaining resonance channel. When non-normalizable modes are introduced, we will see that naturally vanishing resonances are not present.
 
-\subsection{Naturally Vanishing Resonances}
-
-It has been shown that when working in the interior gauge, \eqref{omega} and \eqref{gamma} for a massless scalar vanish by the orthogonality of the basis functions. Moreover, we are able to demonstrate that these continue to vanish (as they must) for massive scalars in the boundary gauge. This means that the dynamics of the perturbative system are determined only from the remaining resonance channel. When non-normalizable modes are introduced, we will see that all none of the resonance channels naturally vanish.
+\begin{center}
+{\bf PLOT OF $\Gamma$ AND $\Omega$ FOR MASSIVE SCALARS?}
+\end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{$(++-)$}
 \label{subs: ttf resonances}
 
-These contributions arise from the resonant condition $\oi + \oj = \ok + \ol$, can be written as
+The first non-vanishing contributions arise when $\oi + \oj = \ok + \ol$. This contribution can be split into three coefficients that are evaluated for certain subsets of the allowed values for the indices, namely
 \begin{align}
 S_\ell &= T_\ell a^3_\ell \cos (\thl + \thl - \thl) + \sum_{i \neq \ell}^\infty R_{i \ell} \, a^2_i a_\ell \cos(\thi + \thl - \thi) \nonumber \\
 & \qquad + \sum_{i \neq \ell}^\infty \sum_{j \neq \ell}^\infty S_{i j (i + j - \ell) \ell} \, a_i a_j a_{(i + j - \ell)} \cos(\thi + \thj - \theta_{i + j -\ell} ) + \ldots
@@ -245,16 +244,24 @@ R_{i\ell} &= \left(\frac{\oi^2}{\ol^2 - \oi^2} \right) \big( Y_{i\ell \ell i} - 
 %
 & - \oi\ol X_{i\ell i \ell} - \frac{3m^2}{2} V_{\ell ii \ell} - \frac{1}{2} H_{ii\ell \ell} + \ol^2 B_{ii\ell} - \oi^2 M_{\ell \ell i} - m^2 \oi^2 Q_{\ell \ell i} \, ,
 \end{align}
+and
 \begin{align}
-T_{\ell} &= \frac{1}{2} \ol^2 \left( X_{\ell \ell \ell \ell} + 4 B_{\ell \ell \ell} -2 M_{\ell \ell \ell} - 2m^2 Q_{\ell \ell \ell} \right) -\frac{3}{4} \left( H_{\ell \ell \ell \ell} + 3m^2 V_{\ell \ell \ell \ell} \right) \, . \hspace{1.0in}
+T_{\ell} &= \frac{1}{2} \ol^2 \left( X_{\ell \ell \ell \ell} + 4 B_{\ell \ell \ell} -2 M_{\ell \ell \ell} - 2m^2 Q_{\ell \ell \ell} \right) -\frac{3}{4} \left( H_{\ell \ell \ell \ell} + 3m^2 V_{\ell \ell \ell \ell} \right) \, .
 \end{align}
+
+\begin{center}
+{\bf PLOT OF $S, R, T$ FOR MASSIVE SCALARS?}
+\end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Resonances From Non-normalizable Modes}
+\label{sec: NNmodes}
 
+\begin{center}
 {\bf Discuss falloff of A2 and delta2 with three NN modes, but don't calculate anything new. Mention overlap of NN and normalizable cases when omega(i) $\pm$ omega(j) = NN frequency. Then focus on two NN modes.}
+\end{center}
 
 We now consider the case when at least one of the $e_i(x), e_j(x), e_k(x)$ is a non-normalizable mode. Since the boundary condition has been set to be a single non-normalizable mode, any non-normalizable modes in the source term must exactly cancel; therefore, at least two of the modes must be non-normalizable. This assumption breaks some of the symmetries that contributed to the previous expressions for resonance channels, and so the resonance conditions must be re-examined starting from the source expression \eqref{general source}.
 
@@ -273,6 +280,7 @@ Focusing on the position-dependence only, we find that
 where we have defined $\xi = \sqrt{d^2 + 4m^2}$. In the massless case, $\xi = d$ and all powers of $\tilde{x}$ are non-negative and thus the limit is finite; for tachyonic masses, $0 \leq \xi < d$ and the limit is again finite. However, for massive scalars, at least one of the terms above diverges as $\xi \to 0$. This case would require the addition of counter-terms in the bulk action to cancel such divergences -- we will not consider this case presently. Thus, we will restrict our discussion to $m^2 \leq 0$ to avoid these issues. A similar check on the near-boundary behaviour of $\delta_2$ shows that, in the massless case, the gauge condition $\delta_2 (t, x=\pi/2)$ remains unchanged by the addition of non-normalizable modes.
 
 \subsection{Two Non-normalizable Modes with Equal Frequencies}
+\label{ssec: equalNN}
 
 As a first case, let us assume that the two non-normalizable modes have equal, constant, and arbitrary frequencies, $\ob$. Applying the time-averaging procedure to the source $S_\ell$ once again eliminates all contributions except those that satisfy \eqref{gen res}. Since the basis onto which we are projecting is normalizable, we know that $\omega_\ell$ is given by $\omega_\ell = 2\ell + \Delta^{+}$. We are now free to choose any one of $\{\omega_i, \omega_j, \ok\}$ to be normalizable and consider when the resonance condition is satisfied. In particular, we find that the following combinations are resonant:
 \begin{align}
@@ -289,16 +297,16 @@ S_\ell = \overline{T}_{\ell \ob} \, a_\ell A_{\ob}^2 \cos (\thl) \, ,
 where the non-normalizable modes have constant amplitudes $A_{\ob}$. Collecting the appropriate terms in \eqref{general source}, and evaluating the each possible resonance (being careful not to violate restrictions placed on the sums), we find that
 \begin{align}
 \label{S:2NN}
-\overline{T}_{\ell \ob} &=  \left( 1 - \delta_{\ol, \ob} \right)\Big[ \, \frac{1}{2} Z^-_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol + \ob} \right) + \frac{1}{2} Z^+_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol - \ob} \right)  + H_{\ell \ob \ob \ell} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right) \nonumber \\
+\overline{T}_{\ell \ob} &=  \bigg[ \, \frac{1}{2} Z^-_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol + \ob} \right) + \frac{1}{2} Z^+_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol - \ob} \right)  + H_{\ell \ob \ob \ell} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right)  - H_{\ob\ell\ob\ell} \left(\frac{\ol^2}{\ol^2 - \ob^2} \right) \nonumber \\
 %
-& - H_{\ob\ell\ob\ell} \left(\frac{\ol^2}{\ol^2 - \ob^2} \right) - m^2 V_{\ell \ob\ob\ell}  \left(\frac{\ol^2}{\ol^2 - \ob^2} \right) + m^2 V_{\ob\ob\ell\ell} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right) + 2 X_{\ob\ob\ell\ell} \left( \frac{\ob^2 \ol^2}{\ol^2 - \ob^2} \right) \nonumber \\
+& - m^2 V_{\ell \ob\ob\ell}  \left(\frac{\ol^2}{\ol^2 - \ob^2} \right) + m^2 V_{\ob\ob\ell\ell} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right) + 2 X_{\ob\ob\ell\ell} \left( \frac{\ob^2 \ol^2}{\ol^2 - \ob^2} \right) - 2 X_{\ell\ell\ob\ob} \left( \frac{\ob^4}{\ol^2 - \ob^2} \right) \bigg]_{\ob \neq \ol} \nonumber \\
 %
-&  - 2 X_{\ell\ell\ob\ob} \left( \frac{\ob^4}{\ol^2 - \ob^2} \right) \Big] + \ol^2 X_{\ob\ob\ell\ell}  - \ob^2 X_{\ell\ell\ob\ob} - \frac{3}{2} m^2 V_{\ell\ell\ob\ob} - \frac{1}{2} m^2 V_{\ob\ob\ell\ell}  - \frac{1}{2} H_{\ob\ob\ell\ell} \nonumber \\
+&  + \ol^2 X_{\ob\ob\ell\ell}  - \ob^2 X_{\ell\ell\ob\ob} - \frac{3}{2} m^2 V_{\ell\ell\ob\ob} - \frac{1}{2} m^2 V_{\ob\ob\ell\ell}  - \frac{1}{2} H_{\ob\ob\ell\ell} + \ol^2 \tilde{Z}^+_{\ob\ob\ell} - 2 \ob^2 \ol^2 P_{\ell\ell\ob} \nonumber \\
 %
-& + \ol^2 \tilde{Z}^+_{\ob\ob\ell} - 2 \ob^2 \ol^2 P_{\ell\ell\ob} - \ob^2 \left( \ol^2 P_{\ell\ell \ob} - B_{\ell\ell\ob} \right) \, .
+& - \ob^2 \left( \ol^2 P_{\ell\ell \ob} - B_{\ell\ell\ob} \right) \, .
 \end{align}
 
-Notice that the Kronecker delta multiplying the terms in the square braces means that these terms will only contribute when $\ob \neq \ol$. Beginning from \eqref{general source}, only terms in the square braces that are proportional to $Z^{\pm}$ are limited in this way; the remaining terms have no such restriction. However, it can be shown that integral functions with permuted indices are equal when the non-normalizable frequency equals the normalizable frequency. Upon simplification, factors of $\ol^2 - \ob^2$ are canceled and the overall contribution to $T_{\ob \ell}$ from the terms in the braces is zero. Thus, these terms are grouped with those that have natural restrictions on the indices. 
+Notice that the terms in the square braces only contribute when $\ob \neq \ol$. Beginning from \eqref{general source}, only terms in the square braces that are proportional to $Z^{\pm}$ are limited in this way; the remaining terms have no such restriction. However, it can be shown that integral functions with permuted indices are equal when the non-normalizable frequency equals the normalizable frequency. Upon simplification, factors of $\ol^2 - \ob^2$ are canceled and the overall contribution to $T_{\ob \ell}$ from the terms in the braces is zero. Thus, these terms are grouped with those that have natural restrictions on the indices. 
 
 In figures~\ref{fig:equal_frequency_m0} and~\ref{fig:equal_frequency_m-4_0}, we evaluate \eqref{S:2NN} for $\ell < 10$ over a variety of $\ob$ values first for a massless scalar, then for a tachyonic scalar.
 
@@ -325,7 +333,7 @@ Focus on non-arbitrary values of the non-normalizable frequencies.
 \subsubsection{Add to an integer}
 \label{ssec: add to integer}
 
-Choose two of the modes to be non-normalizable with frequencies $\oone$ and $\otwo$ that add to give an integer: $\oone+ \otwo = 2n$ where $n = 1, 2, 3, \ldots$ (note that the $n = 0$ case means that both $\omega_1$ and $\omega_2$ would need to be zero by the positive-frequency requirement and so would not contribute). Furthermore, either frequency need not be an integer and therefore the difference $|\oone - \otwo|$ will not be an integer. 
+Choose two of the modes to be non-normalizable with frequencies $\oone$ and $\otwo$ that add to give an integer: $\oone+ \otwo = 2n$ where $n = 1, 2, 3, \ldots$ (note that the $n = 0$ case means that both $\oone$ and $\otwo$ would need to be zero by the positive-frequency requirement and so would not contribute). Furthermore, either frequency need not be an integer and therefore the difference $|\oone - \otwo|$ will, in general, not be an integer. In \S\!~\ref{ssec: intpluschi}, we examine the case when the difference of non-normalizable frequencies is an integer.
 
 When we consider possible resonance channels, we see that resonances can be grouped into
 \begin{align}
@@ -343,9 +351,9 @@ Adding the channels together, the total source term is
 \label{add to integer}
 S_\ell &=\Theta \left( \ell - n \right)  \overline{R}^{(++)}_{(\ell - n) 1 2 \ell} \cos \left( \theta_{(\ell - n)} + 2nt \right) + \overline{R}^{(+-)}_{(\ell + n) 1 2 \ell } \cos\left( \theta_{(\ell + n)} - 2nt \right) \nonumber \\
 %
-& \quad + \Theta\left( n - \ell - d \right) \delta_{m^2} \overline{R}^{(-+)}_{(n - \ell - d) 1 2 \ell} \cos \left( \theta_{(n - \ell - d)} + 2nt \right) + \overline{T}_{12\ell} \cos \left( \theta_\ell \right) \, ,
+& \quad + \bigg[ \Theta\left( n - \ell - d \right) \overline{R}^{(-+)}_{(n - \ell - d) 1 2 \ell} \cos \left( \theta_{(n - \ell - d)} + 2nt \right) \bigg]_{m^2 = 0} + \overline{T}_{12\ell} \cos \left( \theta_\ell \right) \, ,
 \end{align}
-where the Heaviside step function $\Theta(x)$ enforces the restrictions on the indices in \eqref{all pluses} and \eqref{minus plus} and the Kronecker delta is again employed to denote that terms in $\overline{R}^{(-+)}$ only contribute to the massless case.
+where the Heaviside step function $\Theta(x)$ enforces the restrictions on the indices in \eqref{all pluses} and \eqref{minus plus}.
 
 In the following expressions, the sum over all $\oone$, $\otwo$ such that $\oone + \otwo = 2n$ is implied, and only the restrictions on individual frequencies are included. Examining each channel in \eqref{add to integer} individually, we find that
 \begin{align}
@@ -389,7 +397,7 @@ When $m^2 = 0$, we have contributions from
 %
 & \quad - \frac{1}{2} \sum \Big[ (2n - \ol) \left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) - \oone \otwo X_{i12\ell} \Big] .
 \end{align}
-{\it NB.}\, In \eqref{R3} \emph{only}, $\oi = 2i + d$ since this term requires that $m^2 = 0$ to contribute. We maintain the same notation out of convenience, despite the special case.
+{\it NB.}\, In \eqref{R3} \emph{only}, $\oi = 2i + \Delta^+ = 2i + d$ since this term requires that $m^2 = 0$ to contribute. We maintain the same notation out of convenience, despite the special case.
 
 Finally, 
 \begin{align}
@@ -424,6 +432,7 @@ To examine the effect of the choice of $n$ on the value of $S_\ell$ and $| \Sigm
 \end{figure}
 
 \subsection{Integer Plus $\chi$}
+\label{ssec: intpluschi}
 
 This is a case where the non-normalizable frequencies are non-integer, but differ from integer values by a specific amount. In analogue to the case where all modes are normalizable, we consider setting any two of the non-normalizable frequencies to
 \begin{align}
@@ -432,62 +441,64 @@ This is a case where the non-normalizable frequencies are non-integer, but diffe
 where $m^2$ is \emph{not} chosen to be a special value\footnote{By tuning the value of the mass so that $\chi$ is an integer, additional resonant terms are possible; however, this scenario is addressed in \S\!~\ref{ssec: add to integer}. Furthermore, we do not consider the case when the Breitenlohmer-Freeman bound is saturated. This would place further restrictions on the allowed values of the indices in certain terms since the difference between the frequencies of normalizable and non-normalizable modes could then be zero.}, i.e. $\chi \notin \mathbb{Z}^*$, and $\gamma$ is an integer (greek letters are chosen to differentiate between normalizable modes with integer frequencies that use roman letters). For this choice of non-normalizable frequencies, there are no resonant contributions from the all-plus channel; only when either $\oi + \ogam = \obet - \ol$, or $\oi + \ogam = \obet + \ol$ with $i + \gamma \geq \ell$, are resonant terms present.
 
 \subsubsection{$\oi + \ogam = \obet - \ol$}
+\label{sssec: intpluschi1}
 
 This channel contributes secular terms of the form
 \begin{align}
-S_\ell &= \sum_{i \neq \ell} \sum_{\gamma \neq \beta} \overline{S}_{i (i + \gamma + \ell) \gamma \ell} \cos \left( \theta_i - \theta_{(i + \gamma + \ell)} + \theta_\gamma \right) + \sum_\beta \overline{R}_{\ell \beta} \cos \left(\theta_\ell + \theta_\beta - \theta_\beta \right) 
+\label{intpluschi1 source}
+S_\ell &= \sum_{i \neq \ell} \sum_{\gamma \neq \beta} \overline{S}_{i (i + \gamma + \ell) \gamma \ell} \cos \left( \theta_i - \theta_{(i + \gamma + \ell)} + \theta_\gamma \right) + \sum_\beta \overline{R}_{\beta \ell} \cos \left(\theta_\ell + \theta_\beta - \theta_\beta \right) 
 \end{align}
 where 
 \begin{align}
-\overline{S}_{i \beta\gamma\ell} &= - \frac{1}{4} Z^+_{\beta\gamma i \ell} \left( \frac{\oi}{\oi + \ol}\right) + \frac{1}{4} Z^{-}_{i\gamma\beta\ell} \left(  \frac{\obet}{\ol - \obet}  \right) + \frac{1}{4} Z^+_{i\beta\gamma\ell} \left( \frac{\ogam}{\ol + \ogam} \right) \nonumber \\
+\overline{S}_{i \beta\gamma\ell} &= \frac{1}{4} H_{\beta\gamma i \ell} \frac{ \ogam (\oi - \obet + 2\ogam)}{(\obet - \ogam)(\oi + \ogam)} - \frac{1}{4} H_{\gamma\beta i \ell} \frac{\obet(\oi + \ogam - 2\obet)}{(\oi - \obet)(\obet - \ogam)} - \frac{1}{4} H_{\gamma i \beta\ell} \frac{\oi (\ogam - \obet + 2\oi)}{(\oi - \obet)(\oi + \ogam)} \nonumber \\
 %
-& + \frac{1}{4} \bigg[ \frac{1}{\obet - \ogam} \left( \ogam H_{\beta\gamma i \ell} - \obet H_{\gamma \beta i \ell} - 2\oi^2 \left( \ogam X_{\beta\gamma i \ell} - \obet X_{\gamma \beta i \ell} \right) \right)\nonumber \\
+& + \frac{1}{2} \oi \ogam X_{\beta\gamma i \ell} \left( \frac{\ogam}{\oi - \obet} - \frac{\oi}{\obet + \ogam} + 1 \right) + \frac{1}{2} \oi \obet X_{\gamma\beta i \ell} \left( \frac{\oi}{\obet - \ogam} + \frac{\obet}{\oi + \ogam} - 1 \right) \nonumber \\
 %
-& \quad - \frac{1}{\oi + \ogam} \left( \oi H_{\gamma i \beta \ell}  + \ogam H_{i \gamma\beta\ell} - 2\obet^2 \left( \oi X_{\gamma i \beta\ell} + \ogam X_{i \gamma\beta \ell} \right) \right) \nonumber \\
+& + \frac{1}{2} \obet \ogam X_{i\beta\gamma\ell} \left(\frac{\obet}{\oi + \ogam} - \frac{\ogam}{\oi - \obet} - 1 \right) - \frac{1}{4} Z^+_{\beta\gamma i \ell} \left( \frac{\oi}{\oi + \ol}\right)  \nonumber \\
 %
-& \quad + \frac{1}{\oi - \obet} \left( \obet H_{i\beta\gamma\ell} - \oi H_{\beta i \gamma \ell} - 2 \ogam^2 \left( \obet X_{i \beta \gamma \ell} - \oi X_{\beta i \gamma \ell} \right) \right) \nonumber \\
-%
-& \quad -2 \obet \ogam X_{i\beta\gamma\ell} -2 \oi\obet X_{\gamma i \beta\ell} + 2 \oi\ogam X_{\beta i \gamma\ell} \bigg]
+& + \frac{1}{4} Z^{-}_{i\gamma\beta\ell} \left(  \frac{\obet}{\ol - \obet}  \right) + \frac{1}{4} Z^+_{i\beta\gamma\ell} \left( \frac{\ogam}{\ol + \ogam} \right)
 \end{align}
 and
 \begin{align}
-\overline{R}_{\ell \beta} &= \frac{1}{4}  \bigg[ Z^{-}_{\ell \beta \beta \ell} \left( \frac{\obet}{\ol + \obet} \right) +  Z^+_{\ell \beta \beta \ell} \left(\frac{\obet}{\ol - \obet} \right) + 2 H_{\ell\beta\beta\ell} \left( \frac{\obet^2}{\ol^2 - \obet^2} \right)  \nonumber \\
+\overline{R}_{\beta \ell} &= \frac{1}{4} Z^{-}_{\ell \beta \beta \ell} \left( \frac{\obet}{\ol + \obet} \right) +  \frac{1}{4} Z^+_{\ell \beta \beta \ell} \left(\frac{\obet}{\ol - \obet} \right) + \frac{1}{2} H_{\ell\beta\beta\ell} \left( \frac{\obet^2}{\ol^2 - \obet^2} \right) - \frac{1}{2} H_{\beta \ell\beta\ell} \left( \frac{\ol^2}{\ol^2 - \obet^2} \right) \nonumber \\
 %
-& - 2H_{\beta \ell\beta\ell} \left( \frac{\ol^2}{\ol^2 - \obet^2} \right) + 4 X_{\beta\ell\beta\ell} \left( \frac{\ol^2 \obet^2}{\ol^2 - \obet^2} \right)  - 4 X_{\beta\ell\beta\ell} \left( \frac{\obet^4}{\ol^2 - \obet^2} \right)  \nonumber \\
-%
-&  - 2\obet^2 X_{\ell\beta\beta\ell} + 4 \ol^2 X_{\beta\ell\beta\ell} + 4 \ol^2 \tilde{Z}^+_{\beta\beta\ell} - 2H_{\beta\beta\ell\ell}  - 8 \obet^2 \ol^2 P_{\ell\ell\beta} - 4 \obet^2 M_{\ell\ell\beta} \bigg]
+& + X_{\beta\ell\beta\ell} \left( \frac{\ol^4}{\ol^2 - \obet^2} \right)  - \frac{1}{2} \obet^2  X_{\ell\beta\beta\ell} \left(\frac{\ol^2 + \obet^2 }{\ol^2 - \obet^2} \right)  - \frac{1}{2} H_{\ell\beta\beta\ell} + \ol^2 \tilde{Z}^+_{\beta\beta\ell} -2 \obet^2 \ol^2 P_{\ell\ell\beta} - \obet^2 M_{\ell\ell\beta}
 \end{align}
 
 \subsubsection{$\oi + \ogam = \obet + \ol$}
+\label{ssec: intpluschi2}
+
 This channel contributes secular terms of the form
 \begin{align}
-S_\ell = \underbrace{\sum_{i \neq \ell} \sum_{\gamma \neq \beta}}_{i + \gamma \geq \ell} \overline{S}_{i (i + \gamma - \ell) \gamma \ell} \cos \left( \theta_i - \theta_{(i + \gamma - \ell)} + \theta_\gamma \right) + \sum_\beta \overline{R}_{\ell \beta} \cos \left( \theta_\ell + \theta_\beta - \theta_\beta \right)
+\label{intpluschi2 source}
+S_\ell = \underbrace{\sum_{i \neq \ell} \sum_{\gamma \neq \beta}}_{i + \gamma \geq \ell} \overline{S}_{i (i + \gamma - \ell) \gamma \ell} \cos \left( \theta_i - \theta_{(i + \gamma - \ell)} + \theta_\gamma \right) + \sum_\beta \overline{R}_{\beta\ell} \cos \left( \theta_\ell + \theta_\beta - \theta_\beta \right)
 \end{align}
 where
 \begin{align}
-\overline{S}_{i\beta\gamma\ell} &= \frac{1}{4} Z^-_{i\gamma\beta\ell} \left( \frac{\obet}{\ol + \obet}\right)  + \frac{1}{4} Z^+_{i\beta\gamma\ell} \left( \frac{\ogam}{\ol - \ogam}\right)  - \frac{1}{4}Z^+_{\beta\gamma i \ell} \left( \frac{\oi}{\oi - \ol} \right) \nonumber \\
+\overline{S}_{i\beta\gamma\ell} &= \frac{1}{4} H_{\beta\gamma i\ell} \frac{\ogam (\oi - \obet)}{(\obet - \ogam)(\oi - \ogam)} - \frac{1}{4} H_{\gamma\beta i \ell} \frac{\obet(\ol - \obet)}{(\obet - \ogam)(\oi - \obet)} + \frac{1}{4} H_{\beta i \gamma\ell} \frac{\oi (\ogam - \obet)}{(\oi - \obet)(\oi - \ogam)} \nonumber \\
 %
-& + \frac{1}{4}\bigg[  \frac{1}{\obet - \ogam} \left( \ogam H_{\beta\gamma i \ell} - \obet H_{\gamma\beta i \ell} - 2\oi^2 \left( \ogam X_{\beta\gamma i \ell} - \obet X_{\gamma\beta i \ell} \right) \right) \nonumber \\
+& + \frac{1}{2} \oi \ogam X_{\beta\gamma i \ell} \left( \frac{\ogam}{\oi - \obet} - \frac{\oi}{\obet - \ogam} + 1 \right) + \frac{1}{2} \oi \obet X_{\gamma\beta i \ell} \left( \frac{\oi}{\obet - \ogam} - \frac{\obet}{\oi - \ogam} - 1 \right) \nonumber \\
 %
-& \quad + \frac{1}{\oi - \obet} \left( \obet H_{i\beta\gamma\ell} - \oi H_{\beta i \gamma\ell}  -2 \ogam^2 \left( \obet X_{i\beta\gamma\ell} - \oi X_{\beta i \gamma\ell} \right) \right) \nonumber \\
+& + \frac{1}{2} \obet \ogam X_{i\beta\gamma\ell} \left( \frac{\obet}{\oi - \ogam} - \frac{\ogam}{\oi - \obet} - 1 \right)  + \frac{1}{4} Z^-_{i\gamma\beta\ell} \left( \frac{\obet}{\ol + \obet}\right)  \nonumber \\
 %
-& \quad + \frac{1}{\oi - \ogam} \left( \oi H_{\gamma i \beta\ell} - \ogam H_{i\gamma\beta\ell} - 2\obet^2 \left( \oi X_{\gamma i \beta\ell} - \ogam X_{i\gamma\beta\ell} \right) \right) \nonumber \\
-%
-& \quad - 2 \oi\obet X_{\gamma i \beta\ell} - 2 \obet\ogam X_{i\beta\gamma\ell} + 2\oi\ogam X_{\beta\gamma i\ell}\bigg]
+&
++ \frac{1}{4} Z^+_{i\beta\gamma\ell} \left( \frac{\ogam}{\ol - \ogam}\right) - \frac{1}{4}Z^+_{\beta\gamma i \ell} \left( \frac{\oi}{\oi - \ol} \right) 
 \end{align}
 and
 \begin{align}
-\overline{R}_{\ell \alpha} &= \frac{1}{4} \bigg[ Z^-_{\ell\beta\beta\ell} \left( \frac{\obet}{\ol + \obet} \right) + Z^+_{\ell\beta\beta\ell} \left( \frac{\obet}{\ol - \obet} \right) + 2 H_{\ell\beta\beta\ell} \left( \frac{\obet^2}{\ol^2 - \obet^2} \right) \nonumber \\
+\overline{R}_{\beta\ell} &= \frac{1}{4} Z^-_{\ell\beta\beta\ell} \left( \frac{\obet}{\ol + \obet} \right) + \frac{1}{4} Z^+_{\ell\beta\beta\ell} \left( \frac{\obet}{\ol - \obet} \right) + \frac{1}{2} H_{\ell\beta\beta\ell} \left( \frac{\obet^2}{\ol^2 - \obet^2} \right) - \frac{1}{2} H_{\beta\ell\beta\ell} \left( \frac{\ol^2}{\ol^2 - \obet^2} \right) \nonumber \\
 %
-& - 2 H_{\beta\ell\beta\ell} \left( \frac{\ol^2}{\ol^2 - \obet^2} \right) - 4 X_{\ell\beta\beta\ell} \left( \frac{\obet^4}{\ol^2 - \obet^2} \right) + 4 X_{\beta\ell\beta\ell} \left( \frac{\ol^2 \obet^2}{\ol^2 - \obet^2} \right) \nonumber \\
-%
-& - 2 \obet^2 X_{\ell \beta\beta \ell} + 4\ol^2 \tilde{Z}^+_{\beta\beta\ell} + 4 \ol^2 X_{\beta\beta\ell\ell} - 2 H_{\beta\beta\ell\ell} - 8 \obet^2 \ol^2 P_{\ell\ell\beta} - 4 \obet^2 M_{\ell\ell\beta} \bigg] \, .
+& \!\!\!\!\!\!\!\! + X_{\beta\beta\ell\ell} \left( \frac{\ol^2}{\ol^2 - \obet^2} \right) + \frac{1}{2} \obet^2 X_{\ell\beta\beta\ell} \left( \frac{\ol^2 + \obet^2}{\ol^2 - \obet^2} \right) - \frac{1}{2} H_{\beta\beta\ell\ell} +  \ol^2 \tilde{Z}^+_{\beta\beta\ell} - 2 \obet^2 \ol^2 P_{\ell\ell\beta} - \obet^2 M_{\ell\ell\beta} \vspace{-0.3in}
 \end{align}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In figure~\ref{fig: twoiplusx}, we evaluate both resonance channels and plot their contributions for various values of $\chi$. In particular, we examine values $\chi \in \{ \pi/6, \ldots, 7\pi/6 \}$.
 
-\section{QP Equations}
+\begin{figure}
+\centering
+	\includegraphics[width=\textwidth]{./figures/IntPlusChi}
+	\caption{{\it Left:} Evaluating the source term \eqref{intpluschi1 source} for various values of $\chi$ for $\ell < 10$. {\it Right:} Evaluating the source term \eqref{intpluschi2 source} subject to $i + \gamma \geq \ell$ for the same values of $\chi$ and the same range of $\ell$.}
+	\label{fig: twoiplusx}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -504,7 +515,45 @@ and
 
 \appendix
 \section{Derivation of Source Terms For Massive Scalars}
-\label{source term derivation}
+\label{app: source term derivation}
+
+The backreaction between the metric and the scalar field appears at second order in the perturbation,
+\begin{align}
+A_2' = - \mu \nu \left[ (\dot \phi_1 )^2 + (\phi_1')^2 + m^2 \phi_1^2 \sec^2 x \right] + \nu' A_2 / \nu
+\end{align}
+which can be directly integrated to give
+
+\begin{align}
+A_2 = -\nu \int^x_0 dy \, \mu \left( (\dot \phi_1 )^2 + (\phi_1')^2 + m^2 \phi_1^2 \sec^2 x \right) \, .
+\end{align}
+Furthermore, the first non-trivial contribution to the lapse in the boundary time gauge is
+
+\begin{align}
+\delta_2 = \int^{\pi/2}_x dy \, \mu \nu \left(  (\dot \phi_1 )^2 + (\phi_1')^2 \right) \, .
+\end{align}
+For convenience, we have also defined the functions
+\begin{align}
+\mu (x) = \left( \tan x \right)^{d-1} \quad \text{and} \quad \nu(x) = (d-1) / \mu ' \, .
+\end{align}
+
+To aide in evaluating integrals, we first derive the following identities: from the equation for the first-order time-dependent coefficients $c_i$,
+\begin{align} 
+\ddot c_i + \oi^2 c_i = 0 \quad \Rightarrow \quad \p_t \left(\dot c_i^2 + \oi^2 c_i^2 \right) = \p_t \mathbb C_i = 0 \, ;
+\end{align}
+from the equation definition of $\hat L$,
+\begin{align}
+\hat L e_j = -\frac{1}{\mu} \left( \mu e'_j \right)' + m^2 \sec^2 x e_j \quad \Rightarrow \quad \left( \mu e'_j \right)' = \mu \left( m^2 \sec^2 x - \omega_j^2 \right) e_j \, ;
+\end{align}
+from considering the expression $\left( \mu e'_i e_j \right)'$:
+\begin{align}
+\left( \mu e'_i e_j \right) ' = \left(m^2 \sec^2 x - \oi^2 \right) \mu e_i e_j + \mu e'_i e'_j \, ;
+\end{align}
+from permuting $i, j$ above and subtracting to give
+\begin{align}
+\frac{\left[ \mu (e'_i e_j \oj^2 - e_i e'_j \oi^2 ) \right]'}{(\oj^2 - \oi^2)} = \mu m^2 \sec^2 x e_i e_j + \mu e'_i e'_j \, .
+\end{align}
+
+
 The derivation of the source terms for massive scalars closely follows the massless case, particularly if one chooses not to write out the explicit mass dependence as was done in \cite{1810.04753}. However, since we have chosen to write our equations in a slightly different way -- and in a different gauge -- than previous authors, one may find it instructive to see the differences in the derivations. Below we have included the intermediate steps involved in deriving the third-order source term $S_\ell$.
 
 Projecting each of the terms individually onto the eigenbasis $\{ e_\ell \}$:
@@ -568,12 +617,9 @@ M_{ij\ell} &= \oi^2 P_{ij\ell} - B_{ij\ell} -m^2 Q_{ij\ell}
 
 Consider activating two non-normalizable modes at the same general frequency, $\ob$. In such a case, any two of the summed indices may represent a non-normalizable frequency. These non-normalizable modes may have frequencies that happen to satisfy $\ob = \ol$ numerically; this does not change the fact that their basis functions are given by \eqref{general basis}. With this is mind, the same time averaging procedure restricts the presence of resonant contributions to those that satisfy \eqref{gen res}. Since the basis onto which we are projecting is normalizable, we know that $\ol = 2\ell + \Delta^+$, which means there are four cases in which resonance may occur.
 
-Discuss difference resonances for special cases of $\ob$ beyond the arbitrary value condition covered in the main portion. 
-
-In addition to the case of arbitrary values of $\ob$, the following resonances contribute to the source term $S_\ell$ via
+In addition to the case of arbitrary values of $\ob$, which is discussed in \S\!~\ref{ssec: equalNN},  the following resonances contribute to the source term $S_\ell$ via
 \begin{align}
-S_\ell &= a_\ell A^2_{\ob} \left[ \overline{R}^{(1)}_{i \ob} \cos \left( \theta_i - 2\ob t \right) + \overline{R}^{(2)}_{i \ob} \cos \left( \theta_i + 2\ob t \right) + \overline{R}^{(3)}_{i \ob} \cos \left( 2\ob t - \theta_i \right) \right] \Big|_{i = \ell}
-\end{align}
+S_\ell &= a_\ell A^2_{\ob} \left( \overline{R}^{(1)}_{\ell \ob} \cos \left( \theta_\ell - 2\ob t \right) + \overline{R}^{(2)}_{\ell\ob} \cos \left( \theta_\ell + 2\ob t \right) + \overline{R}^{(3)}_{\ell \ob} \cos \left( 2\ob t - \theta_\ell \right) \right)\end{align}
 under their respective conditions on the value of $\ob$:
 \begin{align}
 \label{gen NN res}
@@ -584,7 +630,7 @@ under their respective conditions on the value of $\ob$:
 
 When $\ob \in \mathbb{Z}^*  \leq \ell$, resonance is at $\oi = \ol - 2\ob$ with 
 \begin{align}
-\overline{R}^{(1)}_{i \ob} &= - \frac{1}{12} \left(1 - \delta(\ol - \ob) \right) Z^-_{i \ob \ob \ell} \left(\frac{\ob}{\ol - \ob} \right) \nonumber \\
+\overline{R}^{(2)}_{i \ob} &= - \frac{1}{12} \left(1 - \delta(\ol - \ob) \right) Z^-_{i \ob \ob \ell} \left(\frac{\ob}{\ol - \ob} \right) \nonumber \\
 %
 & \quad - \frac{1}{12} (1 - \delta(\oi - \ob) \Big \{ \left( \frac{\ob}{\oi + \ob} \right) \left(H_{i\ob\ob\ell} + m^2 V_{\ob\ob i \ell} - 2\ob^2 X_{i\ob\ob\ell} \right) + \nonumber \\
 %
