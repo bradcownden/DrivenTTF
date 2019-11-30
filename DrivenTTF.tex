@@ -104,9 +104,9 @@ The general solution to this eigenvalue equation involves two types of functions
 
 In general, a combination of normalizable and non-normalizable eigenmodes make up the scalar field:
 \begin{align}
-\phi_1(t,x) = \sum_j c_j(t) e_j(x) + \sum_\alpha A_\alpha (t) E_\alpha(x) \, ,
+\phi_1(t,x) = \sum_j c_j(t) e_j(x) + \sum_\alpha \bar A_\alpha (t) E_\alpha(x) \, ,
 \end{align}
-with the $A_\alpha$ set by the choice of boundary conditions. The normalizable modes have eigenfunctions given by
+with the $\bar A_\alpha$ set by the choice of boundary conditions. The normalizable modes have eigenfunctions given by
 \begin{align}
 e_j(x) &= k_j \left( \cos(x) \right)^{\Delta^+} P_{j}^{(d/2 - 1, \, \Delta^+ - d/2)} \left( \cos (2x) \right) \\
 k_j &= 2 \sqrt{\frac{(j + \Delta^+ /2) \Gamma(j+1) \Gamma(j+\Delta^+)}{\Gamma(j+d/2) \Gamma(j + \Delta^+ - d/2 + 1)}} \, ,
@@ -211,10 +211,6 @@ where
 
 Building on the work done with massless scalars, we are able to demonstrate that \eqref{omega} and \eqref{gamma} continue to vanish for massive scalars in the boundary gauge; thus, the weak turbulence is determined only from the remaining resonance channel. When non-normalizable modes are introduced, we will see that naturally vanishing resonances are not present.
 
-\begin{center}
-{\bf PLOT OF $\Gamma$ AND $\Omega$ FOR MASSIVE SCALARS?}
-\end{center}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{$(++-)$}
@@ -227,6 +223,7 @@ S_\ell &= T_\ell a^3_\ell \cos (\thl + \thl - \thl) + \sum_{i \neq \ell}^\infty 
 \end{align}
 where each of the coefficients is given by
 \begin{align}
+\label{S_ppm}
 S_{ijk\ell} &= - \frac{1}{4} H_{kij\ell} \frac{\oi (\oj - \ok + 2\oi)}{(\oi - \ok)(\oi + \oj)} -\frac{1}{4} H_{ijk\ell} \frac{\oj (\oi - \ok + 2\oj)}{(\oj - \ok)(\oi + \oj)} - \frac{1}{4} H_{jki\ell} \frac{\ok ( \oi + \oj - 2\ok)}{(\oi - \ok)(\oj - \ok)} \nonumber \\
 %
 & \quad - \frac{1}{2} \oj \ok X_{ijk\ell} \left( \frac{\oj}{\oi - \ok} - \frac{\ok}{\oi + \oj} + 1 \right) - \frac{1}{2} \oi \ok X_{jki\ell} \left( \frac{\oi}{\oj - \ok} - \frac{\ok}{\oi + \oj} + 1 \right) \nonumber \\
@@ -238,6 +235,7 @@ S_{ijk\ell} &= - \frac{1}{4} H_{kij\ell} \frac{\oi (\oj - \ok + 2\oi)}{(\oi - \o
 & \quad + \frac{1}{4}  Z^-_{ijk\ell} \left( \frac{\ok}{\oi + \oj}\right)  + \frac{1}{4}  Z^+_{ikj\ell} \left( \frac{\oj}{\oi - \ok}\right) + \frac{1}{4} Z^+_{jki\ell} \left( \frac{\oi}{\oj - \ok} \right) \, ,
 \end{align}
 \begin{align}
+\label{R_ppm}
 R_{i\ell} &= \left(\frac{\oi^2}{\ol^2 - \oi^2} \right) \big( Y_{i\ell \ell i} - Y_{i\ell i \ell} + \ol^2 ( X_{i\ell i \ell} - X_{\ell i \ell i}) \big) + \left(\frac{\oi^2}{\ol^2 - \oi^2}\right) \big( H_{\ell i i\ell} + m^2 V_{ii\ell \ell} - 2\oi^2 X_{\ell i i \ell} \big) \nonumber \\
 %
 & - \left(\frac{\ol^2}{\ol^2 - \oi^2} \right) \big( H_{i\ell i \ell} + m^2 V_{\ell i i \ell} - 2\oi^2 X_{i\ell i\ell} \big) - \frac{m^2}{4}(V_{i\ell i \ell} + V_{ii\ell \ell} ) + \oi^2 \ol^2 (P_{ii\ell} - 2P_{\ell \ell i}) \nonumber \\
@@ -246,12 +244,19 @@ R_{i\ell} &= \left(\frac{\oi^2}{\ol^2 - \oi^2} \right) \big( Y_{i\ell \ell i} - 
 \end{align}
 and
 \begin{align}
+\label{T_ppm}
 T_{\ell} &= \frac{1}{2} \ol^2 \left( X_{\ell \ell \ell \ell} + 4 B_{\ell \ell \ell} -2 M_{\ell \ell \ell} - 2m^2 Q_{\ell \ell \ell} \right) -\frac{3}{4} \left( H_{\ell \ell \ell \ell} + 3m^2 V_{\ell \ell \ell \ell} \right) \, .
 \end{align}
 
-\begin{center}
-{\bf PLOT OF $S, R, T$ FOR MASSIVE SCALARS?}
-\end{center}
+To examine the effects of non-zero masses on $R$, $S$, and $T$ -- and therefore the differential equations that determine the evolution of the time-dependent coefficients $a_i(t)$ and $b_i(t)$ -- we evaluate \eqref{S_ppm}-\eqref{T_ppm} for tachyonic, massless, and massive scalars in figure~\ref{fig: Nmodes}.
+
+\begin{figure}
+\centering
+	\includegraphics[width=\textwidth]{./figures/Nmodesplot}
+	\caption{Evaluating \eqref{S_ppm}-\eqref{T_ppm} for three different values of $m^2$ for $\ell \leq 10$. $S_{ij(i+j-\ell)\ell}$ is denoted by filled circles connected by dash-dotted lines; $R_{i\ell}$ is denoted by filled triangles connected by solid lines; $T_{\ell}$ is denoted by large Xs connected by dotted lines.}
+	\label{fig: Nmodes}
+\end{figure}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -265,7 +270,7 @@ T_{\ell} &= \frac{1}{2} \ol^2 \left( X_{\ell \ell \ell \ell} + 4 B_{\ell \ell \e
 
 We now consider the case when at least one of the $e_i(x), e_j(x), e_k(x)$ is a non-normalizable mode. Since the boundary condition has been set to be a single non-normalizable mode, any non-normalizable modes in the source term must exactly cancel; therefore, at least two of the modes must be non-normalizable. This assumption breaks some of the symmetries that contributed to the previous expressions for resonance channels, and so the resonance conditions must be re-examined starting from the source expression \eqref{general source}.
 
-An important consideration is also the effect of non-normalizable modes on the perturbative expansion that leads to the source equations. Since non-normalizable solutions do not have well-defined norms, we do not know \emph{a priori} that the inner products described in Appendix~\ref{source term derivation} are still finite. To investigate this, consider the second-order metric function $A_2$
+An important consideration is also the effect of non-normalizable modes on the perturbative expansion that leads to the source equations. Since non-normalizable solutions do not have well-defined norms, we do not know \emph{a priori} that the inner products described in Appendix~\ref{app: source term derivation} are still finite. To investigate this, consider the second-order metric function
 \begin{align}
 A_2 &= - \nu \int^x_0 dy \, \mu \left( (\dot \phi_1)^2 + (\phi'_1)^2 + m^2 \phi_1^2 \sec^2 x \right) \, ,
 \end{align}
@@ -292,9 +297,9 @@ As a first case, let us assume that the two non-normalizable modes have equal, c
 \end{align}
 When any of these resonance conditions is met, the remaining normalizable mode will have a frequency equal to $\ol$, collapsing all sums over frequencies so that
 \begin{align}
-S_\ell = \overline{T}_{\ell \ob} \, a_\ell A_{\ob}^2 \cos (\thl) \, ,
+S_\ell = \overline{T}_{\ell \ob} \, a_\ell \bar A_{\ob}^2 \cos (\thl) \, ,
 \end{align}
-where the non-normalizable modes have constant amplitudes $A_{\ob}$. Collecting the appropriate terms in \eqref{general source}, and evaluating the each possible resonance (being careful not to violate restrictions placed on the sums), we find that
+where the non-normalizable modes have constant amplitudes $\bar A_{\ob}$. Collecting the appropriate terms in \eqref{general source}, and evaluating the each possible resonance (being careful not to violate restrictions placed on the sums), we find that
 \begin{align}
 \label{S:2NN}
 \overline{T}_{\ell \ob} &=  \bigg[ \, \frac{1}{2} Z^-_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol + \ob} \right) + \frac{1}{2} Z^+_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol - \ob} \right)  + H_{\ell \ob \ob \ell} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right)  - H_{\ob\ell\ob\ell} \left(\frac{\ol^2}{\ol^2 - \ob^2} \right) \nonumber \\
@@ -349,13 +354,13 @@ for any $m^2_{BF} \leq m^2 < 0$. However, for a massless scalar, we have an addi
 Adding the channels together, the total source term is
 \begin{align}
 \label{add to integer}
-S_\ell &=\Theta \left( \ell - n \right)  \overline{R}^{(++)}_{(\ell - n) 1 2 \ell} \cos \left( \theta_{(\ell - n)} + 2nt \right) + \overline{R}^{(+-)}_{(\ell + n) 1 2 \ell } \cos\left( \theta_{(\ell + n)} - 2nt \right) \nonumber \\
+S_\ell &=   \overline{R}^{(+-)}_{(\ell + n) 1 2 \ell} \, \bar A_1 \bar A_2 \, a_{(\ell + n)} \cos\left( \theta_{(\ell + n)} - 2nt \right) + \overline{T}_{12\ell} \, \bar A_1 \bar A_2 \, a_\ell \cos \left( \theta_\ell \right) \nonumber \\ 
 %
-& \quad + \bigg[ \Theta\left( n - \ell - d \right) \overline{R}^{(-+)}_{(n - \ell - d) 1 2 \ell} \cos \left( \theta_{(n - \ell - d)} + 2nt \right) \bigg]_{m^2 = 0} + \overline{T}_{12\ell} \cos \left( \theta_\ell \right) \, ,
+& \quad + \bigg[ \Theta\left( n - \ell - d \right) \overline{R}^{(-+)}_{(n - \ell - d) 1 2 \ell} \ \bar A_1 \bar A_2 \, a_{(n - \ell - d)}cos \left( \theta_{(n - \ell - d)} + 2nt \right) \bigg]_{m^2 = 0} \nonumber \\
+%
+& \quad + \Theta \left( \ell - n \right)  \overline{R}^{(++)}_{(\ell - n) 1 2 \ell} \, \bar A_1 \bar A_2 \, a_{(\ell - n)} \cos \left( \theta_{(\ell - n)} + 2nt \right) ,
 \end{align}
-where the Heaviside step function $\Theta(x)$ enforces the restrictions on the indices in \eqref{all pluses} and \eqref{minus plus}.
-
-In the following expressions, the sum over all $\oone$, $\otwo$ such that $\oone + \otwo = 2n$ is implied, and only the restrictions on individual frequencies are included. Examining each channel in \eqref{add to integer} individually, we find that
+where the Heaviside step function $\Theta(x)$ enforces the restrictions on the indices in \eqref{all pluses} and \eqref{minus plus}. In the preceding expressions, the sum over all $\oone$, $\otwo$ such that $\oone + \otwo = 2n$ is implied, and only the restrictions on individual frequencies are included. Examining each channel in \eqref{add to integer} individually, we find
 \begin{align}
 \label{R1}
 \overline{R}^{(++)}_{i 1 2 \ell} &= - \frac{1}{4} \sum_{\otwo \neq \ol} \frac{\otwo}{\ol - \otwo} Z^{-}_{i12\ell} - \frac{1}{4} \sum_{\oone \neq \ol} \frac{\oone}{\ol - \oone} Z^{-}_{i21\ell} - \frac{1}{8n} \sum \left( \ol - 2n \right) Z^-_{12i\ell} \nonumber \\
@@ -368,9 +373,7 @@ In the following expressions, the sum over all $\oone$, $\otwo$ such that $\oone
 %
 & + \frac{1}{2} \sum \Big[ \oone\otwo X_{i12\ell} + \left( \ol - 2n \right)\left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) - \frac{m^2}{2} \left( V_{i12\ell} + V_{i21\ell} + V_{12i\ell} \right) \Big]
 \end{align}
-The notation $X_{i12\ell}$ corresponds to evaluating $X_{ijk\ell}$ with $\omega_j = \oone$ and $\omega_k = \otwo$. 
-
-Next, we find that
+The notation $X_{i12\ell}$ corresponds to evaluating $X_{ijk\ell}$ with $\omega_j = \oone$ and $\omega_k = \otwo$. Next, we find that
 \begin{align}
 \label{R2}
 \overline{R}_{i12\ell}^{(+-)} &= - \frac{1}{4} \sum \Big[ \frac{(\ol + 2n)}{2n} Z^-_{12i\ell} + 2 (\ol + 2n) \left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) \nonumber \\
@@ -619,13 +622,14 @@ Consider activating two non-normalizable modes at the same general frequency, $\
 
 In addition to the case of arbitrary values of $\ob$, which is discussed in \S\!~\ref{ssec: equalNN},  the following resonances contribute to the source term $S_\ell$ via
 \begin{align}
-S_\ell &= a_\ell A^2_{\ob} \left( \overline{R}^{(1)}_{\ell \ob} \cos \left( \theta_\ell - 2\ob t \right) + \overline{R}^{(2)}_{\ell\ob} \cos \left( \theta_\ell + 2\ob t \right) + \overline{R}^{(3)}_{\ell \ob} \cos \left( 2\ob t - \theta_\ell \right) \right)\end{align}
+S_\ell &= \bar A^2_{\ob} \, \overline{R}^{(1)}_{(\ell + \ob) \ob} \, a_{(\ell + \ob)} \cos \left( \theta_\ell + 2\ob t \right) + \bar A^2_{\ob} \, \overline{R}^{(2)}_{(\ell - \ob)\ob} \, a_{(\ell - \ob)}\cos \left( \theta_\ell - 2\ob t \right) \nonumber \\
+& \quad + \bar A^2_{\ob} \, \overline{R}^{(3)}_{(\ob - \ell - \Delta^+) \ob} \, a_{(\ob - \ell- \Delta^+)} \cos \left( (2\ob - 2\Delta^+) t - \theta_\ell \right)\end{align}
 under their respective conditions on the value of $\ob$:
 \begin{align}
 \label{gen NN res}
-\overline{R}^{(1)}_{\ell \ob}: \quad \omega_I &= \ol + 2\ob \quad I \in \{i,j,k\} \; \forall \; \ob \in \mathbb{Z}^* \\
-\overline{R}^{(2)}_{\ell \ob}: \quad \omega_I &= \ol - 2\ob \quad I \in \{i,j,k\} \; \forall \; \ob \in \mathbb{Z}^* \; \text{such that } \ell \geq \ob \\
-\overline{R}^{(3)}_{\ell \ob}: \quad \omega_I &= 2\ob - \ol \quad I \in \{i,j,k\} \; \forall \; \ob \in \mathbb{Z}^* \; \text{such that } \ell \leq \ob
+\overline{R}^{(1)}_{i \ob}: \quad \omega_i &= \ol + 2\ob \quad \forall \; \ob \in \mathbb{Z}^* \\
+\overline{R}^{(2)}_{i \ob}: \quad \omega_i &= \ol - 2\ob \quad \forall \; \ob \in \mathbb{Z}^* \; \text{such that } \ell \geq \ob \\
+\overline{R}^{(3)}_{i \ob}: \quad \omega_i &= 2\ob - \ol \quad \forall \; \ob \in \mathbb{Z}^* \; \text{such that } \ell \leq \ob
 \end{align}
 
 When $\ob \in \mathbb{Z}^*  \leq \ell$, resonance is at $\oi = \ol - 2\ob$ with 
