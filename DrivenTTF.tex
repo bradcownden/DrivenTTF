@@ -44,9 +44,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{Arbitrary Dimensions, Massive, Non-normalizable Time-Dependent BCs}
+\title{Examining Instabilities Due to Driven Scalars in AdS}
 
-\abstract{}
+\abstract{We extend the study of holographic quantum quenches in AdS to include solutions to driven systems, i.e. those with time-dependent sources on the AdS boundary. This necessitates the activation of non-normalizable modes in the massive bulk scalar field, which then couple to the metric and normalizable scalar modes. Analytic expressions for secular terms that persist after time averaging are determined for scalars in $AdS_{d+1}$ with any mass, and for different driving frequencies. We then numerically evaluate these sources for $d=4$ and discuss what role these play in the perturbative stability of these systems.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -61,12 +61,22 @@
 
 \section{Introduction}
 
+Examinations of quenches in strongly coupled quantum systems can be approached using the holographic dual of such a process, namely the evolution of weakly coupled gravity. Full accounting of the return to equilibrium -- signalled by the formation of a black hole in the dual theory -- requires advanced numerical methods, and has been the subject of numerous studies. While AdS has been shown to be perturbatively unstable to generic data, an interesting array of stable and meta-stable behaviours that resist gravitational collapse have been demonstrated for initial data close to the fundamental AdS modes, the oscillons. Data that exhibits stability over long times (a scale that is often set by the amplitude of the perturbation) exhibits inverse energy cascades that balance the direct cascade of energy to short length scales. This weakly turbulent energy cascade is captured by the third-order dynamics of a perturbative expansion. To describe the balance of inverse and direct energy flow, a second, ``slow time'' is introduced that governs the evolution of the scalar field and, therefore, the metric functions. This is known as the Two-Time Formulation (TTF), and allows for analytical determination of the evolution of the scalar field in the perturbative regime.
+
+Conventional examinations perturbative stability using TTF have focused on the quenches of some initial energy perturbation. However, the analytic descriptions of holographic pumped solutions -- those with periodic boundary conditions that constantly inject energy into the system -- remains undetermined.  With this in mind, we examine the effect of a time-dependent source on the conformal boundary has on the analytic expressions for the time evolution of the slowly varying integration constants. Quenches in asymptotically AdS spacetime restrict the space of oscillon solutions to those that approach zero near the conformal boundary; however, in a driven solution the energy is pumped into the system through a second class of oscillons: those that approach constant, non-zero values on the boundary. Since these solutions will have non-finite inner products over the space, they are known as non-normalizable solutions. These non-normalizable modes couple to the metric and the normalizable modes to bring energy into the system, where direct and inverse energy cascades proceed over perturbative time scales.
+
+Following the study of resummation and time-averaging procedures for scalar fields in AdS, we isolate secular terms -- those that grow linearly with time and cannot be absorbed by a phase term -- from those that are averaged out. The terms that persist after time averaging are those that obey certain resonance conditions between the frequencies of the non- and normalizable modes. By evaluating the third-order interactions on resonance, we use a renormalization procedure to absorb resonant contributions into the equations for the slowly varying amplitude and phase variables of the scalar field.
+
+This paper is organized as follows: after a brief discussion of how to arrive at the third order source term, we consider the addition of a time-dependent boundary condition for the scalar field. As an exercise, and to provide explicit expressions for our choice of gauge and mass, \S\!~\ref{sec: norm res} examines the resonant contributions in the case of a massive scalar field in AdS$_{d+1}$ with any mass-squared, up to and including the Breitonlohmer-Freedman mass: $m^2_{BF} \leq m^2$. We recover the natural vanishing of two of the three resonances, and then examine the effects of mass-dependence on the non-vanishing channel. Whenever values are calculated, the choice of $d=4$ is implied as to draw the most direct comparison to existing literature. In section~\S\!~\ref{sec: NNmodes}, we extend the boundary conditions to include a variety of periodic boundary sources that couple to non-normalizable modes in the bulk. For each choice of boundary condition, we derive analytic expressions for applicable resonances and evaluate these expressions for different ranges of scalar field masses. Finally, in~\S\!~\ref{sec: discussion} we discuss the implications of non-vanishing resonances on the competing energy cascades and the perturbative stability of such systems. For completeness, we include details of our derivation of the general source term in an appendix, as well as a complete list of possible resonances and their contributions in the case of activating two, equal frequency non-normalizable modes.
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Source Terms and Boundary Conditions}
 
-To examine the weak turbulence that leads to instability, we consider a massive scalar field coupled to a spherically symmetry, asymptotically AdS$_{d+1}$ spacetime in global coordinates whose metric is given by
+To examine the weak turbulence that leads to instability, we consider a massive scalar field coupled to a spherically symmetric, asymptotically AdS$_{d+1}$ spacetime in global coordinates whose metric is given by
 \begin{align}
 \label{AdS metric}
 ds^2 &= \frac{L^2}{\cos(x)} \left( - A(t,x) e^{-2 \delta(t,x)} \, dt^2 + A^{-1}(t, x) \, dx^2 + \sin^2 (x) \, d\Omega^2_{d-1} \right) \, ,
@@ -494,19 +504,23 @@ and
 & \!\!\!\!\!\!\!\! + X_{\beta\beta\ell\ell} \left( \frac{\ol^2}{\ol^2 - \obet^2} \right) + \frac{1}{2} \obet^2 X_{\ell\beta\beta\ell} \left( \frac{\ol^2 + \obet^2}{\ol^2 - \obet^2} \right) - \frac{1}{2} H_{\beta\beta\ell\ell} +  \ol^2 \tilde{Z}^+_{\beta\beta\ell} - 2 \obet^2 \ol^2 P_{\ell\ell\beta} - \obet^2 M_{\ell\ell\beta} \vspace{-0.3in}
 \end{align}
 
-In figure~\ref{fig: twoiplusx}, we evaluate both resonance channels and plot their contributions for various values of $\chi$. In particular, we examine values $\chi \in \{ \pi/6, \ldots, 7\pi/6 \}$.
-
-\begin{figure}
+\begin{figure}[h!]
 \centering
 	\includegraphics[width=\textwidth]{./figures/IntPlusChi}
 	\caption{{\it Left:} Evaluating the source term \eqref{intpluschi1 source} for various values of $\chi$ for $\ell < 10$. {\it Right:} Evaluating the source term \eqref{intpluschi2 source} subject to $i + \gamma \geq \ell$ for the same values of $\chi$ and the same range of $\ell$.}
 	\label{fig: twoiplusx}
 \end{figure}
 
+In figure~\ref{fig: twoiplusx}, we evaluate both resonance channels and plot their contributions for various values of $\chi$. In particular, we examine values $\chi \in \{ \pi/6, \ldots, 7\pi/6 \}$.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Discussion}
+\label{sec: discussion}
+
+Discussion goes here.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -636,7 +650,6 @@ S_\ell &= \bar A^2_{\ob} \, \overline{T}^{(1)}_{(\ell + \ob)} \, a_{(\ell + \ob)
 \end{align}
 under their respective conditions on the value of $\ob$:
 \begin{align}
-
 \end{align}
 
 We find that
@@ -659,7 +672,6 @@ We find that
 \end{align}
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -673,131 +685,3 @@ We find that
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{./figures/NN_equalfreq_tchannel_n2_m-4_0}
-\caption{{\it Left, above}: . {\it Left, below}: .{\it Right}: $m^2 = -4.0$.}
-\label{fig:atoi_t_m-4_0}
-\end{figure}
-
-\begin{figure}
-\centering
-	\includegraphics[width=\textwidth]{./figures/NN_equalfreq_tchannel_n2_m0_0}
-	\caption{$\overline{T}$ for $m^2 = 0$.}
-\end{figure}
-
-\begin{figure}
-\centering
-	\includegraphics[width=\textwidth]{./figures/NN_equalfreq_pmchannel_n2_m-4_0}
-	\caption{{\it Left, above}: Individual values of $\overline{R}^{(+-)}_{(\ell - n)12\ell}$ for $m^2 = -4.0$ as a function of $\ell$ for $\oone + \otwo = 2n$ with $n = 4$ when $\oone \leq n$. {\it Left, below}: The same function, but for $\oone \geq n$; note the symmetry in values as $\oone \leftrightarrow \otwo$. {\it Right}: The absolute value of the sum of the $(+-)$ source terms for choices of $\oone$.}
-	\label{fig:atoi_pm_m-4_0}
-\end{figure}
-
-\begin{figure}
-\centering
-	\includegraphics[width=\textwidth]{./figures/NN_equalfreq_pmchannel_n2_m0_0}
-	\caption{$\overline{R}^{(+-)}_{(\ell - n)12\ell}$ for $m^2 = 0$.}
-\end{figure}
-
-
-\begin{figure}
-\centering
-	\includegraphics[width=\textwidth]{./figures/NN_equalfreq_ppchannel_n2_m-4_0}
-	\caption{{\it Left, above}: Individual values of $\overline{R}^{(++)}_{(\ell - n)12\ell}$ for $m^2 = -4.0$ as a function of $\ell$ for $\oone + \otwo = 2n$ with $n = 4$ when $\oone \leq n$. {\it Left, below}: The same function, but for $\oone \geq n$; note the symmetry in values as $\oone \leftrightarrow \otwo$. {\it Right}: The absolute value of the sum of the $(++)$ source terms for choices of $\oone$.}
-	\label{fig:atoi_pp_m-4_0}
-\end{figure}
-
-\begin{figure}
-\centering
-	\includegraphics[width=\textwidth]{./figures/NN_equalfreq_ppchannel_n2_m0_0}
-	\caption{$\overline{R}^{(++)}_{(\ell - n)12\ell}$ for $m^2 = 0$.}
-\end{figure}
-
-
-\subsubsection{$(++-)$}
-
-This resonance channel\footnote{As is the case when all modes are normalizable, the results from this channel are equal to those from the $(+-+)$ channel under the exchange of $\ojb \leftrightarrow \okb$.} contributes secular terms to the $\mathcal{O}(\epsilon^3)$ source via:
-\begin{align}
-S_\ell &= \sum_{\jb, \kb}^{\jb \neq \kb} \overline{S}_{(\ell - \overline{j} + \overline{k}) \overline{j} \overline{k} \ell} \, \cos ( \theta_{(\ell - \overline{j} + \overline{k})} + \overline{\theta}_j - \overline{\theta}_k )  + \sum_{\jb}^{\jb \neq \ell} \overline{R}_{\overline{j} \ell} \, \cos \left( \theta_\ell + \overline{\theta}_j - \overline{\theta}_j \right) 
-\end{align}
-where
-%\begin{align}
-%\overline{T}_\ell &= \frac{1}{2} \ol^2 X_{\ell \ell \ell \ell} - \frac{3}{4} H_{\ell \ell \ell \ell} - \frac{9}{4} m^2 V_{\ell \ell \ell \ell} + 2 \ol^2 \widetilde{Z}^{+}_{\ell \ell \ell} - 2 \ol^4 P_{\ell \ell \ell} - \ol^2 M_{\ell \ell \ell} - m^2 \ol^2 Q_{\ell \ell \ell} \, ,
-%\end{align}
-
-\begin{align}
-\overline{S}_{i \beta \gamma \ell} &= \frac{1}{4} \sum_{\gamma \neq \ell} \frac{\ogam}{\oi + \obet} Z^{-}_{i \beta \gamma \ell} + \frac{1}{4} \sum_{\beta \neq \ell} \frac{\obet}{\oi - \ogam} Z^+_{i \gamma \beta \ell} + \frac{1}{4} \sum_{i \neq \ell} \frac{\oi}{\obet - \ogam} Z^+_{\beta \gamma i \ell} \nonumber \\
-%
-& \quad + \frac{1}{4} \sum_{i \neq \gamma} \left[ \frac{\omega_\gamma}{\oi - \ogam} (H_{i \gamma \beta \ell} - 2\obet^2 X_{i \gamma \beta \ell}) - \frac{\oi}{\oi + \ogam} (H_{\gamma i \beta \ell} - 2\obet^2 X_{\gamma i \beta \ell} ) \right] \nonumber \\
-%
-& \quad + \frac{1}{4} \sum_{\beta \neq \gamma} \left[ \frac{\ogam}{\obet - \ogam} (H_{\beta \gamma i \ell} - 2 \oi^2 X_{\beta\gamma i \ell} ) - \frac{\obet}{\obet + \ogam} (H_{\gamma \beta i \ell} - 2\oi^2 X_{\gamma \beta i \ell} ) \right] \nonumber \\
-%
-& \quad -  \frac{1}{4} \sum_{i \neq \beta} \left[ \frac{\obet}{\oi + \obet} (H_{i \beta \gamma \ell} - 2\ogam^2 X_{i \beta \gamma \ell} ) + \frac{\oi}{\oi + \obet} (H_{\beta i \gamma \ell} - 2\ogam^2 X_{\beta i \gamma \ell}) \right] \nonumber \\
-%
-& \quad - \frac{1}{2} \sum \left( \obet \ogam X_{i \beta \gamma \ell} + \oi \ogam X_{\beta \gamma i \ell} - \oi \obet X_{\gamma i \beta \ell} \right) \, ,
-\end{align}
-
-\begin{align}
-\overline{S}_{\alpha \beta k \ell} &= \frac{1}{4} \sum_{\alpha \neq \ell} \frac{\omega_\alpha}{\omega_\beta + \omega_k} Z^{-}_{\beta k \alpha \ell} + \frac{1}{4} \sum_{\beta \neq \ell} \frac{\omega_\beta}{\ok - \omega_{\alpha}} Z^{+}_{\alpha k \beta \ell} + \frac{1}{4} \sum_{k \neq \ell} \frac{\ok}{\obet - \omega_\alpha} Z^{+}_{\alpha \beta k \ell} \nonumber \\
-%
-& \quad + \frac{1}{4} \sum_{k \neq \alpha} \left[ \frac{\oal}{\ok - \oal} (H_{k \alpha \beta \ell} - 2 \obet^2 X_{k \alpha \beta \ell}) - \frac{\ok}{\ok + \oal} (H_{\alpha k \beta \ell} - 2\obet^2 X_{\alpha k \beta \ell}) \right] \nonumber \\
-%
-& \quad + \frac{1}{4} \sum_{\alpha \neq \beta} \left[ \frac{\oal}{\obet - \oal} (H_{\beta \alpha k \ell} - 2\ok^2 X_{\beta \alpha k \ell}) - \frac{\obet}{\oal + \obet}(H_{\alpha \beta k \ell} - 2 \ok^2 X_{\alpha \beta k \ell}) \right] \nonumber \\
-%
-& \quad - \frac{1}{4} \sum_{k \neq \beta} \left[ \frac{\obet}{\ok + \obet} (H_{k \beta \alpha \ell} - 2\oal^2 X_{k \beta \alpha \ell}) + \frac{\ok}{\ok + \obet}(H_{\beta k \alpha \ell} - 2\oal^2 X_{\beta k \alpha \ell}) \right] \nonumber \\
-%
-& \quad - \frac{1}{2} \sum \left( \oal \obet X_{k \alpha \beta \ell} + \oal \ok X_{\beta k \alpha \ell} - \obet \ok X_{\alpha \beta k \ell} \right) \, .
-\end{align}
-
-\begin{align}
-\label{integer plus: ++- source}
-\overline{S}_{i \jb \kb \ell} &= \frac{1}{2} Z^{+}_{\jb \kb i\ell} \left( \frac{\oi}{\ojb - \okb} \right) + \frac{1}{2} Z^{-}_{i \jb \kb \ell} \left( \frac{\okb}{\oi + \ojb} \right) + \frac{1}{2} Z^{+}_{i \kb \jb \ell} \left( \frac{\ojb}{\oi - \okb} \right) \nonumber \\
-%
-& \quad + \frac{1}{2} \ojb H_{i \jb \kb \ell} \left( \frac{1}{\oi - \ojb} - \frac{1}{\oi + \okb} \right) - \frac{1}{2} \oi H_{\jb i \kb \ell} \left( \frac{1}{\oi - \ojb} + \frac{1}{\oi + \okb} \right) \nonumber \\
-%
-& \quad - \frac{1}{2} \okb H_{\jb \kb i \ell} \left( \frac{1}{\ojb + \okb} - \frac{1}{\oi + \okb} \right) - \ojb \okb X_{i \jb \kb \ell} \left( \frac{\okb}{\oi - \ojb} - \frac{\ojb}{\oi + \okb} + 1 \right) \nonumber \\
-%
-& \quad + \oi \okb X_{\jb \kb i \ell} \left( \frac{\okb}{\oi - \ojb} + \frac{\oi}{\ojb + \okb} - 1 \right) + \oi \ojb X_{\kb i \jb \ell} \left( \frac{\ojb}{\oi + \okb} + \frac{\oi}{\ojb + \okb} + 1 \right) \nonumber \\
-%
-& \quad - m^2 V_{\kb i \jb \ell} \left( \frac{\oi}{\oi - \ojb} + \frac{\okb}{\ojb + \okb} + 1 \right) - m^2 V_{i \jb \kb \ell} \left( \frac{\oi}{\oi + \okb} + \frac{\ojb}{\ojb + \okb} + 1 \right) \nonumber \\
-%
-& \quad + m^2 V_{\jb \kb i \ell} \left( \frac{\ojb}{\oi - \ojb} - \frac{\okb}{\oi + \okb} - 1 \right) \, ,
-\end{align}
-\begin{align}
-\overline{R}_{\jb i} &= \frac{1}{2} Z^{-}_{i \jb \jb \ell} \left( \frac{\ojb}{\oi + \ojb} \right) + \frac{1}{2} Z^{+}_{i \jb \jb \ell} \left( \frac{\ojb}{\oi - \ojb} \right) + \frac{1}{2} \left( \frac{\ojb}{\oi - \ojb} \right) H_{\jb \jb i \ell} - H_{\jb i \jb \ell} \left( \frac{\oi^2}{\oi^2 - \ojb^2} \right) \nonumber \\
-%
-& \quad - \frac{5}{4} H_{\jb \jb i \ell}  - \ojb^2 X_{i \jb \jb \ell} \left( \frac{\oi^2 + \ojb^2}{\oi^2 - \ojb^2} \right) + 3 \oi^2 X_{\jb \jb i \ell} + \oi \ojb X_{\jb \jb i \ell} \left( \frac{\ojb}{\oi^2 - \ojb^2} + \frac{\ojb}{\oi + \ojb} \right) \nonumber \\
-%
-& \quad -4m^2 V_{i \jb \jb \ell} - 2m^2 V_{i \jb \jb \ell} \left( \frac{\oi^2}{\oi^2 - \oj^2} \right) + 2m^2 V_{\jb \jb i \ell} \left( \frac{\ojb^2}{\oi^2 - \ojb^2} \right) - m^2 V_{\jb \jb i \ell} \nonumber \\
-%
-& \quad + 2\ojb^2 (\ol^2 P_{\jb \jb \ell} - 3 \oi^2 P_{i \ell \jb} ) + 2\ol^2 B_{\jb \jb \ell} + 2 \ojb^2 B_{i \ell \jb} \, .
-\end{align}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-Sum of two NN frequencies is an integer:
-\begin{align}
-\overline{R}^{(1)}_{i \ell} &= \frac{1}{4} Z^{-}_{12i\ell} \left( \frac{2n - \ol}{2n} \right) - \frac{1}{4} Z^{-}_{i21\ell} \frac{\oone(\ol + \oone)}{\ol^2 - \oone^2} - \frac{1}{4} Z^{-}_{i12\ell} \frac{\otwo (\ol + \otwo)}{\ol^2 - \otwo^2} - \frac{1}{4}  \oone H_{i12\ell} \left( \frac{1}{\ol - \otwo} + \frac{1}{2n} \right) \nonumber \\
-%
-& \quad - \frac{1}{4} \otwo H_{i21\ell} \left( \frac{1}{\ol - \oone} + \frac{1}{2n} \right) - \frac{1}{4} (\ol - 2n) H_{1i2\ell} \left( \frac{1}{\ol - \oone} + \frac{1}{\ol - \otwo} \right) \nonumber \\
-%
-& \quad + \frac{1}{2} \oone \otwo X_{i12\ell} \left( \frac{\otwo}{\ol - \otwo} + \frac{\oone}{\ol - \oone} + 1 \right) + \frac{1}{2} (\ol - 2n) \otwo X_{12i\ell} \left( \frac{\otwo}{\ol - \otwo} + \frac{\ol}{2n} \right) \nonumber \\
-%
-& \quad + \frac{1}{2} (\ol - 2n) \oone X_{21i\ell} \left( \frac{\oone}{\ol - \oone} + \frac{\ol}{2n} \right) - \frac{m^2}{4} V_{12i\ell} \left( \frac{\oone}{\ol - \otwo} + \frac{\otwo}{\ol - \oone} + 1 \right) \nonumber \\
-%
-& \quad - \frac{m^2}{4} V_{i21\ell} \left( \frac{\ol - 2n}{\ol - \otwo} + \frac{\ol - 2n}{\ol - \oone} + 2 \right) - \frac{m^2}{4} V_{i12\ell} \, ,
-\end{align}
-\begin{align}
-\overline{R}^{(2)}_{i \ell} &= \frac{1}{4} Z^{-}_{12i\ell} \left(\frac{\ol + 2n}{2n} \right) - \frac{1}{4} Z^{+}_{i 21\ell} \frac{\oone (\ol - \oone)}{\ol^2 - \oone^2} - \frac{1}{4} Z^{+}_{i12\ell} \frac{\otwo (\ol - \otwo)}{\ol^2 - \otwo^2} + \frac{1}{4} \oone H_{i12\ell} \left( \frac{1}{\ol + \otwo} - \frac{1}{2n} \right) \nonumber \\
-%
-& \quad + \frac{1}{4} \otwo H_{i21\ell} \left( \frac{1}{\ol + \oone} - \frac{1}{2n} \right) - \frac{1}{4} (\ol + 2n) H_{1i2\ell} \left( \frac{1}{\ol + \oone} + \frac{1}{\ol + \otwo} \right) \nonumber \\
-%
-& \quad - \frac{1}{2} \oone \otwo X_{i12\ell} \left( \frac{\otwo}{\ol + \otwo} + \frac{\oone}{\ol + \oone} - 1 \right) + \frac{1}{2} (\ol + 2n) \otwo X_{12i \ell} \left( \frac{\otwo}{\ol + \otwo} + \frac{\ol}{2n} \right) \nonumber \\
-%
-& \quad + \frac{1}{2} (\ol + 2n) \oone X_{21i\ell} \left( \frac{\oone}{\ol + \oone} + \frac{\ol}{2n} \right) + \frac{m^2}{4} V_{12i\ell} \left( \frac{\oone}{\ol + \otwo} + \frac{\otwo}{\ol + \oone} -1 \right) \nonumber \\
-%
-& \quad - \frac{m^2}{4} V_{i21\ell} \left( \frac{\ol + 2n}{\ol + \otwo} + \frac{\otwo}{2n} + 1\right) - \frac{m^2}{4} V_{i12\ell} \left( \frac{\ol + 2n}{\ol + \oone} + \frac{\oone}{2n} + 1 \right) \, .
-\end{align}
-
