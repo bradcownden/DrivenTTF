@@ -641,36 +641,46 @@ In addition to the case of arbitrary values of $\ob$, which is discussed in \S\!
 \overline{T}^{(2)}_{i}: \quad \omega_i &= \ol - 2\ob \quad \forall \; \ob \in \mathbb{Z}^* \; \text{such that } \ell \geq \ob \\
 \overline{T}^{(3)}_{i}: \quad \omega_i &= 2\ob - \ol \quad \forall \; \ob \in \mathbb{Z}^* \; \text{such that } \ob \leq \ell + \Delta^+ \, ,
 \end{align}
-as well as a
-
-resonances contribute to the source term $S_\ell$ via
+with $\omega_i \neq \omega_\ell$ in each case. The sum of these resonances contribute to the source term $S_\ell$ via
 \begin{align}
 S_\ell &= \bar A^2_{\ob} \, \overline{T}^{(1)}_{(\ell + \ob)} \, a_{(\ell + \ob)} \cos \left( \theta_{(\ell + \ob)} - 2\ob t \right) + \bar A^2_{\ob} \, \overline{T}^{(2)}_{(\ell - \ob)} \, a_{(\ell - \ob)}\cos \left( \theta_{(\ell - \ob)} + 2\ob t \right) \nonumber \\
-& \quad + \bar A^2_{\ob} \, \overline{T}^{(3)}_{(\ob - \ell - \Delta^+)} \, a_{(\ob - \ell- \Delta^+)} \cos \left( \theta_{(\ob - \ell - \Delta^+)} - 2 \ob t \right)  + \bar A^2_{\ob} \, \overline{T}_\ell \, a_\ell \cos \left( \theta_\ell \right) 
+& \quad + \bar A^2_{\ob} \, \overline{T}^{(3)}_{(\ob - \ell - \Delta^+)} \, a_{(\ob - \ell- \Delta^+)} \cos \left( 2\ob t - \theta_{(\ob - \ell - \Delta^+)} \right)  + 3 \bar A^2_{\ob} \, \overline{V}_\ell \, a_\ell \cos \left( \theta_\ell \right) 
 \end{align}
-under their respective conditions on the value of $\ob$:
+under their respective conditions on the value of $\ob$. Evaluating \eqref{general source} in each case, we see that
 \begin{align}
-\end{align}
-
-We find that
-\begin{align}
-\overline{T}^{(2)}_{i} &= - \frac{1}{12} \left(1 - \delta(\ol - \ob) \right) Z^-_{i \ob \ob \ell} \left(\frac{\ob}{\ol - \ob} \right) \nonumber \\
+\overline{T}^{(1)}_{i} &= \frac{1}{2} \bigg[ \, H_{i\ob\ob\ell} \left( \frac{\ob}{\oi - \ob} \right) - H_{\ob i \ob\ell} \left( \frac{\oi}{\oi - \ob} \right) + m^2 V_{\ob\ob i\ell} \left( \frac{\ob}{\oi - \ob} \right) \nonumber \\
 %
-& \quad - \frac{1}{12} (1 - \delta(\oi - \ob) \Big \{ \left( \frac{\ob}{\oi + \ob} \right) \left(H_{i\ob\ob\ell} + m^2 V_{\ob\ob i \ell} - 2\ob^2 X_{i\ob\ob\ell} \right) + \nonumber \\
+& - m^2 V_{i \ob\ob\ell} \left( \frac{\oi}{\oi - \ob} \right) - 2 \ob^2 X_{i\ob\ob\ell} \left( \frac{\ob}{\oi - \ob} \right) + 2 \ob^2 X_{\ob i \ob\ell} \left( \frac{\oi}{\oi - \ob} \right) \bigg]_{\oi \neq \ob} \nonumber \\
 %
-& \quad + \left( \frac{\ol - 2\ob}{\oi + \ob} \right) \left( H_{\ob i \ob \ell} + m^2 V_{i \ob \ob \ell} - 2 \ob^2 X_{\ob i \ob \ell} \right) \Big] \nonumber \\
+& -\frac{1}{2} \bigg[ Z^+_{i\ob\ob\ell} \left( \frac{\ob}{\ol + \ob} \right) \bigg]_{\ol \neq \ob} \!\! + \frac{1}{4} Z^-_{\ob\ob i \ell} \left( \frac{\ol + 2\ob}{2 \ob} \right) + \frac{1}{2} \ob^2 X_{i\ob\ob\ell} - \frac{m^2}{4} V_{\ob\ob i \ell} \nonumber \\
 %
-& \quad - \frac{(\ol - 2\ob)}{48\ob} Z^-_{\ob\ob i \ell} + \frac{1}{12} \ob^2 X_{i \ob \ob \ell} + \frac{\ob (\ol - 2\ob)}{12} X_{\ob\ob i \ell} - \frac{m^2}{12} V_{i\ob\ob\ell} - \frac{m^2}{24} V_{\ob\ob i \ell} \, .
+& - \ob \oi X_{\ob\ob i\ell} - \frac{m^2}{2} V_{i \ob\ob\ell} \, ,
 \end{align}
-
 \begin{align}
-\overline{R}^{(2)}_{i \ob} &= \, .
+\overline{T}^{(2)}_{i} &=  - \frac{1}{2} \bigg[ \, H_{i\ob\ob \ell} \left( \frac{\ob}{\oi + \ob} \right) + H_{\ob i \ob \ell} \left( \frac{\oi}{\oi + \ob} \right) + m^2 V_{\ob \ob i \ell} \left( \frac{\ob}{\oi + \ob} \right) \nonumber \\
+%
+& + m^2 V_{i\ob\ob\ell} \left( \frac{\oi}{\oi + \ob} \right) - 2 \ob^2 X_{i \ob\ob\ell} \left( \frac{\ob}{\oi + \ob} \right) - 2 \ob^2 X_{\ob\ob i\ell} \left( \frac{\oi}{\oi + \ob} \right) \bigg]_{\oi \neq \ob} \nonumber \\
+%
+& - \frac{1}{2} \bigg[ \, Z^{-}_{i \ob \ob \ell} \left( \frac{\ob}{\ol - \ob} \right) \bigg]_{\ol \neq \ob} \!\!\!\! - \frac{1}{4} Z^-_{\ob\ob i \ell} \left( \frac{\ol - 2\ob}{\ob} \right) + \frac{1}{2} \ob^2 X_{i\ob\ob\ell} + \frac{m^2}{4} V_{\ob\ob i\ell} \nonumber \\
+%
+& + \ob \oi X_{\ob\ob i \ell} + \frac{m^2}{2} V_{i \ob\ob \ell} \, ,
 \end{align}
-
+and
 \begin{align}
-\overline{R}^{(3)}_{i\ob} &= \, .
+\overline{T}^{(3)}_{i} &= \frac{1}{2} \bigg[ \, H_{i\ob\ob\ell} \left( \frac{\ob}{\oi - \ob} \right) - H_{\ob i \ob\ell} \left( \frac{\oi}{\oi - \ob} \right) + m^2 V_{\ob\ob i \ell} \left( \frac{\ob}{\oi - \ob} \right) \nonumber \\
+%
+& - m^2 V_{i\ob\ob\ell} \left( \frac{\oi}{\oi - \ob} \right) - 2 \ob^2 X_{i\ob\ob\ell} \left( \frac{\ob}{\oi-\ob} \right) + 2 \oi^2 X_{\ob\ob i\ell} \left( \frac{\ob}{\oi-\ob} \right) \nonumber \\
+%
+& - Z^+_{i\ob\ob\ell} \left( \frac{\ob}{\oi - \ob} \right) \bigg]_{\oi \neq \ob} + \frac{1}{4} \bigg[ \, Z^-_{\ob\ob i \ell} \left( \frac{2\ob - \ol}{2\ob} \right) \bigg]_{\oi \neq \ol} \nonumber \\
+%
+& + \frac{1}{2} \ob^2 X_{i\ob\ob\ell} - \frac{m^2}{4} V_{\ob\ob i\ell} - \ob \oi X_{\ob\ob i\ell} - \frac{m^2}{2} V_{i\ob\ob\ell} \, ,
 \end{align}
-
+with $\overline{V}_\ell$ common to all three channels:
+\begin{align}
+\overline{V}_\ell &= \frac{1}{2} \ol^2 X_{\ob\ob\ell\ell} - \frac{1}{2}\ob^2 X_{\ell\ell\ob\ob} + \frac{m^2}{2} V_{\ob\ob\ell\ell} + \frac{1}{2} Y_{\ob\ob\ell\ell} + \frac{1}{2} Y_{\ell\ell\ob\ob} \nonumber \\
+%
+& + \ob^2\ol^2 P_{\ob\ob\ell} - 3 \ob^2\ol^2 P_{\ell\ell\ob} + \ob^2 B_{\ell\ell\ob} + \ol^2 B_{\ob\ob\ell} \, .
+\end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
