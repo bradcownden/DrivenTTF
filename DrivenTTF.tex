@@ -307,12 +307,13 @@ As a first case, let us assume that the two non-normalizable modes have equal, c
 \end{align}
 When any of these resonance conditions is met, the remaining normalizable mode will have a frequency equal to $\ol$, collapsing all sums over frequencies so that
 \begin{align}
-S_\ell = \overline{T}_{\ell \ob} \, a_\ell \bar A_{\ob}^2 \cos (\thl) \, ,
+\label{2genNN}
+S_\ell = \overline{T}_{\ell} \, a_\ell \bar A_{\ob}^2 \cos (\thl) \, ,
 \end{align}
 where the non-normalizable modes have constant amplitudes $\bar A_{\ob}$. Collecting the appropriate terms in \eqref{general source}, and evaluating the each possible resonance (being careful not to violate restrictions placed on the sums), we find that
 \begin{align}
 \label{S:2NN}
-\overline{T}_{\ell \ob} &=  \bigg[ \, \frac{1}{2} Z^-_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol + \ob} \right) + \frac{1}{2} Z^+_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol - \ob} \right)  + H_{\ell \ob \ob \ell} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right)  - H_{\ob\ell\ob\ell} \left(\frac{\ol^2}{\ol^2 - \ob^2} \right) \nonumber \\
+\overline{T}_{\ell} &=  \bigg[ \, \frac{1}{2} Z^-_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol + \ob} \right) + \frac{1}{2} Z^+_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol - \ob} \right)  + H_{\ell \ob \ob \ell} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right)  - H_{\ob\ell\ob\ell} \left(\frac{\ol^2}{\ol^2 - \ob^2} \right) \nonumber \\
 %
 & - m^2 V_{\ell \ob\ob\ell}  \left(\frac{\ol^2}{\ol^2 - \ob^2} \right) + m^2 V_{\ob\ob\ell\ell} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right) + 2 X_{\ob\ob\ell\ell} \left( \frac{\ob^2 \ol^2}{\ol^2 - \ob^2} \right) - 2 X_{\ell\ell\ob\ob} \left( \frac{\ob^4}{\ol^2 - \ob^2} \right) \bigg]_{\ob \neq \ol} \nonumber \\
 %
@@ -631,22 +632,22 @@ M_{ij\ell} &= \oi^2 P_{ij\ell} - B_{ij\ell} -m^2 Q_{ij\ell}
 
 \section{Two Non-normalizable Modes with Equal Frequencies}
 \label{more 2NN}
-
-Consider activating two non-normalizable modes at the same general frequency, $\ob$. In such a case, any two of the summed indices may represent a non-normalizable frequency. These non-normalizable modes may have frequencies that happen to satisfy $\ob = \ol$ numerically; this does not change the fact that their basis functions are given by \eqref{general basis}. With this is mind, the same time averaging procedure restricts the presence of resonant contributions to those that satisfy \eqref{gen res}. Since the basis onto which we are projecting is normalizable, we know that $\ol = 2\ell + \Delta^+$, which means there are four cases in which resonance may occur.
-
-In addition to the case of arbitrary values of $\ob$, which is discussed in \S\!~\ref{ssec: equalNN}, the following special values of $\ob$ contribute to respective $\overline T$-type coefficients to the source term
+Let us return to the case of two, equal, non-normalizable modes with frequency $\ob$. Within the space of resonant frequency values, there are frequencies that happen to satisfy $\ob = \ol$ numerically and may produce extra resonances subject to restrictions on the normalizable frequency. These instances were excluded from the discussion in \S\!~\ref{ssec: equalNN}, and we address them here. When considering special integer values of $\ob$ each choice of $\ob$ below will contribute a $\overline T$-type term to the total source:
 \begin{align}
-\label{gen NN res}
+\label{gen NN res 1}
 \overline{T}^{(1)}_{i}: \quad \omega_i &= \ol + 2\ob \quad \forall \; \ob \in \mathbb{Z}^* \\
 \overline{T}^{(2)}_{i}: \quad \omega_i &= \ol - 2\ob \quad \forall \; \ob \in \mathbb{Z}^* \; \text{such that } \ell \geq \ob \\
+\label{gen NN res 2}
 \overline{T}^{(3)}_{i}: \quad \omega_i &= 2\ob - \ol \quad \forall \; \ob \in \mathbb{Z}^* \; \text{such that } \ob \leq \ell + \Delta^+ \, ,
 \end{align}
-with $\omega_i \neq \omega_\ell$ in each case. The sum of these resonances contribute to the source term $S_\ell$ via
+with $\omega_i \neq \omega_\ell$ in each case. These special values contribute to the case of two, equal non-normalizable modes via
 \begin{align}
+\label{2NN all}
 S_\ell &= \bar A^2_{\ob} \, \overline{T}^{(1)}_{(\ell + \ob)} \, a_{(\ell + \ob)} \cos \left( \theta_{(\ell + \ob)} - 2\ob t \right) + \bar A^2_{\ob} \, \overline{T}^{(2)}_{(\ell - \ob)} \, a_{(\ell - \ob)}\cos \left( \theta_{(\ell - \ob)} + 2\ob t \right) \nonumber \\
-& \quad + \bar A^2_{\ob} \, \overline{T}^{(3)}_{(\ob - \ell - \Delta^+)} \, a_{(\ob - \ell- \Delta^+)} \cos \left( 2\ob t - \theta_{(\ob - \ell - \Delta^+)} \right)  + 3 \bar A^2_{\ob} \, \overline{V}_\ell \, a_\ell \cos \left( \theta_\ell \right) 
+& \quad + \bar A^2_{\ob} \, \overline{T}^{(3)}_{(\ob - \ell - \Delta^+)} \, a_{(\ob - \ell- \Delta^+)} \cos \left( 2\ob t - \theta_{(\ob - \ell - \Delta^+)} \right) 
 \end{align}
-under their respective conditions on the value of $\ob$. Evaluating \eqref{general source} in each case, we see that
+under their respective conditions on the value of $\ob$. The total resonant contribution for all possible $\ob$ values is the addition of \eqref{2NN all} and \eqref{2genNN}. 
+Evaluating \eqref{general source} in each case of the cases described by \eqref{gen NN res 1}~\!-~\!\eqref{gen NN res 2}, we find that
 \begin{align}
 \overline{T}^{(1)}_{i} &= \frac{1}{2} \bigg[ \, H_{i\ob\ob\ell} \left( \frac{\ob}{\oi - \ob} \right) - H_{\ob i \ob\ell} \left( \frac{\oi}{\oi - \ob} \right) + m^2 V_{\ob\ob i\ell} \left( \frac{\ob}{\oi - \ob} \right) \nonumber \\
 %
@@ -673,14 +674,9 @@ and
 %
 & - Z^+_{i\ob\ob\ell} \left( \frac{\ob}{\oi - \ob} \right) \bigg]_{\oi \neq \ob} + \frac{1}{4} \bigg[ \, Z^-_{\ob\ob i \ell} \left( \frac{2\ob - \ol}{2\ob} \right) \bigg]_{\oi \neq \ol} \nonumber \\
 %
-& + \frac{1}{2} \ob^2 X_{i\ob\ob\ell} - \frac{m^2}{4} V_{\ob\ob i\ell} - \ob \oi X_{\ob\ob i\ell} - \frac{m^2}{2} V_{i\ob\ob\ell} \, ,
+& + \frac{1}{2} \ob^2 X_{i\ob\ob\ell} - \frac{m^2}{4} V_{\ob\ob i\ell} - \ob \oi X_{\ob\ob i\ell} - \frac{m^2}{2} V_{i\ob\ob\ell} \, .
 \end{align}
-with $\overline{V}_\ell$ common to all three channels:
-\begin{align}
-\overline{V}_\ell &= \frac{1}{2} \ol^2 X_{\ob\ob\ell\ell} - \frac{1}{2}\ob^2 X_{\ell\ell\ob\ob} + \frac{m^2}{2} V_{\ob\ob\ell\ell} + \frac{1}{2} Y_{\ob\ob\ell\ell} + \frac{1}{2} Y_{\ell\ell\ob\ob} \nonumber \\
-%
-& + \ob^2\ol^2 P_{\ob\ob\ell} - 3 \ob^2\ol^2 P_{\ell\ell\ob} + \ob^2 B_{\ell\ell\ob} + \ol^2 B_{\ob\ob\ell} \, .
-\end{align}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
