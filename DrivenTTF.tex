@@ -76,7 +76,7 @@ This paper is organized as follows: after a brief discussion of how to arrive at
 
 \section{Source Terms and Boundary Conditions}
 
-To examine the weak turbulence that leads to instability, we consider a massive scalar field coupled to a spherically symmetric, asymptotically AdS$_{d+1}$ spacetime in global coordinates whose metric is given by
+Let us first consider a minimally coupled, massive scalar field coupled to a spherically symmetric, asymptotically AdS$_{d+1}$ spacetime in global coordinates, whose metric is given by
 \begin{align}
 \label{AdS metric}
 ds^2 &= \frac{L^2}{\cos(x)} \left( - A(t,x) e^{-2 \delta(t,x)} \, dt^2 + A^{-1}(t, x) \, dx^2 + \sin^2 (x) \, d\Omega^2_{d-1} \right) \, ,
@@ -87,11 +87,11 @@ G_{\mu \nu} + \Lambda g_{\mu \nu} = 8 \pi \left( \nabla_\mu \phi \nabla_\nu \phi
 \end{align}
 with $\Lambda$ as cosmological constant for AdS, $\Lambda = -d(d-1)/2$. 
 
-Perturbing around static AdS, we expand the minimally-coupled scalar field in terms of odd powers of epsilon (the even powers do not contribute)
+Perturbing around static AdS, the scalar field is expanded in of odd powers of epsilon 
 \begin{align}
 \phi(t,x) = \epsilon \phi_1 + \epsilon^3 \phi_3 + \ldots
 \end{align}
-and the metric functions $A$ and $\delta$ in terms of even powers of the expansion parameter,
+and the metric functions $A$ and $\delta$ in even powers,
 \begin{align}
 A(t, x) = 1 + A_2 \epsilon^2 + \ldots \quad \text{and} \quad \delta(t, x) = \epsilon^2 \delta_2 + \ldots \, .
 \end{align}
@@ -99,6 +99,7 @@ We choose to work in the boundary gauge, where $\delta(t, \pi/2) = 0$, for reaso
 
 At linear order, $\phi_1$ satisfies
 \begin{align}
+\label{phi1 eqn}
 \p^2_t \phi_1 + \hat L \phi_1 = 0 \quad \text{where} \quad \hat{L} \equiv \frac{1}{\mu} (\mu' \p_x + \mu \p^2_x)  - \frac{m^2}{\cos^2(x)} \, ,
 \end{align}
 where $\mu \equiv \tan^{d-1}(x)$. Writing the scalar field as the product of time- and position-dependent parts,
@@ -110,9 +111,9 @@ we find that the basis functions $e_j (x)$ are the solutions to the eigenvalue e
 \label{eigen eqn}
 \hat L e_j(x) = \omega^2_j e_j(x) .
 \end{align}
-The general solution to this eigenvalue equation involves two types of functions: those that are normalizable and therefore vanish as $x \to \pi / 2$, and those that are non-normalizable and approach a finite value on the boundary. In many previous works, the dynamics of scalar fields have been studied using exclusively normalizable functions (as is the focus of \S\!~\ref{sec: norm res}); however, we now wish to consider so-called ``pumped'' systems, where a time-dependent source term exists on the boundary that sends energy into AdS. This energy is carried into the bulk spacetime via non-normalizable solutions to \eqref{eigen eqn}, and coupling between the scalar field and metric functions drives the system out of equilibrium. 
+The general solution to this eigenvalue equation involves two types of functions: those that vanish as $x \to \pi / 2$ and therefore are normalizable, and those that approach a finite value on the boundary and are non-normalizable. In many previous works, the dynamics of scalar fields have been studied using exclusively normalizable functions (as is the focus of \S\!~\ref{sec: norm res}); however, we now wish to consider the effects of exciting the second class of basis functions. These driven systems have a time-dependent source term on the boundary that sends energy into bulk space through coupling with non-normalizable modes. Energy is then distributed to both normalizable and non-normalizable scalar modes, as well as the metric functions. 
 
-In general, a combination of normalizable and non-normalizable eigenmodes make up the scalar field:
+Thus, the general solution to \eqref{phi1 eqn} involves a combination of normalizable and non-normalizable eigenmodes, given by
 \begin{align}
 \phi_1(t,x) = \sum_j c_j(t) e_j(x) + \sum_\alpha \bar A_\alpha (t) E_\alpha(x) \, ,
 \end{align}
@@ -121,7 +122,7 @@ with the $\bar A_\alpha$ set by the choice of boundary conditions. The normaliza
 e_j(x) &= k_j \left( \cos(x) \right)^{\Delta^+} P_{j}^{(d/2 - 1, \, \Delta^+ - d/2)} \left( \cos (2x) \right) \\
 k_j &= 2 \sqrt{\frac{(j + \Delta^+ /2) \Gamma(j+1) \Gamma(j+\Delta^+)}{\Gamma(j+d/2) \Gamma(j + \Delta^+ - d/2 + 1)}} \, ,
 \end{align} 
-with fully resonance eigenvalues $\omega_j = 2j + \Delta^+$, $j \in \mathbb{Z}^*$, and $\Delta^+$ as the positive root of $\Delta ( \Delta - d ) = m^2$. On the other hand, non-normalizable eigenfunctions with arbitrary frequency $\omega_\alpha$, have basis functions
+with fully resonance eigenvalues $\omega_j = 2j + \Delta^+$ with $j \in \mathbb{Z}^*$. We define $\Delta^+$ as the positive root of $\Delta ( \Delta - d ) = m^2$. On the other hand, the non-normalizable eigenfunctions have arbitrary frequencies $\omega_\alpha$, and are given by
 \begin{align}
 \label{general basis}
 E_\alpha (x) =  \left( \cos(x) \right)^{\Delta_+} {_2F_1} \left(\frac{\Delta_+ + \omega_\alpha}{2}, \frac{\Delta_+ - \omega_\alpha}{2}, d/2 ; \sin^2 (x) \right) \, .
@@ -131,12 +132,12 @@ E_\alpha (x) =  \left( \cos(x) \right)^{\Delta_+} {_2F_1} \left(\frac{\Delta_+ +
 {\bf DISCUSS RESONANT CONTRIBUTIONS \& THE TIME AVERAGING PROCEDURE}
 \end{center}
 
-Without specifying whether an eigenmode is non-/normalizable, we can determine the effect of the weakly turbulent transfer of energy at $\mc O(\epsilon^3)$, with
+By allowing frequencies and basis functions to remain unspecified for the time being, we can show that the $\mc O(\epsilon^3)$ part of the scalar field satisfies the equation
 \begin{align}
 \label{3rd order}
 \ddot \phi_3 + \hat L \phi_3 = S = 2 (A_2 - \delta_2) \ddot \phi_1 + (\dot A_2 - \dot \delta_2) \dot\phi_1 + (A_2' -\delta_2' )\phi_1' + m^2 A_2 \phi_1 \sec^2 x \, .
 \end{align}
-Following the steps outlined in Appendix~\ref{app: source term derivation}, and employing the solution ${c_i(t) = a_i \cos (\oi t + b_i) = a_i \cos\theta_i}$, the source term can be written as
+Following the steps outlined in Appendix~\ref{app: source term derivation}, we project \eqref{3rd order} onto the basis of normalizable modes and, employing the solution ${c_i(t) = a_i \cos (\oi t + b_i) = a_i \cos\theta_i}$ for the time-dependent portion of the scalar field, find that the general expression for the source term is
 \begin{align}
 \label{general source}
 S_\ell &=\frac{1}{4} \sum_{\substack{i,j,k \\ k \neq \ell}}^\infty \frac{a_i a_j a_k \ok}{\ol^2 - \ok^2} \Big[ Z^-_{ijk\ell} (\oi + \oj - 2\ok) \cos (\thi + \thj - \thk) - Z^-_{ijk\ell} (\oi + \oj + 2\ok) \cos (\thi + \thj + \thk) - \nonumber \\
@@ -159,8 +160,9 @@ S_\ell &=\frac{1}{4} \sum_{\substack{i,j,k \\ k \neq \ell}}^\infty \frac{a_i a_j
 %
 & - \frac{1}{2} \sum_{i,j}^\infty a_i^2 a_j \left( H_{iij\ell} + m^2 V_{jii\ell} - 2\oj^2 X_{iij\ell} + 4\oi^2 \oj^2 P_{j\ell i} + 2\oi^2 (M_{j\ell i} + m^2 Q_{j\ell i}) \right) \cos \thj . \hspace{-0.2in}
 \end{align} 
+Note that sums and restrictions on indices must be interpreted as sums and restrictions on \emph{frequencies} when any of the modes is non-normalizable, since $\omega_\alpha \neq 2 \alpha + \Delta^+$ in general.
 
-As an exercise, we first derive the resonant contributions when the boundary source is zero, and therefore only normalizable modes are present. These results agree numerically with previous work on normalizable modes for massless scalars in the interior time gauge $\delta(t, 0) = 0$. The definitions of the integral functions $Z$, $H$, $X$, etc. differ slightly from other works -- in part because of the gauge choice, and in part because of a desire to separate mass-dependent terms -- and so are given explicitly in Appendix~\ref{app: source term derivation}.
+As an exercise, we first derive the resonant contributions when the boundary source is zero, and therefore only normalizable modes are present. These results agree numerically with previous work on normalizable modes for massless scalars in the interior time gauge where $\delta(t, 0) = 0$. The definitions of the integral functions $Z$, $H$, $X$, etc. differ slightly from other works -- in part because of the gauge choice, and in part because of a desire to separate out mass-dependent terms -- and so are given explicitly in Appendix~\ref{app: source term derivation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -184,11 +186,11 @@ We will see that the first two resonances, $(+++)$ and $(+--)$, will non-trivial
 
 \subsection{Naturally Vanishing Resonances: $(+++)$ and $(+--)$}
 
-Resonant contributions that come from the condition $\oi + \oj + \ok = \ol$ are of the form
+Resonant contributions that come from the condition $\oi + \oj + \ok = \ol$ contribute to the total source term via
 \begin{align}
 S_\ell = \underbrace{\sum_{i=0}^\infty \sum_{j=0}^\infty \sum_{k=0}^\infty}_{\oi + \oj + \ok = \, \ol} \Omega_{ijk\ell} \, a_i a_j a_k \cos \left( \thi + \thj + \thk \right) + \ldots \, ,
 \end{align}
-where dots denote other resonances, both vanishing and non-vanishing. $\Omega_{ijk\ell}$ is then given by
+where the dots denote other resonances. $\Omega_{ijk\ell}$ is given by
 \begin{align}
 \label{omega}
 \Omega_{ijk\ell} &= -\frac{1}{12}H_{ijk\ell} \frac{\oj (\oi + \ok +2\oj)}{(\oi + \oj)(\oj + \ok)} - \frac{1}{12} H_{ikj\ell} \frac{\ok (\oi + \oj + 2\ok)}{(\oi + \ok)(\oj + \ok)}- \frac{1}{12} H_{jik\ell} \frac{\oi (\oj + \ok +2\oi)}{(\oi + \oj)(\oi + \ok)} \nonumber \\
@@ -202,7 +204,7 @@ where dots denote other resonances, both vanishing and non-vanishing. $\Omega_{i
 & \quad - \frac{1}{12} Z^-_{ijk\ell} \left( \frac{\ok}{\oi + \oj} \right) - \frac{1}{12} Z^-_{ikj\ell} \left( \frac{\oj}{\oi + \ok} \right) - \frac{1}{12} Z^-_{jki\ell}  \left( \frac{\oi}{\oj + \ok} \right) \, .
 \end{align}
 
-The second naturally vanishing resonance comes from the condition $\oi - \oj - \ok = \ol$, and is of the form
+The second naturally vanishing resonance comes from the condition $\oi - \oj - \ok = \ol$, and contributes to the total source term via
 \begin{align}
 S_\ell = \sum_{j=0}^\infty \sum_{k=0}^\infty \Gamma_{(j + k + \ell + \Delta^+) jk\ell} \, a_j a_k a_{(j+k+\ell + \Delta^+)} \cos \left( \theta_{(j+k+\ell + \Delta^+)} - \thj - \thk \right) + \ldots \, ,
 \end{align}
@@ -220,7 +222,7 @@ where
 & \quad + \frac{1}{4} Z^-_{kji\ell} \left( \frac{\oi}{\oj + \ok}\right) - \frac{1}{4} Z^+_{ijk\ell} \left( \frac{\ok}{\oi - \oj} \right) - \frac{1}{4} Z^+_{jki\ell} \left( \frac{\oj}{\oi - \ok}\right) \, .
 \end{align}
 
-Building on the work done with massless scalars, we are able to demonstrate that \eqref{omega} and \eqref{gamma} continue to vanish for massive scalars in the boundary gauge; thus, the weak turbulence is determined only from the remaining resonance channel. When non-normalizable modes are introduced, we will see that naturally vanishing resonances are not present.
+Building on the work done with massless scalars, we are able to demonstrate that \eqref{omega} and \eqref{gamma} continue to vanish for massive scalars ($m^2 \geq m^2_{BF}$) in the boundary gauge; thus, the dynamics governing the weakly turbulent transfer of energy is determined only from the remaining resonance channel. When non-normalizable modes are introduced, we will see that naturally vanishing resonances are not present and so the total third-order source term is the sum over all resonant channels.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -230,7 +232,7 @@ Building on the work done with massless scalars, we are able to demonstrate that
 The first non-vanishing contributions arise when $\oi + \oj = \ok + \ol$. This contribution can be split into three coefficients that are evaluated for certain subsets of the allowed values for the indices, namely
 \begin{align}
 S_\ell &= T_\ell a^3_\ell \cos (\thl + \thl - \thl) + \sum_{i \neq \ell}^\infty R_{i \ell} \, a^2_i a_\ell \cos(\thi + \thl - \thi) \nonumber \\
-& \qquad + \sum_{i \neq \ell}^\infty \sum_{j \neq \ell}^\infty S_{i j (i + j - \ell) \ell} \, a_i a_j a_{(i + j - \ell)} \cos(\thi + \thj - \theta_{i + j -\ell} ) + \ldots
+& \qquad + \sum_{i \neq \ell}^\infty \sum_{j \neq \ell}^\infty S_{i j (i + j - \ell) \ell} \, a_i a_j a_{(i + j - \ell)} \cos(\thi + \thj - \theta_{i + j -\ell} ) \, ,
 \end{align}
 where each of the coefficients is given by
 \begin{align}
@@ -264,7 +266,7 @@ To examine the effects of non-zero masses on $R$, $S$, and $T$ -- and therefore 
 \begin{figure}
 \centering
 	\includegraphics[width=\textwidth]{./figures/Nmodesplot}
-	\caption{Evaluating \eqref{S_ppm}-\eqref{T_ppm} for three different values of $m^2$ for $\ell \leq 10$. $S_{ij(i+j-\ell)\ell}$ is denoted by filled circles connected by dash-dotted lines; $R_{i\ell}$ is denoted by filled triangles connected by solid lines; $T_{\ell}$ is denoted by large Xs connected by dotted lines.}
+	\caption{Evaluating \eqref{S_ppm}-\eqref{T_ppm} over different values of $m^2$ for $\ell \leq 10$. $S_{ij(i+j-\ell)\ell}$ is denoted by filled circles connected by dash-dotted lines; $R_{i\ell}$ is denoted by filled triangles connected by solid lines; $T_{\ell}$ is denoted by large Xs connected by dotted lines. Different values of $m^2$ are denoted by the colour of each plot.}
 	\label{fig: Nmodes}
 \end{figure}
 
