@@ -113,11 +113,19 @@ we find that the basis functions $e_j (x)$ are the solutions to the eigenvalue e
 \end{align}
 The general solution to this eigenvalue equation involves two types of functions: those that vanish as $x \to \pi / 2$ and therefore are normalizable, and those that approach a finite value on the boundary and are non-normalizable. In many previous works, the dynamics of scalar fields have been studied using exclusively normalizable functions (as is the focus of \S\!~\ref{sec: norm res}); however, we now wish to consider the effects of exciting the second class of basis functions. These driven systems have a time-dependent source term on the boundary that sends energy into bulk space through coupling with non-normalizable modes. Energy is then distributed to both normalizable and non-normalizable scalar modes, as well as the metric functions. 
 
-Thus, the general solution to \eqref{phi1 eqn} involves a combination of normalizable and non-normalizable eigenmodes, given by
+Writing out the full solution to \eqref{eigen eqn} involves summing over both normalizable and non-normalizable eigenmodes,
 \begin{align}
-\phi_1(t,x) = \sum_j c_j(t) e_j(x) + \sum_\alpha \bar A_\alpha (t) E_\alpha(x) \, ,
+\label{phi1 gen}
+\phi_1(t,x) = \sum_j c_j(t) e_j(x) + \sum_\alpha \bar A_\alpha (t) E_\alpha(x) \, .
 \end{align}
-with the $\bar A_\alpha$ set by the choice of boundary conditions. The normalizable modes have eigenfunctions given by
+The values of $\bar A_\alpha$ are set by the choice of boundary conditions. For example, if the driving term on the boundary is a single, periodic function, then
+\begin{align}
+\label{BC}
+\phi_1(t,\pi/2) = \mc A \cos \ob t \, .
+\end{align}
+This can be extended to include more general driving functions that would fix further $\bar A_\alpha$ values.
+
+The normalizable modes have eigenfunctions given by
 \begin{align}
 e_j(x) &= k_j \left( \cos(x) \right)^{\Delta^+} P_{j}^{(d/2 - 1, \, \Delta^+ - d/2)} \left( \cos (2x) \right) \\
 k_j &= 2 \sqrt{\frac{(j + \Delta^+ /2) \Gamma(j+1) \Gamma(j+\Delta^+)}{\Gamma(j+d/2) \Gamma(j + \Delta^+ - d/2 + 1)}} \, ,
@@ -281,26 +289,22 @@ To examine the effects of non-zero masses on $R$, $S$, and $T$ -- and therefore 
 {\bf Discuss falloff of A2 and delta2 with three NN modes, but don't calculate anything new. Mention overlap of NN and normalizable cases when omega(i) $\pm$ omega(j) = NN frequency. Then focus on two NN modes.}
 \end{center}
 
-We now consider the case when at least one of the $e_i(x), e_j(x), e_k(x)$ is a non-normalizable mode. Since the boundary condition has been set to be a single non-normalizable mode, any non-normalizable modes in the source term must exactly cancel; therefore, at least two of the modes must be non-normalizable. This assumption breaks some of the symmetries that contributed to the previous expressions for resonance channels, and so the resonance conditions must be re-examined starting from the source expression \eqref{general source}.
+Take the boundary condition to be at $\mc O(\epsilon)$, then at 3rd order we must have $\phi_3 (x \to \pi/2) = 0$, which sets $\omega_\ell$ to be normalizable. One could take all contributions to the 3rd order source term to be normalizable, but then the result is the same as the previous section but with a different first-order expression. When one mode is non-normalizable, the third-order boundary condition $\phi_3 (t, \pi/2) = 0$ is violated; thus, at least two NN modes must be present so that the boundary condition can be met. When three non-normalizable modes exist, there are two possibilities: first, that any combination of generically non-integer frequencies gives a non-integer value and so vanishes when projected onto $\omega_\ell$ and time averaged; second, some particular combination of the non-normalizable frequencies gives and integer frequency, in which case the procedure for determining the contribution to $S_\ell$ follows the same procedure as the all-normalizable case. Therefore, the pertinent question is what contribution to the source term results from two of $\{\oi, \oj, \oj\}$ being non-normalizable. Because this choice breaks some of the symmetries that contributed to the previous expressions for resonance channels, the resonance conditions must be re-examined starting from the source expression \eqref{general source}.
 
-An important consideration is also the effect of non-normalizable modes on the perturbative expansion that leads to the source equations. Since non-normalizable solutions do not have well-defined norms, we do not know \emph{a priori} that the inner products described in Appendix~\ref{app: source term derivation} are still finite. To investigate this, consider the second-order metric function
+Before proceeding further, an important consideration what the effect of non-normalizable modes are on the perturbative expansion that leads to the source equations. Since non-normalizable solutions do not have well-defined norms, we do not know \emph{a priori} that the inner products described in Appendix~\ref{app: source term derivation} are still finite. To investigate this, consider the generic expression for the second-order metric function
 \begin{align}
 A_2 &= - \nu \int^x_0 dy \, \mu \left( (\dot \phi_1)^2 + (\phi'_1)^2 + m^2 \phi_1^2 \sec^2 x \right) \, ,
 \end{align}
-in the limit of $x \to \pi/2$ when the scalar field is given by a generic superposition of normalizable and non-normalizable eigenfunctions:
+in the limit of $x \to \pi/2$, and let the scalar field $\phi_1$ be given by a generic superposition of normalizable and non-normalizable eigenfunctions as in \eqref{phi1 gen}. Ignoring the time-dependent contributions, we find that
 \begin{align}
-\phi_1 (t, x) &= \sum_\alpha e_\alpha \cos (\omega_\alpha t ) + \sum_i a_i e_i \cos (\omega_i t + b_i) \, .
+\lim_{\tilde x \to 0} A_2 (\tilde x \equiv \pi /2 - x) = \tilde{x}^{-\xi} \left( \frac{2 \tilde{x}^{2+d}}{2 - \xi} - \frac{\tilde{x}^d (1 + \left(\Delta^{-}\right)^2)}{\xi} \right)
 \end{align}
-Focusing on the position-dependence only, we find that
-\begin{align}
-\lim_{\tilde x \to 0} A_2 (\tilde x = \pi /2 - x) = \tilde{x}^{-\xi} \left( \frac{2 \tilde{x}^{2+d}}{2 - \xi} - \frac{\tilde{x}^d (1 + \left(\Delta^{-}\right)^2)}{\xi} \right)
-\end{align}
-where we have defined $\xi = \sqrt{d^2 + 4m^2}$. In the massless case, $\xi = d$ and all powers of $\tilde{x}$ are non-negative and thus the limit is finite; for tachyonic masses, $0 \leq \xi < d$ and the limit is again finite. However, for massive scalars, at least one of the terms above diverges as $\xi \to 0$. This case would require the addition of counter-terms in the bulk action to cancel such divergences -- we will not consider this case presently. Thus, we will restrict our discussion to $m^2 \leq 0$ to avoid these issues. A similar check on the near-boundary behaviour of $\delta_2$ shows that, in the massless case, the gauge condition $\delta_2 (t, x=\pi/2)$ remains unchanged by the addition of non-normalizable modes.
+where we have defined $\xi = \sqrt{d^2 + 4m^2}$. In the massless case, $\xi = d$ and all powers of $\tilde{x}$ are non-negative; thus, the limit is finite. For tachyonic masses of $m^2_{BF} < m^2 < 0$, $0 < \xi < d$ and the limit is again finite. However, for scalars that either saturate the Brietenlohmer-Freedman bound, or have $m^2 > 0$, part of the limit diverges. In order for the boundary to remain asymptotically AdS, counter-terms in the bulk action would be required to cancel such divergences -- a case we will not address presently. Thus, we will restrict our discussion to $m^2_{BF} < m^2 \leq 0$ to avoid these issues. A similar check on the near-boundary behaviour of $\delta_2$ shows that the gauge condition $\delta_2 (t, x=\pi/2)$ remains unchanged by the addition of non-normalizable modes given the same restrictions on the mass of the scalar field. With these restrictions in mind, let us now examine the resonances produced by the activation of non-normalizable modes.
 
 \subsection{Two Non-normalizable Modes with Equal Frequencies}
 \label{ssec: equalNN}
 
-As a first case, let us assume that the two non-normalizable modes have equal, constant, and arbitrary frequencies, $\ob$. Applying the time-averaging procedure to the source $S_\ell$ once again eliminates all contributions except those that satisfy \eqref{gen res}. Since the basis onto which we are projecting is normalizable, we know that $\omega_\ell$ is given by $\omega_\ell = 2\ell + \Delta^{+}$. We are now free to choose any one of $\{\omega_i, \omega_j, \ok\}$ to be normalizable and consider when the resonance condition is satisfied. In particular, we find that the following combinations are resonant:
+As a first case, let us assume that the two non-normalizable modes have equal, constant, and arbitrary frequencies, $\ob$. Applying the time-averaging procedure to the source $S_\ell$ once again eliminates all contributions except those that satisfy \eqref{gen res}. We are now free to choose any one of $\{\omega_i, \omega_j, \ok\}$ to be normalizable and consider when the resonance condition is satisfied. In particular, we find that the following combinations are resonant:
 \begin{align}
 \label{gen nn res 1}
 \oi - \oj + \ok - \ol &= 0 \qquad \Rightarrow \qquad \text{either $\oi$ or $\ok$ is normalizable} \\
@@ -313,7 +317,7 @@ When any of these resonance conditions is met, the remaining normalizable mode w
 \label{2genNN}
 S_\ell = \overline{T}_{\ell} \, a_\ell \bar A_{\ob}^2 \cos (\thl) \, ,
 \end{align}
-where the non-normalizable modes have constant amplitudes $\bar A_{\ob}$. Collecting the appropriate terms in \eqref{general source}, and evaluating the each possible resonance (being careful not to violate restrictions placed on the sums), we find that
+where the non-normalizable modes their amplitudes $\bar A_{\ob}$ set by the choice of boundary condition. Collecting the appropriate terms in \eqref{general source}, and evaluating the each possible resonance we find that
 \begin{align}
 \label{S:2NN}
 \overline{T}_{\ell} &=  \bigg[ \, \frac{1}{2} Z^-_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol + \ob} \right) + \frac{1}{2} Z^+_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol - \ob} \right)  + H_{\ell \ob \ob \ell} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right)  - H_{\ob\ell\ob\ell} \left(\frac{\ol^2}{\ol^2 - \ob^2} \right) \nonumber \\
@@ -325,34 +329,34 @@ where the non-normalizable modes have constant amplitudes $\bar A_{\ob}$. Collec
 & - \ob^2 \left( \ol^2 P_{\ell\ell \ob} - B_{\ell\ell\ob} \right) \, .
 \end{align}
 
-Notice that the terms in the square braces only contribute when $\ob \neq \ol$. Beginning from \eqref{general source}, only terms in the square braces that are proportional to $Z^{\pm}$ are limited in this way; the remaining terms have no such restriction. However, it can be shown that integral functions with permuted indices are equal when the non-normalizable frequency equals the normalizable frequency. Upon simplification, factors of $\ol^2 - \ob^2$ are canceled and the overall contribution to $T_{\ob \ell}$ from the terms in the braces is zero. Thus, these terms are grouped with those that have natural restrictions on the indices. 
+Notice that the terms in the square braces only contribute when $\ob \neq \ol$. Beginning from \eqref{general source}, only terms in the square braces that are proportional to $Z^{\pm}$ are limited in this way; the remaining terms have no such restriction. However, it can be shown that integral functions with permuted indices are equal when the non-normalizable frequency equals the normalizable frequency. Upon simplification, factors of $\ol^2 - \ob^2$ are canceled and the overall contribution to $T_{\ell}$ from the terms in the braces is zero. Thus, these terms are grouped with those that have natural restrictions on the indices. 
 
-In figures~\ref{fig:equal_frequency_m0} and~\ref{fig:equal_frequency_m-4_0}, we evaluate \eqref{S:2NN} for $\ell < 10$ over a variety of $\ob$ values first for a massless scalar, then for a tachyonic scalar.
+In figures~\ref{fig:equal_frequency_m0} and~\ref{fig:equal_frequency_m-1_0}, we evaluate \eqref{S:2NN} for $\ell < 10$ over a variety of $\ob$ values first for a massless scalar, then for a tachyonic scalar.
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{./figures/NN_equalfreq_sourceterms_m0_0+zoom}
-\caption{{\it Left:} Evaluating $S_\ell$ (rescaled by the amplitudes) when $m^2 = 0$ for various choices of $\ob$. {\it Right}: The behaviour of $S_\ell$ for $\ob$ values near $\omega_0$.}
+\caption{{\it Left:} Evaluating \eqref{S:2NN} when $m^2 = 0$ for various choices of $\ob$. {\it Right}: The behaviour of $S_\ell$ for $\ob$ values near $\omega_0$.}
 \label{fig:equal_frequency_m0}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\textwidth]{./figures/NN_equalfreq_sourceterms_m-4_0+zoom}
-\caption{{\it Left:} Evaluating $\overline{T}_{\ell \ob}$ for a tachyon with $m^2 = -4.0$. {\it Right:} The behaviour of $S_\ell$ near $\omega_0 = \Delta^+ =  2$.}
-\label{fig:equal_frequency_m-4_0}
+\includegraphics[width=\textwidth]{./figures/NN_equalfreq_sourceterms_m-1_0+zoom}
+\caption{{\it Left:} Evaluating $\overline{T}_{\ell}$ for a tachyon with $m^2 = -1.0$. {\it Right:} The behaviour of $S_\ell$ near $\omega_0 = \Delta^+ \approx  3.7$.}
+\label{fig:equal_frequency_m-1_0}
 \end{figure}
 
-Other resonant contributions become possible for more restrictive values of the non-normalizable frequency, such as if $\ob$ is allow to be an integer. These contributions are not included here, but rather are discussed briefly in Appendix~\ref{more 2NN}.
+Other resonant contributions become possible for more restrictive values of the non-normalizable frequency, such as if $\ob$ is allowed to be an integer. These contributions are not included here, but rather are discussed briefly in Appendix~\ref{more 2NN}.
 
 \subsection{Special Values of Non-normalizable Frequencies}
 
-Focus on non-arbitrary values of the non-normalizable frequencies.
+Let us now consider special values of non-normalizable frequencies that will lead to a greater number of resonance channels. While general non-normalizable frequencies do not require any such restrictions, we will find it informative to examine these special cases as they possess more symmetry in index/frequency values than the case of equal non-normalizable frequencies, but less than all-normalizable modes. 
 
 \subsubsection{Add to an integer}
 \label{ssec: add to integer}
 
-Choose two of the modes to be non-normalizable with frequencies $\oone$ and $\otwo$ that add to give an integer: $\oone+ \otwo = 2n$ where $n = 1, 2, 3, \ldots$ (note that the $n = 0$ case means that both $\oone$ and $\otwo$ would need to be zero by the positive-frequency requirement and so would not contribute). Furthermore, either frequency need not be an integer and therefore the difference $|\oone - \otwo|$ will, in general, not be an integer. In \S\!~\ref{ssec: intpluschi}, we examine the case when the difference of non-normalizable frequencies is an integer.
+First, we choose two of the modes to be non-normalizable with frequencies $\oone$ and $\otwo$ that add to give an integer: $\oone+ \otwo = 2n$ where $n = 1, 2, 3, \ldots$ (note that the $n = 0$ case means that both $\oone$ and $\otwo$ would need to be zero by the positive-frequency requirement and so would not contribute). Furthermore, either frequency need not be an integer and therefore the difference $|\oone - \otwo|$ will, in general, not be an integer. In \S\!~\ref{ssec: intpluschi}, we examine the case when the difference of non-normalizable frequencies is an integer.
 
 When we consider possible resonance channels, we see that resonances can be grouped into
 \begin{align}
@@ -360,7 +364,7 @@ When we consider possible resonance channels, we see that resonances can be grou
 (++): \; \omega_i + 2n &= \omega_\ell \quad \forall \; \ell \geq n \\
 (+-): \, \omega_i - 2n &=\omega_\ell \quad \forall \; n
 \end{align}
-for any $m^2_{BF} \leq m^2 < 0$. However, for a massless scalar, we have an additional channel
+for any $m^2_{BF} < m^2 < 0$. However, for a massless scalar, we have an additional channel
 \begin{align}
 \label{minus plus}
 (-+): \, -\omega_i + 2n = \omega_\ell \quad \forall \; n \geq \ell + d
@@ -368,7 +372,7 @@ for any $m^2_{BF} \leq m^2 < 0$. However, for a massless scalar, we have an addi
 Adding the channels together, the total source term is
 \begin{align}
 \label{add to integer}
-S_\ell &=   \overline{R}^{(+-)}_{(\ell + n) 1 2 \ell} \, \bar A_1 \bar A_2 \, a_{(\ell + n)} \cos\left( \theta_{(\ell + n)} - 2nt \right) + \overline{T}_{12\ell} \, \bar A_1 \bar A_2 \, a_\ell \cos \left( \theta_\ell \right) \nonumber \\ 
+S_\ell &=   \overline{R}^{(+-)}_{(\ell + n) 1 2 \ell} \, \bar A_1 \bar A_2 \, a_{(\ell + n)} \cos\left( \theta_{(\ell + n)} - 2nt \right) + \overline{T}_{\ell} \, \bar A_1 \bar A_2 \, a_\ell \cos \left( \theta_\ell \right) \nonumber \\ 
 %
 & \quad + \bigg[ \Theta\left( n - \ell - d \right) \overline{R}^{(-+)}_{(n - \ell - d) 1 2 \ell} \ \bar A_1 \bar A_2 \, a_{(n - \ell - d)} \cos \left( \theta_{(n - \ell - d)} - 2nt \right) \bigg]_{m^2 = 0} \nonumber \\
 %
@@ -419,12 +423,12 @@ When $m^2 = 0$, we have contributions from
 Finally, 
 \begin{align}
 \label{T12}
-\overline{T}_{12\ell} &=  \frac{1}{2} \ol^2 \left( \tilde{Z}^+_{11\ell} + \tilde{Z}^+_{22\ell} \right)- \frac{1}{2} \Big[ H_{11\ell\ell} + H_{22\ell\ell} + m^2 \left( V_{\ell 1 1 \ell} + V_{\ell 2 2 \ell} \right) - 2 \ol^2 \left( X_{11\ell\ell} + X_{22\ell\ell} \right)  \nonumber \\
+\overline{T}_{\ell} &=  \frac{1}{2} \ol^2 \left( \tilde{Z}^+_{11\ell} + \tilde{Z}^+_{22\ell} \right)- \frac{1}{2} \Big[ H_{11\ell\ell} + H_{22\ell\ell} + m^2 \left( V_{\ell 1 1 \ell} + V_{\ell 2 2 \ell} \right) - 2 \ol^2 \left( X_{11\ell\ell} + X_{22\ell\ell} \right)  \nonumber \\
 %
 & \quad + 4 \ol^2 \left( \oone^2 P_{\ell \ell 1} + \otwo^2 P_{\ell \ell 2} \right) + 2\oone^2 M_{\ell \ell 1} + 2\otwo^2 M_{\ell \ell 2} + 2m^2 \left( \oone^2 Q_{\ell\ell 1} + \otwo^2 Q_{\ell \ell 2} \right) \Big] \, .
 \end{align}
 
-To examine the effect of the choice of $n$ on the value of $S_\ell$ and $| \Sigma S_\ell |$, figure~\ref{fig:atoi_all_m0_0compare} provides a comparison between the value of the source term for a massless scalar for two choices of $n$.
+In figure~\ref{fig:atoi_all_m-4_0}, we compute the total source term -- modulo the amplitudes $a_i$ and $\bar A_\alpha$ -- for a tachyonic scalar with $n = 2$. Figure~\ref{fig:atoi_all_m0_0compare} provides a comparison between the value of the source term for a massless scalar between two choices of $n$: one that includes contributions from $\overline{R}_{i12\ell}^{(-+)}$ and one that does not..
 
 \begin{figure}
 \centering
