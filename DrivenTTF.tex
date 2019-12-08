@@ -346,9 +346,10 @@ Notice that the terms in the square braces only contribute when $\ob \neq \ol$. 
 
 The renormalization flow equations for two equal, constant, non-normalizable frequencies are then
 \begin{align}
+\label{equal NN flow}
 \frac{2 \ol}{\epsilon^2} \frac{d a_\ell}{dt} =  0 , \quad \text{and} \quad \frac{2 \ol a_\ell}{\epsilon^2} \frac{d b_\ell}{d t} = - \overline{T}_\ell a_\ell \bar A^2_{\ob} \, .
 \end{align}
-In figures~\ref{fig:equal_frequency_m0} and~\ref{fig:equal_frequency_m-1_0}, we evaluate \eqref{S:2NN} for $\ell < 10$ over a variety of $\ob$ values first for a massless scalar, then for a tachyonic scalar.
+Qualitatively, we see that instead of both the amplitude and the phase running with respect to $\tau$, only the phase changes in time. Indeed, \eqref{equal NN flow} tells us that $b_\ell$ is a linear function of $\tau$ with a slope that is determined by the $\mc O(\epsilon^3)$ physics encapsulated by $\overline{T}_\ell$.
 
 \begin{figure}
 \centering
@@ -364,7 +365,7 @@ In figures~\ref{fig:equal_frequency_m0} and~\ref{fig:equal_frequency_m-1_0}, we 
 \label{fig:equal_frequency_m-1_0}
 \end{figure}
 
-Other resonant contributions become possible for more restrictive values of the non-normalizable frequency, such as if $\ob$ is allowed to be an integer. These contributions are denoted by the dots in \eqref{2genNN} and are discussed briefly in Appendix~\ref{more 2NN}.
+Other resonant contributions become possible for more restrictive values of the non-normalizable frequency, such as if $\ob$ is allowed to be an integer. These contributions are denoted by the dots in \eqref{2genNN} and are discussed briefly in Appendix~\ref{more 2NN}. In figures~\ref{fig:equal_frequency_m0} and~\ref{fig:equal_frequency_m-1_0}, we evaluate \eqref{S:2NN} for $\ell < 10$ over a variety of $\ob$ values first for a massless scalar, then for a tachyonic scalar.
 
 \subsection{Special Values of Non-normalizable Frequencies}
 
@@ -581,7 +582,9 @@ In figure~\ref{fig: twoiplusx}, we evaluate both resonant contributions channels
 \section{Discussion}
 \label{sec: discussion}
 
-Discussion goes here.
+We have seen that the inclusion of a time-dependent boundary term in the holographic dual of a quantum quench allows energy to enter the bulk spacetime through coupling between normalizable and non-normalizable modes. The dynamics of the weakly turbulent energy cascades that trigger instability were captured by secular terms at third-order that could not be removed by phase shifts alone. By using the Two-Time Formalism, we have determined the renormalization group flow equations for the slowly varying amplitudes and phases that are tuned as to cancel the secular terms. 
+
+Unlike when only normalizable modes are considered, the introduction of non-normalizable modes results in no naturally vanishing resonance channels for the frequencies considered. Most importantly, the flow equations for $a_\ell$ and $b_\ell$ are now \emph{linear}, since the non-normalizable amplitudes and phases are set by the first-order boundary condition and thus remain constant. In practice, this means the evolution of the system will be different than in the case where only normalizable modes are activated \cite{TTF}, however how exactly the behaviour differs will require further study except in the simplest cases. We have evaluated the expressions for the resonant contributions over a variety of scalar field masses, the range of which is restricted by ensuring the correct boundary behaviour for the second-order metric functions. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -599,19 +602,19 @@ The derivation of the general expression for the $\mc{O}(\epsilon^3)$ source ter
 
 Continuing the expansion of the equations of motion in powers of $\epsilon$, we see that the backreaction between the metric and the scalar field appears at second order in the perturbation,
 \begin{align}
-A_2' = - \mu \nu \left[ (\dot \phi_1 )^2 + (\phi_1')^2 + m^2 \phi_1^2 \sec^2 x \right] + \nu' A_2 / \nu
+A_2' = - \mu \nu \left[ (\dot \phi_1 )^2 + (\phi_1')^2 + m^2 \phi_1^2 \sec^2 x \right] + \nu' A_2 / \nu \, ,
 \end{align}
 which can be directly integrated to give
 \begin{align}
 A_2 = -\nu \int^x_0 dy \, \mu \left( (\dot \phi_1 )^2 + (\phi_1')^2 + m^2 \phi_1^2 \sec^2 x \right) \, .
 \end{align}
-Similarly, the first non-trivial contribution to the lapse (in the boundary time gauge) is
-\begin{align}
-\delta_2 = \int^{\pi/2}_x dy \, \mu \nu \left(  (\dot \phi_1 )^2 + (\phi_1')^2 \right) \, .
-\end{align}
 For convenience, we have also defined the functions
 \begin{align}
 \mu (x) = \left( \tan x \right)^{d-1} \quad \text{and} \quad \nu(x) = (d-1) / \mu ' \, .
+\end{align}
+Similarly, the first non-trivial contribution to the lapse (in the boundary time gauge) is
+\begin{align}
+\delta_2 = \int^{\pi/2}_x dy \, \mu \nu \left(  (\dot \phi_1 )^2 + (\phi_1')^2 \right) \, .
 \end{align}
 
 To aide in evaluating integrals and inner products, it is useful to derive several identities. First, from the equation for the scalar field's time-dependent coefficients $c_i$,
@@ -622,6 +625,7 @@ Next, from the definition of $\hat L$,
 \begin{align}
 \hat L e_j = -\frac{1}{\mu} \left( \mu e'_j \right)' + m^2 \sec^2 x e_j \quad \Rightarrow \quad \left( \mu e'_j \right)' = \mu \left( m^2 \sec^2 x - \omega_j^2 \right) e_j \, .
 \end{align}
+
 By considering the expression $\left( \mu e'_i e_j \right)'$, we see that
 \begin{align}
 \left( \mu e'_i e_j \right) ' = \left(m^2 \sec^2 x - \oi^2 \right) \mu e_i e_j + \mu e'_i e'_j \, ,
@@ -674,13 +678,16 @@ where the forms of X, Y, V, H, B, M, P, and Q are given by
 \begin{align}
 X_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu e'_i e_j e_k e_\ell \\
 Y_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu e'_i e'_j e_k e'_\ell \\
-V_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu e_i e_j e'_k e_\ell \sec^2 x \\
+V_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu e_i e_j e'_k e_\ell \sec^2 x
+\end{align}
+\begin{align}
 H_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu' e'_i e_j e'_k e_\ell \\
 B_{ij\ell} &= \int^{\pi/2}_0 dx \, \mu \nu e'_i e'_j \int^x_0 dy \, \mu e^2_\ell \\
 M_{ij\ell} &= \int^{\pi/2}_0 dx \, \mu \nu' e'_i e_j \int^x_o dy \, \mu e_\ell^2 \\
 P_{ij\ell} &= \int^{\pi/2}_0 dx \, \mu \nu e_i e_j \int^x_0 dy \, \mu e^2_\ell \\
 Q_{ij\ell} &= \int^{\pi/2}_0 dx \, \mu \nu e_i e_j \sec^2 x \int^x_0 dy \, \mu e^2_\ell \, .
 \end{align}
+
 Note that, using integration by parts to remove the derivative from $\nu$ in the definitions of $H_{ijk\ell}$ and $M_{ij\ell}$, we can show that
 \begin{align}
 H_{ijk\ell} &= \oi^2 X_{kij\ell} + \ok^2 X_{ijk\ell} - Y_{ij\ell k}  - Y_{\ell kji}   - m^2 V_{kji\ell} -m^2 V_{ijk\ell} \, , \\
