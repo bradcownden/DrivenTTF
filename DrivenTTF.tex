@@ -193,6 +193,7 @@ We will see that the first two resonances, $(+++)$ and $(+--)$, will non-trivial
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Naturally Vanishing Resonances: $(+++)$ and $(+--)$}
+\label{ssec: zero resonance}
 
 Resonant contributions that come from the condition $\oi + \oj + \ok = \ol$ contribute to the total source term via
 \begin{align}
@@ -315,7 +316,7 @@ As a first case, let us assume that the two non-normalizable modes have equal, c
 When any of these resonance conditions is met, the remaining normalizable mode will have a frequency equal to $\ol$, collapsing all sums over frequencies so that
 \begin{align}
 \label{2genNN}
-S_\ell = \overline{T}_{\ell} \, a_\ell \bar A_{\ob}^2 \cos (\thl) \, ,
+S_\ell = \overline{T}_{\ell} \, a_\ell \bar A_{\ob}^2 \cos (\thl) + \ldots \, ,
 \end{align}
 where the non-normalizable modes their amplitudes $\bar A_{\ob}$ set by the choice of boundary condition. Collecting the appropriate terms in \eqref{general source}, and evaluating the each possible resonance we find that
 \begin{align}
@@ -347,7 +348,7 @@ In figures~\ref{fig:equal_frequency_m0} and~\ref{fig:equal_frequency_m-1_0}, we 
 \label{fig:equal_frequency_m-1_0}
 \end{figure}
 
-Other resonant contributions become possible for more restrictive values of the non-normalizable frequency, such as if $\ob$ is allowed to be an integer. These contributions are not included here, but rather are discussed briefly in Appendix~\ref{more 2NN}.
+Other resonant contributions become possible for more restrictive values of the non-normalizable frequency, such as if $\ob$ is allowed to be an integer. These contributions are denoted by the dots in \eqref{2genNN} and are discussed briefly in Appendix~\ref{more 2NN}.
 
 \subsection{Special Values of Non-normalizable Frequencies}
 
@@ -372,16 +373,16 @@ for any $m^2_{BF} < m^2 < 0$. However, for a massless scalar, we have an additio
 Adding the channels together, the total source term is
 \begin{align}
 \label{add to integer}
-S_\ell &=   \overline{R}^{(+-)}_{(\ell + n) 1 2 \ell} \, \bar A_1 \bar A_2 \, a_{(\ell + n)} \cos\left( \theta_{(\ell + n)} - 2nt \right) + \overline{T}_{\ell} \, \bar A_1 \bar A_2 \, a_\ell \cos \left( \theta_\ell \right) \nonumber \\ 
+S_\ell &=   \overline{R}^{(+-)}_{(\ell + n) \ell} \, \bar A_1 \bar A_2 \, a_{(\ell + n)} \cos\left( \theta_{(\ell + n)} - 2nt \right) + \overline{T}_{\ell} \, \bar A_1 \bar A_2 \, a_\ell \cos \left( \theta_\ell \right) \nonumber \\ 
 %
-& \quad + \bigg[ \Theta\left( n - \ell - d \right) \overline{R}^{(-+)}_{(n - \ell - d) 1 2 \ell} \ \bar A_1 \bar A_2 \, a_{(n - \ell - d)} \cos \left( \theta_{(n - \ell - d)} - 2nt \right) \bigg]_{m^2 = 0} \nonumber \\
+& \quad + \bigg[ \Theta\left( n - \ell - d \right) \overline{R}^{(-+)}_{(n - \ell - d) \ell} \ \bar A_1 \bar A_2 \, a_{(n - \ell - d)} \cos \left( \theta_{(n - \ell - d)} - 2nt \right) \bigg]_{m^2 = 0} \nonumber \\
 %
-& \quad + \Theta \left( \ell - n \right)  \overline{R}^{(++)}_{(\ell - n) 1 2 \ell} \, \bar A_1 \bar A_2 \, a_{(\ell - n)} \cos \left( \theta_{(\ell - n)} + 2nt \right) ,
+& \quad + \Theta \left( \ell - n \right)  \overline{R}^{(++)}_{(\ell - n)\ell} \, \bar A_1 \bar A_2 \, a_{(\ell - n)} \cos \left( \theta_{(\ell - n)} + 2nt \right) ,
 \end{align}
 where the Heaviside step function $\Theta(x)$ enforces the restrictions on the indices in \eqref{all pluses} and \eqref{minus plus}. In the preceding expressions, the sum over all $\oone$, $\otwo$ such that $\oone + \otwo = 2n$ is implied, and only the restrictions on individual frequencies are included. Examining each channel in \eqref{add to integer} individually, we find
 \begin{align}
 \label{R1}
-\overline{R}^{(++)}_{i 1 2 \ell} &= - \frac{1}{4} \sum_{\otwo \neq \ol} \frac{\otwo}{\ol - \otwo} Z^{-}_{i12\ell} - \frac{1}{4} \sum_{\oone \neq \ol} \frac{\oone}{\ol - \oone} Z^{-}_{i21\ell} - \frac{1}{8n} \sum \left( \ol - 2n \right) Z^-_{12i\ell} \nonumber \\
+\overline{R}^{(++)}_{i \ell} &= - \frac{1}{4} \sum_{\otwo \neq \ol} \frac{\otwo}{\ol - \otwo} Z^{-}_{i12\ell} - \frac{1}{4} \sum_{\oone \neq \ol} \frac{\oone}{\ol - \oone} Z^{-}_{i21\ell} - \frac{1}{8n} \sum \left( \ol - 2n \right) Z^-_{12i\ell} \nonumber \\
 %
 & - \frac{1}{4} \sum_{\oi \neq \oone} \frac{1}{\ol - \otwo} \Big[ \oone \left( H_{i12\ell} + m^2 V_{12i\ell} - 2 \otwo^2 X_{i12\ell} \right) + (\ol - 2n) \left( H_{1i2\ell} + m^2 V_{i21\ell} - 2\otwo^2 X_{1i2\ell} \right)\Big] \nonumber \\
 %
@@ -394,7 +395,7 @@ where the Heaviside step function $\Theta(x)$ enforces the restrictions on the i
 The notation $X_{i12\ell}$ corresponds to evaluating $X_{ijk\ell}$ with $\omega_j = \oone$ and $\omega_k = \otwo$. Next, we find that
 \begin{align}
 \label{R2}
-\overline{R}_{i12\ell}^{(+-)} &= - \frac{1}{4} \sum \Big[ \frac{(\ol + 2n)}{2n} Z^-_{12i\ell} + 2 (\ol + 2n) \left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) \nonumber \\
+\overline{R}_{i \ell}^{(+-)} &= - \frac{1}{4} \sum \Big[ \frac{(\ol + 2n)}{2n} Z^-_{12i\ell} + 2 (\ol + 2n) \left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) \nonumber \\
 %
 & -\frac{\oone}{(\ol + \otwo)} \left( H_{i12\ell} + m^2 V_{12i\ell} - 2 \otwo^2 X_{i12\ell} \right) + \frac{(\ol + 2n)}{(\ol + \otwo)} \left( H_{1i2\ell} + m^2 V_{i21\ell} - 2\otwo^2 X_{1i2\ell} \right)  \nonumber \\
 %
@@ -408,7 +409,7 @@ The notation $X_{i12\ell}$ corresponds to evaluating $X_{ijk\ell}$ with $\omega_
 When $m^2 = 0$, we have contributions from
 \begin{align}
 \label{R3}
-\overline{R}_{i12\ell}^{(-+)} &=  \frac{1}{4} \sum_{\otwo \neq \ol} \frac{\otwo}{\ol - \otwo} Z^+_{i12\ell} + \frac{1}{4} \sum_{\oone \neq \ol} \frac{\oone}{\ol - \oone} Z^+_{i21\ell} + \frac{1}{4} \sum_{i \neq \ell} \left( \frac{2n - \ol}{2n} \right) Z^-_{12i\ell} \nonumber \\
+\overline{R}_{i\ell}^{(-+)} &=  \frac{1}{4} \sum_{\otwo \neq \ol} \frac{\otwo}{\ol - \otwo} Z^+_{i12\ell} + \frac{1}{4} \sum_{\oone \neq \ol} \frac{\oone}{\ol - \oone} Z^+_{i21\ell} + \frac{1}{4} \sum_{i \neq \ell} \left( \frac{2n - \ol}{2n} \right) Z^-_{12i\ell} \nonumber \\
 %
 & \quad + \frac{1}{4} \sum_{\oone \neq \oi} \frac{1}{\oi - \oone} \Big[ \oone \left( H_{i12\ell} - 2\otwo^2 X_{i12\ell} \right) - (2n - \ol) \left( H_{1i2\ell} - 2\otwo^2 X_{1i2\ell} \right) \Big] \nonumber \\
 %
@@ -418,7 +419,7 @@ When $m^2 = 0$, we have contributions from
 %
 & \quad - \frac{1}{2} \sum \Big[ (2n - \ol) \left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) - \oone \otwo X_{i12\ell} \Big] .
 \end{align}
-{\it NB.}\, In \eqref{R3} \emph{only}, $\oi = 2i + \Delta^+ = 2i + d$ since this term requires that $m^2 = 0$ to contribute. We maintain the same notation out of convenience, despite the special case.
+{\it NB.}\, In \eqref{R3} only, $\oi = 2i + \Delta^+ = 2i + d$ since this term requires that $m^2 = 0$ to contribute. We maintain the same notation out of convenience, despite the special case.
 
 Finally, 
 \begin{align}
@@ -428,12 +429,12 @@ Finally,
 & \quad + 4 \ol^2 \left( \oone^2 P_{\ell \ell 1} + \otwo^2 P_{\ell \ell 2} \right) + 2\oone^2 M_{\ell \ell 1} + 2\otwo^2 M_{\ell \ell 2} + 2m^2 \left( \oone^2 Q_{\ell\ell 1} + \otwo^2 Q_{\ell \ell 2} \right) \Big] \, .
 \end{align}
 
-In figure~\ref{fig:atoi_all_m-4_0}, we compute the total source term -- modulo the amplitudes $a_i$ and $\bar A_\alpha$ -- for a tachyonic scalar with $n = 2$. Figure~\ref{fig:atoi_all_m0_0compare} provides a comparison between the value of the source term for a massless scalar between two choices of $n$: one that includes contributions from $\overline{R}_{i12\ell}^{(-+)}$ and one that does not..
+In figure~\ref{fig:atoi_all_m-4_0}, we compute the total source term -- modulo the amplitudes $a_i$ and $\bar A_\alpha$ -- for a tachyonic scalar with $n = 2$. Figure~\ref{fig:atoi_all_m0_0compare} provides a comparison between the value of the source term for a massless scalar between two choices of $n$: one that includes contributions from $\overline{R}_{i\ell}^{(-+)}$ and one that does not.
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{./figures/NNAddToInteger_source_n2_m-4_0}
-\caption{{\it Left}: Source term values for a tachyonic scalar with $m^2 = -4.0$ when the frequencies of non-normalizable modes sum to $4.0$. {\it Right}: The absolute value of the sum of the source terms for each choice of $\oone$, $\otwo$.}
+%\includegraphics[width=\textwidth]{./figures/NNAddToInteger_source_n2_m-1_0}
+\caption{{\it Left}: Source term values for a tachyonic scalar with $m^2 = -1.0$ when the frequencies of non-normalizable modes sum to $4.0$. {\it Right}: The absolute value of the sum of the source terms for each choice of $\oone$, $\otwo$.}
 \label{fig:atoi_all_m-4_0}
 \end{figure}
 
@@ -455,19 +456,22 @@ In figure~\ref{fig:atoi_all_m-4_0}, we compute the total source term -- modulo t
 \subsection{Integer Plus $\chi$}
 \label{ssec: intpluschi}
 
-This is a case where the non-normalizable frequencies are non-integer, but differ from integer values by a specific amount. In analogue to the case where all modes are normalizable, we consider setting any two of the non-normalizable frequencies to
+Finally, let us consider the case where the non-normalizable frequencies are non-integer, but differ from integer values by a set amount. In analogue to the case where all modes are normalizable, we consider the non-normalizable frequencies to be shifted away from integer values by
 \begin{align}
+\label{int plus chi}
 \ogam = 2\gamma + \chi \, ,
 \end{align}
-where $m^2$ is \emph{not} chosen to be a special value\footnote{By tuning the value of the mass so that $\chi$ is an integer, additional resonant terms are possible; however, this scenario is addressed in \S\!~\ref{ssec: add to integer}. Furthermore, we do not consider the case when the Breitenlohmer-Freeman bound is saturated. This would place further restrictions on the allowed values of the indices in certain terms since the difference between the frequencies of normalizable and non-normalizable modes could then be zero.}, i.e. $\chi \notin \mathbb{Z}^*$, and $\gamma$ is an integer (greek letters are chosen to differentiate between normalizable modes with integer frequencies that use roman letters). For this choice of non-normalizable frequencies, there are no resonant contributions from the all-plus channel; only when either $\oi + \ogam = \obet - \ol$, or $\oi + \ogam = \obet + \ol$ with $i + \gamma \geq \ell$, are resonant terms present.
+where $\gamma \in \mathbb{Z}^*$ (greek letters are chosen to differentiate these non-normalizable modes from normalizable modes with integer frequencies, which use roman letters). We furthermore limit $\chi$ to be non-integer\footnote{Indeed, for integer values of $\chi$, the sum or difference of two non-normalizable modes could be an integer. This would either be covered by the work in \S\!~\ref{ssec: add to integer}, or be a slight variation of it.}. For this choice of non-normalizable frequencies there are no resonant contributions from the all-plus channel, unlike the naturally vanishing resonance found in \S\!~\ref{ssec: zero resonance}. Only when either $\oi + \ogam = \obet - \ol$, or $\oi + \ogam = \obet + \ol$ with $i + \gamma \geq \ell$, are resonant terms present. Let us examine each case separately.
 
 \subsubsection{$\oi + \ogam = \obet - \ol$}
 \label{sssec: intpluschi1}
 
-This channel contributes secular terms of the form
+When the resonance condition $\oi + \ogam = \obet - \ol$ is met, the contribution to the source term is of the form
 \begin{align}
 \label{intpluschi1 source}
-S_\ell &= \sum_{i \neq \ell} \sum_{\gamma \neq \beta} \overline{S}_{i (i + \gamma + \ell) \gamma \ell} \cos \left( \theta_i - \theta_{(i + \gamma + \ell)} + \theta_\gamma \right) + \sum_\beta \overline{R}_{\beta \ell} \cos \left(\theta_\ell + \theta_\beta - \theta_\beta \right) 
+S_\ell &= \sum_{i \neq \ell} \sum_{\gamma \neq \beta} \overline{S}_{i (i + \gamma + \ell) \gamma \ell} \, a_i \bar A_{(i + \gamma + \ell)} \bar A_\gamma \cos \left( \theta_i - \theta_{(i + \gamma + \ell)} + \theta_\gamma \right) \nonumber \\
+%
+& \qquad \qquad + \sum_\beta \overline{R}_{\beta \ell} \, a_\ell \bar A_\beta^2  \cos \left(\theta_\ell + \theta_\beta - \theta_\beta \right) + \ldots \, ,
 \end{align}
 where 
 \begin{align}
@@ -477,22 +481,24 @@ where
 %
 & + \frac{1}{2} \obet \ogam X_{i\beta\gamma\ell} \left(\frac{\obet}{\oi + \ogam} - \frac{\ogam}{\oi - \obet} - 1 \right) - \frac{1}{4} Z^+_{\beta\gamma i \ell} \left( \frac{\oi}{\oi + \ol}\right)  \nonumber \\
 %
-& + \frac{1}{4} Z^{-}_{i\gamma\beta\ell} \left(  \frac{\obet}{\ol - \obet}  \right) + \frac{1}{4} Z^+_{i\beta\gamma\ell} \left( \frac{\ogam}{\ol + \ogam} \right)
+& + \frac{1}{4} Z^{-}_{i\gamma\beta\ell} \left(  \frac{\obet}{\ol - \obet}  \right) + \frac{1}{4} Z^+_{i\beta\gamma\ell} \left( \frac{\ogam}{\ol + \ogam} \right) \, ,
 \end{align}
 and
 \begin{align}
 \overline{R}_{\beta \ell} &= \frac{1}{4} Z^{-}_{\ell \beta \beta \ell} \left( \frac{\obet}{\ol + \obet} \right) +  \frac{1}{4} Z^+_{\ell \beta \beta \ell} \left(\frac{\obet}{\ol - \obet} \right) + \frac{1}{2} H_{\ell\beta\beta\ell} \left( \frac{\obet^2}{\ol^2 - \obet^2} \right) - \frac{1}{2} H_{\beta \ell\beta\ell} \left( \frac{\ol^2}{\ol^2 - \obet^2} \right) \nonumber \\
 %
-& + X_{\beta\ell\beta\ell} \left( \frac{\ol^4}{\ol^2 - \obet^2} \right)  - \frac{1}{2} \obet^2  X_{\ell\beta\beta\ell} \left(\frac{\ol^2 + \obet^2 }{\ol^2 - \obet^2} \right)  - \frac{1}{2} H_{\ell\beta\beta\ell} + \ol^2 \tilde{Z}^+_{\beta\beta\ell} -2 \obet^2 \ol^2 P_{\ell\ell\beta} - \obet^2 M_{\ell\ell\beta}
+& + X_{\beta\ell\beta\ell} \left( \frac{\ol^4}{\ol^2 - \obet^2} \right)  - \frac{1}{2} \obet^2  X_{\ell\beta\beta\ell} \left(\frac{\ol^2 + \obet^2 }{\ol^2 - \obet^2} \right)  - \frac{1}{2} H_{\ell\beta\beta\ell} + \ol^2 \tilde{Z}^+_{\beta\beta\ell} -2 \obet^2 \ol^2 P_{\ell\ell\beta} - \obet^2 M_{\ell\ell\beta} \, .
 \end{align}
 
 \subsubsection{$\oi + \ogam = \obet + \ol$}
 \label{ssec: intpluschi2}
 
-This channel contributes secular terms of the form
+Similarly, when the resonance condition $\oi + \ogam = \obet + \ol$ is met, the contribution to the source term is
 \begin{align}
 \label{intpluschi2 source}
-S_\ell = \underbrace{\sum_{i \neq \ell} \sum_{\gamma \neq \beta}}_{i + \gamma \geq \ell} \overline{S}_{i (i + \gamma - \ell) \gamma \ell} \cos \left( \theta_i - \theta_{(i + \gamma - \ell)} + \theta_\gamma \right) + \sum_\beta \overline{R}_{\beta\ell} \cos \left( \theta_\ell + \theta_\beta - \theta_\beta \right)
+S_\ell &= \underbrace{\sum_{i \neq \ell} \sum_{\gamma \neq \beta}}_{i + \gamma \geq \ell} \overline{S}_{i (i + \gamma - \ell) \gamma \ell} \, a_i \bar A_{(i + \gamma - \ell)} \bar A_\gamma \cos \left( \theta_i - \theta_{(i + \gamma - \ell)}  + \theta_\gamma \right) \nonumber \\
+%
+& \qquad \qquad + \sum_\beta \overline{R}_{\beta\ell} \, a_\ell \bar A_\beta^2 \cos \left( \theta_\ell + \theta_\beta - \theta_\beta \right) + \ldots \, ,
 \end{align}
 where
 \begin{align}
@@ -503,7 +509,7 @@ where
 & + \frac{1}{2} \obet \ogam X_{i\beta\gamma\ell} \left( \frac{\obet}{\oi - \ogam} - \frac{\ogam}{\oi - \obet} - 1 \right)  + \frac{1}{4} Z^-_{i\gamma\beta\ell} \left( \frac{\obet}{\ol + \obet}\right)  \nonumber \\
 %
 &
-+ \frac{1}{4} Z^+_{i\beta\gamma\ell} \left( \frac{\ogam}{\ol - \ogam}\right) - \frac{1}{4}Z^+_{\beta\gamma i \ell} \left( \frac{\oi}{\oi - \ol} \right) 
++ \frac{1}{4} Z^+_{i\beta\gamma\ell} \left( \frac{\ogam}{\ol - \ogam}\right) - \frac{1}{4}Z^+_{\beta\gamma i \ell} \left( \frac{\oi}{\oi - \ol} \right) \, ,
 \end{align}
 and
 \begin{align}
@@ -519,7 +525,7 @@ and
 	\label{fig: twoiplusx}
 \end{figure}
 
-In figure~\ref{fig: twoiplusx}, we evaluate both resonance channels and plot their contributions for various values of $\chi$. In particular, we examine values $\chi \in \{ \pi/6, \ldots, 7\pi/6 \}$.
+Unlike the case with all normalizable modes where two of the three resonance channels naturally vanished, both of the resonant channels contribute when the non-normalizable modes have frequencies given by \eqref{int plus chi}. In figure~\ref{fig: twoiplusx}, we evaluate both resonant contributions channels and plot their contributions for various values of $\chi$. In particular, we examine the values $\chi \in \{ \pi/6, \ldots, 7\pi/6 \}$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
