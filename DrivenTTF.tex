@@ -46,7 +46,7 @@
 
 \title{Examining Instabilities Due to Driven Scalars in AdS}
 
-\abstract{We extend the study of the non-linear perturbative theory of energy cascades in AdS to include solutions of driven systems, i.e. those with time-dependent sources on the AdS boundary. This necessitates the activation of non-normalizable modes in the massive bulk scalar field, which then couple to the metric and normalizable scalar modes. Analytic expressions for secular terms in the renormalization flow equations are determined for scalars in $AdS_{d+1}$ with any mass, and for various driving functions. We then numerically evaluate these sources for $d=4$ and discuss what role these driven solutions play in the perturbative stability of AdS.}
+\abstract{We extend the study of the non-linear perturbative theory of energy cascades in AdS$_{d+1}$ to include solutions of driven systems, i.e. those with time-dependent sources on the AdS boundary. This necessitates the activation of non-normalizable modes in the linear solution for the massive bulk scalar field, which couple to the metric and normalizable scalar modes. Analytic expressions for secular terms in the renormalization flow equations are determined for scalars with any mass, and for various driving functions. We then numerically evaluate these sources for $d=4$ and discuss what role these driven solutions play in the perturbative stability of AdS.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -61,20 +61,19 @@
 
 \section{Introduction}
 
-Nonlinear instabilities in Anti-de Sitter space have been the subject of examinations on mathematical, gravitational, and holographic grounds. as well as through the holographic description of quantum quenches. Numerical evolution of such systems accounting of the return to equilibrium -- signalled by the formation of a black hole in the dual theory -- requires advanced numerical methods, and has been the subject of numerous studies. While AdS has been shown to be perturbatively unstable to generic data, an interesting array of stable and meta-stable behaviours that resist gravitational collapse have been demonstrated for initial data close to the fundamental AdS modes. Data that exhibits stability over long times (a scale that is often set by the amplitude of the perturbation) exhibits inverse energy cascades that balance the direct cascade of energy to short length scales. This weakly turbulent energy cascade is captured by the third-order dynamics of a perturbative expansion. To describe the balance of inverse and direct energy flow, a second, ``slow time'' is introduced that governs the evolution of the scalar field and, therefore, the metric functions. This is known as the Two-Time Formulation (TTF), and allows for analytical determination of the evolution of the scalar field in the perturbative regime.
+Nonlinear instabilities in Anti-de Sitter space have been the subject of examinations on several grounds, including general stability of maximally-symmetric solutions in general relativity {\bf cite}, the study of secular growth of terms in time-dependent perturbation theories {\bf cite}, as well as through the holographic description of quantum quenches via the AdS/CFT correspondence {\bf cite}. Numerical studies in holographic AdS show that the eventual collapse of a scalar field into a black hole in the bulk (which is dual to the thermalization of the boundary theory) is generic to any non-zero perturbation {\bf cite}, but can be avoided or delayed for certain initial conditions {\bf cite} \cite{1711.00454}. The method of collapse in such systems is described as a weakly turbulent energy cascade to short length scales. These dynamics can be captured by a non-linear perturbation theory at first non-trivial order through the introduction of a second, ``slow time'' that describes energy transfer between the fundamental modes {\bf cite}. This is known as the Two-Time Formalism (TTF) {\bf cite} and, through a renormalization group flow procedure, allows for analytic expressions to be determined that absorb secular terms into renormalized amplitudes and phases {\bf cite}. Therefore, stability against a perturbation of order $\epsilon$ is maintained over time scales of $t \sim \epsilon^{-2}$.
 
-Conventional examinations of perturbative stability using TTF have focused on the reaction of the bulk space to some initial energy perturbation and with an aim to study the process of that . However, the analytic descriptions of holographic pumped solutions -- those with periodic boundary conditions that constantly inject energy into the system -- remains undetermined.  With this in mind, we examine the effect of a time-dependent source on the conformal boundary has on the analytic expressions for the time evolution of the slowly varying integration constants. Quenches in asymptotically AdS spacetime restrict the space of oscillon solutions to those that approach zero near the conformal boundary; however, in a driven solution the energy is pumped into the system through a second class of oscillons: those that approach constant, non-zero values on the boundary. Since these solutions will have non-finite inner products over the space, they are known as non-normalizable solutions. These non-normalizable modes couple to the metric and the normalizable modes to bring energy into the system, where direct and inverse energy cascades proceed over perturbative time scales.
+Conventional examinations of perturbative stability using TTF have focused on the reaction of the bulk space to some initial energy perturbation, and have aimed to study the balance between direct and inverse energy cascades {\bf cite}. However, extensions to include time-dependent perturbations in the quantum theory -- corresponding to a driving term on the boundary of the bulk space that injects energy into system {\bf cite} -- remain unaddressed.  With this in mind, we examine the effects of a time-dependent source on the conformal boundary that couples to the bulk gravity fields. Previous studies of holographic quenches in AdS have used the fact that the linear order solutions to the equations of motion always approach zero near the conformal boundary, thereby limiting the space of solutions to sets of orthogonal polynomials. However, the introduction of a driving term on the boundary means that we must also include a second class of fundamental modes: those that approach constant, non-zero values on the boundary. Since these solutions will have non-finite inner products over the space, they are known as non-normalizable solutions. Non-normalizable modes couple to both the source and the normalizable modes to bring energy into the system, where direct and inverse energy cascades proceed over perturbative time scales.
 
-Following the study of resummation and time-averaging procedures for scalar fields in AdS, we isolate secular terms -- those that grow linearly with time and cannot be absorbed by a phase term -- from those that are averaged out. The terms that persist after time averaging are those that obey certain resonance conditions between the frequencies of the non- and normalizable modes. By evaluating the third-order interactions on resonance, we use a renormalization procedure to absorb resonant contributions into the equations for the slowly varying amplitude and phase variables of the scalar field.
+To capture these dynamics, we expand the fields in powers of a small perturbation and isolate the secular terms that appear at third order in $\epsilon$. Only modes whose frequencies satisfy certain resonance conditions will contribute terms that cannot be absorbed by simple phase shifts. The form of the resonant terms depend on the specific physics of the system, as well as possible symmetries between frequencies. By evaluating the resonant third-order interactions when combinations of normalizable and non-normalizable modes are activated, we can write renormalization flow equations for the slowly varying amplitudes and phases.
 
-This paper is organized as follows: after a brief discussion of how to arrive at the third order source term, we consider the addition of a time-dependent boundary condition for the scalar field. As an exercise, and to provide explicit expressions for our choice of gauge and mass, \S\!~\ref{sec: norm res} examines the resonant contributions in the case of a massive scalar field in AdS$_{d+1}$ with any mass-squared, up to and including the Breitenlohner-Freedman mass \cite{Breitenlohner:1982bm}: $m^2_{BF} \leq m^2$. We recover the natural vanishing of two of the three resonances, and then examine the effects of mass-dependence on the non-vanishing channel. Whenever values are calculated, the choice of $d=4$ is implied as to draw the most direct comparison to existing literature. In section~\S\!~\ref{sec: NNmodes}, we extend the boundary conditions to include a variety of periodic boundary sources that couple to non-normalizable modes in the bulk. For each choice of boundary condition, we derive analytic expressions for applicable resonances and evaluate these expressions for different ranges of scalar field masses. Finally, in~\S\!~\ref{sec: discussion} we discuss the implications of non-vanishing resonances on the competing energy cascades and the perturbative stability of such systems. For completeness, we include details of our derivation of the general source term in an appendix, as well as a complete list of possible resonances and their contributions in the case of activating two, equal frequency non-normalizable modes.
-
-
+This paper is organized as follows: section \S\!~\ref{sec: source terms and BCs} involves a brief discussion of how we arrive at the third order source term, as well as additional considerations due to the time-dependent boundary condition. As an exercise -- and to provide explicit expressions for the resonant contributions when the scalar field has non-zero mass -- \S\!~\ref{sec: norm res} examines the secular terms in the case of a massive scalar field in AdS$_{d+1}$ with any mass-squared, up to and including the Breitenlohner-Freedman mass \cite{Breitenlohner:1982bm}: $m^2_{BF} \leq m^2$. We demonstrate the natural vanishing of two of the three resonances, and then examine the effects of mass-dependence on the non-vanishing channel. Whenever values are calculated, the choice of $d=4$ is implied as to draw the most direct comparison to existing literature. In section~\S\!~\ref{sec: NNmodes}, we extend the boundary conditions to include a variety of periodic boundary sources that couple to non-normalizable modes in the bulk. For each choice of boundary condition, we derive analytic expressions for applicable resonances and evaluate these expressions for different ranges of scalar field masses. Finally, in~\S\!~\ref{sec: discussion} we discuss the implications of non-vanishing resonances on the competing energy cascades, and the implications for the perturbative stability of such systems. For completeness, we include details of our derivation of the general source term in appendix~\ref{app: source term derivation}, as well as a complete list of possible resonance channels and their resulting secular terms in appendix~\ref{more 2NN} for the case of two, equal frequency non-normalizable modes.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Source Terms and Boundary Conditions}
+\label{sec: source terms and BCs}
 
 Let us first consider a minimally coupled, massive scalar field coupled to a spherically symmetric, asymptotically AdS$_{d+1}$ spacetime in global coordinates, whose metric is given by
 \begin{align}
@@ -313,7 +312,7 @@ in the limit of $x \to \pi/2$, and let the scalar field $\phi_1$ be given by a g
 \begin{align}
 \lim_{\tilde x \to 0} A_2 (\tilde x \equiv \pi /2 - x) = \tilde{x}^{-\xi} \left( \frac{2 \tilde{x}^{2+d}}{2 - \xi} - \frac{\tilde{x}^d (1 + \left(\Delta^{-}\right)^2)}{\xi} \right)
 \end{align}
-where we have defined $\xi = \sqrt{d^2 + 4m^2}$. In the massless case, $\xi = d$ and all powers of $\tilde{x}$ are non-negative; thus, the limit is finite. For tachyonic masses of $m^2_{BF} < m^2 < 0$, $0 < \xi < d$ and the limit is again finite. However, for scalars that either saturate the Brietenlohmer-Freedman bound, or have $m^2 > 0$, part of the limit diverges. In order for the boundary to remain asymptotically AdS, counter-terms in the bulk action would be required to cancel such divergences -- a case we will not address presently. Thus, we will restrict our discussion to $m^2_{BF} < m^2 \leq 0$ to avoid these issues. A similar check on the near-boundary behaviour of $\delta_2$ shows that the gauge condition $\delta_2 (t, x=\pi/2)$ remains unchanged by the addition of non-normalizable modes given the same restrictions on the mass of the scalar field. With these restrictions in mind, let us now examine the resonances produced by the activation of non-normalizable modes.
+where we have defined $\xi = \sqrt{d^2 + 4m^2}$. In the massless case, $\xi = d$ and all powers of $\tilde{x}$ are non-negative; thus, the limit is finite. For tachyonic masses of $m^2_{BF} < m^2 < 0$, so $0 < \xi < d$ and the limit is again finite. However, for scalars that either saturate the Breitenlohner-Freedman bound, or have $m^2 > 0$, part of the limit diverges. In order for the boundary to remain asymptotically AdS, counter-terms in the bulk action would be required to cancel such divergences -- a case we will not address presently. Thus, we will restrict our discussion to $m^2_{BF} < m^2 \leq 0$ to avoid these issues. A similar check on the near-boundary behaviour of $\delta_2$ shows that the gauge condition $\delta_2 (t, x=\pi/2)$ remains unchanged by the addition of non-normalizable modes given the same restrictions on the mass of the scalar field. With these restrictions in mind, let us now examine the resonances produced by the activation of non-normalizable modes.
 
 \subsection{Two Non-normalizable Modes with Equal Frequencies}
 \label{ssec: equalNN}
@@ -388,21 +387,22 @@ for any $m^2_{BF} < m^2 < 0$. However, for a massless scalar, we have an additio
 (-+): \, -\omega_i + 2n = \omega_\ell \quad \forall \; n \geq \ell + d
 \end{align}
 Adding the channels together, the total source term is
-\begin{center}
-{\bf Phase for non-normalizable modes?}
-\end{center}
 \begin{align}
 \label{add to integer}
-S_\ell &=   \overline{R}^{(+-)}_{(\ell + n) \ell} \, \bar A_1 \bar A_2 \, a_{(\ell + n)} \cos\left( \theta_{(\ell + n)} - 2nt \right) + \overline{T}_{\ell} \, \bar A_1 \bar A_2 \, a_\ell \cos \left( \theta_\ell \right) \nonumber \\ 
+S_\ell &=  \!\!\!\! \sum_{\oone + \otwo = 2n}\bigg[ \Theta\left( n - \ell - d \right) \overline{R}^{(-+)}_{(n - \ell - d) \ell} \ \bar A_1 \bar A_2 \, a_{(n - \ell - d)} \cos \left( \theta_{(n - \ell - d)} - \theta_1 - \theta_2 \right) \bigg]_{m^2 = 0}  \nonumber \\ 
 %
-& \quad + \bigg[ \Theta\left( n - \ell - d \right) \overline{R}^{(-+)}_{(n - \ell - d) \ell} \ \bar A_1 \bar A_2 \, a_{(n - \ell - d)} \cos \left( \theta_{(n - \ell - d)} - 2nt \right) \bigg]_{m^2 = 0} \nonumber \\
+&  \quad + \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \Theta \left( \ell - n \right)  \overline{R}^{(++)}_{(\ell - n)\ell} \, \bar A_1 \bar A_2 \, a_{(\ell - n)} \cos \left( \theta_{(\ell - n)} + \theta_1 + \theta_2 \right) \nonumber \\
 %
-& \quad + \Theta \left( \ell - n \right)  \overline{R}^{(++)}_{(\ell - n)\ell} \, \bar A_1 \bar A_2 \, a_{(\ell - n)} \cos \left( \theta_{(\ell - n)} + 2nt \right) ,
+& \quad  + \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \overline{R}^{(+-)}_{(\ell + n) \ell} \, \bar A_1 \bar A_2 \, a_{(\ell + n)} \cos\left( \theta_{(\ell + n)} - \theta_1 - \theta_2 \right) \nonumber \\
+%
+& \qquad + \overline{T}_{\ell} \, \bar A_1 \bar A_2 \, a_\ell \cos \left( \theta_\ell \right)
 \end{align}
-where the Heaviside step function $\Theta(x)$ enforces the restrictions on the indices in \eqref{all pluses} and \eqref{minus plus}. In the preceding expressions, the sum over all $\oone$, $\otwo$ such that $\oone + \otwo = 2n$ is implied, and only the restrictions on individual frequencies are included. Examining each channel in \eqref{add to integer} individually, we find
+where the Heaviside step function $\Theta(x)$ enforces the restrictions on the indices in \eqref{all pluses} and \eqref{minus plus} and $\theta_1 = \oone t + b_1$, etc. 
+
+In the following expressions, the sum over all $\oone$, $\otwo$ such that $\oone + \otwo = 2n$ is implied, and only the restrictions on individual frequencies are included. Examining each channel in \eqref{add to integer} individually, we find
 \begin{align}
 \label{R1}
-\overline{R}^{(++)}_{i \ell} &= - \frac{1}{4} \sum_{\otwo \neq \ol} \frac{\otwo}{\ol - \otwo} Z^{-}_{i12\ell} - \frac{1}{4} \sum_{\oone \neq \ol} \frac{\oone}{\ol - \oone} Z^{-}_{i21\ell} - \frac{1}{8n} \sum \left( \ol - 2n \right) Z^-_{12i\ell} \nonumber \\
+\overline{R}^{(++)}_{i \ell} &= - \frac{1}{4} \sum_{\otwo \neq \ol} \frac{\otwo}{\ol - \otwo} Z^{-}_{i12\ell} - \frac{1}{4} \sum_{\oone \neq \ol} \frac{\oone}{\ol - \oone} Z^{-}_{i21\ell} - \frac{1}{8n} \left( \ol - 2n \right) Z^-_{12i\ell} \nonumber \\
 %
 & - \frac{1}{4} \sum_{\oi \neq \oone} \frac{1}{\ol - \otwo} \Big[ \oone \left( H_{i12\ell} + m^2 V_{12i\ell} - 2 \otwo^2 X_{i12\ell} \right) + (\ol - 2n) \left( H_{1i2\ell} + m^2 V_{i21\ell} - 2\otwo^2 X_{1i2\ell} \right)\Big] \nonumber \\
 %
@@ -410,12 +410,12 @@ where the Heaviside step function $\Theta(x)$ enforces the restrictions on the i
 %
 & - \frac{1}{8n} \sum_{\oone \neq \otwo} \Big[ \oone H_{21i\ell} + \otwo H_{12i\ell} + m^2 \left( \oone V_{1i2\ell} + \otwo V_{2i1\ell} \right) - \left( \ol - 2n \right)^2 \left(\oone X_{21i\ell} + \otwo X_{12i\ell} \right) \Big] \nonumber \\
 %
-& + \frac{1}{2} \sum \Big[ \oone\otwo X_{i12\ell} + \left( \ol - 2n \right)\left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) - \frac{m^2}{2} \left( V_{i12\ell} + V_{i21\ell} + V_{12i\ell} \right) \Big]
+& + \frac{1}{2} \Big[ \oone\otwo X_{i12\ell} + \left( \ol - 2n \right)\left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) - \frac{m^2}{2} \left( V_{i12\ell} + V_{i21\ell} + V_{12i\ell} \right) \Big]
 \end{align}
 The notation $X_{i12\ell}$ corresponds to evaluating $X_{ijk\ell}$ with $\omega_j = \oone$ and $\omega_k = \otwo$. Next, we find that
 \begin{align}
 \label{R2}
-\overline{R}_{i \ell}^{(+-)} &= - \frac{1}{4} \sum \Big[ \frac{(\ol + 2n)}{2n} Z^-_{12i\ell} + 2 (\ol + 2n) \left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) \nonumber \\
+\overline{R}_{i \ell}^{(+-)} &= - \frac{1}{4} \Big[ \frac{(\ol + 2n)}{2n} Z^-_{12i\ell} + 2 (\ol + 2n) \left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) \nonumber \\
 %
 & -\frac{\oone}{(\ol + \otwo)} \left( H_{i12\ell} + m^2 V_{12i\ell} - 2 \otwo^2 X_{i12\ell} \right) + \frac{(\ol + 2n)}{(\ol + \otwo)} \left( H_{1i2\ell} + m^2 V_{i21\ell} - 2\otwo^2 X_{1i2\ell} \right)  \nonumber \\
 %
@@ -437,7 +437,7 @@ When $m^2 = 0$, we have contributions from
 %
 & \quad - \frac{1}{8n} \sum_{\oone \neq \otwo} \Big[ \oone H_{21i\ell} + \otwo H_{12i\ell} - 2 \left( 2n - \ol \right)^2 \left(\oone X_{21i\ell} + \otwo X_{12i\ell} \right) \Big] \nonumber \\
 %
-& \quad - \frac{1}{2} \sum \Big[ (2n - \ol) \left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) - \oone \otwo X_{i12\ell} \Big] .
+& \quad - \frac{1}{2} \Big[ (2n - \ol) \left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) - \oone \otwo X_{i12\ell} \Big] .
 \end{align}
 {\it NB.}\, In \eqref{R3} only, $\oi = 2i + \Delta^+ = 2i + d$ since this term requires that $m^2 = 0$ to contribute. We maintain the same notation out of convenience, despite the special case. Finally, 
 \begin{align}
@@ -470,6 +470,22 @@ In figure~\ref{fig:atoi_all_m-4_0}, we compute the total source term -- modulo t
 	\caption{{\it Above:} The value of \eqref{add to integer} as a function of $\ell$ for a massless scalar with values of $\oone$ and $\otwo$ chosen so that $\oone + \otwo = 4$. {\it Below:} The same plot but with values chosen to satisfy $\oone + \otwo = 8$.}
 	\label{fig:atoi_all_m0_0compare}
 \end{figure}
+
+The renormalization flow equations include the sum of all the channels (none of which vanish naturally), and are
+\begin{align}
+\frac{2 \ol}{\epsilon^2} \frac{d a_\ell}{d t} &= - \!\!\!\! \sum_{\oone + \otwo = 2n}\bigg[ \Theta\left( n - \ell - d \right) \overline{R}^{(-+)}_{(n - \ell - d) \ell} \ \bar A_1 \bar A_2 \, a_{(n - \ell - d)} \sin \left( b_{(n - \ell - d)} - b_1 - b_2 \right) \bigg]_{m^2 = 0}  \nonumber \\ 
+%
+& \quad - \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \Theta \left( \ell - n \right)  \overline{R}^{(++)}_{(\ell - n)\ell} \, \bar A_1 \bar A_2 \, a_{(\ell - n)} \sin \left( b_{(\ell - n)} + b_1 + b_2 \right) \nonumber \\
+%
+& \quad  - \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \overline{R}^{(+-)}_{(\ell + n) \ell} \, \bar A_1 \bar A_2 \, a_{(\ell + n)} \sin \left( b_{(\ell + n)} - b_1 - b_2 \right) \, ,
+\end{align}
+\begin{align}
+\frac{2 \ol a_\ell}{\epsilon^2} \frac{d b_\ell}{d t} &= - \!\!\!\! \sum_{\oone + \otwo = 2n}\bigg[ \Theta\left( n - \ell - d \right) \overline{R}^{(-+)}_{(n - \ell - d) \ell} \ \bar A_1 \bar A_2 \, a_{(n - \ell - d)} \cos \left( b_{(n - \ell - d)} - b_1 - b_2 \right) \bigg]_{m^2 = 0}  \nonumber \\ 
+%
+& \quad - \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \Theta \left( \ell - n \right)  \overline{R}^{(++)}_{(\ell - n)\ell} \, \bar A_1 \bar A_2 \, a_{(\ell - n)} \cos \left( b_{(\ell - n)} + b_1 + b_2 \right) \nonumber \\
+%
+& \quad  - \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \overline{R}^{(+-)}_{(\ell + n) \ell} \, \bar A_1 \bar A_2 \, a_{(\ell + n)} \cos \left( b_{(\ell + n)} - b_1 - b_2 \right) - \overline{T}_{\ell} \, \bar A_1 \bar A_2 \, a_\ell \, .
+\end{align}
 
 \subsection{Integer Plus $\chi$}
 \label{ssec: intpluschi}
