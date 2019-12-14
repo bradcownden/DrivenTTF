@@ -67,9 +67,9 @@ Winnipeg, Manitoba R3T 2N2, Canada}
 
 \section{Introduction}
 
-Nonlinear instabilities in Anti-de Sitter space have been the subject of examinations on several grounds \cite{ 1708.05600, 1501.00007}, including general stability of maximally-symmetric solutions in general relativity \cite{1104.3702, 1208.5772}, the study of the growth of secular terms in time-dependent perturbation theories \cite{hep-th/9506161}, as well as through the holographic description of quantum quenches via the AdS/CFT correspondence {\bf cite}. Numerical studies in holographic AdS show that the eventual collapse of a scalar field into a black hole in the bulk (which is dual to the thermalization of the boundary theory) is generic to any finite sized perturbation \cite{1104.3702, 1106.2339, 1108.4539}, but can be avoided or delayed for certain initial conditions \cite{1803.02830} \cite{1711.00454}. The mechanism of collapse in such systems is described as a weakly turbulent energy cascade to short length scales. These dynamics can be captured by a non-linear perturbation theory at first non-trivial order through the introduction of a second, ``slow time'' that describes energy transfer between the fundamental modes {\bf cite}. This is known as the Two-Time Formalism (TTF) {\bf cite} and, through a renormalization group flow procedure, allows for analytic expressions to be determined that absorb secular terms into renormalized amplitudes and phases {\bf cite}. Therefore, stability against a perturbation of order $\epsilon$ is maintained over time scales of $t \sim \epsilon^{-2}$.
+Nonlinear instabilities in Anti-de Sitter space have been the subject of examinations on several grounds \cite{ 1708.05600, 1501.00007}, including general stability of maximally-symmetric solutions in general relativity \cite{1104.3702, 1208.5772}, the study of the growth of secular terms in time-dependent perturbation theories \cite{hep-th/9506161}, as well as through the holographic description of quantum quenches via the AdS/CFT correspondence {\bf cite}. Numerical studies in holographic AdS show that the eventual collapse of a scalar field into a black hole in the bulk (which is dual to the thermalization of the boundary theory) is generic to any finite sized perturbation \cite{1104.3702, 1106.2339, 1108.4539}, but can be avoided or delayed for certain initial conditions \cite{1803.02830, 1711.00454}. The mechanism of collapse in such systems is described as a weakly turbulent energy cascade to short length scales. These dynamics can be captured by a non-linear perturbation theory at first non-trivial order through the introduction of a second, ``slow time'' that describes energy transfer between the fundamental modes {\bf cite}. This is known as the Two-Time Formalism (TTF) \cite{1403.6471} and yields a renormalization flow equation that allows for the absorption of secular terms into renormalized amplitudes and phases {\bf cite}. Therefore, stability against a perturbation of order $\epsilon$ is maintained over time scales of $t \sim \epsilon^{-2}$.
 
-Conventional examinations of perturbative stability using TTF have focused on the reaction of the bulk space to some initial energy perturbation, and have aimed to study the balance between direct and inverse energy cascades {\bf cite}. Furthermore, numerical examinations of ``pumped'' bulk scalars and their implications for the dual theory have also been examined \cite{1712.07637}. However, extensions of the perturbative description to include time-dependent perturbations in the quantum theory -- corresponding to a driving term on the boundary of the bulk space that injects energy into system {\bf cite} -- remain unaddressed.  With this in mind, we examine the effects of a time-dependent source on the conformal boundary that couples to the bulk gravity fields. Previous studies of holographic quenches in AdS have used the fact that the linear order solutions to the equations of motion always approach zero near the conformal boundary, thereby limiting the space of solutions to sets of orthogonal polynomials. However, the introduction of a driving term on the boundary means that we must also include a second class of fundamental modes: those that approach constant, non-zero values on the boundary. Since these solutions will have non-finite inner products over the space, they are known as non-normalizable solutions. Non-normalizable modes couple to both the source and the normalizable modes to bring energy into the system, where direct and inverse energy cascades proceed over perturbative time scales.
+Conventional examinations of perturbative stability using TTF have focused on the reaction of the bulk space to some initial energy perturbation, and have aimed to study the balance between direct and inverse energy cascades {\bf cite}. Furthermore, numerical examinations of ``pumped'' bulk scalars and their implications for the dual theory have also been examined \cite{1712.07637, 1612.07701}. However, extensions of the perturbative description to include time-dependent perturbations in the quantum theory -- corresponding to a driving term on the boundary of the bulk space that injects energy into system {\bf cite} -- remain unaddressed.  With this in mind, we examine the effects of a time-dependent source on the conformal boundary that couples to the bulk gravity fields. Previous studies of holographic quenches in AdS have used the fact that the linear order solutions to the equations of motion always approach zero near the conformal boundary, thereby limiting the space of solutions to sets of orthogonal polynomials. However, the introduction of a driving term on the boundary means that we must also include a second class of fundamental modes: those that approach constant, non-zero values on the boundary. Since these solutions will have non-finite inner products over the space, they are known as non-normalizable solutions. Non-normalizable modes couple to both the source and the normalizable modes to bring energy into the system, where direct and inverse energy cascades proceed over perturbative time scales.
 
 To capture these dynamics, we expand the fields in powers of a small perturbation and isolate the secular terms that appear at third order in $\epsilon$. Only modes whose frequencies satisfy certain resonance conditions will contribute terms that cannot be absorbed by simple phase shifts. The form of the resonant terms depend on the specific physics of the system, as well as possible symmetries between frequencies. By evaluating the resonant third-order interactions when combinations of normalizable and non-normalizable modes are activated, we can write renormalization flow equations for the slowly varying amplitudes and phases.
 
@@ -88,17 +88,18 @@ ds^2 &= \frac{L^2}{\cos(x)} \left( - A(t,x) e^{-2 \delta(t,x)} \, dt^2 + A^{-1}(
 \end{align}
 where $L$ is the AdS curvature (hereafter set to $1$), and the radial coordinate $x \in [0, \pi/2)$. The dynamics of the system come from the Einstein and Klein-Gordon equations:
 \begin{align}
-G_{\mu \nu} + \Lambda g_{\mu \nu} = 8 \pi \left( \nabla_\mu \phi \nabla_\nu \phi - \frac{1}{2} g_{\mu \nu} \left( \nabla^\rho \phi \nabla_\rho \phi + m^2 \phi^2 \right) \right), \quad \text{and} \quad \nabla^2 \phi - m^2 \phi = 0 \, ,
+G_{\mu \nu} + \Lambda g_{\mu \nu} = 8 \pi \left( \nabla_\mu \phi \nabla_\nu \phi - \frac{1}{2} g_{\mu \nu} \left( \nabla^\rho \phi \nabla_\rho \phi + m^2 \phi^2 \right) \right) \quad \text{and} \quad \nabla^2 \phi - m^2 \phi = 0 \, ,
 \end{align}
-with $\Lambda$ as cosmological constant for AdS, $\Lambda = -d(d-1)/2$. 
+with the cosmological constant for AdS given by $\Lambda = -d(d-1)/2$. 
 
 Perturbing around static AdS, the scalar field is expanded in of odd powers of epsilon 
 \begin{align}
-\phi(t,x) = \epsilon \phi_1 + \epsilon^3 \phi_3 + \ldots
+\phi(t,x) = \epsilon \phi_1(t,x) + \epsilon^3 \phi_3 (t,x) + \ldots
 \end{align}
 and the metric functions $A$ and $\delta$ in even powers,
 \begin{align}
-A(t, x) = 1 + A_2 \epsilon^2 + \ldots \quad \text{and} \quad \delta(t, x) = \epsilon^2 \delta_2 + \ldots \, .
+A(t, x) &= 1 + \epsilon^2 A_2 (t,x) + \ldots \\
+\delta(t, x) &= \epsilon^2 \delta_2 (t,x)+ \ldots \, .
 \end{align}
 We choose to work in the boundary gauge, where $\delta(t, \pi/2) = 0$, for reasons that we discuss below.
 
@@ -107,47 +108,66 @@ At linear order, $\phi_1$ satisfies
 \label{phi1 eqn}
 \p^2_t \phi_1 + \hat L \phi_1 = 0 \quad \text{where} \quad \hat{L} \equiv \frac{1}{\mu} (\mu' \p_x + \mu \p^2_x)  - \frac{m^2}{\cos^2(x)} \, ,
 \end{align}
-where $\mu \equiv \tan^{d-1}(x)$. Writing the scalar field as the product of time- and position-dependent parts,
+and $\mu \equiv \tan^{d-1}(x)$. The general solution for \eqref{phi1 eqn} is given by a sum over the basis functions 
 \begin{align}
-\phi_1 (t, x) = \sum_j c_j (t) e_j (x) \, ,
+\phi_1 (t,x) = \sum_I c_I (t) E_I (x) \, ,
 \end{align}
-we find that the basis functions $e_j (x)$ are the solutions to the eigenvalue equation
+with \cite{Nastase}
+\begin{align}
+\label{general basis}
+E_I (x) =  K_I \left( \cos(x) \right)^{\Delta^+} {_2F_1} \left(\frac{\Delta^+ + \omega_I}{2}, \frac{\Delta^+ - \omega_I}{2}, d/2 ; \sin^2 (x) \right) ,
+\end{align}
+solving the eigenvalue equation
 \begin{align}
 \label{eigen eqn}
-\hat L e_j(x) = \omega^2_j e_j(x) .
+\hat L E_I (x) = \omega_I^2 E_I (x)
 \end{align}
-The general solution to this eigenvalue equation involves two types of functions: those that vanish as $x \to \pi / 2$ and therefore are normalizable, and those that approach a finite value on the boundary and are non-normalizable. In many previous works, the dynamics of scalar fields have been studied using exclusively normalizable functions (as is the focus of \S\!~\ref{sec: norm res}); however, we now wish to consider the effects of exciting the second class of basis functions. These driven systems have a time-dependent source term on the boundary that sends energy into bulk space through coupling with non-normalizable modes. Energy is then distributed to both normalizable and non-normalizable scalar modes, as well as the metric functions. 
+for arbitrary frequencies $\omega_I$. The normalization $K_I$ is fixed later on, and $\Delta^\pm$ is defined as the positive (negative) root of $\Delta ( \Delta - d ) = m^2$. Alternatively, \eqref{general basis} can be written in terms of the boundary solutions ${C^+_I \Phi^+_I (x) + C^- _I \Phi^-_I (x)}$, where
+\begin{align}
+\label{phi pm}
+\Phi^\pm_I (x) = \left( \cos x \right)^{\Delta^\pm} {_2F_1}\left( \frac{\Delta^\pm + \omega_I}{2}, \frac{\Delta^\pm - \omega_I}{2}, \Delta^\pm +1 - \frac{d}{2} ; \cos^2 (x) \right)
+\end{align}
+and
+\begin{align}
+C^\pm_I = \frac{\Gamma(d/2) \Gamma(\mp \sqrt{d^2 + 4m^2} / 2)}{\Gamma \left( (\Delta^{\mp} + \omega_I)/2 \right) \Gamma \left( (\Delta^\mp - \omega_I)/2 \right)} \, .
+\end{align}
+As $x \to \pi/2$, \eqref{phi pm} tells us that $\Phi^\pm$ scales as $\Phi^\pm \sim ( \cos x )^{\Delta^{\pm}}$. Thus, $\Phi^+$ is the normalizable mode and $\Phi^-$ is the non-normalizable mode.
 
-Writing out the full solution to \eqref{eigen eqn} involves summing over both normalizable and non-normalizable eigenmodes \cite{0712.0689},
+In many previous works, the dynamics of scalar fields have been studied using exclusively normalizable functions \cite{1508.05474, 1407.6273, 1412.3249, 1508.04943}. To construct a solution of purely normalizable modes, we require that all $C^-_I = 0$, i.e.,~the frequencies are integers given by $\omega_I = \omega_i = 2i + \Delta^+$ with $i \in \mathbb{Z}^+$. Upon simplification, 
+\begin{align}
+\label{normal basis}
+C^+_I \Phi^+_I (x) \equiv e_i(x) &= k_i \left( \cos(x) \right)^{\Delta^+} P_{i}^{(d/2 - 1, \, \Delta^+ - d/2)} \left( \cos (2x) \right) \, ,
+\end{align}
+with the Jacobi polynomials $P^{(a,b)}_n (x)$ providing an orthogonal basis so that ${\langle e_i (x), e_j(x) \rangle = \delta_{i j}}$ when
+\begin{align}
+k_i &= 2 \sqrt{\frac{(i + \Delta^+ /2) \Gamma(i+1) \Gamma(i+\Delta^+)}{\Gamma(i+d/2) \Gamma(i + \Delta^+ - d/2 + 1)}} \, .
+\end{align} 
+
+Since normalizable modes go as $(\cos x )^{\Delta^+}\!\!$ near the boundary of AdS, they are not able to couple to time-dependent terms there. Thus, the presence of a driving term requires that $\phi_1$ include contributions of the form in \eqref{general basis}. We will find it useful when calculating the third-order source term -- which requires a triple  sum over first-order modes -- to be able to turn on or off either type of mode. To that end, we write the first-order part of the scalar field as a sum over both normalizable and non-normalizable modes:
 \begin{align}
 \label{phi1 gen}
-\phi_1(t,x) &= \sum_I a_I \cos \left( \omega_I t + b_I \right) \nonumber \\
-&= \sum_j a_j (t) \cos \left( \oi t + b_i(t) \right) e_j(x) + \sum_\alpha \bar A_\alpha (t) \cos \left( \omega_\alpha t + \bar{B}_\alpha(t) \right) E_\alpha(x) \, .
+\phi_1(t,x) &= \sum_I c_I (t)  E_I (x) \nonumber \\
+&= \sum_j a_j (t) \cos \left( \oi t + b_i(t) \right) e_j(x) + \sum_\alpha \bar A_\alpha \cos \left( \omega_\alpha t + \bar{B}_\alpha \right) E_\alpha(x) \, .
 \end{align}
-The values of $\bar A_\alpha(t)$ and $\bar{B}_\alpha(t)$ are set by the choice of boundary conditions. For example, if the driving term on the boundary is a single, periodic function, then
+
+The values of $\bar A_\alpha$ and $\bar{B}_\alpha$ will be set by the driving term. This informs our choice of working in the boundary gauge; the time $t$ is the proper time measured on the boundary and as well as the time scale of oscillations from the driving term. In the simplest example, the driving term on the boundary is a single, periodic function
 \begin{align}
 \label{BC}
 \phi_1(t,\pi/2) = \mc A \cos \ob t \, .
 \end{align}
-Extending the boundary condition to include the addition of two driving terms -- or a more general sum over Fourier modes -- would set further $\bar A_\alpha$ values. 
-
-The normalizable modes have eigenfunctions given by
+In this case, \eqref{phi1 gen} collapses into a single term so that
 \begin{align}
-e_j(x) &= k_j \left( \cos(x) \right)^{\Delta^+} P_{j}^{(d/2 - 1, \, \Delta^+ - d/2)} \left( \cos (2x) \right) \\
-k_j &= 2 \sqrt{\frac{(j + \Delta^+ /2) \Gamma(j+1) \Gamma(j+\Delta^+)}{\Gamma(j+d/2) \Gamma(j + \Delta^+ - d/2 + 1)}} \, ,
-\end{align} 
-with fully resonant eigenvalues $\omega_j = 2j + \Delta^+$ with $j \in \mathbb{Z}^*$. We define $\Delta^+$ as the positive root of $\Delta ( \Delta - d ) = m^2$. This resonant spectrum is responsible for the secular growth of terms at third order, which must be controlled the secular term resummation procedure described below. On the other hand, the non-normalizable eigenfunctions have arbitrary frequencies $\omega_\alpha$, and are given by
-\begin{align}
-\label{general basis}
-E_\alpha (x) =  \left( \cos(x) \right)^{\Delta_+} {_2F_1} \left(\frac{\Delta_+ + \omega_\alpha}{2}, \frac{\Delta_+ - \omega_\alpha}{2}, d/2 ; \sin^2 (x) \right) \, .
+\sum_\alpha \bar A_\alpha \cos (\omega_\alpha t + \bar B_\alpha )  E_{\alpha} (\pi / 2) = \mc A \cos \ob t \:\: \Rightarrow \:\: \bar A_{\ob} \, E_{\ob} (\pi / 2) = \mc A \quad \text{and} \quad \bar B_{\ob} = 0 \, .
 \end{align}
+Generalizing the boundary condition to a sum over Fourier modes would set further $\bar A_\alpha$ and $\bar B_\alpha$ to non-zero values. 
 
 Without specifying whether frequencies or basis functions have been chosen to be either normalizable or non-normalizable for the time being, we can show that the $\mc O(\epsilon^3)$ part of the scalar field satisfies the equation
 \begin{align}
 \label{3rd order}
 \ddot \phi_3 + \hat L \phi_3 = S = 2 (A_2 - \delta_2) \ddot \phi_1 + (\dot A_2 - \dot \delta_2) \dot\phi_1 + (A_2' -\delta_2' )\phi_1' + m^2 A_2 \phi_1 \sec^2 x \, .
 \end{align}
-Following the steps outlined in Appendix~\ref{app: source term derivation}, we project \eqref{3rd order} onto the basis of normalizable modes and, employing a ubiquitous time-dependent solution ${c_I(t) = a_I \cos (\omega_I t + b_I) = a_I \cos\theta_I}$ with $I \in \{i, \alpha \}$, we find that the source term for the $\ell^{\rm th}$ normalizable mode is
+Following the steps outlined in Appendix~\ref{app: source term derivation}, we project \eqref{3rd order} onto the basis of normalizable modes since all non-normalizable contributions have been fixed by the $\mc O(\epsilon)$ boundary condition. Employing a ubiquitous time-dependent solution ${c_I(t) = a_I \cos (\omega_I t + b_I) = a_I \cos\theta_I}$ with $I \in \{i, \alpha \}$, we find that the source term for the $\ell^{\rm th}$ mode is
+
 \begin{align}
 \label{general source}
 S_\ell &=\frac{1}{4} \sum_{\substack{I,J,K \\ K \neq \ell}}^\infty \frac{a_I a_J a_K \omega_K}{\ol^2 - \omega_K^2} \bigg[ Z^-_{IJK\ell} (\omega_I + \omega_J - 2\omega_K) \cos (\theta_I + \theta_J - \theta_K) \nonumber \\
@@ -176,11 +196,11 @@ S_\ell &=\frac{1}{4} \sum_{\substack{I,J,K \\ K \neq \ell}}^\infty \frac{a_I a_J
 \end{align} 
 Note that sums and restrictions on indices must be interpreted as sums and restrictions on \emph{frequencies} when any of the modes is non-normalizable, since $\omega_\alpha \neq 2 \alpha + \Delta^+$ in general.
 
-As mentioned above, the growth of resonant terms with time, i.e. secular growth, at $\mc O(\epsilon^3)$ can be absorbed into the time-dependent part of the scalar field at that order \cite{hep-th/9506161}. Thus, \eqref{3rd order} tells us that
+As mentioned above, the growth of resonant terms with time, i.e.~secular growth, at $\mc O(\epsilon^3)$ can be absorbed into the time-dependent part of the scalar field at that order \cite{hep-th/9506161}. Thus, \eqref{3rd order} tells us that
 \begin{align}
 \ddot c^{(3)}_\ell (t) + \ol^2 c^{(3)}_\ell(t) = S^{(3)}_\ell \cos \left( \ol t + \varphi_\ell \right) \, ,
 \end{align}
-where $S^{(3)}_\ell$ is a polynomial in $a_i$ determined by evaluating the resonant contributions from \eqref{general source}, and $\varphi_\ell$ is some combination of the $b_i$. To obtain the renormalization flow equations, we can rewrite the amplitudes and phases in terms of renormalized integration constants that exactly cancel the secular terms at each moment. Doing so yields the renormalization flow equations for the renormalized constants~\cite{1407.6273}
+where $S^{(3)}_\ell$ is a polynomial in $a_I$ determined by evaluating the resonant contributions from \eqref{general source}, and $\varphi_\ell$ is some combination of the $b_I$. To obtain the renormalization flow equations, we can rewrite the amplitudes and phases in terms of renormalized integration constants that exactly cancel the secular terms at each instant. Doing so yields the renormalization flow equations for the renormalized constants~\cite{1407.6273}
 \begin{align}
 \label{RN flow 1}
 \frac{2 \ol}{\epsilon^2} \frac{d a_\ell}{d t} &= - S^{(3)}_\ell \sin \left( b_\ell - \varphi_\ell \right) \, , \\
@@ -189,19 +209,19 @@ where $S^{(3)}_\ell$ is a polynomial in $a_i$ determined by evaluating the reson
 \end{align}
 Note that the amplitudes and phases evolve with respect to the ``slow time'' $\tau = \epsilon^2 t$. In practice, once these flow equations can be written down the perturbative evolution of the system is determined up to a timescale of $t \sim \epsilon^{-2}$.
 
-Let us now examine the exact form of $S^{(3)}_\ell$ for the case of a massive scalar field. As an exercise, we first derive the resonant contributions when the boundary source is zero, and therefore only normalizable modes are present. These results agree numerically with previous work on normalizable modes for massless scalars in the interior time gauge $(\delta(t, 0) = 0)$ \cite{1810.04753}. The definitions of the integral functions $Z$, $H$, $X$, etc. differ slightly from other works -- in part because of the gauge choice, and in part because of a desire to separate out mass-dependent terms -- and so are given explicitly in Appendix~\ref{app: source term derivation}.
+To determine the exact form of $S^{(3)}_\ell$ , we must consider all combinations of the frequencies ${\{ \omega_I, \omega_J, \omega_K\}}$ that satisfy the resonance condition
+\begin{align}
+\label{gen res}
+\omega_I \pm \omega_J \pm \omega_K = \pm \ol \, .
+\end{align}
+As an exercise, we first derive the resonant contributions when the boundary source is zero, and therefore only normalizable modes are present. These results agree numerically with previous work on normalizable modes for massless scalars in the interior time gauge ${(\delta(t, 0) = 0)}$ \cite{1810.04753}. The definitions of the functions $Z$, $H$, $X$, etc.~in~\eqref{general source} differ slightly from other works -- in part because of the gauge choice, and in part because of a desire to separate out mass-dependent terms -- and so are given explicitly in Appendix~\ref{app: source term derivation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Resonances From Normalizable Solutions}
 \label{sec: norm res}
-Consider the case where each of the basis functions are given by normalizable solutions. Resonances occur for the following combination of normalizable frequencies: 
-\begin{align}
-\label{gen res}
-\oi \pm \oj \pm \ok = \pm \ol \,
-\end{align}
-which can be separated into the three distinct cases
+Consider the case where each of the basis functions are given by normalizable solutions. The possible combinations of frequencies that satisfy \eqref{gen res} can be separated into the three distinct cases:
 \begin{align}
 \oi + \oj + \ok &= \ol \qquad (+++) \\
 \oi - \oj - \ok &= \ol \qquad (+--) \\
@@ -328,7 +348,7 @@ where we have defined $\xi = \sqrt{d^2 + 4m^2}$. In the massless case, $\xi = d$
 \subsection{Two Non-normalizable Modes with Equal Frequencies}
 \label{ssec: equalNN}
 
-As a first case, let us assume that the two non-normalizable modes have equal, constant, and arbitrary frequencies, $\ob$. Applying the time-averaging procedure to the source $S_\ell$ once again eliminates all contributions except those that satisfy \eqref{gen res}. We are now free to choose any one of $\{\omega_i, \omega_j, \ok\}$ to be normalizable and consider when the resonance condition is satisfied. In particular, we find that the following combinations are resonant:
+As a first case, let us assume that the two non-normalizable modes have equal, constant, and arbitrary frequencies, $\ob$ (and therefore amplitudes $\bar A_{\ob}$). The resonance condition \eqref{gen res} will only be satisfied when one of $\{\omega_I, \omega_I, \omega_K \}$ are normalizable. In particular, we find that the following combinations are resonant:
 \begin{align}
 \label{gen nn res 1}
 \oi - \oj + \ok - \ol &= 0 \qquad \Rightarrow \qquad \text{either $\oi$ or $\ok$ is normalizable} \\
@@ -507,7 +527,7 @@ Finally, let us consider the case where the non-normalizable frequencies are non
 \label{int plus chi}
 \ogam = 2\gamma + \chi \, ,
 \end{align}
-where $\gamma \in \mathbb{Z}^*$ (greek letters are chosen to differentiate these non-normalizable modes from normalizable modes with integer frequencies, which use roman letters). We furthermore limit $\chi$ to be non-integer\footnote{Indeed, for integer values of $\chi$, the sum or difference of two non-normalizable modes could be an integer. This would either be covered by the work in \S\!~\ref{ssec: add to integer}, or be a slight variation of it.} and set $m^2 = 0$ throughout. For this choice of non-normalizable frequencies there are no resonant contributions from the all-plus channel, unlike the naturally vanishing resonance found in \S\!~\ref{ssec: zero resonance}. Only when either $\oi + \ogam = \obet - \ol$, or $\oi + \ogam = \obet + \ol$ with $i + \gamma \geq \ell$, are resonant terms present. Let us examine each case separately.
+where $\gamma \in \mathbb{Z}^+$ (greek letters are chosen to differentiate these non-normalizable modes from normalizable modes with integer frequencies, which use roman letters). We furthermore limit $\chi$ to be non-integer\footnote{Indeed, for integer values of $\chi$, the sum or difference of two non-normalizable modes could be an integer. This would either be covered by the work in \S\!~\ref{ssec: add to integer}, or be a slight variation of it.} and set $m^2 = 0$ throughout. For this choice of non-normalizable frequencies there are no resonant contributions from the all-plus channel, unlike the naturally vanishing resonance found in \S\!~\ref{ssec: zero resonance}. Only when either $\oi + \ogam = \obet - \ol$, or $\oi + \ogam = \obet + \ol$ with $i + \gamma \geq \ell$, are resonant terms present. Let us examine each case separately.
 
 \subsubsection{$\oi + \ogam = \obet - \ol$}
 \label{sssec: intpluschi1}
@@ -584,7 +604,7 @@ Unlike the case with all normalizable modes where two of the three resonance cha
 %
 & \qquad \qquad -  \underbrace{\sum_{i \neq \ell} \sum_{\gamma \neq \beta}}_{i + \gamma \geq \ell} \overline{S}^{(2)}_{i (i + \gamma - \ell) \gamma \ell} \, a_i \bar A_{(i + \gamma - \ell)} \bar A_\gamma \cos \left( b_\ell + \bar B_{(i+\gamma - \ell)} - b_i - \bar B_\gamma \right)
 \end{align}
-In figure~\ref{fig: twoiplusx}, we evaluate both resonant contributions channels and plot their contributions for various values of $\chi$. In particular, we examine the values $\chi \in \{ \pi/6, \ldots, 7\pi/6 \}$. Again, there is no indication of any channel vanishing naturally. Interestingly, both sources demonstrate anomalous behaviour when $\chi \sim 2$ for reasons that are unclear. The source term \eqref{intpluschi1 source} is generally more positive for larger $\chi$ except for $\chi = 2 \pi / 3$, which is translated negatively with respect to the source terms produced by other $\chi$ values. Again, when \eqref{intpluschi2 source} is evaluated for $\chi = 2 \pi/3$, the result differs significantly from other choices of $\chi$: seemingly reflected about the $x$~axis with respect to other results. The significance of the choice $\chi = 2\pi / 3$ is puzzling since all other relevant scales in the problem are integer based. 
+In figure~\ref{fig: twoiplusx}, we evaluate both resonant contributions channels and plot their contributions for various values of $\chi$. In particular, we examine the values $\chi \in \{ \pi/6, \ldots, 7\pi/6 \}$. Again, there is no indication of any channel vanishing naturally. Interestingly, both sources demonstrate anomalous behaviour when $\chi \sim 2$ for reasons that are not immediately clear. The source term \eqref{intpluschi1 source} is generally more positive for larger $\chi$ except for $\chi = 2 \pi / 3$, which is translated negatively with respect to the source terms produced by other $\chi$ values. Again, when \eqref{intpluschi2 source} is evaluated for $\chi = 2 \pi/3$, the result differs significantly from other choices of $\chi$: seemingly reflected about the $x$~axis with respect to other results. The significance of the choice $\chi = 2\pi / 3 \sim d / 2$ is possibly explained by the non-normalizable modes being \emph{nearly} equal to the normalizable ones. In this event, $S_\ell$ would contain additional terms, such as those present in \S~\!\ref{sec: norm res}. The departure of the $\chi = 2\pi/3$ data from other data sets is perhaps a signal of these missing resonances.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -708,10 +728,10 @@ Finally, using the solution for the time-dependent coefficients, $c_i(t) = a_i(t
 Let us return to the case of two, equal, non-normalizable modes with frequency $\ob$. Within the space of resonant frequency values, there are frequencies that happen to satisfy $\ob = \ol$ numerically and may produce extra resonances subject to restrictions on the normalizable frequency. These instances were excluded from the discussion in \S\!~\ref{ssec: equalNN}, and we address them here. When considering special integer values of $\ob$ each choice of $\ob$ below will contribute a $\overline T$-type term to the total source:
 \begin{align}
 \label{gen NN res 1}
-\overline{T}^{(1)}_{i}: \quad \omega_i &= \ol + 2\ob \quad \forall \; \ob \in \mathbb{Z}^* \\
-\overline{T}^{(2)}_{i}: \quad \omega_i &= \ol - 2\ob \quad \forall \; \ob \in \mathbb{Z}^* \; \text{such that } \ell \geq \ob \\
+\overline{T}^{(1)}_{i}: \quad \omega_i &= \ol + 2\ob \quad \forall \; \ob \in \mathbb{Z}^+ \\
+\overline{T}^{(2)}_{i}: \quad \omega_i &= \ol - 2\ob \quad \forall \; \ob \in \mathbb{Z}^+ \; \text{such that } \ell \geq \ob \\
 \label{gen NN res 2}
-\overline{T}^{(3)}_{i}: \quad \omega_i &= 2\ob - \ol \quad \forall \; \ob \in \mathbb{Z}^* \; \text{such that } \ob \leq \ell + \Delta^+ \, ,
+\overline{T}^{(3)}_{i}: \quad \omega_i &= 2\ob - \ol \quad \forall \; \ob \in \mathbb{Z}^+ \; \text{such that } \ob \leq \ell + \Delta^+ \, ,
 \end{align}
 with $\omega_i \neq \omega_\ell$ in each case. These special values contribute to the case of two, equal non-normalizable modes via
 \begin{align}
@@ -749,7 +769,7 @@ and
 %
 &  - \ob \oi X_{\ob\ob i\ell} - \frac{m^2}{2} V_{i\ob\ob\ell} \, .
 \end{align}
-
+These resonance channels can then be added into the right hand side of the equation for $d a_\ell / d t$ in \eqref{equal NN flow}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
