@@ -16,6 +16,8 @@
 \usepackage{xfrac}
 \usepackage{empheq}
 \usepackage{caption, subcaption}
+\usepackage{parskip}
+
 
 \newcommand{\p}{\partial}
 \newcommand{\oi}{\omega_i}
@@ -51,8 +53,9 @@
 Winnipeg, Manitoba R3T 2N2, Canada}
 \emailAdd{cowndenb@myumanitoba.ca}
 
-\abstract{We extend the study of the non-linear perturbative theory of energy cascades in AdS$_{d+1}$ to include solutions of driven systems, i.e.~those with time-dependent sources on the AdS boundary. This necessitates the activation of non-normalizable modes in the linear solution for the massive bulk scalar field, which couple to the metric and normalizable scalar modes. We determine analytic expressions for secular terms in the renormalization flow equations for any mass, and for various driving functions. Finally, we numerically evaluate these sources for $d=4$ and discuss what role these driven solutions play in the perturbative stability of AdS.}
+\abstract{We extend the study of the non-linear perturbative theory of weakly turbulent energy cascades in AdS$_{d+1}$ to include solutions of driven systems, i.e.~those with time-dependent sources on the AdS boundary. This necessitates the activation of non-normalizable modes in the linear solution for the massive bulk scalar field, which couple to the metric and normalizable scalar modes. We determine analytic expressions for secular terms in the renormalization flow equations for any mass, and for various driving functions. Finally, we numerically evaluate these sources for $d=4$ and discuss what role these driven solutions play in the perturbative stability of AdS.}
 
+\keywords{AdS Instability, Gauge/Gravity Duality, Holographic Quantum Quenches}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -67,12 +70,10 @@ Winnipeg, Manitoba R3T 2N2, Canada}
 
 \section{Introduction}
 
-Nonlinear instabilities in Anti-de Sitter space have been the subject of examinations on several grounds in addition to  the holographic description of quantum quenches via the AdS/CFT correspondence \cite{ 1708.05600, 1501.00007}, including general stability of maximally-symmetric solutions in general relativity \cite{1104.3702, 1208.5772, 1706.06101}, and the study of the growth of secular terms in time-dependent perturbation theories \cite{hep-th/9506161, 1305.4117}. Numerical studies in holographic AdS show that the eventual collapse of a scalar field into a black hole in the bulk (which is dual to the thermalization of the boundary theory) is generic to any finite sized perturbation \cite{1104.3702, 1106.2339, 1108.4539}, but can be avoided or delayed for certain initial conditions \cite{1803.02830, 1711.00454, 1706.07413, 1508.02709}. The mechanism of collapse in such systems is described as a weakly turbulent energy cascade to short length scales. These dynamics can be captured by a non-linear perturbation theory at first non-trivial order through the introduction of a second, ``slow time'' that describes energy transfer between the fundamental modes \cite{1403.6471}. This is known as the Two-Time Formalism (TTF) and yields a renormalization flow equation that allows for the absorption of secular terms into renormalized amplitudes and phases \cite{1508.05474, 1407.6273, 1412.3249, 1508.04943}. Therefore, stability against a perturbation of order $\epsilon$ is maintained over time scales of $t \sim \epsilon^{-2}$.
+Nonlinear instabilities in Anti-de Sitter space have been the subject of examinations on several grounds in addition to  the holographic description of quantum quenches via the AdS/CFT correspondence \cite{ 1708.05600, 1501.00007}, including general stability of maximally-symmetric solutions in general relativity \cite{1104.3702, 1208.5772, 1706.06101}, and the study of the growth of secular terms in time-dependent perturbation theories \cite{hep-th/9506161, 1305.4117}. Numerical studies in holographic AdS show that the eventual collapse of a scalar field into a black hole in the bulk (which is dual to the thermalization of the boundary theory) is generic to any finite sized perturbation \cite{1104.3702, 1106.2339, 1108.4539}, but can be avoided or delayed for certain initial conditions \cite{1803.02830, 1711.00454, 1706.07413, 1508.02709}. The mechanism of collapse in such systems is described as a weakly turbulent energy cascade to short length scales. These dynamics can be captured by a non-linear perturbation theory at first non-trivial order through the introduction of a second, ``slow time'' that describes energy transfer between the fundamental modes. This is known as the Two-Time Formalism (TTF) \cite{1403.6471} and yields a renormalization flow equation that allows for the absorption of secular terms into renormalized amplitudes and phases \cite{1508.05474, 1407.6273, 1412.3249, 1508.04943}. Therefore, stability against a perturbation of order $\epsilon$ is maintained over time scales of $t \sim \epsilon^{-2}$.
 
-Conventional examinations of perturbative stability using TTF have focused on the reaction of the bulk space to some initial energy perturbation, and have aimed to study the balance between direct and inverse energy cascades \cite{1606.02712, 1612.04758, 1602.05859, 1507.08261, 1607.08094}. Furthermore, numerical examinations of ``pumped'' bulk scalars and their implications for the dual theory have also been examined \cite{1410.6201, 1712.07637, 1612.07701, 1502.05726, 1706.02438}. However, extensions of the perturbative description to include time-dependent sources -- corresponding to a driving term on the boundary of the bulk space -- remain unaddressed. The interpretation of this driving term through the AdS/CFT correspondence is the addition of a source $s(t)$ in the CFT. Together with the more familiar role played by the scalar field as a vev for an operator in the CFT, we are able to calculate the change in energy density via the Ward identity,
-\begin{align}
-\p_t \langle T_{tt} \rangle = - \partial_t s(t) \langle \mc O_\phi \rangle \, .
-\end{align}
+Conventional examinations of perturbative stability using TTF have focused on the reaction of the bulk space to some initial energy perturbation, and have aimed to study the balance between direct and inverse energy cascades \cite{1606.02712, 1612.04758, 1602.05859, 1507.08261, 1607.08094}. Furthermore, numerical examinations of ``pumped'' scalars and their implications for thermalization of the dual theory have also been examined \cite{1410.6201, 1712.07637, 1612.07701, 1502.05726, 1706.02438}. However, extensions of the perturbative description to include time-dependent sources -- corresponding to a driving term on the boundary of the bulk space -- remain unaddressed. 
+
 With this in mind, we examine the effects that a time-dependent source on the conformal boundary has on the non-linear perturbative theory. The introduction of a driving term on the boundary means that we must include a second class of fundamental modes with arbitrary frequencies. Since these solutions will have non-finite inner products over the bulk space, they are known as non-normalizable. Non-normalizable modes couple to both the source on the boundary and the regular normalizable modes to bring energy into the system, where direct and inverse energy cascades proceed over perturbative time scales.
 
 To capture these dynamics, we expand the fields in powers of a small perturbation and isolate the secular terms that appear at third order in $\epsilon$. Only modes whose frequencies satisfy certain resonance conditions will contribute terms that cannot be absorbed by simple frequency shifts. The form of the resonant terms depend on the specific physics of the system, as well as possible symmetries between frequencies. By evaluating the resonant third-order interactions when combinations of normalizable and non-normalizable modes are activated, we can write renormalization flow equations for the slowly varying amplitudes and phases.
@@ -112,42 +113,31 @@ At linear order, $\phi_1$ satisfies
 \label{phi1 eqn}
 \p^2_t \phi_1 + \hat L \phi_1 = 0 \quad \text{where} \quad \hat{L} \equiv \frac{1}{\mu} (\mu' \p_x + \mu \p^2_x)  - \frac{m^2}{\cos^2(x)} \, ,
 \end{align}
-and $\mu \equiv \tan^{d-1}(x)$. The general solution for \eqref{phi1 eqn} is given by a sum over the basis functions 
-\begin{align}
-\phi_1 (t,x) = \sum_I c_I (t) E_I (x) \, ,
-\end{align}
-with \cite{Nastase}
+and $\mu \equiv \tan^{d-1}(x)$. The general solution for \eqref{phi1 eqn} in the bulk is a linear combination of the eigenfunctions $\Phi^\pm_I (x)$, whose frequencies $\omega_I$ are arbitrary. Examining each function's scaling when $x \to \pi/2$,  we see that $\Phi_I^+$ is normalizable and goes as $(\cos x )^{\Delta^+}$\!\! while $\Phi_I^-$ is non-normalizable and goes as $( \cos x )^{\Delta^-}$. We denote the positive (negative) root of $\Delta ( \Delta - d ) = m^2$ as $\Delta^+$\!\! ($\Delta^-$). 
+
+For an arbitrary frequency, requiring regularity at the origin means that we must choose the linear combination \cite{Nastase}
 \begin{align}
 \label{general basis}
 E_I (x) =  K_I \left( \cos(x) \right)^{\Delta^+} {_2F_1} \left(\frac{\Delta^+ + \omega_I}{2}, \frac{\Delta^+ - \omega_I}{2}, d/2 ; \sin^2 (x) \right) ,
 \end{align}
-solving the eigenvalue equation
+that solves the eigenvalue equation
 \begin{align}
 \label{eigen eqn}
-\hat L E_I (x) = \omega_I^2 E_I (x)
+\hat L E_I (x) = \omega_I^2 E_I (x) \, .
 \end{align}
-for arbitrary frequencies $\omega_I$. The normalization $K_I$ is fixed later on, and $\Delta^\pm$ is defined as the positive (negative) root of $\Delta ( \Delta - d ) = m^2$. Alternatively, \eqref{general basis} can be written in terms of the boundary solutions ${C^+_I \Phi^+_I (x) + C^- _I \Phi^-_I (x)}$, where
-\begin{align}
-\label{phi pm}
-\Phi^\pm_I (x) = \left( \cos x \right)^{\Delta^\pm} {_2F_1}\left( \frac{\Delta^\pm + \omega_I}{2}, \frac{\Delta^\pm - \omega_I}{2}, \Delta^\pm +1 - \frac{d}{2} ; \cos^2 (x) \right)
-\end{align}
-and
-\begin{align}
-C^\pm_I = \frac{\Gamma(d/2) \Gamma(\mp \sqrt{d^2 + 4m^2} / 2)}{\Gamma \left( (\Delta^{\mp} + \omega_I)/2 \right) \Gamma \left( (\Delta^\mp - \omega_I)/2 \right)} \, .
-\end{align}
-As $x \to \pi/2$, \eqref{phi pm} tells us that $\Phi^\pm$ scales as $\Phi^\pm \sim ( \cos x )^{\Delta^{\pm}}$. Thus, $\Phi^+$ is the normalizable mode and $\Phi^-$ is the non-normalizable mode.
 
-In many previous works, the dynamics of scalar fields have been studied using exclusively normalizable functions. To construct a solution of purely normalizable modes, we require that all $C^-_I = 0$, i.e.,~the frequencies are integers given by $\omega_I = \omega_i = 2i + \Delta^+$ with $i \in \mathbb{Z}^+$. Upon simplification, 
+For special integer values of the frequencies $\omega_I = \omega_i = 2i + \Delta^+$ with $i \in \mathbb{Z}^+$, the functions $\Phi^\pm_i (x)$ are individually regular at the origin. In this case, the normalizable part of the solution in \eqref{general basis} can be written as
 \begin{align}
 \label{normal basis}
-C^+_I \Phi^+_I (x) \equiv e_i(x) &= k_i \left( \cos(x) \right)^{\Delta^+} P_{i}^{(d/2 - 1, \, \Delta^+ - d/2)} \left( \cos (2x) \right) \, ,
+E_I (x) = e_i(x) &= k_i \left( \cos(x) \right)^{\Delta^+} P_{i}^{(d/2 - 1, \, \Delta^+ - d/2)} \left( \cos (2x) \right) \, ,
 \end{align}
 with the Jacobi polynomials $P^{(a,b)}_n (x)$ providing an orthogonal basis so that ${\langle e_i (x), e_j(x) \rangle = \delta_{i j}}$ when
 \begin{align}
 k_i &= 2 \sqrt{\frac{(i + \Delta^+ /2) \Gamma(i+1) \Gamma(i+\Delta^+)}{\Gamma(i+d/2) \Gamma(i + \Delta^+ - d/2 + 1)}} \, .
-\end{align} 
+\end{align}
+For consistency with other frequency values, we choose to write the non-normalizable contributions in the general form of \eqref{general basis}. 
 
-Since normalizable modes go as $(\cos x )^{\Delta^+}\!\!$ near the boundary of AdS, they are not able to couple to time-dependent terms there. Thus, the presence of a driving term requires that $\phi_1$ include contributions of the form in \eqref{general basis}. We will find it useful when calculating the third-order source term -- which requires a triple  sum over first-order modes -- to be able to turn on or off either type of mode. To that end, we write the first-order part of the scalar field as a sum over both normalizable and non-normalizable modes:
+The interpretation of the driving term through the AdS/CFT dictionary is the addition of a time-dependent part of the boundary Hamiltonian. Therefore, the presence of non-normalizable modes corresponds to pumping energy in and out of the system. We will find it useful when calculating the third-order source term -- which requires a triple sum over first-order modes -- to be able to separate the contributions from either kind of mode. To that end, we write the first-order part of the scalar field as a sum over both normalizable and non-normalizable modes:
 \begin{align}
 \label{phi1 gen}
 \phi_1(t,x) &= \sum_I c_I (t)  E_I (x) \nonumber \\
@@ -618,9 +608,15 @@ In figure~\ref{fig: twoiplusx}, we evaluate both resonant contributions channels
 
 We have seen that the inclusion of a time-dependent boundary term in the holographic dual of a quantum quench allows energy to enter the bulk spacetime through coupling with non-normalizable modes. The dynamics of the weakly turbulent energy cascades that trigger instability were captured by secular terms at third-order that could not be removed by frequency shifts alone. Using the Two-Time Formalism, we have determined the renormalization group flow equations for the slowly varying amplitudes and phases that are tuned to cancel the secular terms that give rise to instability. 
 
-Unlike when only normalizable modes are considered, the introduction of non-normalizable modes results in no naturally vanishing resonance channels for the frequencies considered. The flow equations for $a_\ell$ and $b_\ell$ are now linear, since the non-normalizable amplitudes and phases are set by the first-order boundary condition and thus remain constant. In practice, this means the evolution of the system will be different than in the case where only normalizable modes are activated \cite{TTF}. However how exactly the behaviour differs will require further study except in the simplest cases.  
+Unlike when only normalizable modes are considered, the introduction of non-normalizable modes results in no naturally vanishing resonance channels for the frequencies considered. The flow equations for $a_\ell$ and $b_\ell$ are now linear, since the non-normalizable amplitudes and phases are set by the first-order boundary condition and thus remain constant. In practice, this means the evolution of the system will be different than in the case where only normalizable modes are activated. Furthermore, periodic pumping of energy into and out of the bulk theory will undoubtably add interesting dynamics to the evolution already observed for quasi-periodic solutions with static boundary conditions \cite{TTF}.
 
-Ward identity.
+With the renormalization flow equations established, future work will examine whether equilibrium solutions can be derived. Then, general non-collapsing solutions will be constructed out of perturbations of the equilibrium solutions and their numerical evolution will be examined. Comparisons to established numerical pumped solutions in the full theory may be instructive in understanding the space of stable and nearly-stable data.  
+
+Properties of the boundary CFT can also be determined from the perturbative theory in the bulk. For instance, the AdS/CFT dictionary relates the leading coefficient of the normalizable modes of the scalar field at the boundary to the expectation value of an operator $\langle \mc O_\phi \rangle$; the leading part of the non-normalizable modes are related to a time-dependent driving term in the boundary Hamiltonian, $s(t)$. The Ward identity for time translations gives the time dependence of the energy density in the CFT in terms of these quantities
+\begin{align}
+\p_t \langle T_{tt} \rangle = - \partial_t s(t) \langle \mc O_\phi \rangle \, .
+\end{align}
+The evolution of the energy density can then be examined via the slowly varying amplitude and phase variables and compared with fully numeric results.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -695,10 +691,10 @@ Using these identities, we evaluate each of the inner products and find that
 where the forms of X, Y, V, H, B, M, P, and Q are given by
 \begin{align}
 X_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu e'_i e_j e_k e_\ell \\
-Y_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu e'_i e'_j e_k e'_\ell \\
-V_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu e_i e_j e'_k e_\ell \sec^2 x
+Y_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu e'_i e'_j e_k e'_\ell
 \end{align}
 \begin{align}
+V_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu e_i e_j e'_k e_\ell \sec^2 x \\
 H_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu' e'_i e_j e'_k e_\ell \\
 B_{ij\ell} &= \int^{\pi/2}_0 dx \, \mu \nu e'_i e'_j \int^x_0 dy \, \mu e^2_\ell \\
 M_{ij\ell} &= \int^{\pi/2}_0 dx \, \mu \nu' e'_i e_j \int^x_o dy \, \mu e_\ell^2 \\
