@@ -208,118 +208,9 @@ To determine the exact form of $S^{(3)}_\ell\!\!\!$ , we must consider all combi
 \label{gen res}
 \omega_I \pm \omega_J \pm \omega_K = \pm \ol \, .
 \end{align}
-As an exercise, we first derive the resonant contributions when the boundary source is zero, and therefore only normalizable modes are present. These results agree numerically with previous work on normalizable modes for massless scalars in the interior time gauge ${(\delta(t, 0) = 0)}$ \cite{1810.04753}. The definitions of the functions $Z$, $H$, $X$, etc.~in~\eqref{general source} differ slightly from other works -- in part because of the gauge choice, and in part because of a desire to separate out mass-dependent terms -- and so are given explicitly in appendix~\ref{app: source term derivation}.
+A derivation of the resonant contributions for a massive scalar when the boundary term is zero -- and therefore only normalizable modes are present -- is included as an exercise in Appendix~\ref{sec: norm res}. These results agree numerically with previous work on normalizable modes, namely that two of the three resonance channels vanish naturally, for massless scalars in the interior \cite{1407.6273} and boundary \cite{1412.3249} time gauges, as well as massive scalars in the internior time gauge \cite{1810.04753}. The definitions of the functions $Z$, $H$, $X$, etc.~in~\eqref{general source} differ slightly from these previous works in part because of the gauge choice and in part because of a desire to separate out mass-dependent terms; however, the expressions are made equivalent through applications of integration by parts and setting $m^2 = 0$. To avoid confusion, the definitions of $Z$, $H$, $X$, etc. are given explicitly in appendix~\ref{app: source term derivation}.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Resonances From Normalizable Solutions}
-\label{sec: norm res}
-Consider the case where each of the basis functions are given by normalizable solutions. The possible combinations of frequencies that satisfy \eqref{gen res} can be separated into the three distinct cases:
-\begin{align}
-\oi + \oj + \ok &= \ol \qquad (+++) \\
-\oi - \oj - \ok &= \ol \qquad (+--) \\
-\oi + \oj - \ok &= \ol \qquad (++-) \, .
-\end{align}
-Note that the $(+++)$ and $(+--)$ resonances produce restrictions on the allowed values of the indices $\{i, j, k\}$, as well as on values of the mass, since $\oi = 2 i + \Delta^+$. In the first case, the indices are restricted by ${i + j + k = \ell - \Delta^+}$, and so $\Delta^+$ must be an integer and greater than $\ell$ for resonance to occur. Similarly, the $(+--)$ resonance condition becomes ${i - j - k = \ell + \Delta^+}$, which is resonant for any integer value of $\Delta^+$. We will see that these two resonance channels will non-trivially vanish whenever their respective resonance conditions are satisfied. This is in agreement with the results shown for the massless scalar in the interior time gauge (as they must be, since the choice of time gauge should not change the existence of resonant channels). Here we include the expressions for the naturally vanishing resonances, choosing to explicitly express the mass dependence.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Naturally Vanishing Resonances: $(+++)$ and $(+--)$}
-\label{ssec: zero resonance}
-
-Resonant contributions that come from the condition $\oi + \oj + \ok = \ol$ contribute to the total source term via
-\begin{align}
-S_\ell = \underbrace{\sum_{i=0}^\infty \sum_{j=0}^\infty \sum_{k=0}^\infty}_{\oi + \oj + \ok = \, \ol} \Omega_{ijk\ell} \, a_i a_j a_k \cos \left( \thi + \thj + \thk \right) + \ldots \, ,
-\end{align}
-where the ellipsis denotes other resonances. $\Omega_{ijk\ell}$ is given by
-\begin{align}
-\label{omega}
-\Omega_{ijk\ell} &= -\frac{1}{12}H_{ijk\ell} \frac{\oj (\oi + \ok +2\oj)}{(\oi + \oj)(\oj + \ok)} - \frac{1}{12} H_{ikj\ell} \frac{\ok (\oi + \oj + 2\ok)}{(\oi + \ok)(\oj + \ok)}- \frac{1}{12} H_{jik\ell} \frac{\oi (\oj + \ok +2\oi)}{(\oi + \oj)(\oi + \ok)} \nonumber \\
-%
-& \quad - \frac{m^2}{12} V_{ijk\ell} \left( 1 + \frac{\oj}{\oj + \ok} + \frac{\oi}{\oi + \ok} \right) - \frac{m^2}{12} V_{jki\ell} \left( 1 + \frac{\oj}{\oi + \oj} + \frac{\ok}{\oi + \ok} \right) \nonumber \\
-%
-& \quad - \frac{m^2}{12} V_{kij\ell} \left( 1 + \frac{\oi}{\oi + \oj} + \frac{\ok}{\oj + \ok} \right)  + \frac{1}{6} \oj \ok X_{ijk\ell} \left( 1 + \frac{\oj}{\oi + \ok} + \frac{\ok}{\oi + \oj} \right) \nonumber \\
-%
-& \quad + \frac{1}{6} \oi \ok X_{jki\ell} \left( 1 + \frac{\oi}{\oj + \ok} + \frac{\ok}{\oi + \oj} \right) + \frac{1}{6} \oi \oj X_{kij\ell} \left( 1 + \frac{\oi}{\oj + \ok} + \frac{\oj}{\oi + \ok} \right) \nonumber \\
-%
-& \quad - \frac{1}{12} Z^-_{ijk\ell} \left( \frac{\ok}{\oi + \oj} \right) - \frac{1}{12} Z^-_{ikj\ell} \left( \frac{\oj}{\oi + \ok} \right) - \frac{1}{12} Z^-_{jki\ell}  \left( \frac{\oi}{\oj + \ok} \right) \, .
-\end{align}
-
-The second naturally vanishing resonance comes from the condition $\oi - \oj - \ok = \ol$, and contributes to the total source term via
-\begin{align}
-S_\ell = \sum_{j=0}^\infty \sum_{k=0}^\infty \Gamma_{(j + k + \ell + \Delta^+) jk\ell} \, a_j a_k a_{(j+k+\ell + \Delta^+)} \cos \left( \theta_{(j+k+\ell + \Delta^+)} - \thj - \thk \right) + \ldots \, ,
-\end{align}
-where
-\begin{align}
-\label{gamma}
-\Gamma_{ijk\ell} &= \frac{1}{4} H_{ijk\ell} \frac{\oj (\ok - \oi + 2\oj)}{(\oi - \oj)(\oj + \ok)} + \frac{1}{4} H_{jki\ell} \frac{\ok (\oj - \oi + 2\ok)}{(\oi - \ok)(\oj + \ok)} + \frac{1}{4} H_{kij\ell} \frac{\oi (\oj + \ok - 2\oi)}{(\oi - \oj)(\oi - \ok)} \nonumber \\
-% 
-& \quad -\frac{1}{2} \oj \ok X_{ijk\ell} \left( \frac{\ok}{\oi - \oj} + \frac{\oj}{\oi - \ok} - 1\right) + \frac{1}{2} \oi \ok X_{jki\ell} \left( \frac{\ok}{\oi - \oj} + \frac{\oi}{\oj + \ok} - 1 \right) \nonumber \\
-%
-& \quad + \frac{1}{2} \oi \oj X_{kij\ell} \left( \frac{\oj}{\oi - \ok} + \frac{\oi}{\oj + \ok} -1 \right) + \frac{m^2}{4} V_{jki\ell} \left( \frac{\oj}{\oi - \oj} + \frac{\ok}{\oi - \ok} -1\right) \nonumber \\
-%
-& \quad - \frac{m^2}{4} V_{kij\ell} \left( \frac{\oi}{\oi - \oj} + \frac{\ok}{\oj + \ok} + 1\right) - \frac{m^2}{4} V_{ijk\ell} \left( \frac{\oi}{\oi - \ok} + \frac{\oj}{\oj + \ok} + 1 \right) \nonumber \\
-%
-& \quad + \frac{1}{4} Z^-_{kji\ell} \left( \frac{\oi}{\oj + \ok}\right) - \frac{1}{4} Z^+_{ijk\ell} \left( \frac{\ok}{\oi - \oj} \right) - \frac{1}{4} Z^+_{jki\ell} \left( \frac{\oj}{\oi - \ok}\right) \, .
-\end{align}
-
-Building on the work done with massless scalars, we are able to show numerically that \eqref{omega} and \eqref{gamma} continue to vanish for massive scalars ($m^2 \geq m^2_{BF}$) in the boundary gauge; thus, the dynamics governing the weakly turbulent transfer of energy are determined only from the remaining resonance channel. When non-normalizable modes are introduced, we will see that naturally vanishing resonances are not present and so the total third-order source term is the sum over all resonant channels.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Non-vanishing Resonance: $(++-)$}
-\label{subs: ttf resonances}
-
-The first non-vanishing contributions arise when $\oi + \oj = \ok + \ol$. This contribution can be split into three coefficients that are evaluated for certain subsets of the allowed values for the indices, namely
-\begin{align}
-S_\ell &= T_\ell a^3_\ell \cos (\thl + \thl - \thl) + \sum_{i \neq \ell}^\infty R_{i \ell} \, a^2_i a_\ell \cos(\thi + \thl - \thi) \nonumber \\
-& \qquad + \sum_{i \neq \ell}^\infty \sum_{j \neq \ell}^\infty S_{i j (i + j - \ell) \ell} \, a_i a_j a_{(i + j - \ell)} \cos(\thi + \thj - \theta_{i + j -\ell} ) \, ,
-\end{align}
-where the coefficients are given by
-\begin{align}
-\label{S_ppm}
-S_{ijk\ell} &= - \frac{1}{4} H_{kij\ell} \frac{\oi (\oj - \ok + 2\oi)}{(\oi - \ok)(\oi + \oj)} -\frac{1}{4} H_{ijk\ell} \frac{\oj (\oi - \ok + 2\oj)}{(\oj - \ok)(\oi + \oj)} - \frac{1}{4} H_{jki\ell} \frac{\ok ( \oi + \oj - 2\ok)}{(\oi - \ok)(\oj - \ok)} \nonumber \\
-%
-& \quad - \frac{1}{2} \oj \ok X_{ijk\ell} \left( \frac{\oj}{\oi - \ok} - \frac{\ok}{\oi + \oj} + 1 \right) - \frac{1}{2} \oi \ok X_{jki\ell} \left( \frac{\oi}{\oj - \ok} - \frac{\ok}{\oi + \oj} + 1 \right) \nonumber \\
-%
-& \quad + \frac{1}{2} \oi \oj X_{kij\ell} \left( \frac{\oi}{\oj - \ok} + \frac{\oj}{\oi - \ok} + 1 \right) - \frac{m^2}{4} V_{ijk\ell} \left( \frac{\oi}{\oi - \ok} + \frac{\oj}{\oj - \ok} + 1\right) \nonumber \\
-%
-& \quad + \frac{m^2}{4} V_{jki\ell} \left( \frac{\ok}{\oi - \ok} - \frac{\oj}{\oi + \oj} - 1 \right) + \frac{m^2}{4} V_{kij\ell} \left( \frac{\ok}{\oj - \ok} - \frac{\oi}{\oi + \oj} - 1 \right) \nonumber \\
-%
-& \quad + \frac{1}{4}  Z^-_{ijk\ell} \left( \frac{\ok}{\oi + \oj}\right)  + \frac{1}{4}  Z^+_{ikj\ell} \left( \frac{\oj}{\oi - \ok}\right) + \frac{1}{4} Z^+_{jki\ell} \left( \frac{\oi}{\oj - \ok} \right) \, ,
-\end{align}
-\begin{align}
-\label{R_ppm}
-R_{i\ell} &= \left(\frac{\oi^2}{\ol^2 - \oi^2} \right) \big( Y_{i\ell \ell i} - Y_{i\ell i \ell} + \ol^2 ( X_{i\ell i \ell} - X_{\ell i \ell i}) \big) + \left(\frac{\oi^2}{\ol^2 - \oi^2}\right) \big( H_{\ell i i\ell} + m^2 V_{ii\ell \ell} - 2\oi^2 X_{\ell i i \ell} \big) \nonumber \\
-%
-& - \left(\frac{\ol^2}{\ol^2 - \oi^2} \right) \big( H_{i\ell i \ell} + m^2 V_{\ell i i \ell} - 2\oi^2 X_{i\ell i\ell} \big) - \frac{m^2}{4}(V_{i\ell i \ell} + V_{ii\ell \ell} ) + \oi^2 \ol^2 (P_{ii\ell} - 2P_{\ell \ell i}) \nonumber \\
-%
-& - \oi\ol X_{i\ell i \ell} - \frac{3m^2}{2} V_{\ell ii \ell} - \frac{1}{2} H_{ii\ell \ell} + \ol^2 B_{ii\ell} - \oi^2 M_{\ell \ell i} - m^2 \oi^2 Q_{\ell \ell i} \, ,
-\end{align}
-and
-\begin{align}
-\label{T_ppm}
-T_{\ell} &= \frac{1}{2} \ol^2 \left( X_{\ell \ell \ell \ell} + 4 B_{\ell \ell \ell} -2 M_{\ell \ell \ell} - 2m^2 Q_{\ell \ell \ell} \right) -\frac{3}{4} \left( H_{\ell \ell \ell \ell} + 3m^2 V_{\ell \ell \ell \ell} \right) \, .
-\end{align}
-
-Following the form of \eqref{RN flow 1}~-~\eqref{RN flow 2}, these resonant terms set the evolution of the renormalized integration coefficients to be \cite{1412.3249}
-\begin{align}
-\frac{2 \ol}{\epsilon^2} \frac{d a_\ell}{d t} &= -  \sum_{i \neq \ell}^\infty \sum_{j \neq \ell}^\infty S_{i j (i + j - \ell) \ell} \, a_i a_j a_{(i + j - \ell)} \sin ( b_\ell + b_{(i+j-\ell)} - b_i - b_j ) \, , \\
-\frac{2 \ol a_\ell}{\epsilon^2} \frac{d b_\ell}{d t} &= - T_\ell a_\ell^3 - \sum^\infty_{i \neq \ell} R_{i\ell} \, a_i^2 a_\ell \nonumber \\
-%
-& \qquad - \sum_{i \neq \ell}^\infty \sum_{j \neq \ell}^\infty S_{i j (i + j - \ell) \ell} \, a_i a_j a_{(i + j - \ell)} \cos( b_\ell + b_{(i+j-\ell)} - b_i - b_j ) \, .
-\end{align}
-
-To examine the effects of non-zero masses on $R$, $S$, and $T$, we evaluate \eqref{S_ppm}-\eqref{T_ppm} for tachyonic, massless, and massive scalars in figure~\ref{fig: Nmodes}. The result is a vertical shift in the coefficient value that is proportional to the choice of mass-squared. By inspection, there is an indication that this shift increases with increasing $\ell$ values; however, a numerical fit of the data would be needed to claim this definitively. 
-
-\begin{figure}
-\centering
-	\includegraphics[width=\textwidth]{Nmodesplot}
-	\caption{Evaluating \eqref{S_ppm}-\eqref{T_ppm} over different values of $m^2$ for $\ell \leq 10$. $S_{ij(i+j-\ell)\ell}$ is denoted by filled circles connected by dash-dotted lines; $R_{i\ell}$ is denoted by filled triangles connected by solid lines; $T_{\ell}$ is denoted by large Xs connected by dotted lines. Different values of $m^2$ are denoted by the colour of each series.}
-	\label{fig: Nmodes}
-\end{figure}
-
+It should be emphasized that the contibutions to the source term $S^{(3)}_\ell$ from normalizable modes are \emph{always} present. For driving amplitudes $\mc A \neq 0$, there are additional contributions from non-normalizable modes such that the total $\mc O(\epsilon^3)$ source term is given by the sum of both types of contributions \cite{1810.04753}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -335,27 +226,24 @@ A_2 &= - \nu \int^x_0 dy \, \mu \left( (\dot \phi_1)^2 + (\phi'_1)^2 + m^2 \phi_
 \end{align}
 in the limit of $x \to \pi/2$, and let the scalar field $\phi_1$ be given by a generic superposition of normalizable and non-normalizable eigenfunctions as in \eqref{phi1 gen}. Ignoring the time-dependent contributions, we find that
 \begin{align}
-\lim_{\tilde x \to 0} A_2 (\tilde x \equiv \pi /2 - x) = \tilde{x}^{-\xi} \left( \frac{2 \tilde{x}^{2+d}}{2 - \xi} - \frac{\tilde{x}^d (1 + \left(\Delta^{-}\right)^2)}{\xi} \right) \, ,
+A_2 (\tilde x \equiv \pi /2 - x) \sim \tilde{x}^{-\xi} \left( \frac{2 \tilde{x}^{2+d}}{2 - \xi} - \frac{\tilde{x}^d (1 + \left(\Delta^{-}\right)^2)}{\xi} \right) + \ldots \, ,
 \end{align}
 where we have defined $\xi = \sqrt{d^2 + 4m^2}$. In the massless case, $\xi = d$ and all powers of $\tilde{x}$ are non-negative; thus, the limit is finite. For tachyonic masses, $m^2_{BF} < m^2 < 0$ so that $0 < \xi < d$ and the limit is again finite. However, when $m^2 > 0$, part of the limit diverges. In order for the boundary to remain asymptotically AdS, counter-terms in the bulk action would be required to cancel such divergences -- a case we will not address presently. Furthermore, for masses that saturate the Breitenlohner-Freedman bound, the limit would have to be re-evaluated. We will therefore restrict our discussion to $m^2_{BF} < m^2 \leq 0$ to avoid these issues. A similar check on the near-boundary behaviour of $\delta_2$ shows that the gauge condition ${\delta_2 (t, \pi/2) = 0}$ remains unchanged by the addition of non-normalizable modes given the same restrictions on the mass of the scalar field. With these restrictions in mind, let us now examine the resonances produced by the activation of non-normalizable modes.
 
 \subsection{Two Non-normalizable Modes with Equal Frequencies}
 \label{ssec: equalNN}
 
-As a first case, let us assume that the two non-normalizable modes have equal, constant, and arbitrary frequencies, $\ob$ (and therefore amplitudes $\bar A_{\ob}$). The resonance condition \eqref{gen res} will only be satisfied when one of $\{\omega_I, \omega_I, \omega_K \}$ are normalizable. In particular, we find that the following combinations are resonant:
+As a first case, let us assume that the two non-normalizable modes have equal, constant, and arbitrary frequencies, $\ob$ (and therefore amplitudes $\bar A_{\ob}$). The resonance condition \eqref{gen res} will only be satisfied when one of $\{\omega_I, \omega_I, \omega_K \}$ are normalizable. Accounting for (separate) relabelling among normalizable and non-normalizable indices, the resonance condition is
 \begin{align}
-\label{gen nn res 1}
-\oi - \oj + \ok - \ol &= 0 \qquad \Rightarrow \qquad \text{either $\oi$ or $\ok$ is normalizable} \\
-\oi + \oj - \ok - \ol &= 0 \qquad \Rightarrow \qquad \text{either $\oi$ or $\oj$ is normalizable} \\
-\oi - \oj - \ok + \ol &= 0 \qquad \Rightarrow \qquad \text{either $\oj$ or $\ok$ is normalizable.}
-\label{gen nn res 2}
+\label{gen nn}
+\oi - \ob + \ob = \ol \, .
 \end{align}
-When any of these resonance conditions is met, the remaining normalizable mode will have a frequency equal to $\ol$, collapsing all sums over frequencies so that
+When this resonance condition is met, the remaining normalizable mode will have a frequency equal to $\ol$, collapsing all sums over frequencies so that
 \begin{align}
 \label{2genNN}
 S_\ell = \overline{T}_{\ell} \, a_\ell \bar A_{\ob}^2 \cos (\thl) + \ldots \, ,
 \end{align}
-where the amplitudes of the non-normalizable modes $\bar A_{\ob}$ are set by the choice of boundary condition. Collecting the appropriate terms in \eqref{general source} and evaluating each possible resonance, we find that
+where the dots represent the additional contributions that come from all modes being normalizable. The amplitudes of the non-normalizable modes $\bar A_{\ob}$ are set by the choice of boundary condition. Collecting the appropriate terms in \eqref{general source} and evaluating each possible resonance, we find that
 \begin{align}
 \label{S:2NN}
 \overline{T}_{\ell} &=  \bigg[ \, \frac{1}{2} Z^-_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol + \ob} \right) + \frac{1}{2} Z^+_{\ell\ob\ob\ell} \left( \frac{\ob}{\ol - \ob} \right)  + H_{\ell \ob \ob \ell} \left( \frac{\ob^2}{\ol^2 - \ob^2} \right)  - H_{\ob\ell\ob\ell} \left(\frac{\ol^2}{\ol^2 - \ob^2} \right) \nonumber \\
@@ -378,14 +266,14 @@ Qualitatively, we see that instead of both the amplitude and the phase running w
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{NN_equalfreq_sourceterms_m0_0+zoom}
+\includegraphics[width=\textwidth]{./figures/NN_equalfreq_sourceterms_m0_0+zoom}
 \caption{{\it Left:} Evaluating \eqref{S:2NN} when $m^2 = 0$ for various choices of $\ob$. {\it Right}: The behaviour of $S_\ell$ for $\ob$ values near $\omega_0$.}
 \label{fig:equal_frequency_m0}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\textwidth]{NN_equalfreq_sourceterms_m-1_0+zoom}
+\includegraphics[width=\textwidth]{./figures/NN_equalfreq_sourceterms_m-1_0+zoom}
 \caption{{\it Left:} Evaluating $\overline{T}_{\ell}$ for a tachyon with $m^2 = -1.0$. {\it Right:} The behaviour of $S_\ell$ near $\omega_0 = \Delta^+ \approx  3.7$.}
 \label{fig:equal_frequency_m-1_0}
 \end{figure}
@@ -477,7 +365,7 @@ In figure~\ref{fig:atoi_all_m-4_0}, we compute the total source term (modulo the
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{NNAddToInteger_source_n2_m-1_0}
+\includegraphics[width=\textwidth]{./figures/NNAddToInteger_source_n2_m-1_0}
 \caption{{\it Left}: Source term values for a tachyonic scalar with $m^2 = -1.0$ when the frequencies of non-normalizable modes sum to $4.0$. {\it Right}: The absolute value of the sum of the source terms for each choice of $\oone$, $\otwo$.}
 \label{fig:atoi_all_m-4_0}
 \end{figure}
@@ -485,12 +373,12 @@ In figure~\ref{fig:atoi_all_m-4_0}, we compute the total source term (modulo the
 \begin{figure}[h!]
 \centering
 	\begin{subfigure}[b]{0.75\textwidth}
-		\includegraphics[width=\textwidth]{NNAddToInteger_source_n2_m0_0}
+		\includegraphics[width=\textwidth]{./figures/NNAddToInteger_source_n2_m0_0}
 		\label{fig:atoi_all_n2_m0}
 	\end{subfigure}
 	\vspace{-0.25in}
 	\begin{subfigure}[b]{0.75\textwidth}
-		\includegraphics[width=\textwidth]{NNAddToInteger_source_n4_m0_0}
+		\includegraphics[width=\textwidth]{./figures/NNAddToInteger_source_n4_m0_0}
 		\label{fig:atoi_all_n4_m0}
 	\end{subfigure}
 	\caption{{\it Above:} The value of \eqref{add to integer} as a function of $\ell$ for a massless scalar with values of $\oone$ and $\otwo$ chosen so that $\oone + \otwo = 4$. {\it Below:} The same plot but with values chosen to satisfy $\oone + \otwo = 8$.}
@@ -581,7 +469,7 @@ and
 
 \begin{figure}[t]
 \centering
-	\includegraphics[width=\textwidth]{IntPlusChi}
+	\includegraphics[width=\textwidth]{./figures/IntPlusChi}
 	\caption{{\it Left:} Evaluating the source term \eqref{intpluschi1 source} for various values of $\chi$ for $\ell < 10$. {\it Right:} Evaluating the source term \eqref{intpluschi2 source} subject to $i + \gamma \geq \ell$ for the same values of $\chi$ and the same range of $\ell$.}
 	\label{fig: twoiplusx}
 \end{figure}
@@ -721,6 +609,119 @@ where $F_k(z) = \dot c_k \dot z - 2\ok^2 c_k z$, $D_{ij} = \dot c_i \dot c_j + \
 Z^{\pm}_{ijk\ell} = \oi \oj \left( X_{k\ell ij} - X_{\ell kij} \right) \pm \left( Y_{ij\ell k} - Y_{ijk\ell} \right) \quad \text{and} \quad \tilde Z^{\pm}_{ij\ell} = \oi \oj P_{ij\ell} \pm B_{ij\ell} \, .
 \end{align}
 Finally, using the solution for the time-dependent coefficients, $c_i(t) = a_i(t) \cos \left( \omega_i t + b_i (t) \right) \equiv a_i \cos \theta_i$, we arrive at \eqref{general source}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Resonances From Normalizable Solutions}
+\label{sec: norm res}
+Consider the case where each of the basis functions are given by normalizable solutions. The possible combinations of frequencies that satisfy \eqref{gen res} can be separated into the three distinct cases:
+\begin{align}
+\oi + \oj + \ok &= \ol \qquad (+++) \\
+\oi - \oj - \ok &= \ol \qquad (+--) \\
+\oi + \oj - \ok &= \ol \qquad (++-) \, .
+\end{align}
+Note that the $(+++)$ and $(+--)$ resonances produce restrictions on the allowed values of the indices $\{i, j, k\}$, as well as on values of the mass, since $\oi = 2 i + \Delta^+$. In the first case, the indices are restricted by ${i + j + k = \ell - \Delta^+}$, and so $\Delta^+$ must be an integer and greater than $\ell$ for resonance to occur. Similarly, the $(+--)$ resonance condition becomes ${i - j - k = \ell + \Delta^+}$, which is resonant for any integer value of $\Delta^+$. We will see that these two resonance channels will non-trivially vanish whenever their respective resonance conditions are satisfied. This is in agreement with the results shown by \cite{1407.6273} for a massless scalar in the interior time gauge (as they must be, since the choice of time gauge should not change the existence of resonant channels). Here we include the expressions for the naturally vanishing resonances, choosing to explicitly express the mass dependence. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Naturally Vanishing Resonances: $(+++)$ and $(+--)$}
+\label{ssec: zero resonance}
+
+Resonant contributions that come from the condition $\oi + \oj + \ok = \ol$ contribute to the total source term via
+\begin{align}
+S_\ell = \underbrace{\sum_{i=0}^\infty \sum_{j=0}^\infty \sum_{k=0}^\infty}_{\oi + \oj + \ok = \, \ol} \Omega_{ijk\ell} \, a_i a_j a_k \cos \left( \thi + \thj + \thk \right) + \ldots \, ,
+\end{align}
+where the ellipsis denotes other resonances. $\Omega_{ijk\ell}$ is given by
+\begin{align}
+\label{omega}
+\Omega_{ijk\ell} &= -\frac{1}{12}H_{ijk\ell} \frac{\oj (\oi + \ok +2\oj)}{(\oi + \oj)(\oj + \ok)} - \frac{1}{12} H_{ikj\ell} \frac{\ok (\oi + \oj + 2\ok)}{(\oi + \ok)(\oj + \ok)}- \frac{1}{12} H_{jik\ell} \frac{\oi (\oj + \ok +2\oi)}{(\oi + \oj)(\oi + \ok)} \nonumber \\
+%
+& \quad - \frac{m^2}{12} V_{ijk\ell} \left( 1 + \frac{\oj}{\oj + \ok} + \frac{\oi}{\oi + \ok} \right) - \frac{m^2}{12} V_{jki\ell} \left( 1 + \frac{\oj}{\oi + \oj} + \frac{\ok}{\oi + \ok} \right) \nonumber \\
+%
+& \quad - \frac{m^2}{12} V_{kij\ell} \left( 1 + \frac{\oi}{\oi + \oj} + \frac{\ok}{\oj + \ok} \right)  + \frac{1}{6} \oj \ok X_{ijk\ell} \left( 1 + \frac{\oj}{\oi + \ok} + \frac{\ok}{\oi + \oj} \right) \nonumber \\
+%
+& \quad + \frac{1}{6} \oi \ok X_{jki\ell} \left( 1 + \frac{\oi}{\oj + \ok} + \frac{\ok}{\oi + \oj} \right) + \frac{1}{6} \oi \oj X_{kij\ell} \left( 1 + \frac{\oi}{\oj + \ok} + \frac{\oj}{\oi + \ok} \right) \nonumber \\
+%
+& \quad - \frac{1}{12} Z^-_{ijk\ell} \left( \frac{\ok}{\oi + \oj} \right) - \frac{1}{12} Z^-_{ikj\ell} \left( \frac{\oj}{\oi + \ok} \right) - \frac{1}{12} Z^-_{jki\ell}  \left( \frac{\oi}{\oj + \ok} \right) \, .
+\end{align}
+
+The second naturally vanishing resonance comes from the condition $\oi - \oj - \ok = \ol$, and contributes to the total source term via
+\begin{align}
+S_\ell = \sum_{j=0}^\infty \sum_{k=0}^\infty \Gamma_{(j + k + \ell + \Delta^+) jk\ell} \, a_j a_k a_{(j+k+\ell + \Delta^+)} \cos \left( \theta_{(j+k+\ell + \Delta^+)} - \thj - \thk \right) + \ldots \, ,
+\end{align}
+where
+\begin{align}
+\label{gamma}
+\Gamma_{ijk\ell} &= \frac{1}{4} H_{ijk\ell} \frac{\oj (\ok - \oi + 2\oj)}{(\oi - \oj)(\oj + \ok)} + \frac{1}{4} H_{jki\ell} \frac{\ok (\oj - \oi + 2\ok)}{(\oi - \ok)(\oj + \ok)} + \frac{1}{4} H_{kij\ell} \frac{\oi (\oj + \ok - 2\oi)}{(\oi - \oj)(\oi - \ok)} \nonumber \\
+% 
+& \quad -\frac{1}{2} \oj \ok X_{ijk\ell} \left( \frac{\ok}{\oi - \oj} + \frac{\oj}{\oi - \ok} - 1\right) + \frac{1}{2} \oi \ok X_{jki\ell} \left( \frac{\ok}{\oi - \oj} + \frac{\oi}{\oj + \ok} - 1 \right) \nonumber \\
+%
+& \quad + \frac{1}{2} \oi \oj X_{kij\ell} \left( \frac{\oj}{\oi - \ok} + \frac{\oi}{\oj + \ok} -1 \right) + \frac{m^2}{4} V_{jki\ell} \left( \frac{\oj}{\oi - \oj} + \frac{\ok}{\oi - \ok} -1\right) \nonumber \\
+%
+& \quad - \frac{m^2}{4} V_{kij\ell} \left( \frac{\oi}{\oi - \oj} + \frac{\ok}{\oj + \ok} + 1\right) - \frac{m^2}{4} V_{ijk\ell} \left( \frac{\oi}{\oi - \ok} + \frac{\oj}{\oj + \ok} + 1 \right) \nonumber \\
+%
+& \quad + \frac{1}{4} Z^-_{kji\ell} \left( \frac{\oi}{\oj + \ok}\right) - \frac{1}{4} Z^+_{ijk\ell} \left( \frac{\ok}{\oi - \oj} \right) - \frac{1}{4} Z^+_{jki\ell} \left( \frac{\oj}{\oi - \ok}\right) \, .
+\end{align}
+
+Building on the work done with massless scalars, we are able to show numerically that \eqref{omega} and \eqref{gamma} continue to vanish for massive scalars ($m^2 \geq m^2_{BF}$) in the boundary gauge, in agreement with work done by \cite{1810.04753} in the interior gauge. Thus, the dynamics governing the weakly turbulent transfer of energy are determined only from the remaining resonance channel. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Non-vanishing Resonance: $(++-)$}
+\label{subs: ttf resonances}
+
+The first non-vanishing contributions arise when $\oi + \oj = \ok + \ol$. This contribution can be split into three coefficients that are evaluated for certain subsets of the allowed values for the indices, namely
+\begin{align}
+S_\ell &= T_\ell a^3_\ell \cos (\thl + \thl - \thl) + \sum_{i \neq \ell}^\infty R_{i \ell} \, a^2_i a_\ell \cos(\thi + \thl - \thi) \nonumber \\
+& \qquad + \sum_{i \neq \ell}^\infty \sum_{j \neq \ell}^\infty S_{i j (i + j - \ell) \ell} \, a_i a_j a_{(i + j - \ell)} \cos(\thi + \thj - \theta_{i + j -\ell} ) \, ,
+\end{align}
+where the coefficients are given by
+\begin{align}
+\label{S_ppm}
+S_{ijk\ell} &= - \frac{1}{4} H_{kij\ell} \frac{\oi (\oj - \ok + 2\oi)}{(\oi - \ok)(\oi + \oj)} -\frac{1}{4} H_{ijk\ell} \frac{\oj (\oi - \ok + 2\oj)}{(\oj - \ok)(\oi + \oj)} - \frac{1}{4} H_{jki\ell} \frac{\ok ( \oi + \oj - 2\ok)}{(\oi - \ok)(\oj - \ok)} \nonumber \\
+%
+& \quad - \frac{1}{2} \oj \ok X_{ijk\ell} \left( \frac{\oj}{\oi - \ok} - \frac{\ok}{\oi + \oj} + 1 \right) - \frac{1}{2} \oi \ok X_{jki\ell} \left( \frac{\oi}{\oj - \ok} - \frac{\ok}{\oi + \oj} + 1 \right) \nonumber \\
+%
+& \quad + \frac{1}{2} \oi \oj X_{kij\ell} \left( \frac{\oi}{\oj - \ok} + \frac{\oj}{\oi - \ok} + 1 \right) - \frac{m^2}{4} V_{ijk\ell} \left( \frac{\oi}{\oi - \ok} + \frac{\oj}{\oj - \ok} + 1\right) \nonumber \\
+%
+& \quad + \frac{m^2}{4} V_{jki\ell} \left( \frac{\ok}{\oi - \ok} - \frac{\oj}{\oi + \oj} - 1 \right) + \frac{m^2}{4} V_{kij\ell} \left( \frac{\ok}{\oj - \ok} - \frac{\oi}{\oi + \oj} - 1 \right) \nonumber \\
+%
+& \quad + \frac{1}{4}  Z^-_{ijk\ell} \left( \frac{\ok}{\oi + \oj}\right)  + \frac{1}{4}  Z^+_{ikj\ell} \left( \frac{\oj}{\oi - \ok}\right) + \frac{1}{4} Z^+_{jki\ell} \left( \frac{\oi}{\oj - \ok} \right) \, ,
+\end{align}
+\begin{align}
+\label{R_ppm}
+R_{i\ell} &= \left(\frac{\oi^2}{\ol^2 - \oi^2} \right) \big( Y_{i\ell \ell i} - Y_{i\ell i \ell} + \ol^2 ( X_{i\ell i \ell} - X_{\ell i \ell i}) \big) + \left(\frac{\oi^2}{\ol^2 - \oi^2}\right) \big( H_{\ell i i\ell} + m^2 V_{ii\ell \ell} - 2\oi^2 X_{\ell i i \ell} \big) \nonumber \\
+%
+& - \left(\frac{\ol^2}{\ol^2 - \oi^2} \right) \big( H_{i\ell i \ell} + m^2 V_{\ell i i \ell} - 2\oi^2 X_{i\ell i\ell} \big) - \frac{m^2}{4}(V_{i\ell i \ell} + V_{ii\ell \ell} ) + \oi^2 \ol^2 (P_{ii\ell} - 2P_{\ell \ell i}) \nonumber \\
+%
+& - \oi\ol X_{i\ell i \ell} - \frac{3m^2}{2} V_{\ell ii \ell} - \frac{1}{2} H_{ii\ell \ell} + \ol^2 B_{ii\ell} - \oi^2 M_{\ell \ell i} - m^2 \oi^2 Q_{\ell \ell i} \, ,
+\end{align}
+and
+\begin{align}
+\label{T_ppm}
+T_{\ell} &= \frac{1}{2} \ol^2 \left( X_{\ell \ell \ell \ell} + 4 B_{\ell \ell \ell} -2 M_{\ell \ell \ell} - 2m^2 Q_{\ell \ell \ell} \right) -\frac{3}{4} \left( H_{\ell \ell \ell \ell} + 3m^2 V_{\ell \ell \ell \ell} \right) \, .
+\end{align}
+
+Following the form of \eqref{RN flow 1}~-~\eqref{RN flow 2}, these resonant terms set the evolution of the renormalized integration coefficients to be \cite{1412.3249}
+\begin{align}
+\frac{2 \ol}{\epsilon^2} \frac{d a_\ell}{d t} &= -  \sum_{i \neq \ell}^\infty \sum_{j \neq \ell}^\infty S_{i j (i + j - \ell) \ell} \, a_i a_j a_{(i + j - \ell)} \sin ( b_\ell + b_{(i+j-\ell)} - b_i - b_j ) \, , \\
+\frac{2 \ol a_\ell}{\epsilon^2} \frac{d b_\ell}{d t} &= - T_\ell a_\ell^3 - \sum^\infty_{i \neq \ell} R_{i\ell} \, a_i^2 a_\ell \nonumber \\
+%
+& \qquad - \sum_{i \neq \ell}^\infty \sum_{j \neq \ell}^\infty S_{i j (i + j - \ell) \ell} \, a_i a_j a_{(i + j - \ell)} \cos( b_\ell + b_{(i+j-\ell)} - b_i - b_j ) \, .
+\end{align}
+
+To examine the effects of non-zero masses on $R$, $S$, and $T$, we evaluate \eqref{S_ppm}-\eqref{T_ppm} for tachyonic, massless, and massive scalars in figure~\ref{fig: Nmodes}. The result is a vertical shift in the coefficient value that is proportional to the choice of mass-squared. By inspection, there is an indication that this shift increases with increasing $\ell$ values; however, a numerical fit of the data would be needed to claim this definitively. 
+
+\begin{figure}
+\centering
+	\includegraphics[width=\textwidth]{./figures/Nmodesplot}
+	\caption{Evaluating \eqref{S_ppm}-\eqref{T_ppm} over different values of $m^2$ for $\ell \leq 10$. $S_{ij(i+j-\ell)\ell}$ is denoted by filled circles connected by dash-dotted lines; $R_{i\ell}$ is denoted by filled triangles connected by solid lines; $T_{\ell}$ is denoted by large Xs connected by dotted lines. Different values of $m^2$ are denoted by the colour of each series.}
+	\label{fig: Nmodes}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Two Non-normalizable Modes with Equal Frequencies}
 \label{more 2NN}
