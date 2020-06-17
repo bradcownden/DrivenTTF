@@ -111,25 +111,35 @@ We choose to work in the boundary gauge, where $\delta(t, \pi/2) = 0$, for reaso
 At linear order, $\phi_1$ satisfies
 \begin{align}
 \label{phi1 eqn}
-\p^2_t \phi_1 + \hat L \phi_1 = 0 \quad \text{where} \quad \hat{L} \equiv \frac{1}{\mu} (\mu' \p_x + \mu \p^2_x)  - \frac{m^2}{\cos^2(x)} \, ,
+\p^2_t \phi_1 + \hat L \phi_1 = \mc F(t) \quad \text{where} \quad \hat{L} \equiv \frac{1}{\mu} (\mu' \p_x + \mu \p^2_x)  - \frac{m^2}{\cos^2(x)} \, ,
 \end{align}
-and $\mu \equiv \tan^{d-1}(x)$. The general solution for \eqref{phi1 eqn} in the bulk is a linear combination of the eigenfunctions $\Phi^\pm_I (x)$, whose frequencies $\omega_I$ are arbitrary. Examining each function's scaling when $x \to \pi/2$,  we see that $\Phi_I^+$ is normalizable and goes as $(\cos x )^{\Delta^+}$\!\! while $\Phi_I^-$ is non-normalizable and goes as $( \cos x )^{\Delta^-}$. We denote the positive (negative) root of $\Delta ( \Delta - d ) = m^2$ as $\Delta^+$\!\! ($\Delta^-$). 
-
-For an arbitrary frequency, requiring regularity at the origin means that we must choose the linear combination \cite{Nastase}
+and $\mu \equiv \tan^{d-1}(x)$. The inhomogeneous part of this equation is the \emph{driving term} that exists
+only at the conformal boundary $x = \pi/2$ and is a function only of time. Parameterizing the scalar field by
 \begin{align}
-\label{general basis}
-E_I (x) =  K_I \left( \cos(x) \right)^{\Delta^+} {_2F_1} \left(\frac{\Delta^+ + \omega_I}{2}, \frac{\Delta^+ - \omega_I}{2}, d/2 ; \sin^2 (x) \right) ,
+	\phi_1 (t, x) = \sum_I c_I (t) E_I (x)
 \end{align}
-that solves the eigenvalue equation
+yields an solution to the homogeneous part of \eqref{phi1 eqn} with $c_I(t) = a_I \cos \left( \omega_I t + b_I \right)$ as well as an
+eigenvalue equation for the spatial part
 \begin{align}
-\label{eigen eqn}
+	\label{eigen eqn}
 \hat L E_I (x) = \omega_I^2 E_I (x) \, .
 \end{align}
+Requiring regularity at the origin -- and without imposing any restrictions on the frequencies $\omega_I$ -- we
+find that \cite{Nastase}
+\begin{align}
+	\label{general basis}
+	E_I (x) =  K_I \left( \cos(x) \right)^{\Delta^+} {_2F_1} \left(\frac{\Delta^+ + \omega_I}{2}, \frac{\Delta^+ - \omega_I}{2}, d/2 ; \sin^2 (x) \right) ,
+\end{align}
+where the positive (negative) root of $\Delta (\Delta - d) = m^2$ as $\Delta^+$($\Delta^-$). There are two solution for $E_I(x)$ at 
+the boundary, denoted $\Phi^\pm_I (x)$, that combine to give the solution at the origin through $E_I (x) = C_I^+ \Phi^+_I(x) + C^{-}_I \Phi^{-}_I (x)$.
+By examining each function's scaling when $x \to \pi/2$,  we see that $\Phi_I^+$ is normalizable and goes as $(\cos x )^{\Delta^+}$\!\! while $\Phi_I^-$ is non-normalizable and goes as $( \cos x )^{\Delta^-}$. 
+It is these non-normalizable modes that couple to the inhomogeneous part of \eqref{phi1 eqn}. Thus, the general solution for the
+scalar field in the bulk can be written as a sum of normalizable \emph{and} non-normalizable components.
 
 For special integer values of the frequencies $\omega_I = \omega_i = 2i + \Delta^+$ with $i \in \mathbb{Z}^+$, the functions $\Phi^\pm_i (x)$ are individually regular at the origin. In this case, the normalizable part of the solution in \eqref{general basis} can be written as
 \begin{align}
 \label{normal basis}
-E_I (x) = e_i(x) &= k_i \left( \cos(x) \right)^{\Delta^+} P_{i}^{(d/2 - 1, \, \Delta^+ - d/2)} \left( \cos (2x) \right) \, ,
+E_I (x)\Big|_{\omega_I = \oi} = e_i(x) &= k_i \left( \cos(x) \right)^{\Delta^+} P_{i}^{(d/2 - 1, \, \Delta^+ - d/2)} \left( \cos (2x) \right) \, ,
 \end{align}
 with the Jacobi polynomials $P^{(a,b)}_n (x)$ providing an orthogonal basis so that ${\langle e_i (x), e_j(x) \rangle = \delta_{i j}}$ when
 \begin{align}
