@@ -1,0 +1,72 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage{fullpage}
+\usepackage[top=2cm, bottom=4.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, linkbordercolor={0 0 1}}
+
+\renewcommand{\arraystretch}{1.75}
+
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.05in}
+
+\pagestyle{fancyplain}
+\cfoot{\small\thepage}
+\headsep 36pt
+
+\begin{document}
+\vspace{.2in}
+\begin{center}
+    {\Large Response to Referee Report \\ JHEP\_252P\_0420\_EDREP032460520}  
+\end{center}
+
+\vspace{.25in}
+
+I would like to thank the referee for their detailed and constructive
+report, and I hope the changes I have outlined here have addressed their
+concerns. Because the report covered several topics, I will address each
+of these through the numbering given in the report.
+\begin{enumerate}
+    \item
+    \begin{enumerate}
+        \item The issue of the existance of both types of modes being
+        present at all times has been expanded upon at the end of section 2 
+        following equation (2.19).
+        \item If I have misunderstood the referee's comment here, I apologize and would be 
+        happy to reconsider their comment. However, I believe the referee may be mistaken on this
+        point. Let us allow for integer frequency values for the non-normalizable solutions,
+        and examine the general solution for a massless scalar in $d$ dimensions (as 
+        per the example put forward in the report). The spatial part of the scalar field
+        is given by
+        \begin{align}
+            \label{e:NN function}
+            E_I (x) = K_I \left( \cos x \right)^{\Delta^+} {_2}F_1 \left(\frac{\Delta^+ + \omega_I}{2}, \frac{\Delta^+ - \omega_I}{2}; \frac{d}{2}; \sin^2 x \right)
+        \end{align}
+        where $K_I$ is a constant, and $\Delta^+ = d$ for a massless field. Now, we
+        consider values of $\omega_I = 2i + d$ and examine $E_I$ the origin:
+        \begin{align}
+            E_I(0) = K_I \; {_2}F_1 \left( i + d, -i; \frac{d}{2}; 0 \right)
+        \end{align}
+        According to the \href{https://dlmf.nist.gov/15.2}{DLMF}, the hypergeometric function
+        ${_2}F_1 (a, b; c; z)$ exists on the disk $| z | < 1$ provided that $c \neq 0, -1, -2, \ldots$
+        which the number of dimensions, $d$, always satisfies. Furthermore, we can write
+        \begin{align}
+            {_2}F_1 (a, b; c; z) = \sum_{s = 0}^\infty \frac{(a)_s (b)_s}{\Gamma(c + s) s!} z^s
+        \end{align}
+        for all values of $c$. This clearly demonstrates that \eqref{e:NN function} does not
+        diverge at the origin and therefore constitutes a valid field decomposition.
+        
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
+
+
+\end{document}
