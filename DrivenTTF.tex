@@ -95,7 +95,7 @@ where $L$ is the AdS curvature (hereafter set to $1$), and the radial coordinate
 \begin{align}
 G_{\mu \nu} + \Lambda g_{\mu \nu} = 8 \pi \left( \nabla_\mu \phi \nabla_\nu \phi - \frac{1}{2} g_{\mu \nu} \left( \nabla^\rho \phi \nabla_\rho \phi + m^2 \phi^2 \right) \right) \quad \text{and} \quad \nabla^2 \phi - m^2 \phi = 0 \, ,
 \end{align}
-with the cosmological constant for AdS given by $\Lambda = -d(d-1)/2$. 
+where the cosmological constant $\Lambda$ for AdS given by $\Lambda = -d(d-1)/2$. 
 
 Perturbing around static AdS, the scalar field is expanded in odd powers of epsilon 
 \begin{align}
@@ -111,7 +111,7 @@ We choose to work in the boundary gauge, where $\delta(t, \pi/2) = 0$, for reaso
 At linear order, $\phi_1$ satisfies
 \begin{align}
 \label{phi1 eqn}
-\p^2_t \phi_1 + \hat L \phi_1 = \mc F(t) \quad \text{where} \quad \hat{L} \equiv \frac{1}{\mu} (\mu' \p_x + \mu \p^2_x)  - \frac{m^2}{\cos^2(x)} \, ,
+\p^2_t \phi_1 + \hat L \phi_1 = \delta(x - \pi/2) \mc F(t) \quad \text{where} \quad \hat{L} \equiv \frac{1}{\mu} (\mu' \p_x + \mu \p^2_x)  - \frac{m^2}{\cos^2(x)} \, ,
 \end{align}
 and $\mu \equiv \tan^{d-1}(x)$. The inhomogeneous part of this equation is the \emph{driving term} that exists
 only at the conformal boundary $x = \pi/2$ and is a function only of time. Parameterizing the scalar field by
@@ -124,19 +124,22 @@ eigenvalue equation for the spatial part
 	\label{eigen eqn}
 \hat L E_I (x) = \omega_I^2 E_I (x) \, .
 \end{align}
-Requiring regularity at the origin -- and without imposing any restrictions on the frequencies $\omega_I$ -- we
-find that \cite{Nastase}
+Requiring regularity at the origin we find that \cite{Nastase}
 \begin{align}
 	\label{general basis}
 	E_I (x) =  K_I \left( \cos(x) \right)^{\Delta^+} {_2F_1} \left(\frac{\Delta^+ + \omega_I}{2}, \frac{\Delta^+ - \omega_I}{2}, d/2 ; \sin^2 (x) \right) ,
 \end{align}
 where the positive (negative) root of $\Delta (\Delta - d) = m^2$ as $\Delta^+$($\Delta^-$). There are two solution for $E_I(x)$ at 
-the boundary, denoted $\Phi^\pm_I (x)$, that combine to give the solution at the origin through $E_I (x) = C_I^+ \Phi^+_I(x) + C^{-}_I \Phi^{-}_I (x)$.
-By examining each function's scaling when $x \to \pi/2$,  we see that $\Phi_I^+$ is normalizable and goes as $(\cos x )^{\Delta^+}$\!\! while $\Phi_I^-$ is non-normalizable and goes as $( \cos x )^{\Delta^-}$. 
-It is these non-normalizable modes that couple to the inhomogeneous part of \eqref{phi1 eqn}. Thus, the general solution for the
-scalar field in the bulk can be written as a sum of normalizable \emph{and} non-normalizable components.
+the boundary, denoted $\Phi^\pm_I (x)$, that combine to give the solution at the origin through $E_I (x) = C_I^+ \Phi^+_I(x) + C^{-}_I \Phi^{-}_I (x)$, where
+$C^{\pm}_I$ are constants that depend on the frequency $\omega_I$ and scaling dimension $\Delta^{\pm}$.
 
-For special integer values of the frequencies $\omega_I = \omega_i = 2i + \Delta^+$ with $i \in \mathbb{Z}^+$, the functions $\Phi^\pm_i (x)$ are individually regular at the origin. In this case, the normalizable part of the solution in \eqref{general basis} can be written as
+By examining each function's scaling when $x \to \pi/2$,  we see that $\Phi_I^+$ goes as $(\cos x )^{\Delta^+}$\!\! near the boundary and therefore is normalizable; 
+furthermore, $\Phi_I^-$ goes as $( \cos x )^{\Delta^-}$ in this limit and therefore is non-normalizable. 
+The non-normalizable modes are the ones that couple to the inhomogeneous part of \eqref{phi1 eqn}. Thus, the general solution for the
+scalar field in the bulk, \eqref{general basis}, contains both normalizable \emph{and} non-normalizable components.
+
+For special integer values of the frequencies $\omega_I = \omega_i = 2i + \Delta^+$ with $i \in \mathbb{Z}^+$, the solution is purely normalizable 
+and can be written as
 \begin{align}
 \label{normal basis}
 E_I (x)\Big|_{\omega_I = \oi} = e_i(x) &= k_i \left( \cos(x) \right)^{\Delta^+} P_{i}^{(d/2 - 1, \, \Delta^+ - d/2)} \left( \cos (2x) \right) \, ,
@@ -145,25 +148,58 @@ with the Jacobi polynomials $P^{(a,b)}_n (x)$ providing an orthogonal basis so t
 \begin{align}
 k_i &= 2 \sqrt{\frac{(i + \Delta^+ /2) \Gamma(i+1) \Gamma(i+\Delta^+)}{\Gamma(i+d/2) \Gamma(i + \Delta^+ - d/2 + 1)}} \, .
 \end{align}
-For consistency with other frequency values, we choose to write the non-normalizable contributions in the general form of \eqref{general basis}. 
+For consistency with other frequency values, we choose to write the non-normalizable contributions 
+in the general form of \eqref{general basis}. 
 
-The interpretation of the driving term through the AdS/CFT dictionary is the addition of a time-dependent part of the boundary Hamiltonian. Therefore, the presence of non-normalizable modes corresponds to pumping energy in and out of the system. We will find it useful when calculating the third-order source term -- which requires a triple sum over first-order modes -- to be able to separate the contributions from either kind of mode. To that end, we write the first-order part of the scalar field as a sum over both normalizable and non-normalizable modes:
+
+The AdS/CFT dictionary relates the leading coefficient of the normalizable modes 
+of the scalar field at the boundary to the expectation value of an operator $\langle \mc O_0 \rangle$.
+The interpretation of the driving term through the AdS/CFT dictionary is the addition of a 
+time-dependent part of the boundary Hamiltonian. To see this, we write the field as a linear combination of normalizable and
+non-normalizable modes 
+\begin{align}
+	\phi_0 \sim \alpha_0 (t) \left(\cos (x)\right)^{\Delta^-} + \beta_0 (t) \left( \cos (x) \right)^{\Delta^+} \, ,
+\end{align}
+where $\alpha_0(t)$ is the coefficient of the non-normalizable mode on the boundary and $\beta_0 (t)$ is the 
+coefficient of the normalizable mode. The Hamiltonian on the boundary is then the addition of the Hamiltonian
+for the CFT that lives there, plus a contribution from the operator $\mc O_0$
+\begin{align}
+	H = H_{CFT} + \alpha_0(t) \mc O_0 \, .
+\end{align}
+Therefore, the presence of non-normalizable modes corresponds to pumping energy into and out of the system. Finally, 
+the Ward identity for time translations gives the time dependence of the 
+energy density in the CFT in terms of the coefficients of both types of modes, and allows us to examine 
+the evolution of the energy density in boundary theory in terms of the leading contributions to bulk 
+variables.
+
+Let us now write the first-order part of the scalar field as a sum over both normalizable 
+and non-normalizable modes
 \begin{align}
 \label{phi1 gen}
 \phi_1(t,x) &= \sum_I c_I (t)  E_I (x) \nonumber \\
 &= \sum_j a_j (t) \cos \left( \oi t + b_i(t) \right) e_j(x) + \sum_\alpha \bar A_\alpha \cos \left( \omega_\alpha t + \bar{B}_\alpha \right) E_\alpha(x) \, .
 \end{align}
-
-The values of $\bar A_\alpha$ and $\bar{B}_\alpha$ will be set by the driving term. This informs our choice of working in the boundary gauge; the time $t$ is the proper time measured on the boundary, as well as the time scale of oscillations from the driving term. In the simplest example, the driving term on the boundary is a single, periodic function
+As we have seen, the non-normalizable modes will couple to the driving term. The values of $\bar A_\alpha$ and 
+$\bar{B}_\alpha$ will be set by the particular form of the driving term, which we impose. This justifies 
+our choice of working in the boundary gauge; the time $t$ is the proper time measured on the boundary, 
+as well as the time scale of oscillations from the driving term. In the simplest example, the driving term 
+on the boundary is a single, periodic function with frequency $\ob$ and amplitude $\mc A$
 \begin{align}
 \label{BC}
 \phi_1(t,\pi/2) = \mc A \cos \ob t \, .
 \end{align}
-In this case, \eqref{phi1 gen} collapses into a single term so that
+In this case, the vanishing of the normalizable modes at the boundary leaves only the
+non-normalizable part of \eqref{phi1 gen}, which collapses into a single term
 \begin{align}
 \sum_\alpha \bar A_\alpha \cos (\omega_\alpha t + \bar B_\alpha )  E_{\alpha} (\pi / 2) = \mc A \cos \ob t \:\: \Rightarrow \:\: \bar A_{\ob} \, E_{\ob} (\pi / 2) = \mc A \quad \text{and} \quad \bar B_{\ob} = 0 \, .
 \end{align}
-Generalizing the boundary condition to a sum over Fourier modes would set further $\bar A_\alpha$ and $\bar B_\alpha$ to non-zero values. 
+In practice, we generalize the boundary condition to a sum over Fourier modes $\ob_\alpha$, which means 
+that additional $\bar A_\alpha$ and $\bar B_\alpha$ terms are non-zero. Note that the allowed non-normalizable frequencies
+are completely set by the form of the boundary term being considered. In subsequent sections, we will
+examine several specific choices of driving frequencies that would produce resonances beyond first order.
+Note that because the non-normalizable frequencies are not restricted to integer values like the normalizable
+modes, there are an infinite set of possible boundary configurations that could be explored. Therefore, we
+will restrict our work to a set of configurations that will be particularly useful {\bf[CITATION NEEDED].}
 
 Without specifying whether frequencies or basis functions have been chosen to be either normalizable or non-normalizable for the time being, we can show that the $\mc O(\epsilon^3)$ part of the scalar field satisfies the equation
 \begin{align}
@@ -524,8 +560,6 @@ We have seen that the inclusion of a time-dependent boundary term in the hologra
 Unlike when only normalizable modes are considered, the introduction of non-normalizable modes results in no naturally vanishing resonance channels for the frequencies considered. The flow equations for $a_\ell$ and $b_\ell$ are now linear, since the non-normalizable amplitudes and phases are set by the first-order boundary condition and thus remain constant. In practice, this means the evolution of the system will be different than in the case where only normalizable modes are activated. Furthermore, periodic pumping of energy into and out of the bulk theory will undoubtably add interesting dynamics to the evolution already observed for quasi-periodic solutions with static boundary conditions \cite{TTF}.
 
 With the renormalization flow equations established, future work will examine whether equilibrium solutions can be derived. Then, general non-collapsing solutions will be constructed and their evolution within the perturbative description will be examined. Comparisons to established numerical pumped solutions in the full theory may be instructive in understanding the space of stable and nearly-stable data.  
-
-Properties of the boundary CFT can also be determined from the perturbative theory in the bulk. For instance, the AdS/CFT dictionary relates the leading coefficient of the normalizable modes of the scalar field at the boundary to the expectation value of an operator $\langle \mc O_\phi \rangle$; the leading part of the non-normalizable modes are related to a time-dependent driving term in the boundary Hamiltonian $s(t)$. The Ward identity for time translations gives the time dependence of the energy density in the CFT in terms of these quantities, and allows us to examine the evolution of the energy density in boundary theory in terms of the leading contributions to bulk variables.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
