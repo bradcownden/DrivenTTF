@@ -135,8 +135,9 @@ $C^{\pm}_I$ are constants that depend on the frequency $\omega_I$ and scaling di
 
 By examining each function's scaling when $x \to \pi/2$,  we see that $\Phi_I^+$ goes as $(\cos x )^{\Delta^+}$\!\! near the boundary and therefore is normalizable; 
 furthermore, $\Phi_I^-$ goes as $( \cos x )^{\Delta^-}$ in this limit and therefore is non-normalizable. 
-The non-normalizable modes are the ones that couple to the inhomogeneous part of \eqref{phi1 eqn}. Thus, the general solution for the
-scalar field in the bulk, \eqref{general basis}, contains both normalizable \emph{and} non-normalizable components.
+The non-normalizable modes are the ones that couple to the inhomogeneous part of the equation of motion for the scalar field \cite{hep-th/9805171}. 
+Thus, the general solution for the scalar field in the bulk, \eqref{general basis}, contains both 
+normalizable \emph{and} non-normalizable components.
 
 For special integer values of the frequencies $\omega_I = \omega_i = 2i + \Delta^+$ with $i \in \mathbb{Z}^+$, the solution is purely normalizable 
 and can be written as
@@ -153,7 +154,7 @@ in the general form of \eqref{general basis}.
 
 
 The AdS/CFT dictionary relates the leading coefficient of the normalizable modes 
-of the scalar field at the boundary to the expectation value of an operator $\langle \mc O_0 \rangle$.
+of the scalar field at the boundary to the expectation value of an operator $\langle \mc O_0 \rangle$ there \cite{hep-th/9808017}.
 The interpretation of the driving term through the AdS/CFT dictionary is the addition of a 
 time-dependent part of the boundary Hamiltonian. To see this, we write the field as a linear combination of normalizable and
 non-normalizable modes 
@@ -166,12 +167,20 @@ for the CFT that lives there, plus a contribution from the operator $\mc O_0$
 \begin{align}
 	H = H_{CFT} + \alpha_0(t) \mc O_0 \, .
 \end{align}
-Therefore, the presence of non-normalizable modes corresponds to pumping energy into and out of the system. Finally, 
-the Ward identity for time translations gives the time dependence of the 
+Therefore, the presence of non-normalizable modes corresponds to pumping energy into and out of the system. In the presence of the 
+source $\mc F(t)$, the Ward identity now includes a contribution from the driving function,
+\begin{align}
+	\nabla_\mu T^\mu_\nu = \mc O \nabla_\nu \mc F(t)
+\end{align} 
+-------- \\
+the time dependence of the 
 energy density in the CFT in terms of the coefficients of both types of modes, and allows us to examine 
 the evolution of the energy density in boundary theory in terms of the leading contributions to bulk 
-variables.
-
+variables. \\
+-------- \\
+Application of GF metric in AdS/CFT \cite{0707.1737, hep-th/0303164, hep-th/0205075}. \\
+GF metric in general \cite{fefferman1985mathematical}. \\
+-------- \\
 Let us now write the first-order part of the scalar field as a sum over both normalizable 
 and non-normalizable modes
 \begin{align}
@@ -199,7 +208,8 @@ are completely set by the form of the boundary term being considered. In subsequ
 examine several specific choices of driving frequencies that would produce resonances beyond first order.
 Note that because the non-normalizable frequencies are not restricted to integer values like the normalizable
 modes, there are an infinite set of possible boundary configurations that could be explored. Therefore, we
-will restrict our work to a set of configurations that will be particularly useful {\bf[CITATION NEEDED].}
+will restrict our work to a set of configurations that will be particularly useful in comparing to 
+existing work with driven CFTs \cite{1502.05726, 1612.07701, 1805.00031}.
 
 Without specifying whether frequencies or basis functions have been chosen to be either normalizable or non-normalizable for the time being, we can show that the $\mc O(\epsilon^3)$ part of the scalar field satisfies the equation
 \begin{align}
