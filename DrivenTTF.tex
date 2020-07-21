@@ -261,11 +261,17 @@ where $S^{(3)}_\ell$ is a polynomial in $a_I$ determined by evaluating the reson
 \end{align}
 Note that the amplitudes and phases evolve with respect to the ``slow time'' $\tau = \epsilon^2 t$. In practice, once these flow equations can be written down, the perturbative evolution of the system is determined up to a timescale of $t \sim \epsilon^{-2}$.
 
-To determine the exact form of $S^{(3)}_\ell\!\!\!$ , we must consider all combinations of the frequencies ${\{ \omega_I, \omega_J, \omega_K\}}$ that satisfy the resonance condition
+To determine the exact form of $S^{(3)}_\ell\!\!\!$ , we must consider all combinations of the frequencies that that appear in the right hand side of \eqref{3rd order}, namely ${\{ \omega_I, \omega_J, \omega_K\}}$, that satisfy the resonance condition
 \begin{align}
 \label{gen res}
 \omega_I \pm \omega_J \pm \omega_K = \pm \ol \, .
 \end{align}
+The allowed values of the non-normalizable frequencies are set by the form of driving term in $\mc F(t)$, i.e. which non-normalizable modes have been excited. For instance, if the driving term is of the form in \eqref{BC}, then $\omega_I = \{\omega_i, \ob\}$. Plugging this restriction into \eqref{gen res}, there is only a single non-trivial resonance that can occur without tuning the value of $\ob$, which is $\oi + \ob - \ob = \ol$. By carefully tuning the value of $\ob$, other resonances are possible. For example, the choice of ${ \omega_I = \omega_J = \omega_K =\ob = 2n - \Delta^-}$ with $n \in \mathbb{Z}^+$ gives rise to a possible resonance when
+\begin{align}
+\omega_I \pm \omega_J \pm \omega_K = \pm \ol \; \to \; \omega_I - \omega_J + \omega_K = \ol
+\end{align}
+which -- when working in an even number of dimensions with $d \geq 4$ -- is satisfied for $n = \ell - d/2$. However, in the interest of examining the most generic choices for the driving frequency, we do not consider such specialized values. It should be noted that the same procedures used to derive the results in \S\!~\ref{sec: NNmodes} can be applied to more specific choices of driving frequency if need be.
+
 The contributions from considering only normalizable modes, when $\{ I, J, K \} = \{i, j ,k\}$,
 have been considered already in detail for massless scalars in the interior \cite{1407.6273} 
 and boundary \cite{1412.3249} time gauges, as well as massive scalars in the interior time gauge \cite{1810.04753}.

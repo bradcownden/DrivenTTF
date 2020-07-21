@@ -22,7 +22,7 @@
 \begin{document}
 \vspace{.2in}
 \begin{center}
-    {\Large Response to Referee Report \\ JHEP\_252P\_0420\_EDREP032460520}  
+    {\Large Response to Referee Report \\ \verb+JHEP_252P_0420_EDREP032460520+}  
 \end{center}
 
 \vspace{.25in}
@@ -60,7 +60,29 @@ of these through the numbering given in the report.
         \end{align}
         for all values of $c$. This clearly demonstrates that \eqref{e:NN function} does not
         diverge at the origin and therefore constitutes a valid field decomposition.
-        \item 
+        \item I have expanded on the issue of including either one or three non-normalizable modes at the end of section 2. The particular case raised by the referee can be addressed using additional information from [31]. As addressed under equation (2.6), we can write the general solution for a scalar field with generic frequency $\omega$ as the linear combination of a purely normalizable part $\Phi^+$ with a purely non-normalizable part $\Phi^-$ as ${\phi_\omega = C^+ \Phi^+ + C^- \Phi^-}$ where the coefficients are
+        \begin{align}
+            \label{Cplus}
+            C^+ &= \frac{\Gamma(d/2) \Gamma(- \sqrt{d^2 + 4m^2} / 2)}{\Gamma\Big( (\Delta^- + \omega)/2 \Big) \Gamma\Big( (\Delta^- - \omega) / 2 \Big)} \\
+            \label{Cminus}
+            C^- &= \frac{\Gamma(d/2) \Gamma(\sqrt{d^2 + 4m^2} / 2)}{\Gamma \Big( (\Delta^+ + \omega) / 2 \Big) \Gamma \Big( (\Delta^+ - \omega) / 2 \Big)} \, 
+        \end{align}
+        and the functions $\Phi^\pm$ are
+        \begin{align}
+            \label{Phiplus}
+            \Phi^+ &= \left( \cos(x) \right)^{\Delta^+} {_2}F_1 \left( \frac{\Delta^+ + \omega}{2}, \frac{\Delta^+ - \omega}{2}, \Delta^+ +1 - \frac{d}{2}; \cos^2 x \right) \\
+            \label{Phiminus}
+            \Phi^- &= \left( \cos(x) \right)^{\Delta^-} {_2}F_1 \left( \frac{\Delta^- + \omega}{2}, \frac{\Delta^- - \omega}{2}, \Delta^- + 1 - \frac{d}{2} ; \cos^2 x \right)
+        \end{align}
+        When the frequency $\omega$ is set to an integer that satisfies ${\omega = \omega_i = 2i + \Delta^+}$, \eqref{Cminus} is zero and so $\phi_{\omega_i} = C^+ \Phi^+$, i.e. the field is \emph{entirely normalizable}. Interestingly, for the particular choices of $m^2 = 0$, $d=4$, and $\omega = 2$ as suggested, it is $C^+$ than vanishes so that $\phi_\omega = C^- \Phi^-$. However, in this case ${\Delta^- = 0}$ so that
+        \begin{align}
+            \phi\,\Big|_{\omega = 2} \propto {_2}F_1 \left( 1, -1, -1; \cos^2 x \right) \, .
+        \end{align}
+        Since ${{_2}F_1 (a, b, b; z) = (1 - z)^{-a} \; \forall \; b}$, 
+        \begin{align}
+            \phi\,\Big|_{\omega=2} \propto \sin^2 x \, ,
+        \end{align}
+        which clearly goes to zero as $x \to \pi/2$, making this a normalizable mode.
         \item 
     \end{enumerate}
     \item % 2.
