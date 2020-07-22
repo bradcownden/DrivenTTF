@@ -48,7 +48,7 @@ of these through the numbering given in the report.
             E_I (x) = K_I \left( \cos x \right)^{\Delta^+} {_2}F_1 \left(\frac{\Delta^+ + \omega_I}{2}, \frac{\Delta^+ - \omega_I}{2}; \frac{d}{2}; \sin^2 x \right)
         \end{align}
         where $K_I$ is a constant, and $\Delta^+ = d$ for a massless field. Now, we
-        consider values of $\omega_I = 2i + d$ and examine $E_I$ the origin:
+        consider values of $\omega_I = 2i + d$ and examine $E_I$ at the origin:
         \begin{align}
             E_I(0) = K_I \; {_2}F_1 \left( i + d, -i; \frac{d}{2}; 0 \right)
         \end{align}
@@ -60,7 +60,9 @@ of these through the numbering given in the report.
         \end{align}
         for all values of $c$. This clearly demonstrates that \eqref{e:NN function} does not
         diverge at the origin and therefore constitutes a valid field decomposition.
-        \item I have expanded on the issue of including either one or three non-normalizable modes at the end of section 2. The particular case raised by the referee can be addressed using additional information from [31]. As addressed under equation (2.6), we can write the general solution for a scalar field with generic frequency $\omega$ as the linear combination of a purely normalizable part $\Phi^+$ with a purely non-normalizable part $\Phi^-$ as ${\phi_\omega = C^+ \Phi^+ + C^- \Phi^-}$ where the coefficients are
+        \item I have expanded on the issue of including either one or three non-normalizable modes at the end of section 2 and explained that cases where the number of dimensions, the mass, or the driving frequency are tuned to specific values may indeed present resonance channels that are not discussed in the paper. However, the procedure for determining the source terms in the event of such additional resonances is not changed by their presence. 
+        
+        The particular case raised by the referee can be addressed using additional information from [31]. As addressed under equation (2.6), we can write the general solution for a scalar field with generic frequency $\omega$ as the linear combination of a purely normalizable part $\Phi^+$ with a purely non-normalizable part $\Phi^-$ as ${\phi_1 = C^+ \Phi^+ + C^- \Phi^-}$ where the coefficients are
         \begin{align}
             \label{Cplus}
             C^+ &= \frac{\Gamma(d/2) \Gamma(- \sqrt{d^2 + 4m^2} / 2)}{\Gamma\Big( (\Delta^- + \omega)/2 \Big) \Gamma\Big( (\Delta^- - \omega) / 2 \Big)} \\
@@ -74,16 +76,10 @@ of these through the numbering given in the report.
             \label{Phiminus}
             \Phi^- &= \left( \cos(x) \right)^{\Delta^-} {_2}F_1 \left( \frac{\Delta^- + \omega}{2}, \frac{\Delta^- - \omega}{2}, \Delta^- + 1 - \frac{d}{2} ; \cos^2 x \right)
         \end{align}
-        When the frequency $\omega$ is set to an integer that satisfies ${\omega = \omega_i = 2i + \Delta^+}$, \eqref{Cminus} is zero and so $\phi_{\omega_i} = C^+ \Phi^+$, i.e. the field is \emph{entirely normalizable}. Interestingly, for the particular choices of $m^2 = 0$, $d=4$, and $\omega = 2$ as suggested, it is $C^+$ than vanishes so that $\phi_\omega = C^- \Phi^-$. However, in this case ${\Delta^- = 0}$ so that
-        \begin{align}
-            \phi\,\Big|_{\omega = 2} \propto {_2}F_1 \left( 1, -1, -1; \cos^2 x \right) \, .
-        \end{align}
-        Since ${{_2}F_1 (a, b, b; z) = (1 - z)^{-a} \; \forall \; b}$, 
-        \begin{align}
-            \phi\,\Big|_{\omega=2} \propto \sin^2 x \, ,
-        \end{align}
-        which clearly goes to one as $x \to \pi/2$, making this a normalizable mode.
-        \item 
+        When the frequency $\omega$ is set to an integer that satisfies ${\omega = \omega_i = 2i + \Delta^+}$, \eqref{Cminus} is zero and so $\phi_1 = C^+ \Phi^+$, i.e. the field is \emph{entirely normalizable} for $\omega \geq \Delta^+$. Interestingly, for the particular choice of $m^2 = 0$, $d=4$, and $\omega = 2$ as suggested, it is $C^+$ than vanishes so that $\phi_1 = C^- \Phi^-$ and there is indeed a non-normalizable mode. However, this requires non-generic values of the parameters and so is not explored in detail.
+
+        Finally, I have addressed the case of three non-normalizable modes as an additional example of resonances that require special choices of either mass, number of dimensions, or driving frequency. Such cases are not addressed in this work, as they are not the most broadly applicable. I have also included a caveat below equation (2.19) to caution that not all possible resonances are addressed in this work. However, the procedure for deriving the contributions from special resonances is the same as the procedure for the cases that are included, and so I believe that including such resonances would not produce distinctly new results.
+        \item I agree that (4.11) is satisfied for the choice of $d=3$ and $m^2 = -2$. Based on my response above, I have not included this special case; however, I have added a footnote above equation (4.11)  that addresses this case.
     \end{enumerate}
     \item % 2.
     \begin{enumerate}
@@ -94,16 +90,16 @@ of these through the numbering given in the report.
         \item 
         \item 
         \item 
-        \item 
+        \item The material concerning resonances from only normalizable modes has been moved to an appendix.
         \item 
         \item 
         \item
     \end{enumerate}
     \item % 3.
     \begin{enumerate}
-        \item 
-        \item 
-        \item 
+        \item References added to other literature that examine TTF in $d = 4$ dimensions.
+        \item References have been changed to reflect this correction.
+        \item References have been added to the discussion resonances (both vanishing and non-vanishing) for massive scalars with static boundary conditions.
         \item 
     \end{enumerate}
     \item % 4.
@@ -129,15 +125,15 @@ of these through the numbering given in the report.
         basis functions. Since chapter 4 demonstrates that there are no resonances that naturally 
         vanish in this fashion, I believe this sentence is correct as it stands.
         \item I have rewritten equation (4.2) as an expansion in $\tilde x$ to make the expression consistent.
-        \item I have reduced the three expressions to a single expression that allows for relabeling of the normalizable index.
+        \item I have reduced the three expressions to a single expression that allows for relabeling of the normalizable index and removed the repeated index on the frequencies.
         \item I have corrected $T_\ell$ to read $\overline{T}_\ell$ in the paragraph below (4.2).
-        \item 
+        \item I have corrected ``source equations'' to ``source term'' and provided an equation reference.
         \item Yes, (4.9) and (4.10) are indeed applicable for $m^2 = 0$. I have changed the language around (4.9) and (4.10) to make this clearer.
         \item
     \end{enumerate}   
 \end{enumerate}
 
-
+Once again, I would like to thank the referee for their diligent reading of this draft. I hope I have satisfactorily addressed their concerns. 
 
 
 

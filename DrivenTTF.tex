@@ -78,7 +78,7 @@ With this in mind, we examine the effects that a time-dependent source on the co
 
 To capture these dynamics, we expand the fields in powers of a small perturbation and isolate the secular terms that appear at third order in $\epsilon$. Only modes whose frequencies satisfy certain resonance conditions will contribute terms that cannot be absorbed by simple frequency shifts. The form of the resonant terms depends on the specific physics of the system, as well as possible symmetries between frequencies. Finally, by evaluating the resonant third-order interactions when combinations of normalizable and non-normalizable modes are activated, we can write renormalization flow equations for the slowly varying amplitudes and phases.
 
-This paper is organized as follows: section \S\!~\ref{sec: source terms and BCs} involves a brief discussion of how we arrive at the third order source term, as well as additional considerations due to the time-dependent boundary condition. As an exercise -- and to provide explicit expressions for the resonant contributions when the scalar field has non-zero mass -- \S\!~\ref{sec: norm res} examines the secular terms in the case of a massive scalar field in AdS$_{d+1}$ with any mass-squared, up to and including the Breitenlohner-Freedman mass \cite{Breitenlohner:1982bm}: $m^2_{BF} \leq m^2$. We demonstrate the natural vanishing of two of the three resonances, and then examine the effects of mass-dependence on the non-vanishing channel. Whenever values are calculated, the choice of $d=4$ is implied as to draw the most direct comparison to existing literature. In section~\S\!~\ref{sec: NNmodes}, we extend the boundary conditions to include a variety of periodic boundary sources that couple to non-normalizable modes in the bulk. For each choice of boundary condition, we derive analytic expressions for applicable resonances and evaluate these expressions for different ranges of scalar field masses. Finally, in~\S\!~\ref{sec: discussion} we discuss the implications of non-vanishing resonances on the competing energy cascades, and the implications for the perturbative stability of such systems. For completeness, we include details of our derivation of the general source term in appendix~\ref{app: source term derivation}, as well as a complete list of possible resonance channels and their resulting secular terms in appendix~\ref{more 2NN} for the case of two, equal frequency non-normalizable modes.
+This paper is organized as follows: section \S\!~\ref{sec: source terms and BCs} involves a brief discussion of how we arrive at the third order source term, as well as additional considerations due to the time-dependent boundary condition. As an exercise -- and to provide explicit expressions for the resonant contributions when the scalar field has non-zero mass -- \S\!~\ref{sec: norm res} examines the secular terms in the case of a massive scalar field in AdS$_{d+1}$ with any mass-squared, up to and including the Breitenlohner-Freedman mass \cite{Breitenlohner:1982bm}: $m^2_{BF} \leq m^2$. We demonstrate the natural vanishing of two of the three resonances, and then examine the effects of mass-dependence on the non-vanishing channel. Whenever values are calculated, the choice of $d=4$ is implied as to draw the most direct comparison to existing literature such as~\cite{1412.3249, 1407.6273, 1508.04943, 1606.02712}. In section~\S\!~\ref{sec: NNmodes}, we extend the boundary conditions to include a variety of periodic boundary sources that couple to non-normalizable modes in the bulk. For each choice of boundary condition, we derive analytic expressions for applicable resonances and evaluate these expressions for different ranges of scalar field masses. Finally, in~\S\!~\ref{sec: discussion} we discuss the implications of non-vanishing resonances on the competing energy cascades, and the implications for the perturbative stability of such systems. For completeness, we include details of our derivation of the general source term in Appendix~\ref{app: source term derivation}, as well as a complete list of possible resonance channels and their resulting secular terms in Appendix~\ref{more 2NN} for the case of two, equal frequency non-normalizable modes.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -218,7 +218,7 @@ Without specifying whether frequencies or basis functions have been chosen to be
 \label{3rd order}
 \ddot \phi_3 + \hat L \phi_3 = S = 2 (A_2 - \delta_2) \ddot \phi_1 + (\dot A_2 - \dot \delta_2) \dot\phi_1 + (A_2' -\delta_2' )\phi_1' + m^2 A_2 \phi_1 \sec^2 x \, .
 \end{align}
-Following the steps outlined in appendix~\ref{app: source term derivation}, we project \eqref{3rd order} onto the basis of normalizable modes since all non-normalizable contributions have been fixed by the $\mc O(\epsilon)$ boundary condition. Employing a ubiquitous time-dependent solution ${c_I(t) = a_I \cos (\omega_I t + b_I) = a_I \cos\theta_I}$ with $I \in \{i, \alpha \}$, we find that the source term for the $\ell^{\rm th}$ mode is
+Following the steps outlined in Appendix~\ref{app: source term derivation}, we project \eqref{3rd order} onto the basis of normalizable modes since all non-normalizable contributions have been fixed by the $\mc O(\epsilon)$ boundary condition. Employing a ubiquitous time-dependent solution ${c_I(t) = a_I \cos (\omega_I t + b_I) = a_I \cos\theta_I}$ with $I \in \{i, \alpha \}$, we find that the source term for the $\ell^{\rm th}$ mode is
 
 \begin{align}
 \label{general source}
@@ -266,18 +266,18 @@ To determine the exact form of $S^{(3)}_\ell\!\!\!$ , we must consider all combi
 \label{gen res}
 \omega_I \pm \omega_J \pm \omega_K = \pm \ol \, .
 \end{align}
-The allowed values of the non-normalizable frequencies are set by the form of driving term in $\mc F(t)$, i.e. which non-normalizable modes have been excited. For instance, if the driving term is of the form in \eqref{BC}, then $\omega_I = \{\omega_i, \ob\}$. Plugging this restriction into \eqref{gen res}, there is only a single non-trivial resonance that can occur without tuning the value of $\ob$, which is $\oi + \ob - \ob = \ol$. By carefully tuning the value of $\ob$, other resonances are possible. For example, the choice of ${ \omega_I = \omega_J = \omega_K =\ob = 2n - \Delta^-}$ with $n \in \mathbb{Z}^+$ gives rise to a possible resonance when
+The allowed values of the non-normalizable frequencies are set by the form of driving term in $\mc F(t)$, i.e. which non-normalizable modes have been excited. For instance, if the driving term is of the form in \eqref{BC}, then $\omega_I = \{\omega_i, \ob\}$. Plugging this restriction into \eqref{gen res}, there is only a single non-trivial resonance that can occur without tuning the value of $\ob$, which is $\oi + \ob - \ob = \ol$. By carefully tuning the value of $\ob$, other resonances are possible. For example, the choice of ${ \omega_I = \omega_J = \omega_K =\ob = 2n - \Delta^-}$ with $n \in \mathbb{Z}^+$ gives rise to possible resonances, one of which is when
 \begin{align}
-\omega_I \pm \omega_J \pm \omega_K = \pm \ol \; \to \; \omega_I - \omega_J + \omega_K = \ol
+\omega_I \pm \omega_J \pm \omega_K = \pm \ol \; \to \; \ob - \ob + \ob = \ol
 \end{align}
-which -- when working in an even number of dimensions with $d \geq 4$ -- is satisfied for $n = \ell - d/2$. However, in the interest of examining the most generic choices for the driving frequency, we do not consider such specialized values. It should be noted that the same procedures used to derive the results in \S\!~\ref{sec: NNmodes} can be applied to more specific choices of driving frequency if need be.
+which -- when working in an even number of dimensions with $d \geq 4$ -- is satisfied for $n = \ell - d/2$. However, in the interest of examining the most generic choices for the driving frequency, we do not consider cases that rely on specially tuned values. Therefore, an important caveat to this work is that it does not present an exhaustive list of possible resonances, and specific choices for the number of dimensions, mass, and driving frequency could result in cases not addressed here. In the event that additional resonances are possible, the same procedures used to derive the results in \S\!~\ref{sec: NNmodes} can be applied to more specific scenarios if need be.
 
 The contributions from considering only normalizable modes, when $\{ I, J, K \} = \{i, j ,k\}$,
 have been considered already in detail for massless scalars in the interior \cite{1407.6273} 
 and boundary \cite{1412.3249} time gauges, as well as massive scalars in the interior time gauge \cite{1810.04753}.
 We include a detailed derivation of the resonant contributions for a massive scalar when the boundary term is 
-zero -- and therefore only normalizable modes are present -- as an exercise in appendix~\ref{sec: norm res}. 
-Therefore, we will concern ourselves mainly with what new terms arise from the activation of non-normalizable 
+zero -- and therefore only normalizable modes are present -- as an exercise in Appendix~\ref{sec: norm res}. 
+Instead, we will concern ourselves mainly with what new terms arise from the activation of non-normalizable 
 modes while keeping in mind that the the total $\mc O(\epsilon^3)$ source term is always given 
 by the sum of both types of contributions \cite{1810.04753}.
 
@@ -286,7 +286,7 @@ from those presented in \cite{1407.6273, 1412.3249} in part because of the gauge
 a desire to separate out mass-dependent terms; however, the expressions are made equivalent through applications 
 of integration by parts and setting $m^2 = 0$. To avoid confusion, 
 the definitions of $Z$, $H$, $X$, etc. are given explicitly in 
-appendix~\ref{app: source term derivation}.
+Appendix~\ref{app: source term derivation}.
 
 
 
@@ -296,22 +296,22 @@ appendix~\ref{app: source term derivation}.
 \section{Resonances From Non-normalizable Modes}
 \label{sec: NNmodes}
 
-Now let us consider the excitation of non-normalizable modes by a driving term on the boundary of AdS. Having set $\ol$ to be a normalizable mode, we may ask what restrictions exist on our choices for the other frequencies, $\{ \oi, \oj, \ok \}$. Aside from the trivial case where all modes are normalizable, we could imagine that one of the modes is non-normalizable. However, this would violate the resonance condition \eqref{gen res}; thus, at least two modes must be non-normalizable. When three non-normalizable modes exist, there are two possibilities: first, that any combination of generically non-integer frequencies gives a non-integer value and so does not contribute a secular term when projected onto the $\omega_\ell$ basis; second, some particular combination of the non-normalizable frequencies gives an integer frequency, in which case there are resonant contributions to $S^{(3)}_\ell$. Therefore, the pertinent question is what resonances are possible when two of $\{\oi, \oj, \oj\}$ are non-normalizable? Because this choice breaks some of the symmetries that contributed to the previous expressions for resonance channels, the resonance conditions must be re-examined starting from the source expression \eqref{general source}.
+Now let us consider the excitation of non-normalizable modes by a driving term on the boundary of AdS. Having set $\ol$ to be a normalizable mode, we may ask what restrictions exist on our choices for the other frequencies in \eqref{general source}. As discussed at the end of the previous section, we will focus our attention on resonances that occur when \emph{only two} of $\{ \omega_I, \omega_J, \omega_K \}$ are non-normalizable. Furthermore, we limit the values of the non-normalizable frequencies as little as possible, choosing not to consider frequencies that have been too finely tuned. In such cases there may be many resonance channels that need to be considered, which will add together to constitute the total source term $S^{(3)}$.
 
-Before proceeding further, an important consideration is what the effect of non-normalizable modes are on the perturbative expansion that leads to the source equations. Since non-normalizable solutions do not have well-defined norms, we do not know \emph{a priori} that the inner products described in appendix~\ref{app: source term derivation} are still finite. To investigate this, consider the generic expression for the second-order metric function
+Before proceeding further, it is important to consider what effects the introduction of non-normalizable modes might have on the calculation of the source term $S^{(3)}$ in \eqref{3rd order}. In particular, since non-normalizable solutions do not have well-defined norms, we do not know \emph{a priori} that the inner products that result from projecting the terms in $S^{(3)}$ onto the basis of normalizable eigenfunctions are still finite. To investigate this, consider the generic expression for the second-order metric function
 \begin{align}
 A_2 &= - \nu \int^x_0 dy \, \mu \left( (\dot \phi_1)^2 + (\phi'_1)^2 + m^2 \phi_1^2 \sec^2 x \right) \, ,
 \end{align}
-in the limit of $x \to \pi/2$, and let the scalar field $\phi_1$ be given by a generic superposition of normalizable and non-normalizable eigenfunctions as in \eqref{phi1 gen}. Expanding in terms of the small parameter $\tilde x$, and ignoring time-dependent contributions, we find that
+in the limit of $x \to \pi/2$, and let the scalar field $\phi_1$ be given by a generic superposition of normalizable and non-normalizable eigenfunctions, as in \eqref{phi1 gen}. Expanding in terms of the small parameter $\tilde x$, and ignoring time-dependent contributions, we find that
 \begin{align}
 A_2 (\tilde x \equiv \pi /2 - x) \sim \tilde{x}^{-\xi} \left( \frac{2 \tilde{x}^{2+d}}{2 - \xi} - \frac{\tilde{x}^d (1 + \left(\Delta^{-}\right)^2)}{\xi} \right) + \ldots \, ,
 \end{align}
-where we have defined $\xi = \sqrt{d^2 + 4m^2}$. In the massless case, $\xi = d$ and all powers of $\tilde{x}$ are non-negative; thus, the limit is finite. For tachyonic masses, $m^2_{BF} < m^2 < 0$ so that $0 < \xi < d$ and the limit is again finite. However, when $m^2 > 0$, part of the limit diverges. In order for the boundary to remain asymptotically AdS, counter-terms in the bulk action would be required to cancel such divergences -- a case we will not address presently. Furthermore, for masses that saturate the Breitenlohner-Freedman bound, the limit would have to be re-evaluated. We will therefore restrict our discussion to $m^2_{BF} < m^2 \leq 0$ to avoid these issues. A similar check on the near-boundary behaviour of $\delta_2$ shows that the gauge condition ${\delta_2 (t, \pi/2) = 0}$ remains unchanged by the addition of non-normalizable modes given the same restrictions on the mass of the scalar field. With these restrictions in mind, let us now examine the resonances produced by the activation of non-normalizable modes.
+where we have defined $\xi = \sqrt{d^2 + 4m^2}$. In the massless case, $\xi = d$ and all powers of $\tilde{x}$ are non-negative; thus, $A_2$ is finite as $\tilde x \to 0$. For tachyonic masses, $m^2_{BF} < m^2 < 0$ so that $0 < \xi < d$ and the limit is again finite. However, when $m^2 > 0$, part of the expression diverges resulting in a non-zero contribution at the conformal boundary. In order for the boundary to remain asymptotically AdS, counter-terms in the bulk action would be required to cancel such divergences -- a case we will not address presently. Furthermore, for masses that saturate the Breitenlohner-Freedman bound, the limit would have to be re-evaluated. We will therefore restrict our discussion to $m^2_{BF} < m^2 \leq 0$ to avoid these issues. A similar check on the near-boundary behaviour of $\delta_2$ shows that the gauge condition ${\delta_2 (t, \pi/2) = 0}$ remains unchanged by the addition of non-normalizable modes given the same restrictions on the mass of the scalar field. With these restrictions in mind, let us now examine the resonances produced by the activation of non-normalizable modes.
 
 \subsection{Two Non-normalizable Modes with Equal Frequencies}
 \label{ssec: equalNN}
 
-As a first case, let us assume that the two non-normalizable modes have equal, constant, and arbitrary frequencies, $\ob$ (and therefore amplitudes $\bar A_{\ob}$). The resonance condition \eqref{gen res} will only be satisfied when one of $\{\omega_I, \omega_I, \omega_K \}$ are normalizable. Accounting for (separate) relabelling among normalizable and non-normalizable indices, the resonance condition is
+As a first case, let us assume that the driving frequency is of the form in \eqref{BC}, i.e. a single, non-integer value, $\ob$. Resonances from integer values of $\ob$ are addressed separately in Appendix~\ref{more 2NN} as they constitute a special case. The resonance condition \eqref{gen res} will only be satisfied when one of $\{\omega_I, \omega_I, \omega_K \}$ is normalizable. Accounting for (separate) relabelling among normalizable and non-normalizable indices, the resonance condition is
 \begin{align}
 \label{gen nn}
 \oi - \ob + \ob = \ol \, .
@@ -356,7 +356,7 @@ Qualitatively, we see that instead of both the amplitude and the phase running w
 \label{fig:equal_frequency_m-1_0}
 \end{figure}
 
-Other resonant contributions become possible for more restrictive values of the non-normalizable frequency, such as if $\ob$ is allowed to be an integer. These contributions are denoted by the ellipsis in \eqref{2genNN} and are listed in appendix~\ref{more 2NN}. In figures~\ref{fig:equal_frequency_m0} and~\ref{fig:equal_frequency_m-1_0}, we evaluate \eqref{S:2NN} for $\ell < 10$ over a variety of $\ob$ values first for a massless scalar, then for a tachyonic scalar. For both values of mass-squared, $T_\ell$ demonstrates power law-type behaviour as a function of $\ell$ with a leading coefficient that is proportional to the non-normalizable frequency $\ob$. We also see that the limit of \eqref{S:2NN} as $\ob \to \omega_0$ is well-defined in both cases.
+In figures \ref{fig:equal_frequency_m0} and \ref{fig:equal_frequency_m-1_0}, we evaluate \eqref{S:2NN} for $\ell < 10$ over a variety of $\ob$ values first for a massless scalar, then for a tachyonic scalar. For both values of mass-squared, $T_\ell$ demonstrates power law-type behaviour as a function of $\ell$ with a leading coefficient that is proportional to the non-normalizable frequency $\ob$. We also see that the limit of \eqref{S:2NN} as $\ob \to \omega_0$ is well-defined in both cases.
 
 \subsection{Special Values of Non-normalizable Frequencies}
 
@@ -365,7 +365,7 @@ Let us now consider special values of non-normalizable frequencies that will lea
 \subsubsection{Add to an integer}
 \label{ssec: add to integer}
 
-First, we choose two of the modes to be non-normalizable with frequencies $\oone$ and $\otwo$ that add to give an integer: $\oone+ \otwo = 2n$ where $n = 1, 2, 3, \ldots$ (note that the $n = 0$ case means that both $\oone$ and $\otwo$ would need to be zero by the positive-frequency requirement and so would not contribute). Furthermore, either frequency need not be an integer and therefore the difference $|\oone - \otwo|$ will, in general, not be an integer. In \S\!~\ref{ssec: intpluschi}, we examine the case when the difference of non-normalizable frequencies is an integer.
+First, we choose the driving term to be given by the sum of two terms whose frequencies $\oone$ and $\otwo$ add to give an integer: $\oone+ \otwo = 2n$ where $n = 1, 2, 3, \ldots$ (note that the $n = 0$ case means that both $\oone$ and $\otwo$ would need to be zero by the positive-frequency requirement and so would not contribute). Furthermore, either frequency need not be an integer and therefore the difference $|\oone - \otwo|$ will, in general, not be an integer. In \S\!~\ref{ssec: intpluschi}, we examine the case when the difference of non-normalizable frequencies is an integer.
 
 When we consider possible resonance channels, we find two resonances are present for any mass value within $m^2_{BF} < m^2 \leq 0$ which we label as  
 \begin{align}
@@ -373,7 +373,7 @@ When we consider possible resonance channels, we find two resonances are present
 (++): \; \omega_i + 2n &= \omega_\ell \quad \forall \; \ell \geq n \\
 (+-): \, \omega_i - 2n &=\omega_\ell \quad \forall \; n \, .
 \end{align}
-Moreover, for a massless scalar, we have the additional channel
+Moreover, for a massless scalar\footnote{Note that specific values of $m^2 \neq 0$ are capable of producing this kind of resonance channel. In such a case, the condition in \eqref{minus plus} would be $n \geq \ell + \Delta^+$ with $m$, $d$ such that $\Delta^+ \in \; \mathbb{Z}^+$.}, we have the additional channel
 \begin{align}
 \label{minus plus}
 (-+): \, -\omega_i + 2n = \omega_\ell \quad \forall \; n \geq \ell + d \, .
