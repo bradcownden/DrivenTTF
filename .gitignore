@@ -243,3 +243,4 @@ TSWLatexianTemp*
 
 # intermediate gcc files
 #.o
+.DS_Store
