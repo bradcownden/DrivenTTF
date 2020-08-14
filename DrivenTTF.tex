@@ -268,16 +268,27 @@ where $S_\ell$ is a polynomial in $a_I$ determined by evaluating the resonant co
 \end{align}
 Note that the amplitudes and phases evolve with respect to the ``slow time'' $\tau = \epsilon^2 t$. In practice, once these flow equations can be written down, the perturbative evolution of the system is determined up to a timescale of $t \sim \epsilon^{-2}$.
 
-To determine the exact form of $S_\ell\!\!\!$ , we must consider all combinations of the frequencies that that appear in the right hand side of \eqref{3rd order}, namely ${\{ \omega_I, \omega_J, \omega_K\}}$, that satisfy the resonance condition
+To determine the exact form of $S_\ell$, we must consider all combinations of the frequencies that that appear in the right hand side of \eqref{3rd order}, namely ${\{ \omega_I, \omega_J, \omega_K\}}$, that satisfy the resonance condition
 \begin{align}
 \label{gen res}
 \omega_I \pm \omega_J \pm \omega_K = \pm \ol \, .
 \end{align}
-The allowed values of the non-normalizable frequencies are set by the form of driving term in $\mc F(t)$, i.e. which non-normalizable modes have been excited. For instance, if the driving term is of the form in \eqref{BC}, then $\omega_I = \{\omega_i, \ob\}$. Plugging this restriction into \eqref{gen res}, there is only a single non-trivial resonance that can occur without tuning the value of $\ob$, which is $\oi + \ob - \ob = \ol$. By carefully tuning the value of $\ob$, other resonances are possible. For example, the choice of ${ \omega_I = \omega_J = \omega_K =\ob = 2n - \Delta^-}$ with $n \in \mathbb{Z}^+$ gives rise to possible resonances, e.g.
+The allowed values of the non-normalizable frequencies are set by the form of driving term in $\mc F(t)$, i.e. which non-normalizable modes have been excited. For instance, if the driving term is of the form in \eqref{BC}, then $\omega_I = \{\omega_i, \ob\}$. Plugging this restriction into \eqref{gen res}, we could potentially have resonances from
+\begin{align}
+	\label{one NN}
+	\omega_i \pm \omega_j \pm \ob &= \pm \ol \\
+	\label{two NN}
+	\omega_i \pm \ob \pm \ob &= \pm \ol \\
+	\label{three NN}
+	\ob \pm \ob \pm \ob &= \pm \ol \, .
+\end{align}
+Since the frequencies of the normalizable modes are always $\oi = 2i + \Delta^+$, and since the non-normalizable modes have generically non-integer frequencies, \eqref{one NN} and \eqref{three NN} require specific values of $\ob$ to be satisfied. There is only a single non-trivial resonance that can occur without tuning the value of $\ob$, which is $\oi + \ob - \ob = \ol$. As an additional example, consider the choice of ${ \omega_I = \omega_J = \omega_K =\ob = 2n - \Delta^-}$ with $n \in \mathbb{Z}^+$ in \eqref{gen res}. One resonance that arises from the condition \eqref{three NN} is
 \begin{align}
 \omega_I \pm \omega_J \pm \omega_K = \pm \ol \; \to \; \ob - \ob + \ob = \ol
 \end{align}
-which -- when working in an even number of dimensions with $d \geq 4$ -- is satisfied for $n = \ell - d/2$. However, in the interest of examining the most generic choices for the driving frequency, we do not consider cases that rely on specially tuned values. Therefore, an important caveat to this work is that it does not present an exhaustive list of possible resonances, and specific choices for the number of dimensions, mass, and driving frequency could result in cases not addressed here. In the event that additional resonances are possible, the same procedures used to derive the results in \S\!~\ref{sec: NNmodes} can be applied to more specific scenarios if need be.
+which -- when working in an even number of dimensions with $d \geq 4$ -- is satisfied for $n = \ell - d/2$. Again, this requires the frequency of the boundary condition to be tuned to a special value. 
+
+In the interest of examining the most generic choices for the driving frequency, we do not consider cases that rely on specially tuned values. In particular, we focus on resonances produced when \emph{only two} of the frequencies in \eqref{gen res} are non-normalizable. Therefore, an important caveat to this work is that it does not present an exhaustive list of possible resonances, and that specific choices for the number of dimensions, mass, and driving frequency could result in cases not addressed here. In fact, tuning the frequency of the boundary condition may lead to some very interesting behaviours which may deserve closer inspection in their own right. In the event that additional resonances are possible, the same procedures used to derive the results in \S\!~\ref{sec: NNmodes} can be applied to more specific scenarios if need be.
 
 The contributions from considering only normalizable modes, when $\{ I, J, K \} = \{i, j ,k\}$,
 have been considered already in detail for massless scalars in the interior \cite{1407.6273} 
@@ -380,7 +391,7 @@ First, we choose the driving term to be given by the sum of two terms whose freq
 \begin{align}
 	\mc F(t) = \bar A_1 \cos \oone t + \bar A_2 \cos \otwo t \, ,
 \end{align}
-where $\oone+ \otwo = 2n$ and $n = 1, 2, 3, \ldots$ (note that the $n = 0$ case means that both $\oone$ and $\otwo$ would need to be zero by the positive-frequency requirement and so would not contribute). Furthermore, since neither frequency is restricted to integer values, the difference $|\oone - \otwo|$ will, in general, not be an integer. In \S\!~\ref{ssec: intpluschi}, we examine the case when the difference of non-normalizable frequencies is an integer.
+where $\oone+ \otwo = 2n$ and $n = 1, 2, 3, \ldots$ (note that the $n = 0$ case means that both $\oone$ and $\otwo$ would need to be zero by the positive-frequency requirement and so would not contribute). Once again, the amplitudes $\bar A_1$ and $\bar A_2$ are constant and fixed by the form of $\mc F(t)$. Furthermore, since neither frequency is restricted to integer values, the difference $|\oone - \otwo|$ will, in general, not be an integer. In \S\!~\ref{ssec: intpluschi}, we examine the case when the difference of non-normalizable frequencies is an integer.
 
 When we consider possible resonance channels, we find two resonances are present for any mass value within $m^2_{BF} < m^2 \leq 0$ which we label as  
 \begin{align}
@@ -454,7 +465,7 @@ When $m^2 = 0$, we have contributions from
 & \quad + 4 \ol^2 \left( \oone^2 P_{\ell \ell 1} + \otwo^2 P_{\ell \ell 2} \right) + 2\oone^2 M_{\ell \ell 1} + 2\otwo^2 M_{\ell \ell 2} + 2m^2 \left( \oone^2 Q_{\ell\ell 1} + \otwo^2 Q_{\ell \ell 2} \right) \Big] \, .
 \end{align}
 
-In figure~\ref{fig:atoi_all_m-4_0}, we compute the total source term (modulo the amplitudes $a_i$ and $\bar A_\alpha$) for a tachyonic scalar with $n = 2$. Figure~\ref{fig:atoi_all_m0_0compare} provides a comparison between the value of the source term for a massless scalar between two choices of $n$: one that includes contributions from $\overline{R}_{i\ell}^{(-+)}$ and one that does not. As expected, the source terms are symmetric in $\oone \leftrightarrow \otwo$, hence only $\oone \leq n$ data are shown. As a function of $\ell$, \eqref{add to integer} starts near zero before becoming increasingly negative as $\ell$ becomes large. As a check for naturally vanishing channels, the absolute value of the sum of $S_\ell$ is also plotted; however, there is no indication that any channel vanishes for any of the $\oone$, $\otwo$ values considered. 
+In figure~\ref{fig:atoi_all_m-4_0}, we compute the total source term (modulo the amplitudes $a_i$ and $\bar A_\alpha$) for a tachyonic scalar with $n = 2$. Figure~\ref{fig:atoi_all_m0_0compare} provides a comparison between the value of the source term for a massless scalar between two choices of $n$: one that includes contributions from $\overline{R}_{i\ell}^{(-+)}$ and one that does not. As expected, the source terms are symmetric in $\oone \leftrightarrow \otwo$, hence only $\oone \leq n$ data are shown. Evaluations of each channel separately found that none vanished naturally. Since the total source term $S_\ell$ given by \eqref{add to integer} initially evaluates to small, positive values before becoming increasingly negative as $\ell$ becomes large, one may ask if the \emph{sum} of the channels vanishes. As a check for this, the absolute value of the sum of $S_\ell$ is also plotted; however, there is no indication that any channel vanishes for any of the $\oone$, $\otwo$ values considered. 
 
 \begin{figure}
 \centering
@@ -480,6 +491,7 @@ In figure~\ref{fig:atoi_all_m-4_0}, we compute the total source term (modulo the
 
 The renormalization flow equations include the sum of all the channels (none of which vanish naturally), and are
 \begin{align}
+\label{atoi RN 1}	
 \frac{2 \ol}{\epsilon^2} \frac{d a_\ell}{d t} &= - \!\!\!\! \sum_{\oone + \otwo = 2n}\bigg[ \Theta\left( n - \ell - d \right) \overline{R}^{(-+)}_{(n - \ell - d) \ell} \ \bar A_1 \bar A_2 \, a_{(n - \ell - d)} \sin \left( b_{(n - \ell - d)} - \bar B_1 - \bar B_2 \right) \bigg]_{m^2 = 0}  \nonumber \\ 
 %
 & \quad - \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \Theta \left( \ell - n \right)  \overline{R}^{(++)}_{(\ell - n)\ell} \, \bar A_1 \bar A_2 \, a_{(\ell - n)} \sin \left( b_{(\ell - n)} + \bar B_1 + \bar B_2 \right) \nonumber \\
@@ -488,6 +500,7 @@ The renormalization flow equations include the sum of all the channels (none of 
 \end{align}
 and
 \begin{align}
+\label{atoi RN 2}	
 \frac{2 \ol a_\ell}{\epsilon^2} \frac{d b_\ell}{d t} &= - \!\!\!\! \sum_{\oone + \otwo = 2n}\bigg[ \Theta\left( n - \ell - d \right) \overline{R}^{(-+)}_{(n - \ell - d) \ell} \ \bar A_1 \bar A_2 \, a_{(n - \ell - d)} \cos \left( b_{(n - \ell - d)} - \bar B_1 - \bar B_2 \right) \bigg]_{m^2 = 0}  \nonumber \\ 
 %
 & \quad - \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \Theta \left( \ell - n \right)  \overline{R}^{(++)}_{(\ell - n)\ell} \, \bar A_1 \bar A_2 \, a_{(\ell - n)} \cos \left( b_{(\ell - n)} + \bar B_1 + \bar B_2 \right) \nonumber \\
@@ -498,12 +511,12 @@ and
 \subsection{Integer Plus $\chi$}
 \label{ssec: intpluschi}
 
-Finally, let us consider the case where the non-normalizable frequencies are non-integer, but differ from integer values by a set amount. In analogue to the case where all modes are normalizable, we consider the non-normalizable frequencies to be shifted away from integer values by
+Finally, let us consider the case where the boundary condition can be written in terms of a sum of non-normalizable modes with constant amplitudes $\bar A_\gamma$ and frequencies $\omega_\gamma$ that are each non-integer valued, but differ from integer values by a set amount, i.e.
 \begin{align}
-\label{int plus chi}
-\ogam = 2\gamma + \chi \, ,
+	\label{int plus chi}
+	\mc F(t) = \sum_{\gamma} \bar A_{\gamma} \cos \left( \omega_\gamma t + \bar B_{\gamma} \right) \quad \text{with} \quad \ogam = 2\gamma + \chi \, ,
 \end{align}
-where $\gamma \in \mathbb{Z}^+$ (Greek letters are chosen to differentiate these non-normalizable modes from normalizable modes with integer frequencies, which use Roman letters). We furthermore limit $\chi$ to be non-integer\footnote{Indeed, for integer values of $\chi$, the sum or difference of two non-normalizable modes could be an integer. This would either be covered by the work in \S\!~\ref{ssec: add to integer}, or be a slight variation of it.} and set $m^2 = 0$ throughout. For this choice of non-normalizable frequencies there are no resonant contributions from the all-plus channel, unlike the naturally vanishing resonance found in \S\!~\ref{ssec: zero resonance}. Only when either $\oi + \ogam = \obet - \ol$, or $\oi + \ogam = \obet + \ol$ with $i + \gamma \geq \ell$, are resonant terms present. Let us examine each case separately.
+where $\gamma \in \mathbb{Z}^+$. Greek letters are chosen to differentiate these non-normalizable modes from normalizable modes with integer frequencies, which use Roman letters. We furthermore limit $\chi$ to be non-integer\footnote{Indeed, for integer values of $\chi$, the sum or difference of two non-normalizable modes could be an integer. This would either be covered by the work in \S\!~\ref{ssec: add to integer}, or be a slight variation of it.} and set $m^2 = 0$ throughout. For this choice of non-normalizable frequencies there are no resonant contributions from the all-plus channel, unlike the naturally vanishing resonance found in \S\!~\ref{ssec: zero resonance}. Only when either $\oi + \ogam = \obet - \ol$, or $\oi + \ogam = \obet + \ol$ with $i + \gamma \geq \ell$, are resonant terms present. Let us examine each case separately.
 
 \subsubsection{$\oi + \ogam = \obet - \ol$}
 \label{sssec: intpluschi1}
@@ -589,6 +602,12 @@ In figure~\ref{fig: twoiplusx}, we evaluate both resonant contributions channels
 \label{sec: discussion}
 
 We have seen that the inclusion of a time-dependent boundary term in the holographic dual of a quantum quench allows energy to enter the bulk spacetime through coupling with non-normalizable modes. The dynamics of the weakly turbulent energy cascades that trigger instability were captured by secular terms at third-order that could not be removed by frequency shifts alone. Using the Two-Time Formalism, we have determined the renormalization group flow equations for the slowly varying amplitudes and phases that are tuned to cancel the secular terms that give rise to instability. 
+
+Following our discussion at the end of \S\!~\ref{sec: source terms and BCs}, we have limited the types of resonances we have considered to only those produced when the resonance condition ${\omega_I \pm \omega_J \pm \omega_K = \pm \omega_\ell}$ contains \emph{exactly two} non-normalizable frequencies. As a result, the flow equations for the time-dependent amplitudes and phases of the normal modes are linear in the amplitude. When only normalizable modes are considered, these equations contain three powers of the amplitude~\cite{1403.6471, 1407.6273}. It is important to note that the resonances from only normalizable modes are still present (see appendix~\ref{sec: norm res} for their explicit forms) and would also contribute to the non-normalizable resonances. What remains to be shown is if, for some judicious choice of time-dependent boundary term, the different types of resonances would destructively interfere and render the perturbative description naturally stable. Finally, we have restricted our choice of mass to within $m_{BF}^2 < m^2 \leq 0$ to avoid potential issues raised by renormalizability of the metric functions ${A(t,x),~\delta(t,x)}$ on the boundary of AdS. Future work will consider what counterterms are required to keep the CFT renormalizable outside of this restriction on the mass.
+
+We have considered a set of broadly applicable choices for the form of the boundary term $\mc F(t)$ that require little or no fine tuning to produce resonant contributions. When the driving term is given by a single, non-integer frequency component, there is a single resonant channel and the renormalization flow equations for the amplitudes and phases of the normalizable modes decouple. In fact, \eqref{equal NN flow} tell us that the amplitudes $a_\ell$ remain constant while the phases $b_\ell$ are linear functions of time for this choice of driving term. 
+
+By considering more specialized forms of the driving term, additional resonance channels from non-normalizable modes are present. Unlike when only normalizable modes are considered, none of the channels are naturally vanishing. When the driving term is given by the superposition of two periodic functions with frequencies that add to an integer, the flow equations for $a_\ell$ and $b_\ell$ receive contributions from multiple terms that mix modes. For example, \eqref{atoi RN 1} shows that $da_\ell / dt$ can contain contributions proportional to $a_{(n-\ell-d)}$, $a_{(\ell -n)}$, and $a_{(\ell + n)}$. 
 
 Unlike when only normalizable modes are considered, the introduction of non-normalizable modes results in no naturally vanishing resonance channels for the frequencies considered. The flow equations for $a_\ell$ and $b_\ell$ are now linear, since the non-normalizable amplitudes and phases are set by the first-order boundary condition and thus remain constant. In practice, this means the evolution of the system will be different than in the case where only normalizable modes are activated. Furthermore, periodic pumping of energy into and out of the bulk theory will undoubtedly add interesting dynamics to the evolution already observed for quasi-periodic solutions with static boundary conditions \cite{TTF}.
 
@@ -814,9 +833,13 @@ To examine the effects of non-zero masses on $R$, $S$, and $T$, we evaluate \eqr
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Two Non-normalizable Modes with Equal Frequencies}
+\section{A Single Non-normalizable Mode: Integer Frequencies}
 \label{more 2NN}
-Let us return to the case of two, equal, non-normalizable modes with frequency $\ob$. Within the space of resonant frequency values, there are frequencies that happen to satisfy $\ob = \ol$ numerically and may produce extra resonances subject to restrictions on the normalizable frequency. These instances were excluded from the discussion in \S\!~\ref{ssec: equalNN}, and we address them here. When considering special integer values of $\ob$ each choice of $\ob$ below will contribute a $\overline T$-type term to the total source:
+Let us return to the case of the boundary term $\mc F(t)$ being given by a single function
+\begin{align}
+	\mc F(t) = \bar A_{\ob} \cos \ob t
+\end{align}
+with fixed amplitude $\bar A_{\ob}$ and some frequency $\ob$. Within the space of resonant frequency values, there are frequencies that happen to satisfy $\ob = \ol$ numerically and may produce extra resonances subject to restrictions on the normalizable frequency. These instances were excluded from the discussion in \S\!~\ref{ssec: equalNN}, and we address them here. When considering special integer values of $\ob$ each choice of $\ob$ below will contribute a $\overline T$-type term to the total source:
 \begin{align}
 \label{gen NN res 1}
 \overline{T}^{(1)}_{i}: \quad \omega_i &= \ol + 2\ob \quad \forall \; \ob \in \mathbb{Z}^+ \\
