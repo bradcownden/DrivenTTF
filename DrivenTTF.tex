@@ -78,17 +78,17 @@ With this in mind, we examine the effects that a time-dependent source on the co
 
 Following the TTF prescription, we expand all fields in powers of a small perturbation $\epsilon$. At third order in this perturbation, we find expressions for the resonant terms that are responsible for the weakly turbulent transfer of energy to short length scales which will eventually lead to gravitational collapse. The form of the resonant terms depends on the specific physics of the system, as well as possible symmetries between frequencies. While in general types of resonances are able to be removed by frequency shifts, combinations of frequencies that satisfy a resonance condition will produce secular growth that cannot be absorbed by simple frequency shifts. These terms will be absorbed into the definition of slowly-varying integration constants through a set of renormalization flow equations so that the scalar field remains stable against collapse over perturbative timescales.
 
-This paper is organized as follows: section \S\!~\ref{sec: source terms and BCs} discusses how the presence of a time-dependent boundary condition on the scalar field results in the activation of non-normalizable modes. We briefly discuss the interpretation of non-normalizable modes within the AdS/CFT correspondence and how their behaviour near the boundary is related to energy fluctuations in the CFT. Furthermore, we specify any restrictions on the form of the resonances that we are considering. In section~\S\!~\ref{sec: NNmodes}, we consider a variety of boundary conditions for non-normalizable modes in the bulk. For each choice of boundary condition, we derive analytic expressions for applicable resonances and evaluate these expressions numerically in $d=4$ for different ranges of scalar field masses. Finally, in~\S\!~\ref{sec: discussion} we discuss the implications of non-vanishing resonances on slowly-varying amplitudes and phases, and contrast these results with those for static boundary conditions. Whenever values are calculated, the choice of $d=4$ is implied as to draw the most direct comparison to existing literature such as~\cite{1412.3249, 1407.6273, 1508.04943, 1606.02712}. 
+This paper is organized as follows: section \S\!~\ref{sec: source terms and BCs} discusses how the presence of a time-dependent boundary condition on the scalar field results in the activation of non-normalizable modes. We briefly discuss the interpretation of non-normalizable modes within the AdS/CFT correspondence and how their behaviour near the boundary is related to energy fluctuations in the CFT. Furthermore, we specify any restrictions on the form of the resonances that we are considering. In section~\S\!~\ref{sec: NNmodes}, we consider a variety of boundary conditions for non-normalizable modes in the bulk. For each choice of boundary condition, we derive analytic expressions for applicable resonances and evaluate these expressions numerically in four spacetime dimensions for different ranges of scalar field masses. Finally, in~\S\!~\ref{sec: discussion} we discuss the implications of non-vanishing resonances on slowly-varying amplitudes and phases, and contrast these results with those for static boundary conditions. Whenever values are calculated, the choice of $d=4$ is implied as to draw the most direct comparison to existing literature such as~\cite{1412.3249, 1407.6273, 1508.04943, 1606.02712}. 
 
 For completeness, we include details of our derivation of the general source term in Appendix~\ref{app: source term derivation} in the boundary time gauge. As an exercise -- and to provide explicit expressions for the resonant contributions when the scalar field has non-zero mass -- Appendix~\ref{sec: norm res} contains the calculation of secular terms in the case of a massive scalar field in AdS$_{d+1}$ with any mass-squared, up to and including the Breitenlohner-Freedman mass \cite{Breitenlohner:1982bm}: $m^2_{BF} \leq m^2$. We present numerical evidence of the natural vanishing of two of the three resonances, and then examine the effects of mass-dependence on the non-vanishing channel. Finally, Appendix~\ref{more 2NN} focuses on additional possible contributions to the source term when the boundary condition is a single non-normalizable mode but with specific values for the frequency.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Source Terms and Boundary Conditions}
+\section{Normalizable and Non-normalizable Modes}
 \label{sec: source terms and BCs}
 
-Let us first consider a spherically symmetric, minimally coupled, massive scalar field on an asymptotically AdS$_{d+1}$ spacetime in global coordinates whose metric is given by
+Let us consider a spherically symmetric, minimally coupled, massive scalar field on an asymptotically AdS$_{d+1}$ spacetime in global coordinates whose metric is given by
 \begin{align}
 \label{AdS metric}
 ds^2 &= \frac{L^2}{\cos(x)} \left( - A(t,x) e^{-2 \delta(t,x)} \, dt^2 + A^{-1}(t, x) \, dx^2 + \sin^2 (x) \, d\Omega^2_{d-1} \right) \, ,
@@ -97,9 +97,7 @@ where $L$ is the AdS curvature (hereafter set to $1$), and the radial coordinate
 \begin{align}
 G_{\mu \nu} + \Lambda g_{\mu \nu} = 8 \pi \left( \nabla_\mu \phi \nabla_\nu \phi - \frac{1}{2} g_{\mu \nu} \left( \nabla^\rho \phi \nabla_\rho \phi + m^2 \phi^2 \right) \right) \quad \text{and} \quad \nabla^2 \phi - m^2 \phi = 0 \, ,
 \end{align}
-where the cosmological constant $\Lambda$ for AdS given by $\Lambda = -d(d-1)/2$. 
-
-Perturbing around static AdS, the scalar field is expanded in odd powers of epsilon 
+where the cosmological constant $\Lambda$ for AdS given by $\Lambda = -d(d-1)/2$. Perturbing around static AdS, the scalar field is expanded in odd powers of epsilon 
 \begin{align}
 \phi(t,x) = \epsilon \phi_1(t,x) + \epsilon^3 \phi_3 (t,x) + \ldots
 \end{align}
@@ -113,15 +111,14 @@ We choose to work in the boundary gauge, where $\delta(t, \pi/2) = 0$, for reaso
 At linear order, $\phi_1$ satisfies
 \begin{align}
 \label{phi1 eqn}
-\p^2_t \phi_1 + \hat L \phi_1 = 0 \quad \text{and}& \quad \phi(t, x \to \pi/2) = \mc F(t) \left( \cos(x) \right)^{\Delta^-}\, \\
+\p^2_t \phi_1 + \hat L \phi_1 = 0 \quad \text{and}& \quad \phi_1(t, x \to \pi/2) = \mc F(t) \left( \cos(x) \right)^{\Delta^-}\, \\
 \text{where} \;\; \hat{L} &\equiv \frac{1}{\mu} (\mu' \p_x + \mu \p^2_x)  - \frac{m^2}{\cos^2(x)} \, ,
 \end{align}
-and $\mu \equiv \tan^{d-1}(x)$. The inhomogeneous part of this equation is the \emph{driving term} that exists
-only at the conformal boundary $x = \pi/2$ and is a function only of time. Parameterizing the scalar field by
+and $\mu \equiv \tan^{d-1}(x)$. The time-dependent boundary condition for $\phi_1$ is the result of the insertion of a \emph{driving term} in the conformal theory that a function only of time. Parameterizing the scalar field by
 \begin{align}
 	\phi_1 (t, x) = \sum_I c_I (t) E_I (x)
 \end{align}
-yields an solution to the homogeneous part of \eqref{phi1 eqn} with $c_I(t) = a_I \cos \left( \omega_I t + b_I \right)$ as well as an
+yields an solution to \eqref{phi1 eqn} in the bulk with $c_I(t) = a_I \cos \left( \omega_I t + b_I \right)$ as well as an
 eigenvalue equation for the spatial part
 \begin{align}
 	\label{eigen eqn}
@@ -132,15 +129,13 @@ Requiring regularity at the origin we find that \cite{hep-th/9805171}
 	\label{general basis}
 	E_I (x) =  K_I \left( \cos(x) \right)^{\Delta^+} {_2F_1} \left(\frac{\Delta^+ + \omega_I}{2}, \frac{\Delta^+ - \omega_I}{2}, d/2 ; \sin^2 (x) \right) ,
 \end{align}
-where the positive (negative) root of $\Delta (\Delta - d) = m^2$ as $\Delta^+$($\Delta^-$). There are two solution for $E_I(x)$ at 
-the boundary, denoted $\Phi^\pm_I (x)$, that combine to give the solution at the origin through $E_I (x) = C_I^+ \Phi^+_I(x) + C^{-}_I \Phi^{-}_I (x)$, where
-$C^{\pm}_I$ are constants that depend on the frequency $\omega_I$ and scaling dimension $\Delta^{\pm}$.
+where the positive (negative) root of $\Delta (\Delta - d) = m^2$ as $\Delta^+$($\Delta^-$). There are two solution for $E_I(x)$ at the boundary, denoted $\Phi^\pm_I (x)$, that combine to give the solution at the origin \eqref{general basis} through $E_I (x) = C_I^+ \Phi^+_I(x) + C^{-}_I \Phi^{-}_I (x)$, where $C^{\pm}_I$ are constants that depend on the frequency $\omega_I$ and scaling dimension $\Delta^{\pm}$. By examining each function's scaling when $x \to \pi/2$,  we see that $\Phi_I^+$ goes as $(\cos x )^{\Delta^+}$ near the boundary and therefore is normalizable; furthermore, $\Phi_I^-$ goes as $( \cos x )^{\Delta^-}$ in this limit and therefore is non-normalizable with respect to the inner product
+\begin{align}
+	\label{inner prod}
+	\langle f(x), g(x) \rangle = \int^{\pi/2}_0 dx \, \mu(x) f(x)^\dagger g(x) \, .
+\end{align}
 
-By examining each function's scaling when $x \to \pi/2$,  we see that $\Phi_I^+$ goes as $(\cos x )^{\Delta^+}$\!\! near the boundary and therefore is normalizable; 
-furthermore, $\Phi_I^-$ goes as $( \cos x )^{\Delta^-}$ in this limit and therefore is non-normalizable. 
-The non-normalizable modes are the ones that couple to the inhomogeneous boundary condition for the scalar field \cite{Nastase}. 
-Thus, the general solution for the scalar field in the bulk, \eqref{general basis}, contains both 
-normalizable \emph{and} non-normalizable components.
+Matching this behaviour with the time-dependent boundary condition in \eqref{phi1 eqn}, we see that the non-normalizable modes are the ones that couple to the driving term \cite{Nastase}. It is important to realize that the general solution for the scalar field in the bulk, \eqref{general basis}, contains both normalizable \emph{and} non-normalizable components.
 
 For special integer values of the frequencies $\omega_I = \omega_i = 2i + \Delta^+$ with $i \in \mathbb{Z}^+$, the solution is purely normalizable 
 and can be written as
@@ -148,22 +143,17 @@ and can be written as
 \label{normal basis}
 E_I (x)\Big|_{\omega_I = \oi} = e_i(x) &= k_i \left( \cos(x) \right)^{\Delta^+} P_{i}^{(d/2 - 1, \, \Delta^+ - d/2)} \left( \cos (2x) \right) \, ,
 \end{align}
-with the Jacobi polynomials $P^{(a,b)}_n (x)$ providing an orthogonal basis that satisfies ${\langle e_i (x), e_j(x) \rangle = \delta_{i j}}$ with respect to the inner product
-\begin{align}
-	\langle f(x), g(x) \rangle = \int^{\pi/2}_0 dx \, \mu(x) \bar f(x) g(x) \, ,
-\end{align}
-when
+with the Jacobi polynomials $P^{(a,b)}_n (x)$ satisfying ${\langle e_i (x), e_j(x) \rangle = \delta_{i j}}$ with respect to the inner product \eqref{inner prod} when
 \begin{align}
 k_i &= 2 \sqrt{\frac{(i + \Delta^+ /2) \Gamma(i+1) \Gamma(i+\Delta^+)}{\Gamma(i+d/2) \Gamma(i + \Delta^+ - d/2 + 1)}} \, .
 \end{align}
-For consistency with other frequency values, we choose to write the non-normalizable contributions 
-in the general form of \eqref{general basis}. 
+For consistency with other frequency values, we choose to write all modes in the general form of \eqref{general basis}. 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The AdS/CFT dictionary relates the leading coefficient of the normalizable modes 
-of the scalar field at the boundary to the expectation value of an operator $\langle \mc O_0 \rangle$ there \cite{hep-th/9808017}.
-The interpretation of the driving term through the AdS/CFT dictionary is the addition of a 
-time-dependent part of the boundary Hamiltonian. To illustrate this, we write the field as a linear combination of normalizable and
+\subsection{Interpretation Through the AdS/CFT Dictionary}
+The AdS/CFT dictionary relates the leading coefficient of the normalizable modes of the scalar field at the boundary to the expectation value of an operator $\langle \mc O_0 \rangle$ there \cite{hep-th/9808017}.
+The interpretation of the driving term through the AdS/CFT dictionary is the addition of a time-dependent part of the boundary Hamiltonian. To illustrate this, we write the field as a linear combination of normalizable and
 non-normalizable modes 
 \begin{align}
 	\phi_0 \sim \alpha_0 (t) \left(\cos (x)\right)^{\Delta^-} + \beta_0 (t) \left( \cos (x) \right)^{\Delta^+} \, ,
@@ -222,6 +212,9 @@ modes, there are an infinite set of possible boundary configurations that could 
 will restrict our work to a set of configurations that will be particularly useful in comparing to 
 existing work with driven CFTs \cite{1502.05726, 1612.07701, 1805.00031}.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The General Source Term}
+
 Without specifying whether frequencies or basis functions have been chosen to be either normalizable or non-normalizable for the time being, we can show that the $\mc O(\epsilon^3)$ part of the scalar field satisfies the equation
 \begin{align}
 \label{3rd order}
@@ -269,6 +262,9 @@ where $S_\ell$ is a polynomial in $a_I$ determined by evaluating the resonant co
 \frac{2 \ol a_\ell}{\epsilon^2} \frac{d b_\ell}{d t} &= - S_\ell \cos \left( b_\ell - \varphi_\ell \right) \, .
 \end{align}
 Note that the amplitudes and phases evolve with respect to the ``slow time'' $\tau = \epsilon^2 t$. In practice, once these flow equations can be written down, the perturbative evolution of the system is determined up to a timescale of $t \sim \epsilon^{-2}$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The Resonance Condition}
 
 To determine the exact form of $S_\ell$, we must consider all combinations of the frequencies that that appear in the right hand side of \eqref{3rd order}, namely ${\{ \omega_I, \omega_J, \omega_K\}}$, that satisfy the resonance condition
 \begin{align}
@@ -845,7 +841,7 @@ Let us return to the case of the boundary term $\mc F(t)$ being given by a singl
 \begin{align}
 	\mc F(t) = \bar A_{\ob} \cos \ob t
 \end{align}
-with fixed amplitude $\bar A_{\ob}$ and some frequency $\ob$. Within the space of resonant frequency values, there are frequencies that happen to satisfy $\ob = \ol$ numerically and may produce extra resonances subject to restrictions on the normalizable frequency. These instances were excluded from the discussion in \S\!~\ref{ssec: equalNN}, and we address them here. When considering special integer values of $\ob$ each choice of $\ob$ below will contribute a $\overline T$-type term to the total source:
+with fixed amplitude $\bar A_{\ob}$ and some frequency $\ob$ (recall also that $m^2_{BF} < m^2 \leq 0$ by the discussion in \S\!~\ref{sec: NNmodes}). Within the space of resonant frequency values, there are frequencies that happen to satisfy $\ob = \ol$ numerically and may produce extra resonances subject to restrictions on the normalizable frequency. These instances were excluded from the discussion in \S\!~\ref{ssec: equalNN}, and we address them here. When considering special integer values of $\ob$ each choice of $\ob$ below will contribute a $\overline T$-type term to the total source:
 \begin{align}
 \label{gen NN res 1}
 \overline{T}^{(1)}_{i}: \quad \omega_i &= \ol + 2\ob \quad \forall \; \ob \in \mathbb{Z}^+ \\
