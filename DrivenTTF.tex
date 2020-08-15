@@ -132,7 +132,7 @@ Requiring regularity at the origin we find that \cite{hep-th/9805171}
 where the positive (negative) root of $\Delta (\Delta - d) = m^2$ as $\Delta^+$($\Delta^-$). There are two solution for $E_I(x)$ at the boundary, denoted $\Phi^\pm_I (x)$, that combine to give the solution at the origin \eqref{general basis} through $E_I (x) = C_I^+ \Phi^+_I(x) + C^{-}_I \Phi^{-}_I (x)$, where $C^{\pm}_I$ are constants that depend on the frequency $\omega_I$ and scaling dimension $\Delta^{\pm}$. By examining each function's scaling when $x \to \pi/2$,  we see that $\Phi_I^+$ goes as $(\cos x )^{\Delta^+}$ near the boundary and therefore is normalizable; furthermore, $\Phi_I^-$ goes as $( \cos x )^{\Delta^-}$ in this limit and therefore is non-normalizable with respect to the inner product
 \begin{align}
 	\label{inner prod}
-	\langle f(x), g(x) \rangle = \int^{\pi/2}_0 dx \, \mu(x) f(x)^\dagger g(x) \, .
+	\langle f(x), g(x) \rangle = \int^{\pi/2}_0 dx \, \mu(x) f^\dagger(x) g(x) \, .
 \end{align}
 
 Matching this behaviour with the time-dependent boundary condition in \eqref{phi1 eqn}, we see that the non-normalizable modes are the ones that couple to the driving term \cite{Nastase}. It is important to realize that the general solution for the scalar field in the bulk, \eqref{general basis}, contains both normalizable \emph{and} non-normalizable components.
@@ -149,68 +149,39 @@ k_i &= 2 \sqrt{\frac{(i + \Delta^+ /2) \Gamma(i+1) \Gamma(i+\Delta^+)}{\Gamma(i+
 \end{align}
 For consistency with other frequency values, we choose to write all modes in the general form of \eqref{general basis}. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Interpretation Through the AdS/CFT Dictionary}
-The AdS/CFT dictionary relates the leading coefficient of the normalizable modes of the scalar field at the boundary to the expectation value of an operator $\langle \mc O_0 \rangle$ there \cite{hep-th/9808017}.
-The interpretation of the driving term through the AdS/CFT dictionary is the addition of a time-dependent part of the boundary Hamiltonian. To illustrate this, we write the field as a linear combination of normalizable and
-non-normalizable modes 
-\begin{align}
-	\phi_0 \sim \alpha_0 (t) \left(\cos (x)\right)^{\Delta^-} + \beta_0 (t) \left( \cos (x) \right)^{\Delta^+} \, ,
-\end{align}
-where $\alpha_0(t)$ is the coefficient of the non-normalizable mode on the boundary and $\beta_0 (t)$ is the 
-coefficient of the normalizable mode. The Hamiltonian on the boundary is then the addition of the Hamiltonian
-for the CFT that lives there, plus a contribution from the operator $\mc O_0$
-\begin{align}
-	H = H_{CFT} + \alpha_0(t) \mc O_0 \, .
-\end{align}
-Therefore, the presence of non-normalizable modes corresponds to pumping energy into and out of the boundary theory. In the presence of the 
-source $\mc F(t)$, the Ward identity now includes a contribution from the driving function,
-\begin{align}
-	\nabla_\mu T^\mu_\nu = \mc O \nabla_\nu \mc F(t)
-\end{align} 
--------- \\
-the time dependence of the 
-energy density in the CFT in terms of the coefficients of both types of modes, and allows us to examine 
-the evolution of the energy density in boundary theory in terms of the leading contributions to bulk 
-variables. \\
--------- \\
-Application of GF metric in AdS/CFT \cite{0707.1737, hep-th/0303164, hep-th/0205075}. \\
-GF metric in general \cite{fefferman1985mathematical}. \\
--------- \\
-Stepping through holographic renormalization \cite{hep-th/0112119, hep-th/0205061} \\
--------- \\
-Inclusion of counterterms on the boundary in order to calculate the bulk to boundary correlator \cite{hep-th/9804058} \\
--------- \\
-Let us now write the first-order part of the scalar field as a sum over both normalizable 
-and non-normalizable modes
+Let us now write the first-order part of the scalar field as a sum over both normalizable and non-normalizable modes
 \begin{align}
 \label{phi1 gen}
 \phi_1(t,x) &= \sum_I c_I (t)  E_I (x) \nonumber \\
 &= \sum_j a_j (t) \cos \left( \oi t + b_i(t) \right) e_j(x) + \sum_\alpha \bar A_\alpha \cos \left( \omega_\alpha t + \bar{B}_\alpha \right) E_\alpha(x) \, .
 \end{align}
-As we have seen, the non-normalizable modes will couple to the driving term. The values of $\bar A_\alpha$ and 
-$\bar{B}_\alpha$ will be set by the particular form of the driving term, which we impose. This justifies 
-our choice of working in the boundary gauge; the time $t$ is the proper time measured on the boundary, 
-as well as the time scale of oscillations from the driving term. In the simplest example, the driving term 
-on the boundary is a single, periodic function with frequency $\ob$ and amplitude $\mc A$
+As we have seen, the addition of a time-dependent boundary condition on the boundary of AdS activates the non-normalizable modes of the scalar field. The values of $\bar A_\alpha$ and $\bar{B}_\alpha$ will be set by the particular form of the driving term, which we impose. This justifies our choice of working in the boundary gauge; the time $t$ is the proper time measured on the boundary, as well as the time scale of oscillations from the driving term. In the simplest example, the driving term on the boundary is a single, periodic function with (non-integer) frequency $\ob$ and (constant) amplitude $\mc A$
 \begin{align}
 \label{BC}
 \phi_1(t,\pi/2) = \mc A \cos \ob t \, .
 \end{align}
-In this case, the vanishing of the normalizable modes at the boundary leaves only the
-non-normalizable part of \eqref{phi1 gen}, which collapses into a single term
+In this case, the vanishing of the normalizable modes at the boundary leaves only the non-normalizable part of \eqref{phi1 gen}, which collapses into a single term
 \begin{align}
 \sum_\alpha \bar A_\alpha \cos (\omega_\alpha t + \bar B_\alpha )  E_{\alpha} (\pi / 2) = \mc A \cos \ob t \:\: \Rightarrow \:\: \bar A_{\ob} \, E_{\ob} (\pi / 2) = \mc A \quad \text{and} \quad \bar B_{\ob} = 0 \, .
 \end{align}
-In practice, we generalize the boundary condition to a sum over Fourier modes $\ob_\alpha$, which means 
-that additional $\bar A_\alpha$ and $\bar B_\alpha$ terms are non-zero. Note that the allowed non-normalizable frequencies
-are completely set by the form of the boundary term being considered. In subsequent sections, we will
-examine several specific choices of driving frequencies that would produce resonances beyond first order.
-Note that because the non-normalizable frequencies are not restricted to integer values like the normalizable
-modes, there are an infinite set of possible boundary configurations that could be explored. Therefore, we
-will restrict our work to a set of configurations that will be particularly useful in comparing to 
+In practice, we generalize the boundary condition to a sum over Fourier modes $\ob_\alpha$, which means that additional $\bar A_\alpha$ and $\bar B_\alpha$ terms are non-zero. Note that the allowed non-normalizable frequencies
+are completely set by the form of the boundary term being considered. In subsequent sections, we will examine several specific choices of driving frequencies that would produce resonances beyond first order. Note that because the non-normalizable frequencies are not restricted to integer values like the normalizable modes, there are an infinite set of possible boundary configurations that could be explored. Therefore, we will restrict our work to a set of configurations that will be particularly useful in comparing to 
 existing work with driven CFTs \cite{1502.05726, 1612.07701, 1805.00031}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Interpretation Through the AdS/CFT Dictionary}
+
+The AdS/CFT dictionary relates the leading coefficient of the normalizable modes of the scalar field at the boundary to the expectation value of an operator $\langle \mc O_0 \rangle$ there \cite{hep-th/9808017}. Similarly, the leading coefficient of the non-normalizable modes is related to a source in the boundary CFT. To illustrate this, consider the leading-order behaviour of the scalar field near the conformal boundary:  
+\begin{align}
+	\phi \sim \alpha (t) \left(\cos (x)\right)^{\Delta^-} + \beta (t) \left( \cos (x) \right)^{\Delta^+} +~\ldots \, ,
+\end{align}
+where $\alpha(t)$ and $\beta(t)$ are the coefficients of the non-normalizable and normalizable modes, respectively, as determined by their scaling with $x$, and the $(\ldots)$ represent subleading contributions. The Hamiltonian on the boundary receives and extra contribution from the operator $\mc O_0$ that goes like
+\begin{align}
+	H = H_{CFT} + \alpha(t) \mc O_0 \, .
+\end{align}
+Therefore, the presence of non-normalizable modes corresponds to a time-dependent portion of the energy of the boundary theory. 
+
+In principle, we can determine the exact form of the time dependence of the energy density in the boundary theory in terms of bulk variables. However, there are additional considerations that arise due to non-normalizable modes. In particular, the boundary CFT must be renormalizable and surface terms from the bulk action may contain contributions from non-normalizable modes that violate renormalizability. The process of holographic renormalization can be approached through the explicit calculation of the required counterterms \cite{hep-th/9804058, hep-th/0112119}, or by rewriting the metric near the boundary in the Fefferman-Graham form \cite{0707.1737, hep-th/0303164, hep-th/0205075, fefferman1985mathematical}. However, this process is complicated by the appearance of different terms when either even or odd numbers of dimensions are considered \cite{hep-th/0205061, 1206.6785}. For these reasons, explicit calculations of one-point functions on the boundary in terms of the bulk variables -- which requires that the relevant counterterms be added -- will be left to future work.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The General Source Term}
@@ -472,20 +443,24 @@ In figure~\ref{fig:atoi_all_m-4_0}, we compute the total source term (modulo the
 \label{fig:atoi_all_m-4_0}
 \end{figure}
 
+\newpage
+
 \begin{figure}[h!]
 \centering
-	\begin{subfigure}[b]{0.75\textwidth}
+	\begin{subfigure}[b]{0.9\textwidth}
 		\includegraphics[width=\textwidth]{./figures/NNAddToInteger_source_n2_m0_0}
 		\label{fig:atoi_all_n2_m0}
 	\end{subfigure}
 	\vspace{-0.25in}
-	\begin{subfigure}[b]{0.75\textwidth}
+	\begin{subfigure}[b]{0.9\textwidth}
 		\includegraphics[width=\textwidth]{./figures/NNAddToInteger_source_n4_m0_0}
 		\label{fig:atoi_all_n4_m0}
 	\end{subfigure}
 	\caption{Evaluating \eqref{add to integer} for $m^2 = 0$ in $d=4$. {\it Above:} $S_\ell$ as a function of $\ell$ for a massless scalar with values of $\oone$ and $\otwo$ chosen so that $\oone + \otwo = 4$. {\it Below:} The same plot but with values chosen to satisfy $\oone + \otwo = 8$ so that contributions from $\overline R^{(-+)}_{i\ell}$ are present.}
 	\label{fig:atoi_all_m0_0compare}
 \end{figure}
+
+\newpage
 
 The renormalization flow equations include the sum of all the channels (none of which vanish naturally), and are
 \begin{align}
