@@ -53,7 +53,7 @@
 Winnipeg, Manitoba R3T 2N2, Canada}
 \emailAdd{cowndenb@myumanitoba.ca}
 
-\abstract{We extend the study of the non-linear perturbative theory of weakly turbulent energy cascades in AdS$_{d+1}$ to include solutions of driven systems, i.e.~those with time-dependent sources on the AdS boundary. This necessitates the activation of non-normalizable modes in the linear solution for the massive bulk scalar field, which couple to the metric and normalizable scalar modes. We determine analytic expressions for secular terms in the renormalization flow equations for any mass, and for various driving functions. Finally, we numerically evaluate these sources for $d=4$ and discuss what role these driven solutions play in the perturbative stability of AdS.}
+\abstract{We extend the study of the non-linear perturbative theory of weakly turbulent energy cascades in AdS$_{d+1}$ to include solutions of driven systems, i.e.~those with time-dependent sources on the AdS boundary. This necessitates the activation of non-normalizable modes in the linear solution for the massive bulk scalar field, which couple to the metric and normalizable scalar modes. We determine analytic expressions for secular terms in the renormalization flow equations mass values $m_{BF}^2 < m^2 \leq 0$, and for various driving functions. Finally, we numerically evaluate these sources for $d=4$ and discuss what role these driven solutions play in the perturbative stability of AdS.}
 
 \keywords{Anti-de Sitter Instability, Gauge/Gravity Duality, Holographic Quantum Quenches}
 
@@ -640,10 +640,8 @@ Using these identities, we evaluate each of the inner products and find that
 & \qquad + \sum_{i = 0}^\infty \sum_{j = 0}^\infty \oj^2 c_j \left( \mathbb C_i P_{j \ell i} + c_i^2 X_{ii j \ell} \right) \, , \\
 %
 \langle \dot \delta_2 \dot \phi_1 , e_\ell \rangle &= \sum_{i = 0}^\infty \sum_{\substack{j=0 \\ k \neq \ell}}^\infty \sum_{k=0}^\infty \frac{\dot c_k}{\ol^2 - \ok^2} \left[ \p_t \left( \dot c_i \dot c_j \right) \left( X_{k\ell ij} - X_{\ell k i j} \right) + \p_t (c_i c_j) \left(Y_{ij\ell k} - Y_{ijk\ell}\right) \right] \nonumber \\
-& \qquad+ \sum_{i=0}^\infty \sum_{j=0}^\infty \dot c_\ell \left[ \p_t \left( \dot c_i \dot c_j \right) P_{ij\ell} + \p_t (c_i c_j) B_{ij\ell} \right] \, , 
+& \qquad+ \sum_{i=0}^\infty \sum_{j=0}^\infty \dot c_\ell \left[ \p_t \left( \dot c_i \dot c_j \right) P_{ij\ell} + \p_t (c_i c_j) B_{ij\ell} \right] \, , \\
 %
-\end{align}
-\begin{align}
 \langle \dot A_2 \dot \phi_1, e_\ell \rangle &= -2 \sum_{i=0}^\infty \sum_{j=0}^\infty \sum_{k=0}^\infty  \dot c_k \dot c_j c_i X_{ijk\ell} \, , \\
 %
 \langle \left( A_2' - \delta_2' \right) \phi_1', e_\ell \rangle &= - 2 \sum_{i = 0}^\infty \sum_{\substack{j=0 \\ i \neq j}}^\infty \sum_{k=0}^\infty \frac{c_k (\dot c_i \dot c_j + \oj^2 c_i c_j)}{\oj^2 -\oi^2} H_{ijk\ell} -m^2 \sum_{i=0}^\infty \sum _{j=0}^\infty \sum_{k=0}^\infty c_i c_j c_k V_{ijk\ell} \nonumber \\
@@ -657,7 +655,9 @@ Using these identities, we evaluate each of the inner products and find that
 where the forms of X, Y, V, H, B, M, P, and Q are given by
 \begin{align}
 X_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu e'_i e_j e_k e_\ell \\
-Y_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu e'_i e'_j e_k e'_\ell \\
+Y_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu e'_i e'_j e_k e'_\ell
+\end{align}
+\begin{align}
 V_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu e_i e_j e'_k e_\ell \sec^2 x \\
 H_{ijk\ell} &= \int^{\pi/2}_0 dx \, \mu^2 \nu' e'_i e_j e'_k e_\ell \\
 B_{ij\ell} &= \int^{\pi/2}_0 dx \, \mu \nu e'_i e'_j \int^x_0 dy \, \mu e^2_\ell \\
