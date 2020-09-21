@@ -165,8 +165,7 @@ In this case, the vanishing of the normalizable modes at the boundary leaves onl
 \sum_\alpha \bar A_\alpha \cos (\omega_\alpha t + \bar B_\alpha )  E_{\alpha} (\pi / 2) = \mc A \cos \ob t \:\: \Rightarrow \:\: \bar A_{\ob} \, E_{\ob} (\pi / 2) = \mc A \quad \text{and} \quad \bar B_{\ob} = 0 \, .
 \end{align}
 In practice, we generalize the boundary condition to a sum over Fourier modes $\ob_\alpha$, which means that additional $\bar A_\alpha$ and $\bar B_\alpha$ terms are non-zero. Note that the allowed non-normalizable frequencies
-are completely set by the form of the boundary term being considered. In subsequent sections, we will examine several specific choices of driving frequencies that would produce resonances beyond first order. Note that because the non-normalizable frequencies are not restricted to integer values like the normalizable modes, there are an infinite set of possible boundary configurations that could be explored. Therefore, we will restrict our work to a set of configurations that will be particularly useful in comparing to 
-existing work with driven CFTs \cite{1502.05726, 1612.07701, 1805.00031}.
+are completely set by the form of the boundary term being considered. In subsequent sections, we will examine several specific choices of driving frequencies that would produce resonances beyond first order. Note that because the non-normalizable frequencies are not restricted to integer values like the normalizable modes, there are an infinite set of possible boundary configurations that could be explored. Therefore, we will restrict our work to a set of configurations that will be particularly useful in comparing to existing work with driven CFTs \cite{1712.07637, 1502.05726, 1612.07701, 1805.00031}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Interpretation Through the AdS/CFT Dictionary}
@@ -175,7 +174,7 @@ The AdS/CFT dictionary relates the leading coefficient of the normalizable modes
 \begin{align}
 	\phi \sim \alpha (t) \left(\cos (x)\right)^{\Delta^-} + \beta (t) \left( \cos (x) \right)^{\Delta^+} +~\ldots \, ,
 \end{align}
-where $\alpha(t)$ and $\beta(t)$ are the coefficients of the non-normalizable and normalizable modes, respectively, as determined by their scaling with $x$, and the $(\ldots)$ represent subleading contributions. The Hamiltonian on the boundary receives and extra contribution from the operator $\mc O_0$ that goes like
+where $\alpha(t)$ and $\beta(t)$ are the coefficients of the non-normalizable and normalizable modes, respectively, as determined by their scaling with $x$, and the $(\ldots)$ represent subleading contributions. The Hamiltonian on the boundary receives an extra contribution from the operator $\mc O_0$ that goes like
 \begin{align}
 	H = H_{CFT} + \alpha(t) \mc O_0 \, .
 \end{align}
@@ -223,9 +222,9 @@ Note that sums and restrictions on indices must be interpreted as sums and restr
 
 As mentioned above, the growth of resonant terms with time, i.e.~secular growth, at $\mc O(\epsilon^3)$ can be absorbed into the definition of the first-order amplitudes and phases \cite{hep-th/9506161}. Thus, \eqref{3rd order} tells us that
 \begin{align}
-\ddot c^{(3)}_\ell (t) + \ol^2 c^{(3)}_\ell(t) = S_\ell \cos \left( \ol t + \varphi_\ell \right) \, ,
+\ddot c^{(3)}_\ell (t) + \ol^2 c^{(3)}_\ell(t) = S_\ell \, ,
 \end{align}
-where $S_\ell$ is a polynomial in $a_I$ determined by evaluating the resonant contributions from \eqref{general source}, $\varphi_\ell$ is some combination of the $b_I$, and $c^{(3)}_\ell (t)$ is of the same form as $c_I(t)$ but with third-order amplitudes and phases. The components of $c^{(3)}_\ell (t)$ will be expressed in terms of first-order quantities through a set of coupled renormalization flow equations, obtained either from the Two-Time Formalism picture~\cite{1403.6471} or the renormalization group resummation picture~\cite{1412.3249}. The effect of either method is that we can rewrite the amplitudes and phases in terms of renormalized integration constants that exactly cancel the secular terms at each instant. Doing so yields the renormalization flow equations for the renormalized constants~\cite{1407.6273}
+where $S_\ell$ is a polynomial in $a_I$ determined by evaluating the resonant contributions from \eqref{general source} and $c^{(3)}_\ell (t)$ is of the same form as $c_I(t)$ but with third-order amplitudes and phases. The components of $c^{(3)}_\ell (t)$ will be expressed in terms of first-order quantities through a set of coupled renormalization flow equations, obtained either from the Two-Time Formalism picture~\cite{1403.6471} or the renormalization group resummation picture~\cite{1412.3249}. The effect of either method is that we can rewrite the amplitudes and phases in terms of renormalized integration constants that exactly cancel the secular terms at each instant. Doing so yields the renormalization flow equations for the renormalized constants~\cite{1407.6273}
 \begin{align}
 \label{RN flow 1}
 \frac{2 \ol}{\epsilon^2} \frac{d a_\ell}{d t} &= - S_\ell \sin \left( b_\ell - \varphi_\ell \right) \\
@@ -237,7 +236,7 @@ Note that the amplitudes and phases evolve with respect to the ``slow time'' $\t
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The Resonance Condition}
 
-To determine the exact form of $S_\ell$, we must consider all combinations of the frequencies that that appear in the right hand side of \eqref{3rd order}, namely ${\{ \omega_I, \omega_J, \omega_K\}}$, that satisfy the resonance condition
+To determine the exact form of $S_\ell$, we must consider all combinations of the frequencies that appear in the right hand side of \eqref{3rd order}, namely ${\{ \omega_I, \omega_J, \omega_K\}}$, that satisfy the resonance condition
 \begin{align}
 \label{gen res}
 \omega_I \pm \omega_J \pm \omega_K = \pm \ol \, .
@@ -295,6 +294,8 @@ A_2 (\tilde x \equiv \pi /2 - x) \sim \tilde{x}^{-\xi} \left( \frac{2 \tilde{x}^
 \end{align}
 where we have defined $\xi = \sqrt{d^2 + 4m^2}$. In the massless case, $\xi = d$ and all powers of $\tilde{x}$ are non-negative; thus, $A_2$ is finite as $\tilde x \to 0$. For tachyonic masses, $m^2_{BF} < m^2 < 0$ so that $0 < \xi < d$ and the limit is again finite. However, when $m^2 > 0$, part of the expression diverges resulting in a non-zero contribution at the conformal boundary. In order for the boundary to remain asymptotically AdS, counter-terms in the bulk action would be required to cancel such divergences -- a case we will not address presently. Furthermore, for masses that saturate the Breitenlohner-Freedman bound, the limit would have to be re-evaluated. We will therefore restrict our discussion to $m^2_{BF} < m^2 \leq 0$ to avoid these issues. A similar check on the near-boundary behaviour of $\delta_2$ shows that the gauge condition ${\delta_2 (t, \pi/2) = 0}$ remains unchanged by the addition of non-normalizable modes given the same restrictions on the mass of the scalar field. With these restrictions in mind, let us now examine the resonances produced by the activation of non-normalizable modes.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{A Single Non-normalizable Mode}
 \label{ssec: equalNN}
 
@@ -347,11 +348,15 @@ Qualitatively, we see that instead of both the amplitude and the phase running w
 \label{fig:equal_frequency_m-1_0}
 \end{figure}
 
-In figures \ref{fig:equal_frequency_m0} and \ref{fig:equal_frequency_m-1_0}, we evaluate \eqref{S:2NN} for $\ell < 10$ over a variety of $\ob$ values first for a massless scalar, then for a tachyonic scalar. For both values of mass-squared, $T_\ell$ demonstrates power law-type behaviour as a function of $\ell$ with a leading coefficient that is proportional to the non-normalizable frequency $\ob$. We also see that the limit of \eqref{S:2NN} as $\ob \to \omega_0$ is well-defined in both cases.
+In figures \ref{fig:equal_frequency_m0} and \ref{fig:equal_frequency_m-1_0}, we evaluate \eqref{S:2NN} for $\ell < 10$ over a variety of $\ob$ values first for a massless scalar, then for a tachyonic scalar. For both values of mass-squared, $\overline{T}_\ell$ demonstrates power law-type behaviour as a function of $\ell$ with a leading coefficient that is proportional to the non-normalizable frequency $\ob$. We also see that the limit of \eqref{S:2NN} as $\ob \to \omega_0$ is well-defined in both cases.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Special Values of Non-normalizable Frequencies}
 
 Let us now consider special values of non-normalizable frequencies that will lead to a greater number of resonance channels. While general non-normalizable frequencies do not require any such restrictions, we will find it informative to examine these special cases as they possess more symmetry in index/frequency values than the case of equal non-normalizable frequencies, but less than all-normalizable modes. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Add to an integer}
 \label{ssec: add to integer}
@@ -481,6 +486,8 @@ and
 & \quad  - \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \overline{R}^{(+-)}_{(\ell + n) \ell} \, \bar A_1 \bar A_2 \, a_{(\ell + n)} \cos \left( b_{(\ell + n)} - \bar B_1 - \bar B_2 \right) - \overline{T}_{\ell} \, \bar A_1 \bar A_2 \, a_\ell \, .
 \end{align}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{Integer Plus $\chi$}
 \label{ssec: intpluschi}
 
@@ -490,6 +497,8 @@ Finally, let us consider the case where the boundary condition can be written in
 	\mc F(t) = \sum_{\gamma} \bar A_{\gamma} \cos \left( \omega_\gamma t + \bar B_{\gamma} \right) \quad \text{with} \quad \ogam = 2\gamma + \chi \, ,
 \end{align}
 where $\gamma \in \mathbb{Z}^+$. Greek letters are chosen to differentiate these non-normalizable modes from normalizable modes with integer frequencies, which use Roman letters. We furthermore limit $\chi$ to be non-integer\footnote{Indeed, for integer values of $\chi$, the sum or difference of two non-normalizable modes could be an integer. This would either be covered by the work in \S\!~\ref{ssec: add to integer}, or be a slight variation of it.} and set $m^2 = 0$ throughout. For this choice of non-normalizable frequencies there are no resonant contributions from the all-plus channel, unlike the naturally vanishing resonance found in \S\!~\ref{ssec: zero resonance}. Only when either $\oi + \ogam = \obet - \ol$, or $\oi + \ogam = \obet + \ol$ with $i + \gamma \geq \ell$, are resonant terms present. Let us examine each case separately.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{$\oi + \ogam = \obet - \ol$}
 \label{sssec: intpluschi1}
@@ -517,6 +526,8 @@ and
 %
 & + X_{\beta\ell\beta\ell} \left( \frac{\ol^4}{\ol^2 - \obet^2} \right)  - \frac{1}{2} \obet^2  X_{\ell\beta\beta\ell} \left(\frac{\ol^2 + \obet^2 }{\ol^2 - \obet^2} \right)  - \frac{1}{2} H_{\ell\beta\beta\ell} + \ol^2 \tilde{Z}^+_{\beta\beta\ell} -2 \obet^2 \ol^2 P_{\ell\ell\beta} - \obet^2 M_{\ell\ell\beta} \, .
 \end{align}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{$\oi + \ogam = \obet + \ol$}
 \label{ssec: intpluschi2}
