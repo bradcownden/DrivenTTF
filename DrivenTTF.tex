@@ -190,7 +190,48 @@ Without specifying whether frequencies or basis functions have been chosen to be
 \label{3rd order}
 \ddot \phi_3 + \hat L \phi_3 = S = 2 (A_2 - \delta_2) \ddot \phi_1 + (\dot A_2 - \dot \delta_2) \dot\phi_1 + (A_2' -\delta_2' )\phi_1' + m^2 A_2 \phi_1 \sec^2 x \, .
 \end{align}
-Following the steps outlined in Appendix~\ref{app: source term derivation}, we project \eqref{3rd order} onto the basis of normalizable modes since all non-normalizable contributions have been fixed by the $\mc O(\epsilon)$ boundary condition. Employing a ubiquitous time-dependent solution ${c_I(t) = a_I \cos (\omega_I t + b_I) = a_I \cos\theta_I}$ with $I \in \{i, \alpha \}$, we find that the source term for the $\ell^{\rm th}$ mode is
+Following the steps outlined in Appendix~\ref{app: source term derivation}, we project \eqref{3rd order} onto the basis of normalizable modes. Since all non-normalizable contributions have been fixed by the $\mc O(\epsilon)$ boundary condition, there will be no contribution from non-normalizable modes at this order. Using the expansion from \eqref{phi1 gen}, we see that ${\langle \phi_3, e_\ell \rangle = c^{(3)}_\ell}$ and so
+\begin{align}
+\label{S gen}
+\ddot c^{(3)}_\ell (t) + \ol^2 c^{(3)}_\ell(t) = S_\ell \, ,
+\end{align}
+where $S_\ell$ is a polynomial in the first-order amplitudes $a_I$. 
+
+As discussed in \cite{1407.6273}, the solution to \eqref{S gen} will contain terms proportional to 
+\begin{align}
+\label{cos of thetas}
+\cos ( \theta_I \pm \theta_J \pm \theta_K) = \cos \left( (\omega_I \pm \omega_J \pm \omega_K) t + b_I \pm b_J \pm b_K \right) \, .
+\end{align}
+For choices of $\{\theta_I,\theta_J,\theta_K\}$ such that ${\pm \omega_\ell \neq \pm \omega_I \pm \omega_J \pm \omega_K}$, $S_\ell$ will always be made up of terms of the form in \eqref{cos of thetas}. However, if the frequencies are \emph{resonant}, i.e.~if ${\pm \omega_\ell = \pm \omega_I \pm \omega_J \pm \omega_K}$, then the solution to \eqref{S gen} will contain terms of the form
+\begin{align}
+\label{secular}
+t \sin ( \theta_I \pm \theta_J \pm \theta_K ) \, .
+\end{align}
+These terms, known as \emph{secular terms}, grow linearly with time and will eventually invalidate the perturbative expansion. 
+\\
+
+of resonant terms with time, i.e.~secular growth, at $\mc O(\epsilon^3)$ can be absorbed into the definition of the first-order amplitudes and phases \cite{hep-th/9506161}. Thus, \eqref{3rd order} tells us that
+\\
+
+determined by evaluating the resonant contributions from \eqref{general source} and . The components of $c^{(3)}_\ell (t)$ will be expressed in terms of first-order quantities through a set of coupled renormalization flow equations, obtained either from the Two-Time Formalism picture~\cite{1403.6471} or the renormalization group resummation picture~\cite{1412.3249}. The effect of either method is that we can rewrite the amplitudes and phases in terms of renormalized integration constants that exactly cancel the secular terms at each instant. Doing so yields the renormalization flow equations for the renormalized constants~\cite{1407.6273}
+\begin{align}
+\label{RN flow 1}
+\frac{2 \ol}{\epsilon^2} \frac{d a_\ell}{d t} &= - S_\ell \sin \left( b_\ell - \varphi_\ell \right) \\
+\label{RN flow 2}
+\frac{2 \ol a_\ell}{\epsilon^2} \frac{d b_\ell}{d t} &= - S_\ell \cos \left( b_\ell - \varphi_\ell \right) \, .
+\end{align}
+Note that the amplitudes and phases evolve with respect to the ``slow time'' $\tau = \epsilon^2 t$. In practice, once these flow equations can be written down, the perturbative evolution of the system is determined up to a timescale of $t \sim \epsilon^{-2}$.
+
+
+
+
+
+
+
+
+
+
+Employing a ubiquitous time-dependent solution ${c_I(t) = a_I \cos (\omega_I t + b_I) = a_I \cos\theta_I}$ with $I \in \{i, \alpha \}$, we find that the source term for the $\ell^{\rm th}$ mode is
 
 \begin{align}
 \label{general source}
@@ -220,18 +261,6 @@ S_\ell &=\frac{1}{4} \sum_{\substack{I,J,K \\ K \neq \ell}}^\infty \frac{a_I a_J
 \end{align} 
 Note that sums and restrictions on indices must be interpreted as sums and restrictions on \emph{frequencies} when any of the modes is non-normalizable, since $\omega_\alpha \neq 2 \alpha + \Delta^+$ in general.
 
-As mentioned above, the growth of resonant terms with time, i.e.~secular growth, at $\mc O(\epsilon^3)$ can be absorbed into the definition of the first-order amplitudes and phases \cite{hep-th/9506161}. Thus, \eqref{3rd order} tells us that
-\begin{align}
-\ddot c^{(3)}_\ell (t) + \ol^2 c^{(3)}_\ell(t) = S_\ell \, ,
-\end{align}
-where $S_\ell$ is a polynomial in $a_I$ determined by evaluating the resonant contributions from \eqref{general source} and $c^{(3)}_\ell (t)$ is of the same form as $c_I(t)$ but with third-order amplitudes and phases. The components of $c^{(3)}_\ell (t)$ will be expressed in terms of first-order quantities through a set of coupled renormalization flow equations, obtained either from the Two-Time Formalism picture~\cite{1403.6471} or the renormalization group resummation picture~\cite{1412.3249}. The effect of either method is that we can rewrite the amplitudes and phases in terms of renormalized integration constants that exactly cancel the secular terms at each instant. Doing so yields the renormalization flow equations for the renormalized constants~\cite{1407.6273}
-\begin{align}
-\label{RN flow 1}
-\frac{2 \ol}{\epsilon^2} \frac{d a_\ell}{d t} &= - S_\ell \sin \left( b_\ell - \varphi_\ell \right) \\
-\label{RN flow 2}
-\frac{2 \ol a_\ell}{\epsilon^2} \frac{d b_\ell}{d t} &= - S_\ell \cos \left( b_\ell - \varphi_\ell \right) \, .
-\end{align}
-Note that the amplitudes and phases evolve with respect to the ``slow time'' $\tau = \epsilon^2 t$. In practice, once these flow equations can be written down, the perturbative evolution of the system is determined up to a timescale of $t \sim \epsilon^{-2}$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The Resonance Condition}
