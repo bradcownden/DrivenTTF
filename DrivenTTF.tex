@@ -382,6 +382,12 @@ Moreover, for a massless scalar\footnote{Note that specific values of $m^2 \neq 
 \label{minus plus}
 (-+): \, -\omega_i + 2n = \omega_\ell \quad \forall \; n \geq \ell + d \, .
 \end{align}
+Finally, there are extra contributions of the form \eqref{gen nn} that are present for all choices of $n$ or $m^2$ within the bounds described when
+\begin{align}
+\label{atoi plus/minus}
+	\omega_i + \oone - \oone = \oi + \otwo - \otwo = \ol \quad \forall \; n \, .
+\end{align}
+
 Adding the channels together, the total source term is
 \begin{align}
 \label{add to integer}
@@ -391,7 +397,9 @@ S_\ell &=  \!\!\!\! \sum_{\oone + \otwo = 2n}\bigg[ \Theta\left( n - \ell - d \r
 %
 & \quad  + \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \overline{R}^{(+-)}_{(\ell + n) \ell} \, \bar A_1 \bar A_2 \, a_{(\ell + n)} \cos\left( \theta_{(\ell + n)} - \theta_1 - \theta_2 \right) \nonumber \\
 %
-& \quad + \overline{T}_{\ell} \, \bar A_1 \bar A_2 \, a_\ell \cos \left( \theta_\ell \right)
+& \quad + \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \overline{R}^{(1)}_{(\ell)\ell} \, \bar A_1^2 \, a_\ell \cos\left( \theta_{(\ell)} + \theta_1 - \theta_1 \right) + \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \overline{R}^{(2)}_{(\ell)\ell} \, \bar A_2^2 \, a_\ell \cos\left( \theta_{(\ell)} + \theta_2 - \theta_2 \right) \nonumber \\
+%
+& \quad + \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \overline{T}^{(1)}_{\ell} \bar A_1^2 \, a_\ell \cos \left( \theta_\ell \right) + \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \overline{T}^{(2)}_{\ell} \bar A_2^2 \, a_\ell \cos \left( \theta_\ell \right)
 \end{align}
 where the Heaviside step function $\Theta(x)$ enforces the restrictions on the indices in \eqref{all pluses} and \eqref{minus plus} and $\theta_1 = \oone t + \bar B_1$, etc. 
 
@@ -408,6 +416,7 @@ In the following expressions, the sum over all $\oone$, $\otwo$ such that $\oone
 %
 & + \frac{1}{2} \Big[ \oone\otwo X_{i12\ell} + \left( \ol - 2n \right)\left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) - \frac{m^2}{2} \left( V_{i12\ell} + V_{i21\ell} + V_{12i\ell} \right) \Big] \, .
 \end{align}
+
 The notation $X_{i12\ell}$ corresponds to evaluating $X_{ijk\ell}$ with $\omega_j = \oone$ and $\omega_k = \otwo$. Next, we find that
 \begin{align}
 \label{R2}
@@ -435,13 +444,21 @@ When $m^2 = 0$, we have contributions from
 %
 & \quad - \frac{1}{2} \Big[ (2n - \ol) \left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) - \oone \otwo X_{i12\ell} \Big] .
 \end{align}
-{\it NB.}\, In \eqref{R3} only, $\oi = 2i + \Delta^+ = 2i + d$ since this term requires that $m^2 = 0$ to contribute. We maintain the same notation out of convenience, despite the special case. Finally, 
+{\it NB.}\, In \eqref{R3} only, $\oi = 2i + \Delta^+ = 2i + d$ since this term requires that $m^2 = 0$ to contribute. We maintain the same notation out of convenience, despite the special case. 
+
+For all values of $n$, we have the following channels:
 \begin{align}
-\label{T12}
-\overline{T}_{\ell} &=  \frac{1}{2} \ol^2 \left( \tilde{Z}^+_{11\ell} + \tilde{Z}^+_{22\ell} \right)- \frac{1}{2} \Big[ H_{11\ell\ell} + H_{22\ell\ell} + m^2 \left( V_{\ell 1 1 \ell} + V_{\ell 2 2 \ell} \right) - 2 \ol^2 \left( X_{11\ell\ell} + X_{22\ell\ell} \right)  \nonumber \\
+\label{R1}
+\overline{R}^{(1)}_{i\ell} &= \sum_{\oi \neq \oone} \left[ \frac{\oone^2}{\oi^2 - \oone^2} \left( H_{i11\ell} + m^2 V_{11i\ell} -2\oone^2 X_{i11\ell} \right) - \frac{\oi^2}{\oi^2 - \oone^2} \left( H_{1i1\ell} +m^2 V_{i11\ell} -2\oone^2 X_{11i\ell} \right) \right] \nonumber \\
 %
-& \quad + 4 \ol^2 \left( \oone^2 P_{\ell \ell 1} + \otwo^2 P_{\ell \ell 2} \right) + 2\oone^2 M_{\ell \ell 1} + 2\otwo^2 M_{\ell \ell 2} + 2m^2 \left( \oone^2 Q_{\ell\ell 1} + \otwo^2 Q_{\ell \ell 2} \right) \Big] \, .
+& \!\!\!\! + \frac{1}{2} \sum_{\ol \neq \oone} \left[ \frac{\oone}{\ol + \oone} Z^-_{i11\ell} + \frac{\oone}{\ol - \oone}Z^+_{i11\ell} \right] + \frac{1}{2} \ol^2 \tilde{Z}^+_{11\ell} - \oone^2 X_{i11\ell} - \frac{1}{2}m^2 V_{i11\ell}  \, ,
 \end{align}
+and
+\begin{align}
+	\label{T1}
+	\overline{T}^{(1)}_\ell = -\frac{1}{2} \left[ H_{11\ell\ell} + m^2 V_{\ell 11\ell} - 2\ol^2 X_{11\ell\ell} +4 \ol^2 \oone^2 P_{\ell\ell 1} + 2\oone^2 M_{\ell\ell 1} + 2m^2 \oone^2 Q_{\ell\ell 1} \right] \, .
+\end{align}
+Where $\overline{R}^{(2)}_{i\ell}$ and $\overline{T}^{(2)}_{\ell}$ follow from \eqref{R1} and \eqref{T1} by replacing $\oone \to \otwo$.
 
 In figure~\ref{fig:atoi_all_m-4_0}, we compute the total source term (modulo the amplitudes $a_i$ and $\bar A_\alpha$) for a tachyonic scalar with $n = 2$. Figure~\ref{fig:atoi_all_m0_0compare} provides a comparison between the value of the source term for a massless scalar between two choices of $n$: one that includes contributions from $\overline{R}_{i\ell}^{(-+)}$ and one that does not. As expected, the source terms are symmetric in $\oone \leftrightarrow \otwo$, hence only $\oone \leq n$ data are shown. Evaluations of each channel separately found that none vanished naturally. Since the total source term $S_\ell$ given by \eqref{add to integer} initially evaluates to small, positive values before becoming increasingly negative as $\ell$ becomes large, one may ask if the \emph{sum} of the channels vanishes. As a check for this, the absolute value of the sum of $S_\ell$ is also plotted; however, there is no indication that any channel vanishes for any of the $\oone$, $\otwo$ values considered. 
 
@@ -512,7 +529,7 @@ When the resonance condition $\oi + \ogam = \obet - \ol$ is met, the contributio
 \label{intpluschi1 source}
 S_\ell &= \sum_{i \neq \ell} \sum_{\gamma \neq \beta} \overline{S}^{(1)}_{i (i + \gamma + \ell) \gamma \ell} \, a_i \bar A_{(i + \gamma + \ell)} \bar A_\gamma \cos \left( \theta_i - \theta_{(i + \gamma + \ell)} + \theta_\gamma \right) \nonumber \\
 %
-& \qquad \qquad + \sum_\beta \overline{R}^{(1)}_{\beta \ell} \, a_\ell \bar A_\beta^2  \cos \left(\theta_\ell + \theta_\beta - \theta_\beta \right) + \ldots \, ,
+& \qquad \qquad + \sum_\beta \overline{R}^{(1)}_{\beta \ell} \, a_\ell \bar A_\beta^2  \cos \left(\theta_\ell + \theta_\beta - \theta_\beta \right)  \, ,
 \end{align}
 where 
 \begin{align}
@@ -541,7 +558,7 @@ Similarly, when the resonance condition $\oi + \ogam = \obet + \ol$ is met, the 
 \label{intpluschi2 source}
 S_\ell &= \underbrace{\sum_{i \neq \ell} \sum_{\gamma \neq \beta}}_{i + \gamma \geq \ell} \overline{S}^{(2)}_{i (i + \gamma - \ell) \gamma \ell} \, a_i \bar A_{(i + \gamma - \ell)} \bar A_\gamma \cos \left( \theta_i - \theta_{(i + \gamma - \ell)}  + \theta_\gamma \right) \nonumber \\
 %
-& \qquad \qquad + \sum_\beta \overline{R}^{(2)}_{\beta\ell} \, a_\ell \bar A_\beta^2 \cos \left( \theta_\ell + \theta_\beta - \theta_\beta \right) + \ldots \, ,
+& \qquad \qquad + \sum_\beta \overline{R}^{(2)}_{\beta\ell} \, a_\ell \bar A_\beta^2 \cos \left( \theta_\ell + \theta_\beta - \theta_\beta \right) \, ,
 \end{align}
 where
 \begin{align}
