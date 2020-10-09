@@ -371,18 +371,18 @@ First, we choose the driving term to be given by the sum of two terms whose freq
 \end{align}
 where $\oone+ \otwo = 2n$ and $n = 1, 2, 3, \ldots$ (note that the $n = 0$ case means that both $\oone$ and $\otwo$ would need to be zero by the positive-frequency requirement and so would not contribute). Once again, the amplitudes $\bar A_1$ and $\bar A_2$ are constant and fixed by the form of $\mc F(t)$. Furthermore, since neither frequency is restricted to integer values, the difference $|\oone - \otwo|$ will, in general, not be an integer. In \S\!~\ref{ssec: intpluschi}, we examine the case when the difference of non-normalizable frequencies is an integer.
 
-When we consider possible resonance channels, we find two resonances are present for any mass value within $m^2_{BF} < m^2 \leq 0$ which we label as  
+When we consider possible resonance channels, we find two resonances are present for any mass value within $m^2_{BF} < m^2 \leq 0$,
 \begin{align}
 \label{all pluses}
 (++): \; \omega_i + 2n &= \omega_\ell \quad \forall \; \ell \geq n \\
-(+-): \, \omega_i - 2n &=\omega_\ell \quad \forall \; n \, .
+(+-): \, \omega_i - 2n &=\omega_\ell \quad \forall \; n \, ,
 \end{align}
-Moreover, for a massless scalar\footnote{Note that specific values of $m^2 \neq 0$ are capable of producing this kind of resonance channel. In such a case, the condition in \eqref{minus plus} would be $n \geq \ell + \Delta^+$ with $m$, $d$ such that $\Delta^+ \in \; \mathbb{Z}^+$.}, we have the additional channel
+while one channel is restricted to massless scalars\footnote{Note that specific values of $m^2 \neq 0$ are capable of producing this kind of resonance channel. In such a case, the condition in \eqref{minus plus} would be $n \geq \ell + \Delta^+$ with $m$, $d$ such that $\Delta^+ \in \; \mathbb{Z}^+$.}
 \begin{align}
 \label{minus plus}
 (-+): \, -\omega_i + 2n = \omega_\ell \quad \forall \; n \geq \ell + d \, .
 \end{align}
-Finally, there are extra contributions of the form \eqref{gen nn} that are present for all choices of $n$ or $m^2$ within the bounds described when
+Furthermore, for all allowed values of $n$ and $m^2$, there are extra contributions due to resonances of the form of \eqref{gen nn}, i.e.
 \begin{align}
 \label{atoi plus/minus}
 	\omega_i + \oone - \oone = \oi + \otwo - \otwo = \ol \quad \forall \; n \, .
@@ -397,13 +397,14 @@ S_\ell &=  \!\!\!\! \sum_{\oone + \otwo = 2n}\bigg[ \Theta\left( n - \ell - d \r
 %
 & \quad  + \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \overline{R}^{(+-)}_{(\ell + n) \ell} \, \bar A_1 \bar A_2 \, a_{(\ell + n)} \cos\left( \theta_{(\ell + n)} - \theta_1 - \theta_2 \right) \nonumber \\
 %
-& \quad + \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \overline{R}^{(1)}_{(\ell)\ell} \, \bar A_1^2 \, a_\ell \cos\left( \theta_{(\ell)} + \theta_1 - \theta_1 \right) + \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \overline{R}^{(2)}_{(\ell)\ell} \, \bar A_2^2 \, a_\ell \cos\left( \theta_{(\ell)} + \theta_2 - \theta_2 \right) \nonumber \\
+& \quad + \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \overline{U}^{(1)}_{(\ell)\ell} \, \bar A_1^2 \, a_\ell \cos\left( \theta_{(\ell)} + \theta_1 - \theta_1 \right) + \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \overline{U}^{(2)}_{(\ell)\ell} \, \bar A_2^2 \, a_\ell \cos\left( \theta_{(\ell)} + \theta_2 - \theta_2 \right) \nonumber \\
 %
 & \quad + \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \overline{T}^{(1)}_{\ell} \bar A_1^2 \, a_\ell \cos \left( \theta_\ell \right) + \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \overline{T}^{(2)}_{\ell} \bar A_2^2 \, a_\ell \cos \left( \theta_\ell \right)
 \end{align}
 where the Heaviside step function $\Theta(x)$ enforces the restrictions on the indices in \eqref{all pluses} and \eqref{minus plus} and $\theta_1 = \oone t + \bar B_1$, etc. 
 
 In the following expressions, the sum over all $\oone$, $\otwo$ such that $\oone + \otwo = 2n$ is implied, and only the restrictions on individual frequencies are included. Examining each channel in \eqref{add to integer} individually, we find
+
 \begin{align}
 \label{R1}
 \overline{R}^{(++)}_{i \ell} &= - \frac{1}{4} \sum_{\otwo \neq \ol} \frac{\otwo}{\ol - \otwo} Z^{-}_{i12\ell} - \frac{1}{4} \sum_{\oone \neq \ol} \frac{\oone}{\ol - \oone} Z^{-}_{i21\ell} - \frac{1}{8n} \left( \ol - 2n \right) Z^-_{12i\ell} \nonumber \\
@@ -444,12 +445,10 @@ When $m^2 = 0$, we have contributions from
 %
 & \quad - \frac{1}{2} \Big[ (2n - \ol) \left( \oone X_{21i\ell} + \otwo X_{12i\ell} \right) - \oone \otwo X_{i12\ell} \Big] .
 \end{align}
-{\it NB.}\, In \eqref{R3} only, $\oi = 2i + \Delta^+ = 2i + d$ since this term requires that $m^2 = 0$ to contribute. We maintain the same notation out of convenience, despite the special case. 
-
-For all values of $n$, we have the following channels:
+{\it NB.}\, In \eqref{R3} only, $\oi = 2i + \Delta^+ = 2i + d$ since this term requires that $m^2 = 0$ to contribute. We maintain the same notation out of convenience, despite the special case. Finally, 
 \begin{align}
 \label{R1}
-\overline{R}^{(1)}_{i\ell} &= \sum_{\oi \neq \oone} \left[ \frac{\oone^2}{\oi^2 - \oone^2} \left( H_{i11\ell} + m^2 V_{11i\ell} -2\oone^2 X_{i11\ell} \right) - \frac{\oi^2}{\oi^2 - \oone^2} \left( H_{1i1\ell} +m^2 V_{i11\ell} -2\oone^2 X_{11i\ell} \right) \right] \nonumber \\
+\overline{U}^{(1)}_{i\ell} &= \sum_{\oi \neq \oone} \left[ \frac{\oone^2}{\oi^2 - \oone^2} \left( H_{i11\ell} + m^2 V_{11i\ell} -2\oone^2 X_{i11\ell} \right) - \frac{\oi^2}{\oi^2 - \oone^2} \left( H_{1i1\ell} +m^2 V_{i11\ell} -2\oone^2 X_{11i\ell} \right) \right] \nonumber \\
 %
 & \!\!\!\! + \frac{1}{2} \sum_{\ol \neq \oone} \left[ \frac{\oone}{\ol + \oone} Z^-_{i11\ell} + \frac{\oone}{\ol - \oone}Z^+_{i11\ell} \right] + \frac{1}{2} \ol^2 \tilde{Z}^+_{11\ell} - \oone^2 X_{i11\ell} - \frac{1}{2}m^2 V_{i11\ell}  \, ,
 \end{align}
@@ -458,7 +457,7 @@ and
 	\label{T1}
 	\overline{T}^{(1)}_\ell = -\frac{1}{2} \left[ H_{11\ell\ell} + m^2 V_{\ell 11\ell} - 2\ol^2 X_{11\ell\ell} +4 \ol^2 \oone^2 P_{\ell\ell 1} + 2\oone^2 M_{\ell\ell 1} + 2m^2 \oone^2 Q_{\ell\ell 1} \right] \, .
 \end{align}
-Where $\overline{R}^{(2)}_{i\ell}$ and $\overline{T}^{(2)}_{\ell}$ follow from \eqref{R1} and \eqref{T1} by replacing $\oone \to \otwo$.
+Where $\overline{U}^{(2)}_{i\ell}$ and $\overline{T}^{(2)}_{\ell}$ follow from \eqref{R1} and \eqref{T1} by replacing $\oone \to \otwo$.
 
 In figure~\ref{fig:atoi_all_m-4_0}, we compute the total source term (modulo the amplitudes $a_i$ and $\bar A_\alpha$) for a tachyonic scalar with $n = 2$. Figure~\ref{fig:atoi_all_m0_0compare} provides a comparison between the value of the source term for a massless scalar between two choices of $n$: one that includes contributions from $\overline{R}_{i\ell}^{(-+)}$ and one that does not. As expected, the source terms are symmetric in $\oone \leftrightarrow \otwo$, hence only $\oone \leq n$ data are shown. Evaluations of each channel separately found that none vanished naturally. Since the total source term $S_\ell$ given by \eqref{add to integer} initially evaluates to small, positive values before becoming increasingly negative as $\ell$ becomes large, one may ask if the \emph{sum} of the channels vanishes. As a check for this, the absolute value of the sum of $S_\ell$ is also plotted; however, there is no indication that any channel vanishes for any of the $\oone$, $\otwo$ values considered. 
 
@@ -468,8 +467,6 @@ In figure~\ref{fig:atoi_all_m-4_0}, we compute the total source term (modulo the
 \caption{{\it Left}: Source term values for a tachyonic scalar with $m^2 = -1.0$ when the frequencies of non-normalizable modes sum to $4.0$. {\it Right}: The absolute value of the sum of the source terms for each choice of $\oone$, $\otwo$.}
 \label{fig:atoi_all_m-4_0}
 \end{figure}
-
-\newpage
 
 \begin{figure}[h!]
 \centering
@@ -485,8 +482,6 @@ In figure~\ref{fig:atoi_all_m-4_0}, we compute the total source term (modulo the
 	\caption{Evaluating \eqref{add to integer} for $m^2 = 0$ in $d=4$. {\it Above:} $S_\ell$ as a function of $\ell$ for a massless scalar with values of $\oone$ and $\otwo$ chosen so that $\oone + \otwo = 4$. {\it Below:} The same plot but with values chosen to satisfy $\oone + \otwo = 8$ so that contributions from $\overline R^{(-+)}_{i\ell}$ are present.}
 	\label{fig:atoi_all_m0_0compare}
 \end{figure}
-
-\newpage
 
 The renormalization flow equations include the sum of all the channels (none of which vanish naturally), and are
 \begin{align}
@@ -504,7 +499,9 @@ and
 %
 & \quad - \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \Theta \left( \ell - n \right)  \overline{R}^{(++)}_{(\ell - n)\ell} \, \bar A_1 \bar A_2 \, a_{(\ell - n)} \cos \left( b_{(\ell - n)} + \bar B_1 + \bar B_2 \right) \nonumber \\
 %
-& \quad  - \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \overline{R}^{(+-)}_{(\ell + n) \ell} \, \bar A_1 \bar A_2 \, a_{(\ell + n)} \cos \left( b_{(\ell + n)} - \bar B_1 - \bar B_2 \right) - \overline{T}_{\ell} \, \bar A_1 \bar A_2 \, a_\ell \, .
+& \quad  - \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! \overline{R}^{(+-)}_{(\ell + n) \ell} \, \bar A_1 \bar A_2 \, a_{(\ell + n)} \cos \left( b_{(\ell + n)} - \bar B_1 - \bar B_2 \right) \nonumber \\
+%
+& \quad - \!\!\!\! \sum_{\oone + \otwo = 2n} \!\!\!\! a_\ell \left( \bar A_1^2 ( \overline{U}^{(1)}_{(\ell)\ell} + \overline{T}^{(1)}_\ell) + \bar A_2^2 (\overline{U}^{(2)}_{(\ell)\ell} + \overline{T}^{(2)}_\ell) \right) \, .
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -524,12 +521,12 @@ where $\gamma \in \mathbb{Z}^+$. Greek letters are chosen to differentiate these
 \subsubsection{$\oi + \ogam = \obet - \ol$}
 \label{sssec: intpluschi1}
 
-When the resonance condition $\oi + \ogam = \obet - \ol$ is met, the contribution to the source term is of the form
+The resonance condition $\oi + \ogam = \obet - \ol$ will contribute two types of terms to $S_\ell$. The first term includes a double sum over the frequencies $\omega_i$ and $\omega_\gamma$ with $\beta = i + \gamma + \ell$ and $\beta \neq \gamma$, and the second term includes a single sum over $\omega_\gamma$ with $\beta = \gamma + 2\ell + d$. In total, the source term is of the form
 \begin{align}
 \label{intpluschi1 source}
 S_\ell &= \sum_{i \neq \ell} \sum_{\gamma \neq \beta} \overline{S}^{(1)}_{i (i + \gamma + \ell) \gamma \ell} \, a_i \bar A_{(i + \gamma + \ell)} \bar A_\gamma \cos \left( \theta_i - \theta_{(i + \gamma + \ell)} + \theta_\gamma \right) \nonumber \\
 %
-& \qquad \qquad + \sum_\beta \overline{R}^{(1)}_{\beta \ell} \, a_\ell \bar A_\beta^2  \cos \left(\theta_\ell + \theta_\beta - \theta_\beta \right)  \, ,
+& \qquad + \sum_\gamma \overline{R}^{(1)}_{(\gamma + 2\ell + d) \ell} \, a_\ell \bar A_\gamma \bar A_{(\gamma + 2\ell + d)}  \cos \left(\theta_\ell - \theta_{(\gamma + 2\ell + d)} + \theta_\gamma \right)  \, ,
 \end{align}
 where 
 \begin{align}
@@ -543,9 +540,11 @@ where
 \end{align}
 and
 \begin{align}
-\overline{R}^{(1)}_{\beta \ell} &= \frac{1}{4} Z^{-}_{\ell \beta \beta \ell} \left( \frac{\obet}{\ol + \obet} \right) +  \frac{1}{4} Z^+_{\ell \beta \beta \ell} \left(\frac{\obet}{\ol - \obet} \right) + \frac{1}{2} H_{\ell\beta\beta\ell} \left( \frac{\obet^2}{\ol^2 - \obet^2} \right) - \frac{1}{2} H_{\beta \ell\beta\ell} \left( \frac{\ol^2}{\ol^2 - \obet^2} \right) \nonumber \\
+\overline{R}^{(1)}_{\beta \ell} &= -\frac{1}{4} Z^{-}_{\gamma \ell \beta \ell} \left( \frac{\obet}{\ol - \obet} \right) -  \frac{1}{4} Z^+_{\ell \beta \gamma \ell} \left(\frac{\ogam}{\ol + \ogam} \right) + \frac{1}{8} H_{\beta\gamma\ell\ell} \frac{\ogam (\ogam - \ol)}{\ol (\ol + \ogam)} + \frac{1}{8} H_{\gamma\beta\ell\ell} \frac{\obet (\ol - \ogam)}{\ol (\ol + \ogam)} \nonumber \\
 %
-& + X_{\beta\ell\beta\ell} \left( \frac{\ol^4}{\ol^2 - \obet^2} \right)  - \frac{1}{2} \obet^2  X_{\ell\beta\beta\ell} \left(\frac{\ol^2 + \obet^2 }{\ol^2 - \obet^2} \right)  - \frac{1}{2} H_{\ell\beta\beta\ell} + \ol^2 \tilde{Z}^+_{\beta\beta\ell} -2 \obet^2 \ol^2 P_{\ell\ell\beta} - \obet^2 M_{\ell\ell\beta} \, .
+& - \frac{1}{4}\ogam\ol X_{\beta\gamma\ell\ell}\frac{(\ol - \ogam)}{(\ol + \ogam)} + \frac{1}{4} \obet \ol X_{\gamma\beta\ell\ell} \frac{(\ol + \ogam + 2\obet)}{(\ol + \ogam)} + \frac{1}{2} \obet \ogam X_{\ell\ell\beta\gamma} \frac{(\ogam + \obet)}{(\ol + \ogam)} \nonumber \\
+%
+& -\frac{1}{2} \ol \obet X_{\gamma\beta\ell\ell} - \frac{1}{2}\obet \ogam X_{\ell\ell\beta\gamma} + \frac{1}{2} \ol \ogam X_{\beta\gamma\ell\ell} - \ol^2 \tilde{Z}^+_{\beta\gamma\ell} \, .
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
