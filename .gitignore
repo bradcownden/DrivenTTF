@@ -244,3 +244,8 @@ TSWLatexianTemp*
 # intermediate gcc files
 #.o
 .DS_Store
+
+#
+# Directory for arXiv submission
+#
+arXiv/*
