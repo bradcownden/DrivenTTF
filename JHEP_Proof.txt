@@ -1,0 +1,6 @@
+- Luckily, equations 3.14 and 3.17 sharing the same label has not resulted in an incorrect reference later in the
+paper. This does not need to be changed.
+- Final sentence of the top paragraph on page 3: "Finally, appendix B focuses on..". Please remove "Finally"
+so the sentence reads "Appendix B focuses on..."
+- Equation (3.20) starts on page 15 and continues on page 17 due to page 16 being entirely figures. Is there any
+way to avoid this equation being broken over a page line like this?
